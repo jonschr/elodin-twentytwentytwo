@@ -1,9 +1,10 @@
-body.content-title-hidden {
+body.content-title-hidden,
+body.post-new-php.post-type-page {
     .edit-post-visual-editor__post-title-wrapper {
         .wp-block-post-title {
             transition: 0.3s all ease;
         }
-        .wp-block-post-title:not(.is-selected) {
+        .wp-block-post-title:not(:focus) {
             opacity: 0.15;
             text-decoration: line-through;
         }

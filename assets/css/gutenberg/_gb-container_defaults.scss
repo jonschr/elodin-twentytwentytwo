@@ -18,6 +18,18 @@
 //         padding-bottom: 40px;
 //     }
 // }
+/* ==========================================================================
+   On the frontend
+   ========================================================================== */
+
+.entry-content > .gb-container {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* ==========================================================================
+   In the editor
+   ========================================================================== */
 
 :where(.entry-content > .gb-container > .gb-inside-container),
 :where(.block-editor-block-list__block > .gb-container > .gb-inside-container) {
@@ -25,7 +37,8 @@
     padding-bottom: 120px;
 
     @include mobile {
-        padding: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 

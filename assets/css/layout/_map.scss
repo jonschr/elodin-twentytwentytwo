@@ -1,0 +1,50 @@
+body .wpgmp_map_parent,
+body .wpgmp_filter_wrappers {
+    float: none;
+
+    div.wpgmp_listing_header,
+    div.categories_filter,
+    div.wpgmp_categories,
+    div.wpgmp_before_listing {
+        float: none;
+    }
+
+    div.categories_filter select {
+        float: none;
+    }
+}
+
+body {
+    .wpgmp_filter_wrappers {
+        background-color: $base-2;
+
+        .wpgmp_before_listing {
+            color: $contrast;
+        }
+    }
+
+    .location_listing1 {
+        float: none !important;
+
+        div.wpgmp_listing_container {
+            float: none !important;
+        }
+
+        div.wpgmp_listing_header,
+        div.categories_filter,
+        div.wpgmp_categories,
+        div.wpgmp_before_listing {
+            float: none !important;
+        }
+
+        .fc-featured-hoverinner {
+            display: none !important;
+        }
+
+        .wpgmp_listing_container {
+            margin-left: -10px;
+            margin-right: -10px;
+            width: calc(100% + 20px);
+        }
+    }
+}

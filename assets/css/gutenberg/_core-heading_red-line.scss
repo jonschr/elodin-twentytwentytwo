@@ -1,0 +1,9 @@
+.is-style-red-line {
+    border-bottom: 3px solid $accent;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

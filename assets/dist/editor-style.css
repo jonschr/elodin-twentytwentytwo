@@ -1,0 +1,1 @@
+body.content-title-hidden .edit-post-visual-editor__post-title-wrapper .wp-block-post-title{transition:.3s all ease}body.content-title-hidden .edit-post-visual-editor__post-title-wrapper .wp-block-post-title:not(.is-selected){opacity:.15;text-decoration:line-through}

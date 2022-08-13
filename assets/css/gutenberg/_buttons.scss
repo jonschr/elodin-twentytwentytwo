@@ -1,0 +1,57 @@
+.btn {
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: 14px !important;
+    cursor: pointer;
+    line-height: 1;
+    padding: 15px 20px !important;
+    background-color: $accent;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $accentlighten;
+    }
+}
+
+.wp-block-buttons {
+    .wp-block-button {
+        .wp-block-button__link {
+            @extend .btn;
+        }
+    }
+}
+
+// .gb-button-wrapper {
+//     .gb-button {
+//         @extend .btn;
+//         margin: 0 10px 25px 0;
+
+//         @include mobile {
+//             width: 100%;
+//             margin: 0 0 5px 0;
+//         }
+//     }
+
+//     &:last-child {
+//         .gb-button {
+//             margin-bottom: 0;
+
+//             &:last-child {
+//                 margin-right: 0;
+//             }
+//         }
+//     }
+// }
+
+input[type='submit'],
+.gform_footer input[type='submit'] {
+    @extend .btn;
+
+    &:last-child {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}

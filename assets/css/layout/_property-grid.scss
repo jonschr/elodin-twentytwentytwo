@@ -1,0 +1,102 @@
+.loop-container.loop-layout-property_grid {
+    .entry {
+        padding: 25px;
+        box-shadow: $boxshadow;
+        position: relative;
+        z-index: 50;
+        background-color: white;
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 20;
+        }
+
+        .post-edit-link {
+            position: relative;
+            z-index: 25;
+        }
+
+        .property-content {
+            text-align: center;
+            padding-top: 25px;
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .featured-image-wrap {
+            background-color: $contrast;
+            height: 0;
+            padding-top: 55%;
+            width: 100%;
+            position: relative;
+            transition: 0.3s all ease;
+        }
+
+        .logo_white,
+        .logo_color {
+            position: absolute;
+            inset: 15% 5%;
+            z-index: 15;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: 0.3s all ease;
+        }
+
+        .logo_white {
+            opacity: 1;
+        }
+
+        .logo_color {
+            opacity: 0;
+        }
+
+        .featured-image {
+            position: absolute;
+            inset: 0;
+            background-position: center center;
+            background-size: cover;
+            filter: saturate(0);
+            transition: 0.3s all ease;
+            margin: 0;
+            padding: 0;
+            z-index: 5;
+            background-repeat: no-repeat;
+            opacity: 0.7;
+        }
+
+        .btn {
+            background-color: transparent;
+            color: $accent;
+            position: relative;
+            z-index: 25;
+
+            &:hover {
+                background-color: $accent;
+                color: white;
+            }
+        }
+    }
+
+    .entry:hover {
+        .featured-image-wrap {
+            background-color: $base-2;
+        }
+
+        .featured-image {
+            filter: saturate;
+            opacity: 0.2;
+        }
+
+        .logo_color {
+            opacity: 1;
+        }
+
+        .logo_white {
+            opacity: 0;
+        }
+    }
+}

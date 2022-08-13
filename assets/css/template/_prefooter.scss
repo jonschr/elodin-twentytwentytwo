@@ -1,0 +1,53 @@
+.prefooter {
+    position: relative;
+
+    .before-prefooter-map {
+        margin-bottom: -10px;
+    }
+
+    .before-prefooter-cta {
+        position: absolute;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        bottom: 0;
+        transform: translateY(0) translateX(-50%);
+        left: 50%;
+
+        :last-child {
+            margin-bottom: 0;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        display: block;
+        height: 115px;
+        background-color: $contrast-2;
+    }
+}
+
+body.hide-prefooter-map {
+    .prefooter {
+    }
+    .before-prefooter-map {
+        display: none;
+    }
+}
+
+body.hide-prefooter-cta {
+    .prefooter {
+        &:after {
+            display: none;
+        }
+    }
+
+    .before-prefooter-cta {
+        display: none;
+    }
+}

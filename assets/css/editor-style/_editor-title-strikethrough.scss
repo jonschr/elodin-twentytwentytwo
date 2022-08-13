@@ -1,0 +1,11 @@
+body.content-title-hidden {
+    .edit-post-visual-editor__post-title-wrapper {
+        .wp-block-post-title {
+            transition: 0.3s all ease;
+        }
+        .wp-block-post-title:not(.is-selected) {
+            opacity: 0.15;
+            text-decoration: line-through;
+        }
+    }
+}

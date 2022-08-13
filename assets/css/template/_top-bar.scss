@@ -1,0 +1,43 @@
+div.top-bar {
+    .inside-top-bar {
+        justify-content: flex-end;
+
+        @include mobile {
+            justify-content: center;
+        }
+
+        .widget {
+            margin: 0 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    p {
+        font-size: 16px !important;
+        margin-bottom: 0;
+        line-height: 1;
+
+        span {
+            margin-left: 10px;
+            padding-left: 10px;
+            display: inline-block;
+            border-left: 1px solid rgba(white, 0.3);
+
+            &:first-child {
+                margin-left: 0;
+                padding-left: 0;
+                border: none;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

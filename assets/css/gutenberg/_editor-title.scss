@@ -1,0 +1,10 @@
+.edit-post-visual-editor__post-title-wrapper {
+    // max-width: 1200px;
+    // margin-left: auto;
+    // margin-right: auto;
+    background-color: $base-2;
+    margin: 0;
+    padding: 50px;
+
+    @extend h1 !optional;
+}

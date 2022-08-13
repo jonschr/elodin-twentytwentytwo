@@ -1,0 +1,18 @@
+@include desktop {
+    .site-header {
+        position: relative;
+
+        .site-logo {
+            position: absolute;
+            bottom: 0;
+            height: 136px;
+            background-color: white;
+            padding: 15px;
+
+            img {
+                height: calc(133px - 30px);
+                width: auto !important;
+            }
+        }
+    }
+}

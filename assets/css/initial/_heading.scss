@@ -1,0 +1,29 @@
+/* ==========================================================================
+   All headings
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 200;
+    line-height: 1.2;
+    margin-bottom: $marginbottom;
+    font-family: Montserrat, sans-serif;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1 {
+    font-size: 56px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Set default padding
+   ========================================================================== */
+
+// :where(.entry-content > .gb-container),
+// :where(.block-editor-block-list__block > .gb-container) {
+//     padding-left: 40px;
+//     padding-right: 40px;
+// }
+
+// :where(.entry-content > .gb-container > .gb-inside-container),
+// :where(.block-editor-block-list__block > .gb-container > .gb-inside-container) {
+//     padding-top: 120px;
+//     padding-bottom: 120px;
+
+//     @include mobile {
+//         padding-top: 40px;
+//         padding-bottom: 40px;
+//     }
+// }
+
+:where(.entry-content > .gb-container > .gb-inside-container),
+:where(.block-editor-block-list__block > .gb-container > .gb-inside-container) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    @include mobile {
+        padding: 40px;
+    }
+}
+
+/* ==========================================================================
+   Dotted line on containers
+   ========================================================================== */
+
+.gb-inside-container .block-editor-inner-blocks {
+    outline: 1px dashed rgba(gray, 0.4);
+}

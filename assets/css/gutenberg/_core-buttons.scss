@@ -1,18 +1,17 @@
 .btn {
     border-radius: 3px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     font-weight: bold;
-    font-size: 13px !important;
     cursor: pointer;
-    line-height: 1;
     padding: 15px 20px !important;
-    background-color: $accent;
-    color: white;
     text-decoration: none;
+    font-size: 13px !important;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-transform: uppercase;
 
-    &:hover {
-        background-color: $accentlighten;
+    @include mobile {
+        display: block;
+        width: 100%;
     }
 }
 

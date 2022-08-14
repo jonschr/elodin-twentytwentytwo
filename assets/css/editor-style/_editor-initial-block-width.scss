@@ -1,4 +1,4 @@
-body.post-type-page {
+body:not(.post-type-post) {
     .wp-block,
     .gb-root-block-generateblocks-container {
         max-width: 100%;

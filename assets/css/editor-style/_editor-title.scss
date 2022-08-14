@@ -1,10 +1,25 @@
 .edit-post-visual-editor__post-title-wrapper {
-    // max-width: 1200px;
-    // margin-left: auto;
-    // margin-right: auto;
-    background-color: #f7f7f7;
+    background-color: black;
     margin: 0;
-    padding: 50px;
+    padding: 30px 50px;
 
     @extend h1 !optional;
+
+    .wp-block-post-title {
+        color: white;
+        position: relative;
+    }
+}
+
+body.content-title-hidden,
+body:not(.post-type-post) {
+    .edit-post-visual-editor__post-title-wrapper {
+        .wp-block-post-title {
+            transition: 0.3s all ease;
+        }
+        .wp-block-post-title:not(:focus) {
+            opacity: 0.15;
+            text-decoration: line-through;
+        }
+    }
 }

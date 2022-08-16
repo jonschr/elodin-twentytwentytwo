@@ -10,7 +10,7 @@ body.single-properties {
             &:after {
                 content: '';
                 width: 100%;
-                border-bottom: 3px solid $accent;
+                border-bottom: 3px solid var(--accent);
                 display: block;
                 margin: 20px 0 15px;
             }
@@ -40,7 +40,7 @@ body.single-properties {
         max-width: 100vw;
         width: 100vw;
         padding: 40px 40px;
-        background-color: $contrast-2;
+        background-color: var(--contrast-2);
 
         position: relative;
 
@@ -110,7 +110,7 @@ body.single-properties {
         max-width: 100vw;
         width: 100vw;
         padding: 7% 40px;
-        background-color: $base-2;
+        background-color: var(--base-2);
 
         .floorplans-wrap {
             margin: 0 auto;
@@ -124,7 +124,7 @@ body.single-properties {
                 font-size: 20px;
 
                 &:after {
-                    color: $accent;
+                    color: var(--accent);
                 }
             }
 
@@ -165,7 +165,7 @@ body.single-properties {
         margin: 0 calc(50% - 50vw);
         max-width: 100vw;
         width: 100vw;
-        background-color: $accent;
+        background-color: var(--accent);
         padding: 7% 40px;
 
         .amenities-wrap {

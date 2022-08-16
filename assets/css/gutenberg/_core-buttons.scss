@@ -1,18 +1,29 @@
+/* ==========================================================================
+   Generic
+   ========================================================================== */
+
 .btn {
     border-radius: 3px;
     font-weight: bold;
     cursor: pointer;
     padding: 15px 20px !important;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 13px !important;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    border-width: 2px !important;
+    display: inline-block !important;
+    position: static;
 
     @include mobile {
         display: block;
         width: 100%;
     }
 }
+
+/* ==========================================================================
+   Core buttons
+   ========================================================================== */
 
 .wp-block-buttons {
     .wp-block-button {
@@ -22,27 +33,19 @@
     }
 }
 
-// .gb-button-wrapper {
-//     .gb-button {
-//         @extend .btn;
-//         margin: 0 10px 25px 0;
+/* ==========================================================================
+   GeneratePress buttons
+   ========================================================================== */
 
-//         @include mobile {
-//             width: 100%;
-//             margin: 0 0 5px 0;
-//         }
-//     }
+.gb-button-wrapper {
+    .gb-button {
+        @extend .btn;
+    }
+}
 
-//     &:last-child {
-//         .gb-button {
-//             margin-bottom: 0;
-
-//             &:last-child {
-//                 margin-right: 0;
-//             }
-//         }
-//     }
-// }
+/* ==========================================================================
+   Gravity forms buttons
+   ========================================================================== */
 
 input[type='submit'],
 .gform_footer input[type='submit'] {

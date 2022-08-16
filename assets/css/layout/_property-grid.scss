@@ -27,7 +27,7 @@
         }
 
         .featured-image-wrap {
-            background-color: $contrast;
+            background-color: var(--contrast);
             height: 0;
             padding-top: 55%;
             width: 100%;
@@ -70,12 +70,12 @@
 
         .btn {
             background-color: transparent;
-            color: $accent;
+            color: var(--accent);
             position: relative;
             z-index: 25;
 
             &:hover {
-                background-color: $accent;
+                background-color: var(--accent);
                 color: white;
             }
         }
@@ -83,7 +83,7 @@
 
     .entry:hover {
         .featured-image-wrap {
-            background-color: $base-2;
+            background-color: var(--base-2);
         }
 
         .featured-image {

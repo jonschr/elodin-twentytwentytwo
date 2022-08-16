@@ -2,7 +2,8 @@
    Padding on the frontend
    ========================================================================== */
 
-.entry-content > .gb-container {
+.entry-content > .gb-container,
+.prefooter > .gb-container {
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -12,7 +13,8 @@
    ========================================================================== */
 
 :where(.entry-content > .gb-container > .gb-inside-container),
-:where(.block-editor-block-list__block > .gb-container > .gb-inside-container) {
+:where(.block-editor-block-list__block > .gb-container > .gb-inside-container),
+.prefooter > .gb-container {
     padding-top: 120px;
     padding-bottom: 120px;
 

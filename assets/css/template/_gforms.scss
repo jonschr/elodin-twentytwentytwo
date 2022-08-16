@@ -17,10 +17,15 @@ body .gform_wrapper.gravity-theme {
     }
 
     input:not([type='submit']),
+    select {
+        min-height: 47px;
+    }
+
+    input:not([type='submit']),
     textarea,
     select {
         background-color: white;
-        color: $contrast;
+        color: var(--contrast);
     }
 
     .gform_description {
@@ -50,7 +55,7 @@ body .gform_wrapper.gravity-theme {
 
     .gfield.gsection {
         padding-top: 20px;
-        border-bottom: 1px solid rgba($accent, 0.1);
+        border-bottom: 1px solid rgba(var(--accent), 0.1);
 
         &:first-child {
             padding-top: 0;

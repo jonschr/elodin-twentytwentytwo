@@ -44,9 +44,6 @@ wp.domReady(() => {
     // wp.blocks.unregisterBlockType('core/verse');
     // wp.blocks.unregisterBlockType('core/video');
     // wp.blocks.unregisterBlockType('core/widget-area');
-
-    wp.blocks.unregisterBlockType('generateblocks/button');
-    wp.blocks.unregisterBlockType('generateblocks/buttons');
 });
 
 //* Add alt styles

@@ -6,57 +6,6 @@ $boxshadow: 0 10px 30px 0 rgba(black, 0.12);
 $marginbottom: 20px;
 
 /* ==========================================================================
-   Colors
-   ========================================================================== */
-
-$contrast: var(--contrast);
-$contrast-2: var(--contrast-2);
-$contrast-3: var(--contrast-3);
-$base: var(--base);
-$base-2: var(--base-2);
-$base-3: var(--base-3);
-$accent: var(--accent);
-$accentlighten: var(--accentlighten);
-
-// $white: #fffffa;
-// $light: #f0f2f2;
-// $blue: #02262e;
-// $bluelight: #2e4148;
-// $bluehalf: #8f999d;
-// $default: $blue;
-// $dark: $blue;
-// $gold: #f2b220;
-// $highlight: $gold;
-
-/* ==========================================================================
-   Color loop
-   ========================================================================== */
-
-$colors: (
-    'contrast': $contrast,
-    'contrast-2': $contrast-2,
-    'contrast-3': $contrast-3,
-    'base': $base,
-    'base-2': $base-2,
-    'base-3': $base-3,
-    'accent': $accent,
-);
-
-/*
-   Connect up the colors
-   ========================================================================== */
-
-@each $name, $color in $colors {
-    .has-#{$name}-color {
-        color: $color;
-    }
-
-    .has-#{$name}-background-color {
-        background-color: $color;
-    }
-}
-
-/* ==========================================================================
    Queries
    ========================================================================== */
 

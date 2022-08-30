@@ -1,0 +1,37 @@
+body .loop-container.loop-layout-testimonial_slider {
+    .entry {
+        padding: 0;
+        text-align: center;
+
+        &:before {
+            display: none;
+        }
+
+        .testimonial-content {
+            margin-bottom: 30px;
+
+            p {
+                color: var(--contrast);
+
+                @include desktop {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        top: 0;
+        bottom: auto;
+        transform: translateY(-150%);
+
+        li {
+            button {
+                &:before {
+                    font-size: 10px;
+                    color: var(--accent);
+                }
+            }
+        }
+    }
+}

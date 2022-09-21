@@ -6,6 +6,11 @@
 .prefooter > .gb-container {
     padding-left: 40px;
     padding-right: 40px;
+
+    @include mobile {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 /* ==========================================================================
@@ -19,8 +24,8 @@
     padding-bottom: 120px;
 
     @include mobile {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
 

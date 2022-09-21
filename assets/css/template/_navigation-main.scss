@@ -1,0 +1,19 @@
+.site-header {
+    .main-navigation {
+        .main-nav {
+            // Main menu
+            ul {
+                // Submenu
+                ul {
+                    width: 250px;
+
+                    li {
+                        a {
+                            padding: 15px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

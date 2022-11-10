@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Default styles to extend elsewhere
+   ========================================================================== */
+
+.make-title-black {
+    background-color: black;
+    margin: 0;
+    padding: 30px 50px;
+
+    @extend h1 !optional;
+
+    .wp-block-post-title {
+        color: white;
+        position: relative;
+    }
+}
+
+.give-title-margin {
+    margin-bottom: 30px;
+}
+
+.cross-out-title {
+    .wp-block-post-title {
+        transition: 0.3s all ease;
+    }
+    .wp-block-post-title:not(:focus) {
+        opacity: 0.15;
+        text-decoration: line-through;
+    }
+}
+
+/* ==========================================================================
+   Make title black
+   ========================================================================== */
+
+body.post-type-page,
+body.post-type-services {
+    .edit-post-visual-editor__post-title-wrapper {
+        @extend .make-title-black;
+    }
+}
+
+/* ==========================================================================
+   Give title margin
+   ========================================================================== */
+
+body.post-type-post {
+    .edit-post-visual-editor__post-title-wrapper {
+        @extend .give-title-margin;
+    }
+}
+
+/* ==========================================================================
+   Cross out title
+   ========================================================================== */
+
+body.content-title-hidden,
+body.post-type-page {
+    .edit-post-visual-editor__post-title-wrapper {
+        @extend .cross-out-title;
+    }
+}
+
+/* ==========================================================================
+   Blocks general
+   ========================================================================== */
+
+.block-editor-block-list__layout {
+    > .wp-block {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

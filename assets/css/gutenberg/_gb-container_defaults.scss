@@ -18,11 +18,18 @@
 
 :where(.entry-content > .gb-container > .gb-inside-container),
 :where(.block-editor-block-list__block > .gb-container > .gb-inside-container),
-:where(.gb-root-block-generateblocks-container
-        > .gb-container
-        > .gb-inside-container) {
-    padding-top: 120px;
-    padding-bottom: 120px;
+:where(
+        .gb-root-block-generateblocks-container
+            > .gb-container
+            > .gb-inside-container
+    ) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
     @include mobile {
         padding-top: 25px;

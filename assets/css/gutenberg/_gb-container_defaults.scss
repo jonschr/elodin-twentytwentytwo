@@ -2,11 +2,13 @@
    Padding on the frontend
    ========================================================================== */
 
-.entry-content > .gb-container {
-    padding-left: 40px;
-    padding-right: 40px;
+:where(.entry-content > .gb-container) {
+    @include tablet {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 
-    @include mobile {
+    @media (max-width: 1260px) {
         padding-left: 25px;
         padding-right: 25px;
     }
@@ -16,13 +18,17 @@
    Padding in the editor AND on the frontend
    ========================================================================== */
 
-:where(.entry-content > .gb-container > .gb-inside-container),
-:where(.block-editor-block-list__block > .gb-container > .gb-inside-container),
-:where(.gb-root-block-generateblocks-container
-        > .gb-container
-        > .gb-inside-container) {
-    padding-top: 120px;
-    padding-bottom: 120px;
+:where(.entry-content > .gb-container),
+:where(.gb-is-root-block > .gb-container),
+:where(.gb-root-block-generateblocks-container > .gb-container),
+:where(.block-library-block__reusable-block-container > .gb-container) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
     @include mobile {
         padding-top: 25px;
@@ -34,6 +40,7 @@
    Dotted line on containers
    ========================================================================== */
 
-.gb-inside-container .block-editor-inner-blocks {
+.gb-inside-container .block-editor-inner-blocks,
+.block-editor-block-list__block.gb-container > .gb-container {
     outline: 1px dashed rgba(gray, 0.4);
 }

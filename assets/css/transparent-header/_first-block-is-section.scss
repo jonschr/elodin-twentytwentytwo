@@ -1,35 +1,38 @@
-body.full-width-content.first-block-is-section {
-    .entry-content {
-        > :first-child {
-            &.gb-container {
-                @include desktop {
-                    margin-top: -$headerheightdesktop;
-                    padding-top: $headerheightdesktop;
-                }
-            }
-        }
-    }
-}
-
 //* Default for @extending
 .inner-add-margin {
-    margin-top: $headerheightdesktop;
+    @include desktop {
+        margin-top: $headerheightdesktop;
+    }
 
     @include tablet {
-        margin-top: $headerheighttablet;
+        // margin-top: $headerheighttablet;
     }
 
     @include mobile {
-        margin-top: $headerheightmobile;
+        // margin-top: $headerheightmobile;
     }
 }
 
 body.first-block-is-section {
+    header.site-header {
+        // margin-bottom is negative so that the header is not counted in the height of the first block
+        @include desktop {
+            margin-bottom: calc(#{$headerheightdesktop} * -1);
+        }
+    }
+
     .site-inner {
         margin-top: 0 !important;
     }
 
     .entry-content > :first-child {
+        //* GENERATEBLOCKS
+        &.gb-container {
+            > .gb-container {
+                @extend .inner-add-margin;
+            }
+        }
+
         //* CORE COVER
         &.wp-block-cover {
             > .wp-block-cover__inner-container {

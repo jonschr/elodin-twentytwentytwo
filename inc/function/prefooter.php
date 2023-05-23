@@ -1,22 +1,37 @@
 <?php
 
-//* Register the widget areas
+//* Register prefooter 1
 register_sidebar( array(
-	'name'          => __( 'Prefooter', 'ettt' ),
-	'id'            => 'prefooter',
-	'description'   => __( 'A prefooter widget area', 'ettt' ),
+	'name'          => __( 'Endorsements prefooter', 'ettt' ),
+	'id'            => 'prefooter-1',
+	'description'   => __( 'Prefooter Area 1', 'ettt' ),
 	'before_widget' => '<div class="prefooter">',
 	'after_widget'  => '</div>',
 	'before_title'  => '<h2 class="widgettitle">',
 	'after_title'   => '</h2>',
 ) );
 
-//* Display the widget area
-add_action( 'generate_footer', 'ettt_add_prefooter', 3 );
-function ettt_add_prefooter() {
+//* Display prefooter 1
+add_action( 'generate_footer', 'ettt_add_prefooter_1', 3 );
+function ettt_add_prefooter_1() {
+	dynamic_sidebar( 'prefooter-1' );
+}
+
+//* Register prefooter 2
+register_sidebar( array(
+	'name'          => __( 'CTA prefooter', 'ettt' ),
+	'id'            => 'prefooter-2',
+	'description'   => __( 'Prefooter Area 2', 'ettt' ),
+	'before_widget' => '<div class="prefooter">',
+	'after_widget'  => '</div>',
+	'before_title'  => '<h2 class="widgettitle">',
+	'after_title'   => '</h2>',
+) );
+
+
+//* Display prefooter 2
+add_action( 'generate_footer', 'ettt_add_prefooter_2', 4 );
+function ettt_add_prefooter_2() {
 	
-	// echo '<div class="prefooter">';
-		dynamic_sidebar( 'prefooter' );
-	// echo '</div>';
-	
+	dynamic_sidebar( 'prefooter-2' );
 }

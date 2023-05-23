@@ -60,6 +60,18 @@ wp.domReady(() => {
         },
     ]);
 
+    wp.blocks.registerBlockStyle('core/list', [
+        {
+            name: 'default',
+            label: 'Default',
+            isDefault: true,
+        },
+        {
+            name: 'checkmark',
+            label: 'Checkmark',
+        },
+    ]);
+
     // wp.blocks.registerBlockStyle('core/heading', [
     //     {
     //         name: 'default',

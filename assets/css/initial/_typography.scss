@@ -2,7 +2,9 @@ body {
     font-size: 18px;
 }
 
-p:last-child {
+p:last-child,
+ul:last-child,
+ol:last-child {
     margin-bottom: 0;
 }
 

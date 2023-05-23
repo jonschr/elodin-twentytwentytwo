@@ -14,6 +14,11 @@ register_sidebar( array(
 //* Display prefooter 1
 add_action( 'generate_footer', 'ettt_add_prefooter_1', 3 );
 function ettt_add_prefooter_1() {
+	
+	// bail if this is the endorsements page
+	if ( is_page(201) ) 
+		return; 
+		
 	dynamic_sidebar( 'prefooter-1' );
 }
 
@@ -32,6 +37,10 @@ register_sidebar( array(
 //* Display prefooter 2
 add_action( 'generate_footer', 'ettt_add_prefooter_2', 4 );
 function ettt_add_prefooter_2() {
+	
+	// bail if this is the donations page
+	if ( is_page(196) ) 
+		return; 
 	
 	dynamic_sidebar( 'prefooter-2' );
 }

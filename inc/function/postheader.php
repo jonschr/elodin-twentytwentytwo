@@ -12,7 +12,16 @@ register_sidebar( array(
 ) );
 
 //* Display postheader
-add_action( 'generate_after_header', 'ettt_add_postheader', 3 );
+add_action( 'generate_after_header', 'ettt_add_postheader', 9 );
 function ettt_add_postheader() {
-	dynamic_sidebar( 'prefooter-1' );
+	
+	// bail if this is the contact page
+	if ( is_page(13) ) 
+		return; 
+		
+	// bail if this is the donations page
+	if ( is_page(196) ) 
+		return; 
+	
+	dynamic_sidebar( 'postheader' );
 }

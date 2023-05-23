@@ -12,7 +12,7 @@
                         @extend .btn;
 
                         @include notmobile {
-                            background-color: var(--accent);
+                            background-color: var(--accent-3);
                             border-radius: 3px;
                             color: white;
                             padding: 15px 20px !important;
@@ -20,7 +20,7 @@
                             transition: 0.3s all ease;
 
                             &:hover {
-                                filter: brightness(102%);
+                                background-color: var(--accent-4);
                                 color: white;
                             }
                         }

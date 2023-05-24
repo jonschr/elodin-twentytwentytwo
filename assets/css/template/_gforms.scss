@@ -82,17 +82,22 @@ body .gform_wrapper.gravity-theme {
     // Footer
     .gform_footer {
         padding-bottom: 0;
-
-        input.gform_button {
-            @extend .btn;
-
-            margin-bottom: 0;
-            cursor: pointer;
-        }
     }
 
     .gform_footer.before {
         padding: 0 !important;
         margin: 0 !important;
+    }
+
+    .gform_footer,
+    #field_submit {
+        input.gform-button {
+            @extend .btn;
+            border: none !important;
+            min-height: 47px !important;
+
+            margin-bottom: 0;
+            cursor: pointer;
+        }
     }
 }

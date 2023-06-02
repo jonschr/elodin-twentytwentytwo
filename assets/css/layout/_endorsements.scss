@@ -1,105 +1,87 @@
-/* ==========================================================================
-   Muuri defaults
-   ========================================================================== */
-
-.loop-container.loop-layout-endorsements {
+.grid {
     position: relative;
-    display: block;
-    margin: 0 !important;
+}
 
-    > * {
-        display: block;
-        position: absolute;
-        margin: 0px !important;
-        border: none !important;
-        z-index: 1;
-        overflow: hidden;
+.item {
+    display: block;
+    position: absolute;
+    width: calc(100% / 3 - 45px);
+    height: auto;
+    margin: 20px;
+    z-index: 1;
+
+    @include tablet {
+        width: calc(100% / 2 - 45px);
     }
 
-    > .muuri-item-dragging {
+    @include mobile {
+        width: calc(100% - 45px);
+    }
+
+    &.muuri-item-dragging {
         z-index: 3;
     }
 
-    > .muuri-item-releasing {
+    &.muuri-item-releasing {
         z-index: 2;
     }
 
-    > .muuri-item-hidden {
+    &.muuri-item-hidden {
         z-index: 0;
     }
 
-    .loop-item-inner {
+    .item-content {
         position: relative;
         width: 100%;
         height: 100%;
-    }
-}
 
-/* ==========================================================================
-   Specifics
-   ========================================================================== */
+        blockquote.endorsement {
+            padding: 0;
+            border: none;
+            font-style: normal;
+            margin: 0;
 
-.loop-container.loop-layout-endorsements {
-    .entry {
-        width: calc(100% / 3 - 1px);
-        padding: 15px;
+            .endorsement-content {
+                padding: 15px;
+                border-radius: 3px;
+                background-color: var(--contrast-2);
+                margin-bottom: 25px;
+                position: relative;
 
-        @media (max-width: 1200px) {
-            width: calc(100% / 2 - 1px);
+                p {
+                    color: var(--base);
+                    font-size: 18px;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    border: 10px solid red;
+                    border-color: var(--contrast-2) transparent transparent
+                        transparent;
+                    position: absolute;
+                    bottom: 0;
+                    transform: translateY(100%);
+                    color: transparent;
+                    left: 30px;
+                }
+            }
+
+            figcaption {
+                padding-left: 15px;
+
+                h3 {
+                    margin-bottom: 5px;
+                    font-size: 22px;
+                    color: var(--base);
+                }
+
+                p.title {
+                    font-size: 16px;
+                    line-height: 1.4;
+                    font-style: italic;
+                }
+            }
         }
-
-        @media (max-width: 700px) {
-            width: calc(100% / 1 - 1px);
-        }
-    }
-
-    .content-container {
-        padding: 25px;
-        border-radius: 3px;
-        position: relative;
-        background-color: white;
-
-        @include mobile {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-right: 0;
-        }
-
-        &:before {
-            content: '';
-            position: absolute;
-            background-image: url('../images/quote.png');
-            width: 30px;
-            height: 40px;
-            top: 10px;
-            left: -15px;
-
-            // background-color: red;
-            background-size: contain;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
-    }
-
-    h3 {
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
-
-    div.testimonial-content {
-        line-height: 1.3em !important;
-    }
-
-    p.title {
-        margin-bottom: 0;
-        font-style: italic;
-        font-size: 16px;
-        line-height: 1.2em;
-    }
-
-    .testimonial-content {
-        margin-bottom: 15px;
     }
 }

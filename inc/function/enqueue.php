@@ -57,7 +57,6 @@ function ettt_enqueue_everything() {
     wp_register_script(
 		'muuri-main',
         'https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js',
-		// get_stylesheet_directory_uri() . '/vendor/muuri/muuri.min.js',
 		array( 'jquery' ),
 		CHILD_THEME_VERSION,
 		true

@@ -1,65 +1,78 @@
 <?php
 
-//* Output endorsements before
-add_action( 'before_loop_layout_endorsements', 'rb_endorsements_before' );
-function rb_endorsements_before( $args ) {
+add_shortcode( 'endorsements', 'endorsements_loop_shortcode' );
+function endorsements_loop_shortcode() {
     
-    //* Do the muuri main script
     wp_enqueue_script( 'muuri-main' );
+    
+    $args = array(
+        'post_type' => 'endorsements',
+        'posts_per_page' => -1, // Display all posts
+    );
+    
+    ob_start();
+    
+    $endorsements_query = new WP_Query($args);
+    
+    if ($endorsements_query->have_posts()) {
+        
+        echo '<div class="grid">';
+        
+            while ($endorsements_query->have_posts()) {
+                
+                $endorsements_query->the_post();
+                
+                echo '<div class="item">';
+                    echo '<figure class="item-content">';
+                
+                        //* Global vars
+                        global $post;
+                        $id = get_the_ID();
 
-    $rand = rand( 1, 100000 );
+                        //* Vars
+                        $title = get_the_title();
+                        $permalink = get_the_permalink();
+                        $content = apply_filters( 'the_content', apply_filters( 'the_content', get_the_content() ) );
+                        $reference = get_post_meta( $id, 'reference', true );
 
-    printf( '<div id="muuri-%s">', $rand ); // use a random number to allow multiple on a page
+                        //* Markup
+                        echo '<blockquote class="endorsement">';
+                        
+                            if ( $content )
+                                printf( '<div class="endorsement-content">%s</div>', $content );
+                                                            
+                            if ( $title ) {
+                                echo '<figcaption>';
+                                    
+                                    printf( '<h3>%s</h3>', $title );
+                                    
+                                    if ( $reference )
+                                        printf( '<p class="title">%s</p>', $reference );
+                                
+                                echo '</figcaption>';
+                            }
+                               
+                        echo '</blockquote>';
+
+                    echo '</figure>';
+                echo '</div>';
+                
+            }
+        
+        echo '</div>';
+        
+        wp_reset_postdata();
+        
+    }
     
     ?>
-    <script>
-        jQuery(document).ready(function( $ ) {
-	            
-            var grid = new Muuri('#muuri-<?php echo $rand; ?> .loop-layout-endorsements', {
-                layout: {
-                    fillGaps: true,
-                }
-            });
+    <script type="text/javascript">
+        jQuery(window).on('load', function( $ ) {
+        // Muuri initialization code here
+            var grid = new Muuri('.grid');
         });
     </script>
     <?php
-}
-
-add_action( 'after_loop_layout_endorsements', 'wm_endorsements_afer' );
-function wm_endorsements_afer( $args ) {
-    echo '</div>';
-}
-
-//* Output each endorsements
-add_action( 'add_loop_layout_endorsements', 'rb_endorsements_each' );
-function rb_endorsements_each() {
-
-	//* Global vars
-	global $post;
-	$id = get_the_ID();
-
-	//* Vars
-	$title = get_the_title();
-    $permalink = get_the_permalink();
-    $content = get_the_content();
-    $reference = get_post_meta( $id, 'reference', true );
-
-    //* Markup
-    echo '<div class="content-container">';
-
-        if ( $content )
-            printf( '<div class="testimonial-content">%s</div>', $content );
-            
-        if ( $title )
-            printf( '<h3>%s</h3>', $title );
-
-        if ( $reference )
-            printf( '<p class="title">%s</p>', $reference );
-
-    echo '</div>';
     
-    // printf( '<a class="link-overlay" href="%s"></a>', $permalink );
-
-    // if ( has_post_thumbnail() ) 
-    //     printf( '<div class="featured-image" style="background-image:url( %s )"></div>', get_the_post_thumbnail_url( $post_id, 'large' ) );
+    return ob_get_clean();
 }

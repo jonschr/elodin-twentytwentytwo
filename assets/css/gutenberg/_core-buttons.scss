@@ -5,7 +5,7 @@
 .btn {
     font-weight: bold;
     cursor: pointer;
-    padding: 13px 20px !important;
+    padding: 20px 30px !important;
     text-decoration: none !important;
     font-size: 13px !important;
     letter-spacing: 0.1em;
@@ -13,6 +13,7 @@
     border-width: 2px !important;
     display: inline-block !important;
     position: static;
+    line-height: 1 !important;
     border-radius: 3px;
 
     &:hover {

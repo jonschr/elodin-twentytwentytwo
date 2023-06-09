@@ -1,0 +1,91 @@
+.facetwp-template[data-name='locations'] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    .hentry {
+        padding: 20px;
+        position: relative;
+        background-color: var(--light);
+        transition: 0.3s all ease, 0.5s box-shadow ease;
+
+        &.hidearea {
+            display: none;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            // border-radius: 5px;
+        }
+
+        .info {
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--green);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.2em;
+            margin: 0 0 5px;
+            transition: 0.3s all ease;
+        }
+
+        p {
+            transition: 0.3s all ease;
+            margin: 0 0 5px;
+            line-height: 1.3em;
+            font-weight: 400;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            strong {
+                font-weight: bold;
+            }
+
+            &.address {
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 500;
+            }
+
+            &.store_manager {
+                font-style: italic;
+            }
+        }
+
+        .buttons {
+            margin-top: 20px;
+
+            .locations-button {
+                background-color: var(--green);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 3px;
+                display: inline-block;
+                position: relative;
+                z-index: 10;
+
+                &:hover {
+                    background-color: var(--green-2);
+                }
+            }
+        }
+    }
+
+    .hentry:hover {
+        // box-shadow: 0 0 0 7px var(--green), 0 0 10px 0 rgba(black, 0.2);
+        // background-color: var(--green);
+        // background: linear-gradient(-135deg, var(--green), var(--green-2));
+        background-color: var(--contrast);
+
+        p,
+        h3 {
+            color: white;
+        }
+    }
+}

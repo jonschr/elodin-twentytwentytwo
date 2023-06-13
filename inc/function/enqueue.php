@@ -38,6 +38,8 @@ function ettt_gutenberg_assets() {
 add_action( 'wp_enqueue_scripts', 'ettt_enqueue_everything' );
 function ettt_enqueue_everything() {
     
+    wp_enqueue_style( 'dashicons' );
+    
     // Theme styles
 	wp_enqueue_style( 'theme-styles', get_bloginfo( 'stylesheet_directory') . '/assets/dist/theme-style.css', array(), CHILD_THEME_VERSION );
 	    
@@ -93,12 +95,21 @@ function ettt_enqueue_everything() {
         CHILD_THEME_VERSION
     );
     
+    // Smoothscroll
     wp_enqueue_script(
-        'all-scripts',
-        get_stylesheet_directory_uri() . '/assets/dist/scripts.min.js',
+        'smoothscroll',
+        get_stylesheet_directory_uri() . '/assets/js/smoothscroll.js',
         array('jquery'),
         CHILD_THEME_VERSION,
         true
     );
+    
+    // wp_enqueue_script(
+    //     'all-scripts',
+    //     get_stylesheet_directory_uri() . '/assets/dist/scripts.min.js',
+    //     array('jquery'),
+    //     CHILD_THEME_VERSION,
+    //     true
+    // );
 	
 }

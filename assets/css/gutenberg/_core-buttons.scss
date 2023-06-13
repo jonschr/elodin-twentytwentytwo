@@ -5,9 +5,9 @@
 .btn {
     font-weight: bold;
     cursor: pointer;
-    padding: 13px 20px !important;
+    padding: 20px 30px !important;
     text-decoration: none !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
     letter-spacing: 0.1em;
     text-transform: uppercase !important;
     border-width: 2px !important;
@@ -18,13 +18,14 @@
     box-shadow: 4px 4px 0 0 var(--accent);
 
     &:hover {
-        filter: brightness(102%);
+        filter: brightness(110%);
         box-shadow: 6px 6px 0 0 var(--accent);
     }
 
     @include mobile {
         display: block;
         width: 100%;
+        padding: 13px 20px;
     }
 }
 
@@ -34,8 +35,20 @@
 
 .wp-block-buttons {
     .wp-block-button {
+        @include mobile {
+            display: block !important;
+            width: 100% !important;
+        }
+
         .wp-block-button__link {
             @extend .btn;
+
+            @include mobile {
+                display: block !important;
+                text-align: center;
+                font-size: 13px !important;
+                width: 100% !important;
+            }
         }
     }
 
@@ -59,11 +72,36 @@
    ========================================================================== */
 
 .gform_footer input[type='submit'] {
-    @extend .btn;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none !important;
+    letter-spacing: 0.1em;
+    text-transform: uppercase !important;
+    border-width: 2px !important;
+    display: inline-block !important;
+    position: static;
+    border-radius: 3px;
+    transition: 0.3s all ease;
+    box-shadow: 4px 4px 0 0 var(--accent);
+    font-size: 14px;
+
+    &:hover {
+        filter: brightness(110%);
+        box-shadow: 6px 6px 0 0 var(--accent);
+    }
 
     &:last-child {
         margin-bottom: 0;
         margin-right: 0;
+    }
+
+    @include mobile {
+        display: block !important;
+        text-align: center;
+        font-size: 13px !important;
+        width: 100% !important;
+        padding: 13px 20px !important;
+        line-height: 1 !important;
     }
 }
 

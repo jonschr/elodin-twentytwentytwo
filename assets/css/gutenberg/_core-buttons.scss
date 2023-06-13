@@ -14,9 +14,12 @@
     display: inline-block !important;
     position: static;
     border-radius: 3px;
+    transition: 0.3s all ease;
+    box-shadow: 4px 4px 0 0 var(--accent);
 
     &:hover {
         filter: brightness(102%);
+        box-shadow: 6px 6px 0 0 var(--accent);
     }
 
     @include mobile {

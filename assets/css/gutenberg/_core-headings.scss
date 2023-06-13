@@ -15,3 +15,14 @@ h3.wp-block-heading {
         margin-top: 0;
     }
 }
+
+h1,
+h2 {
+    &.has-white-color {
+        text-shadow: 3px 3px 0 var(--accent);
+    }
+
+    &.has-accent-color {
+        // text-shadow: 3px 3px 0 var(--base);
+    }
+}

@@ -1,7 +1,11 @@
 .is-style-kicker {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    // font-size: 15px;
+    // font-weight: bold;
+    // text-transform: uppercase;
+    // letter-spacing: 0.1em;
     margin-bottom: 5px;
+
+    &.has-white-color {
+        text-shadow: 2px 2px 0 var(--accent);
+    }
 }

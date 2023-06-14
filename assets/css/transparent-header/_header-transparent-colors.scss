@@ -1,19 +1,22 @@
 body.full-width-content.first-block-is-section {
     @include desktop {
         .site-header {
-            background-color: transparent;
+            background-color: rgba(black, 0.3);
+            border: none;
+            border-bottom: 2px solid white;
+            z-index: 50;
         }
 
-        .main-navigation {
-            background-color: transparent;
-        }
+        // .main-navigation {
+        //     background-color: transparent;
+        // }
 
         .main-navigation.navigation-clone {
             background-color: white;
         }
 
         .main-navigation:not(.navigation-clone) .main-nav > ul > li > a {
-            background-color: transparent;
+            // background-color: transparent;
             color: white;
         }
 

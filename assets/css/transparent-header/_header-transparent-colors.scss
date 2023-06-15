@@ -1,9 +1,13 @@
 body.full-width-content.first-block-is-section {
     @include desktop {
         .site-header {
-            background-color: rgba(black, 0.3);
+            // background-color: rgba(black, 0.3);
+            background: linear-gradient(
+                0deg,
+                transparent 0%,
+                rgba(black, 0.4) 100%
+            );
             border: none;
-            border-bottom: 2px solid white;
             z-index: 50;
         }
 
@@ -12,7 +16,9 @@ body.full-width-content.first-block-is-section {
         // }
 
         .main-navigation.navigation-clone {
-            background-color: white;
+            background-color: rgba(white, 0.7);
+            backdrop-filter: blur(10px);
+            transition: none;
         }
 
         .main-navigation:not(.navigation-clone) .main-nav > ul > li > a {

@@ -1,0 +1,24 @@
+.rfp-button {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 30px 20px !important;
+    text-decoration: none !important;
+    font-size: 15px !important;
+    // letter-spacing: 0.1em;
+    // text-transform: uppercase !important;
+    border-width: 2px !important;
+    display: inline-block !important;
+    position: static;
+    line-height: 1;
+
+    &:hover {
+        background-color: var(--accent-2) !important;
+    }
+}
+
+.rfp-button-wrap.right {
+    .rfp-button {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}

@@ -5,15 +5,16 @@
 .btn {
     font-weight: bold;
     cursor: pointer;
-    padding: 13px 20px !important;
+    padding: 20px 30px !important;
     text-decoration: none !important;
-    font-size: 13px !important;
-    letter-spacing: 0.1em;
-    text-transform: uppercase !important;
+    font-size: 15px !important;
+    // letter-spacing: 0.1em;
+    // text-transform: uppercase !important;
     border-width: 2px !important;
     display: inline-block !important;
     position: static;
-    border-radius: 3px;
+    border-radius: 10px;
+    line-height: 1;
 
     &:hover {
         filter: brightness(102%);
@@ -34,10 +35,24 @@
         .wp-block-button__link {
             @extend .btn;
         }
+
+        &.is-style-outline {
+            .wp-block-button__link {
+                &:hover {
+                    background-color: var(--accent);
+                    border-color: var(--accent);
+                    // color: white;
+                }
+            }
+        }
     }
 
     &:last-child {
         margin-top: 30px;
+    }
+
+    &:first-child {
+        margin-top: 0;
     }
 }
 

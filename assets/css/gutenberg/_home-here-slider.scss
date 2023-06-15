@@ -1,0 +1,10 @@
+.position-static {
+    position: static !important;
+}
+
+.home-here-slider-wrap {
+    @include notmobile {
+        position: absolute !important;
+        bottom: -40px !important;
+    }
+}

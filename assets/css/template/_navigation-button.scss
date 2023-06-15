@@ -1,0 +1,45 @@
+ul.menu {
+    > li.nav-button {
+        a {
+            // @extend .btn;
+
+            @include notmobile {
+                font-family: Montserrat, sans-serif;
+                font-weight: bold !important;
+                cursor: pointer;
+                text-decoration: none !important;
+                font-size: 15px !important;
+                border-width: 2px !important;
+                position: static;
+                border-radius: 10px;
+                display: inline-block !important;
+                line-height: 1 !important;
+                background-color: var(--accent);
+                padding: 20px 30px !important;
+                transition: 0.3s all ease;
+                color: white !important;
+
+                &:hover {
+                    color: white;
+                    background-color: var(--accent-2);
+                }
+            }
+        }
+    }
+}
+
+ul#menu-main {
+    > li.nav-button {
+        @include notmobile {
+            margin-left: 20px;
+        }
+    }
+}
+
+ul#menu-off-canvas {
+    > li.nav-button {
+        @include notmobile {
+            margin-top: 20px;
+        }
+    }
+}

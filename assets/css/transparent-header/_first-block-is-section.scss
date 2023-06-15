@@ -4,7 +4,7 @@ body.full-width-content.first-block-is-section {
             &.gb-container {
                 @include desktop {
                     margin-top: -$headerheightdesktop;
-                    padding-top: $headerheightdesktop;
+                    padding-top: $headerheightdesktop * 1.5;
                 }
             }
         }

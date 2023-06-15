@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Closed
+   ========================================================================== */
+
+.menu-bar-items {
+    margin-left: 15px !important;
+
+    .slideout-toggle {
+        a {
+            line-height: 1 !important;
+        }
+    }
+
+    .gp-icon {
+        svg {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+}
+
+body.first-block-is-section {
+    .gp-icon svg {
+        fill: white;
+    }
+
+    .is_stuck {
+        .gp-icon svg {
+            fill: black;
+        }
+    }
+}
+
+/* ==========================================================================
+   Open
+   ========================================================================== */
+
+body {
+    .slideout-overlay {
+        transition: 0.3s all ease;
+        background-color: rgba(black, 0.2);
+    }
+
+    .main-navigation.offside {
+        width: 600px;
+        max-width: 100%;
+        padding: 40px;
+
+        @include mobile {
+            padding: 20px;
+        }
+
+        button.slideout-exit {
+            text-align: right;
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            .gp-icon {
+                svg {
+                    height: 1.5em;
+                    width: 1.5em;
+                }
+            }
+
+            @include mobile {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .main-navigation.slideout-navigation {
+        &.offside--right {
+            right: -600px;
+        }
+
+        &.offside--right.is-open {
+            right: -265px;
+        }
+
+        a {
+            display: inline;
+            font-size: inherit;
+            text-decoration: underline;
+        }
+    }
+
+    .slideout-navigation {
+        background-color: var(--contrast);
+
+        .main-nav {
+            margin-bottom: 0;
+        }
+
+        .slideout-widget {
+            margin-bottom: 20px;
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            ul.wp-block-social-links {
+                li {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .wp-block-social-links {
+            a.wp-block-social-link-anchor {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Nav
+   ========================================================================== */
+
+ul#menu-off-canvas {
+    padding: 0;
+    font-family: 'ledger';
+
+    > li {
+        margin-bottom: 20px;
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+
+        > a {
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 1;
+            text-decoration: none;
+
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+
+        &.current-menu-item > a,
+        &:hover > a {
+            color: var(--accent-2);
+        }
+    }
+}

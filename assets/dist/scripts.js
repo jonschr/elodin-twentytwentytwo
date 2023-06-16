@@ -35,6 +35,22 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
+    $('.testimonials-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        fade: true,
+        centerMode: false,
+        speed: 300,
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+});
+
+jQuery(document).ready(function ($) {
     $("a[href^='#']:not(.menu-bar-items a)").on('click', function (event) {
         event.preventDefault();
         var href = $(this).attr('href');
@@ -61,7 +77,7 @@ jQuery(document).ready(function ($) {
 function scrollToElement(href) {
     var target = document.querySelector(href);
     if (target) {
-        var header = document.querySelector('header');
+        var header = document.querySelector('#sticky-navigation');
         var headerHeight = header ? header.offsetHeight : 0;
         var offset = target.offsetTop - headerHeight;
 

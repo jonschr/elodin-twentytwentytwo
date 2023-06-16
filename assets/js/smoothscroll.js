@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
 function scrollToElement(href) {
     var target = document.querySelector(href);
     if (target) {
-        var header = document.querySelector('header');
+        var header = document.querySelector('#sticky-navigation');
         var headerHeight = header ? header.offsetHeight : 0;
         var offset = target.offsetTop - headerHeight;
 

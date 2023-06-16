@@ -29,6 +29,49 @@ function tallgrass_properties_hero() {
 
 function tallgrass_properties_nav() {
     
+    global $post;
+    
+    echo '<div class="section-nav">';
+        echo '<div class="wrap">';
+            
+            echo '<div class="nav-content">';
+            
+                $description = apply_filters( 'the_content', get_post_meta( get_the_ID(), 'description', true ) );
+                if ( $description ) {
+                    echo '<div class="nav-item">';
+                        echo '<a href="#overview">Overview</a>';
+                    echo '</div>';
+                }
+                
+                $availability_script = get_post_meta( get_the_ID(), 'availability_script', true );
+                if ( $availability_script ) {
+                    echo '<div class="nav-item">';
+                        echo '<a href="#availability">Availability</a>';
+                    echo '</div>';
+                }
+                         
+                $video_url = get_post_meta( get_the_ID(), 'video', true );
+                if ( $video_url ) {
+                    echo '<div class="nav-item">';
+                        echo '<a href="#video">Video</a>';
+                    echo '</div>';
+                }
+                
+                $terms = get_the_terms( get_the_ID(), 'amenities' );
+                if ( $terms ) {
+                    echo '<div class="nav-item">';
+                        echo '<a href="#amenities">Amenities</a>';
+                    echo '</div>';
+                }
+                
+                echo '<div class="nav-item">';
+                    echo '<a href="#other">Other Communities</a>';
+                echo '</div>';
+                
+            echo '</div>';
+        
+        echo '</div>';
+    echo '</div>';
 }
 
 function tallgrass_properties_description() {
@@ -41,7 +84,7 @@ function tallgrass_properties_description() {
     if ( !$description )
         return;
     
-    echo '<div class="section-description">';
+    echo '<div class="section-description" id="overview">';
         echo '<div class="wrap">';
             echo '<div class="description-content">';
             
@@ -94,7 +137,7 @@ function tallgrass_properties_availability() {
     if ( !$availability_script )
         return;
     
-    echo '<div class="section-availability">';
+    echo '<div class="section-availability" id="availability">';
         echo '<div class="wrap">';
             echo '<h2>Availability</h2>';
             echo $availability_script;
@@ -110,25 +153,28 @@ function tallgrass_properties_video() {
     if ( !$video_url )
         return;
         
-    if (strpos($video_url, 'matterport') !== false) {
-    
-       echo '<div style="position: relative; width: 100%; max-width: 100%;">';
-            echo '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">';
-                printf('<iframe src="%s" width="100%%" height="100%%" frameborder="0" allowfullscreen allow="xr-spatial-tracking" style="position: absolute; top: 0; left: 0; width: 100%%; height: 100%%;"></iframe>', esc_url($video_url));
+    echo '<div id="video">';
+        
+        if (strpos($video_url, 'matterport') !== false) {
+        
+        echo '<div style="position: relative; width: 100%; max-width: 100%;">';
+                echo '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">';
+                    printf('<iframe src="%s" width="100%%" height="100%%" frameborder="0" allowfullscreen allow="xr-spatial-tracking" style="position: absolute; top: 0; left: 0; width: 100%%; height: 100%%;"></iframe>', esc_url($video_url));
+                echo '</div>';
             echo '</div>';
-        echo '</div>';
-        
-    } else {
-        // Get the oEmbed HTML for the video
-        $video_html = wp_oembed_get($video_url);
+            
+        } else {
+            // Get the oEmbed HTML for the video
+            $video_html = wp_oembed_get($video_url);
 
-        // Wrap the video HTML in a container with custom CSS
-        $video_html = '<div class="full-width-video">' . $video_html . '</div>';
+            // Wrap the video HTML in a container with custom CSS
+            $video_html = '<div class="full-width-video">' . $video_html . '</div>';
 
-        // Output the modified video HTML
-        echo $video_html;
-    }
+            // Output the modified video HTML
+            echo $video_html;
+        }
         
+    echo '</div>';
     
 }
 
@@ -144,9 +190,9 @@ function tallgrass_properties_amenities() {
     if ( !$terms )
         return;
     
-     echo '<div class="section-amenities">';
+     echo '<div class="section-amenities" id="amenities">';
         echo '<div class="wrap">';
-            echo '<h2 id="amenities">Amenities</h2>';
+            echo '<h2>Amenities</h2>';
             echo '<div class="amenities">';
                 foreach( $terms as $term ) {                
                     printf( '<div>%s</div>', esc_attr( $term->name ) );
@@ -198,7 +244,7 @@ function tallgrass_properties_area_amenities() {
 
 function tallgrass_properties_other_properties() {
     
-    echo '<div class="section-other-properties">';
+    echo '<div class="section-other-properties" id="other">';
         echo '<div class="wrap">';
         
             echo '<h2>Other Properties</h2>';

@@ -55,25 +55,27 @@ function ettt_enqueue_everything() {
         CHILD_THEME_VERSION,
         true
     );
-    
-    // // AOS init
-    // wp_enqueue_script(
-    //     'aos-script',
-    //     get_stylesheet_directory_uri() . '/js/aos-init.js',
-    //     array('aos-script'),
-    //     CHILD_THEME_VERSION,
-    //     true
-    // );
-    
+        
     // AOS style: https://michalsnik.github.io/aos/
     wp_enqueue_style(
         'aos-style',
         'https://unpkg.com/aos@2.3.1/dist/aos.css',
         array(),
         CHILD_THEME_VERSION
-    );    
+    );   
+    
+     wp_enqueue_script(
+        'smoothscroll',
+        get_stylesheet_directory_uri() . '/assets/js/smoothscroll.js',
+        array('jquery'),
+        CHILD_THEME_VERSION,
+        true
+    );
 
-    // Slick
+    ///////////
+    // Slick //
+    ///////////
+    
     wp_register_script(
         'slick-main-script',
         get_stylesheet_directory_uri() . '/vendor/slick/slick.min.js',
@@ -85,6 +87,14 @@ function ettt_enqueue_everything() {
     wp_register_script(
         'slick-single-property-slider-init',
         get_stylesheet_directory_uri() . '/assets/js/slick-single-property-slider-init.js',
+        array('slick-main-script'),
+        CHILD_THEME_VERSION,
+        true
+    );
+    
+    wp_register_script(
+        'slick-testimonials-slider-init',
+        get_stylesheet_directory_uri() . '/assets/js/slick-testimonials-slider-init.js',
         array('slick-main-script'),
         CHILD_THEME_VERSION,
         true
@@ -104,21 +114,9 @@ function ettt_enqueue_everything() {
         CHILD_THEME_VERSION
     );
     
-    // wp_enqueue_script(
-    //     'all-scripts',
-    //     get_stylesheet_directory_uri() . '/assets/dist/scripts.min.js',
-    //     array('jquery'),
-    //     CHILD_THEME_VERSION,
-    //     true
-    // );
-    
-    wp_enqueue_script(
-        'smoothscroll',
-        get_stylesheet_directory_uri() . '/assets/js/smoothscroll.js',
-        array('jquery'),
-        CHILD_THEME_VERSION,
-        true
-    );
+    ////////////
+    // SWIPER //
+    ////////////
     
     wp_register_script(
         'swiper-script',

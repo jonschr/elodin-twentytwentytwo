@@ -110,6 +110,52 @@ body.properties-template-default {
     }
 
     /* ==========================================================================
+       Nav
+       ========================================================================== */
+
+    .section-nav {
+        background-color: var(--base);
+
+        .nav-content {
+            margin: 0 auto;
+            text-align: center;
+
+            .nav-item {
+                display: inline-block;
+
+                @include mobile {
+                    display: block;
+                    width: 100%;
+                }
+
+                a {
+                    padding: 20px 30px;
+                    position: static;
+                    line-height: 1;
+                    display: block;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    margin-bottom: 5px;
+                    color: var(--contrast);
+                    text-decoration: none !important;
+                    margin: 0;
+
+                    &:hover {
+                        color: var(--accent);
+                    }
+
+                    @include mobile {
+                        padding: 20px;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ==========================================================================
        Description
        ========================================================================== */
 

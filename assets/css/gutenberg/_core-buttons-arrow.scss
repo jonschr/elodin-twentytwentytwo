@@ -1,0 +1,28 @@
+.wp-block-buttons {
+    .wp-block-button.is-style-arrow {
+        .wp-block-button__link {
+            padding: 15px 0 !important;
+            background-color: transparent !important;
+
+            &:after {
+                // background-color: red;
+                background-image: url(../images/arrow-right.svg);
+                background-position: center right;
+                background-size: auto 1.3em;
+                content: '';
+                width: 90px;
+                height: 1.3em;
+                display: inline-block;
+                transform: translateY(5px);
+                margin-left: 10px;
+                transition: 0.3s all ease;
+            }
+
+            &:hover {
+                &:after {
+                    width: 120px;
+                }
+            }
+        }
+    }
+}

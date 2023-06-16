@@ -72,15 +72,19 @@ wp.domReady(() => {
         },
     ]);
 
-    // wp.blocks.registerBlockStyle('core/heading', [
-    //     {
-    //         name: 'default',
-    //         label: 'Default',
-    //         isDefault: true,
-    //     },
-    //     {
-    //         name: 'red-line',
-    //         label: 'Red line',
-    //     },
-    // ]);
+    wp.blocks.registerBlockStyle('core/button', [
+        // {
+        //     name: 'default',
+        //     label: 'Default',
+        //     isDefault: true,
+        // },
+        {
+            name: 'arrow',
+            label: 'Arrow',
+        },
+        {
+            name: 'outline',
+            label: 'Outline',
+        },
+    ]);
 });

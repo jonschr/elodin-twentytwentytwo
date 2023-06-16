@@ -1,0 +1,147 @@
+/* ==========================================================================
+   Transparent header
+   ========================================================================== */
+
+body.properties-template-default {
+    .site-content {
+        display: block;
+
+        > :first-child {
+            &.section-hero {
+                @include desktop {
+                    margin-top: -$headerheightdesktop;
+                    padding-top: $headerheightdesktop * 1.5;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Markup
+   ========================================================================== */
+
+body.properties-template-default {
+    background-color: white;
+
+    .wrap {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* ==========================================================================
+       Hero
+       ========================================================================== */
+
+    .section-hero {
+        height: 90vh;
+        width: 100%;
+        background-color: black;
+        position: relative;
+
+        @include mobile {
+            height: 60vh;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            height: auto;
+            padding: 0;
+            background-size: cover;
+        }
+
+        .hero-content {
+            top: auto;
+            position: absolute;
+            bottom: 0;
+            padding: 0 25px 60px;
+            width: 100%;
+
+            @include mobile {
+                padding: 25px;
+            }
+
+            :last-child {
+                margin-bottom: 0;
+            }
+
+            h1 {
+                color: white;
+            }
+
+            a.directions-link {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+
+                .dashicons {
+                    transition: 0.3s all ease;
+                }
+
+                &:hover {
+                    .dashicons {
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+    }
+
+    /* ==========================================================================
+       Description
+       ========================================================================== */
+
+    .section-description {
+        text-align: center;
+        padding: 60px 25px;
+
+        @include mobile {
+            padding: 25px;
+        }
+
+        .description-content {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    /* ==========================================================================
+       Slider
+       ========================================================================== */
+
+    .section-slider {
+        background-color: var(--accent);
+        padding: 60px 25px;
+        text-align: center;
+
+        h2 {
+            color: white;
+        }
+    }
+
+    /* ==========================================================================
+       Availability 
+       ========================================================================== */
+
+    .section-availability {
+        padding: 120px 25px;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            padding: 25px;
+        }
+    }
+}
+
+/* ==========================================================================
+   Description
+   ========================================================================== */

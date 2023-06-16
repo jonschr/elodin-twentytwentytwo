@@ -1,5 +1,3 @@
-AOS.init();
-
 const swiper = new Swiper('.swiper', {
     speed: 400,
     autoHeight: false,

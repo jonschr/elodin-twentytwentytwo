@@ -1,0 +1,50 @@
+.tallgrass-properties-slider {
+    width: 100%;
+
+    .swiper {
+        // height: 300px;
+    }
+
+    .properties.type-properties {
+        padding: 0;
+        height: 382px;
+
+        .background-image {
+            position: absolute;
+            inset: 0;
+            height: auto;
+            padding: 0;
+        }
+    }
+}
+
+.properties-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .properties-swiper-button {
+        color: var(--accent);
+        padding: 20px;
+        cursor: pointer;
+
+        &.swiper-button-disabled {
+            color: gray;
+            opacity: 0.5;
+        }
+
+        &:hover {
+            color: var(--accent-2);
+        }
+    }
+    .properties-swiper-button-prev {
+    }
+}
+
+.featured-communities-title-wrap {
+    @media (min-width: 1025px) and (max-width: 1258px) {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+}

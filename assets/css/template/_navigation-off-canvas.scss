@@ -19,9 +19,12 @@
     }
 }
 
-body.first-block-is-section {
+body.first-block-is-section,
+body.properties-template-default {
     .gp-icon svg {
-        fill: white;
+        @include desktop {
+            fill: white;
+        }
     }
 
     .is_stuck {

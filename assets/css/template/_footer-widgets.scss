@@ -5,3 +5,35 @@
         padding: 25px;
     }
 }
+
+@include desktop {
+    body .inside-footer-widgets {
+        display: flex;
+        justify-content: space-between;
+
+        > div {
+            width: auto;
+            max-width: 20%;
+            margin: 0 10px;
+            flex: 0 1 auto;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+a.top {
+    display: inline-block;
+    text-align: center;
+
+    span {
+        display: block;
+        margin: 0 auto 5px auto !important;
+    }
+}

@@ -15,6 +15,10 @@ body.properties-template-default {
             }
         }
     }
+
+    .site-inner {
+        margin-top: 0 !important;
+    }
 }
 
 /* ==========================================================================
@@ -40,6 +44,18 @@ body.properties-template-default {
         background-color: black;
         position: relative;
 
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.89) 0%,
+                rgba(0, 0, 0, 0) 56%
+            );
+            z-index: 15;
+        }
+
         @include mobile {
             height: 60vh;
         }
@@ -50,6 +66,7 @@ body.properties-template-default {
             height: auto;
             padding: 0;
             background-size: cover;
+            z-index: 10;
         }
 
         .hero-content {
@@ -58,6 +75,7 @@ body.properties-template-default {
             bottom: 0;
             padding: 0 25px 60px;
             width: 100%;
+            z-index: 20;
 
             @include mobile {
                 padding: 25px;
@@ -101,6 +119,7 @@ body.properties-template-default {
 
         @include mobile {
             padding: 25px;
+            text-align: left;
         }
 
         .description-content {
@@ -115,12 +134,50 @@ body.properties-template-default {
        ========================================================================== */
 
     .section-slider {
-        background-color: var(--accent);
-        padding: 60px 25px;
+        padding: 25px 0;
         text-align: center;
 
-        h2 {
-            color: white;
+        @include mobile {
+            text-align: left;
+        }
+
+        .single-property-slider {
+            transition: 0.3s opacity ease;
+            &:not(.slick-initialized) {
+                opacity: 0;
+                height: 320px;
+            }
+
+            .slide {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .image {
+                height: 0;
+                padding-top: 55%;
+                width: 100%;
+                display: block;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+
+        .arrows {
+            margin-top: 20px;
+            text-align: center;
+
+            .single-property-prev,
+            .single-property-next {
+                background-color: transparent;
+                color: var(--accent);
+                transition: 0.3s all ease;
+                padding: 20px 10px;
+
+                &:hover {
+                    color: var(--accent-2);
+                }
+            }
         }
     }
 
@@ -132,12 +189,167 @@ body.properties-template-default {
         padding: 120px 25px;
         text-align: center;
 
+        @include mobile {
+            text-align: left;
+        }
+
         h2 {
-            margin-bottom: 40px;
+            @include desktop {
+                margin-bottom: 40px;
+            }
         }
 
         @include mobile {
             padding: 25px;
+        }
+    }
+
+    /* ==========================================================================
+       Tour
+       ========================================================================== */
+
+    .full-width-video {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (9 divided by 16) */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .full-width-video iframe,
+    .full-width-video object,
+    .full-width-video embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* ==========================================================================
+       Amenities
+       ========================================================================== */
+
+    .section-amenities {
+        padding: 60px 25px;
+        text-align: center;
+        background-color: var(--accent);
+        color: white;
+
+        @include mobile {
+            padding: 25px;
+            text-align: left;
+        }
+
+        .wrap {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .amenities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            text-align: left;
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    /* ==========================================================================
+       Checkerboard
+       ========================================================================== */
+
+    .section-checkerboard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include notdesktop {
+            grid-template-columns: 1fr;
+        }
+
+        .column {
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            min-height: 500px;
+
+            &.image {
+                @include notdesktop {
+                    order: 0;
+                    min-height: 200px;
+                }
+            }
+
+            &.content {
+                @include notdesktop {
+                    order: 1;
+                }
+
+                .content-wrap {
+                    max-width: 540px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                &:first-child {
+                    .content-wrap {
+                        margin-right: 0;
+                    }
+                }
+
+                &:last-child {
+                    .content-wrap {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            @include notdesktop {
+                padding: 25px;
+                min-height: auto;
+            }
+
+            .wrap {
+                max-width: 800px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .amenities {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                text-align: left;
+            }
+        }
+
+        .image {
+            background-color: gray;
+            position: relative;
+
+            .the-image {
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+    }
+
+    /* ==========================================================================
+       Other properties
+       ========================================================================== */
+
+    .section-other-properties {
+        padding: 120px 25px;
+        text-align: center;
+
+        @include mobile {
+            padding: 25px;
+            text-align: left;
         }
     }
 }

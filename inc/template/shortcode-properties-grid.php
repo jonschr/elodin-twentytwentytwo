@@ -4,10 +4,14 @@ function tallgrass_properties_grid_shortcode() {
     
     ob_start();
     
+    // order by menu_order
+    
     // Args for WP_Query
     $args = array(
         'post_type' => 'properties',
         'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
     );
 
     // Query

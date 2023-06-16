@@ -5,7 +5,7 @@ get_header();
 function tallgrass_properties_hero() {
     
     $title = get_the_title();
-    $property_images = rentfetch_get_property_images();
+    $property_images = rentfetch_get_property_images( array( 'size' => 'full' ) );
     $directions_link = get_post_meta( get_the_ID(), 'directions_link', true );
     
     echo '<div class="section-hero">';
@@ -37,6 +37,10 @@ function tallgrass_properties_description() {
     $state = get_post_meta( get_the_ID(), 'state', true );
     $description = apply_filters( 'the_content', get_post_meta( get_the_ID(), 'description', true ) );
     
+    // Bail if no description
+    if ( !$description )
+        return;
+    
     echo '<div class="section-description">';
         echo '<div class="wrap">';
             echo '<div class="description-content">';
@@ -52,8 +56,34 @@ function tallgrass_properties_description() {
 }
 
 function tallgrass_properties_slider() {
+    
+    $property_images = rentfetch_get_property_images( array( 'size' => 'large' ) );
+    $count = count( $property_images );
+    
+    // bail if we don't have enough images
+    if ( $count < 5 )
+        return;
+    
+    // drop the first image
+    array_shift( $property_images );
+        
+    wp_enqueue_script( 'slick-main-script' );
+    wp_enqueue_script( 'slick-single-property-slider-init' );
+    wp_enqueue_style( 'slick-main-styles' );
+    wp_enqueue_style( 'slick-main-theme');
+    
     echo '<div class="section-slider">';
-        echo '<h2>Slider goes here</h2>';
+        echo '<div class="single-property-slider">';
+            foreach( $property_images as $image ) {
+                printf( '<div class="slide"><div class="image" style="background-image:url(%s);"></div></div>', $image['url'] );
+            }            
+        echo '</div>';
+        
+        echo '<div class="arrows">';
+            echo '<button class="single-property-prev"><span class="dashicons dashicons-arrow-left-alt"></span></button>';
+            echo '<button class="single-property-next"><span class="dashicons dashicons-arrow-right-alt"></span></button>';
+        echo '</div>';
+        
     echo '</div>';
 }
 
@@ -74,25 +104,142 @@ function tallgrass_properties_availability() {
 
 function tallgrass_properties_video() {
     
+    $video_url = get_post_meta( get_the_ID(), 'video', true );
+        
+    // Bail if no video URL
+    if ( !$video_url )
+        return;
+        
+    if (strpos($video_url, 'matterport') !== false) {
+    
+       echo '<div style="position: relative; width: 100%; max-width: 100%;">';
+            echo '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">';
+                printf('<iframe src="%s" width="100%%" height="100%%" frameborder="0" allowfullscreen allow="xr-spatial-tracking" style="position: absolute; top: 0; left: 0; width: 100%%; height: 100%%;"></iframe>', esc_url($video_url));
+            echo '</div>';
+        echo '</div>';
+        
+    } else {
+        // Get the oEmbed HTML for the video
+        $video_html = wp_oembed_get($video_url);
+
+        // Wrap the video HTML in a container with custom CSS
+        $video_html = '<div class="full-width-video">' . $video_html . '</div>';
+
+        // Output the modified video HTML
+        echo $video_html;
+    }
+        
+    
 }
 
 function tallgrass_properties_floorplans() {
-    
+    rentfetch_single_property_floorplans();
 }
 
 function tallgrass_properties_amenities() {
     
+    $terms = get_the_terms( get_the_ID(), 'amenities' );
+    
+    // Bail if no terms
+    if ( !$terms )
+        return;
+    
+     echo '<div class="section-amenities">';
+        echo '<div class="wrap">';
+            echo '<h2 id="amenities">Amenities</h2>';
+            echo '<div class="amenities">';
+                foreach( $terms as $term ) {                
+                    printf( '<div>%s</div>', esc_attr( $term->name ) );
+                }
+            echo '</div>';
+        echo '</div>';
+    echo '</div>';
 }
 
 function tallgrass_properties_community_amenities() {
+    $community_amenities = apply_filters( 'the_content', get_post_meta( get_the_ID(), 'community_amenities', true ) );
+    
+    if ( !$community_amenities )
+        return;
+        
+    echo '<div class="section-community-amenities section-checkerboard">';
+        echo '<div class="image column">';
+            echo '<div class="the-image" style="background-image:url(/wp-content/uploads/2023/06/community-amenities.jpg);"></div>';
+        echo '</div>';
+        echo '<div class="content column">';
+            echo '<div class="content-wrap">';
+                echo '<h2>Community Amenities</h2>';
+                echo $community_amenities;
+            echo '</div>';
+        echo '</div>';
+    echo '</div>';
     
 }
 
 function tallgrass_properties_area_amenities() {
+   $area_amenities = apply_filters( 'the_content', get_post_meta( get_the_ID(), 'area_amenities', true ) );
+    
+    if ( !$area_amenities )
+        return;
+        
+    echo '<div class="section-community-amenities section-checkerboard">';
+        echo '<div class="content column">';
+            echo '<div class="content-wrap">';
+                echo '<h2>Area Amenities</h2>';
+                echo $area_amenities;
+            echo '</div>';
+        echo '</div>';
+        echo '<div class="image column">';
+            echo '<div class="the-image" style="background-image:url(/wp-content/uploads/2023/06/area-amenities.jpg);"></div>';
+        echo '</div>';
+    echo '</div>';
     
 }
 
 function tallgrass_properties_other_properties() {
+    
+    echo '<div class="section-other-properties">';
+        echo '<div class="wrap">';
+        
+            echo '<h2>Other Properties</h2>';
+    
+            // order rand
+            
+            
+            // Args for WP_Query
+            $args = array(
+                'post_type' => 'properties',
+                'posts_per_page' => 3,
+                'not__in' => array( get_the_ID() ),
+                'orderby' => 'rand',
+            );
+
+            // Query
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) {
+                
+                // Output
+                echo '<div class="tallgrass-properties-grid">';
+                
+                    while ($query->have_posts()) {
+                        $query->the_post();
+                                        
+                        do_action( 'tallgrass_properties_do_each' );
+                        
+                    }
+                
+                echo '</div>';
+                
+            } else {
+                echo 'No properties found.';
+            }
+
+            // Reset Post Data
+            wp_reset_postdata();
+            
+        echo '</div>';
+    echo '</div>';
     
 }
 

@@ -11,20 +11,20 @@ function scrolldown_shortcode() {
     
     ?>
     <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(document).ready(function() {
-                $('.scrolldown').click(function(event) {
-                    event.preventDefault();
+        // jQuery(document).ready(function($) {
+        //     $(document).ready(function() {
+        //         $('.scrolldown').click(function(event) {
+        //             event.preventDefault();
 
-                    var target = $(this).attr('href');
-                    var headerHeight = $('header').outerHeight(); // Get the height of the header element
+        //             var target = $(this).attr('href');
+        //             var headerHeight = $('header').outerHeight(); // Get the height of the header element
 
-                    $('html, body').animate({
-                    scrollTop: $(target).offset().top - headerHeight // Subtract header height from the scroll position
-                    }, 1000);
-                });
-            });
-        });
+        //             $('html, body').animate({
+        //             scrollTop: $(target).offset().top - headerHeight // Subtract header height from the scroll position
+        //             }, 1000);
+        //         });
+        //     });
+        // });
     </script>
     <?php
     

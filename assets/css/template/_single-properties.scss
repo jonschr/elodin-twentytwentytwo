@@ -272,6 +272,44 @@ body.properties-template-default {
     }
 
     /* ==========================================================================
+       Floorplans
+       ========================================================================== */
+
+    .wrap-floorplans {
+        background-color: var(--base);
+        padding: 120px 25px;
+
+        .floorplans-wrap {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            summary {
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+                padding: 20px 30px;
+
+                h3 {
+                    font-family: 'Montserrat';
+                    font-size: 18px;
+                }
+            }
+
+            h3.floorplan-title {
+                font-family: 'Montserrat';
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            .floorplan-rent-range {
+                display: none;
+            }
+        }
+    }
+
+    /* ==========================================================================
        Amenities
        ========================================================================== */
 

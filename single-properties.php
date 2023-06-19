@@ -194,8 +194,10 @@ function tallgrass_properties_amenities() {
         echo '<div class="wrap">';
             echo '<h2>Amenities</h2>';
             echo '<div class="amenities">';
-                foreach( $terms as $term ) {                
-                    printf( '<div>%s</div>', esc_attr( $term->name ) );
+                foreach( $terms as $term ) {        
+                    
+                    $icon = get_field( 'amenities_image', $term );
+                    printf( '<div><div class="icon" style="background-image:url(%s);"></div>%s</div>', $icon['url'], esc_attr( $term->name ) );
                 }
             echo '</div>';
         echo '</div>';

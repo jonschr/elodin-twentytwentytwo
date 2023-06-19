@@ -319,6 +319,12 @@ body.properties-template-default {
         background-color: var(--accent);
         color: white;
 
+        h2 {
+            @include desktop {
+                margin-bottom: 40px;
+            }
+        }
+
         @include mobile {
             padding: 25px;
             text-align: left;
@@ -333,8 +339,21 @@ body.properties-template-default {
         .amenities {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            gap: 20px;
             text-align: left;
+
+            > div {
+                align-items: center;
+                display: flex;
+            }
+
+            div.icon {
+                height: 30px;
+                width: 30px;
+                margin-right: 10px;
+                background-size: contain;
+                display: inline-block;
+            }
 
             @include mobile {
                 grid-template-columns: 1fr;

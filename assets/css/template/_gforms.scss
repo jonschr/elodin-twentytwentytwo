@@ -94,14 +94,15 @@ body .gform_wrapper.gravity-theme {
         input.gform_button {
             @extend .btn;
             border: none !important;
-            background-color: var(--accent-2s) !important;
+            background-color: var(--accent-2) !important;
             min-height: 47px !important;
 
             margin-bottom: 0;
             cursor: pointer;
 
             &:hover {
-                background-color: var(--accent-3) !important;
+                background-color: var(--base) !important;
+                color: var(--accent) !important;
             }
         }
     }

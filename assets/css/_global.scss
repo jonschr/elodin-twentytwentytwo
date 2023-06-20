@@ -52,3 +52,52 @@ $wide: 1200px;
         @content;
     }
 }
+
+/* ==========================================================================
+   Font
+   ========================================================================== */
+
+@font-face {
+    font-family: 'clar';
+    src: url('../font/ClarendonLTStd.woff2') format('woff2'),
+        url('../font/ClarendonLTStd.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nimbus';
+    src: url('../font/NimbusSanL-Reg.woff2') format('woff2'),
+        url('../font/NimbusSanL-Reg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nimbus';
+    src: url('../font/NimbusSanL-Bol.woff2') format('woff2'),
+        url('../font/NimbusSanL-Bol.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nimbus';
+    src: url('../font/NimbusSanL-RegIta.woff2') format('woff2'),
+        url('../font/NimbusSanL-RegIta.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nimbus';
+    src: url('../font/NimbusSanL-BolIta.woff2') format('woff2'),
+        url('../font/NimbusSanL-BolIta.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}

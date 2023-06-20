@@ -9,7 +9,7 @@ body .gform_wrapper.gravity-theme {
     }
 
     .gfield_required_text {
-        color: var(--accent);
+        color: var(--base);
     }
 
     .ginput_container {
@@ -91,13 +91,18 @@ body .gform_wrapper.gravity-theme {
 
     .gform_footer,
     #field_submit {
-        input.gform-button {
+        input.gform_button {
             @extend .btn;
             border: none !important;
+            background-color: var(--accent-2s) !important;
             min-height: 47px !important;
 
             margin-bottom: 0;
             cursor: pointer;
+
+            &:hover {
+                background-color: var(--accent-3) !important;
+            }
         }
     }
 }

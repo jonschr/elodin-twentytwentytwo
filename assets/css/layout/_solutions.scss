@@ -1,0 +1,89 @@
+.solutions-wrap {
+    .solution-wrap-inner {
+        display: grid;
+        row-gap: 40px;
+
+        @include mobile {
+            row-gap: 30px;
+        }
+
+        .solution {
+            background-color: white;
+            box-shadow: $boxshadow;
+            margin: 0;
+            border-radius: 3px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            position: relative;
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+
+            .overlay {
+                position: absolute;
+                inset: 0;
+                background-color: var(--blue-transparent);
+                opacity: 0;
+                transition: 0.3s all ease;
+
+                &:before {
+                    content: 'Read more';
+                    position: absolute;
+                    left: 50%;
+                    top: 80%;
+                    transform: translateX(-50%) translateY(-50%);
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    color: white;
+                    font-size: 15px;
+                    font-weight: bold;
+                    opacity: 0;
+                    transition: 0.3s all ease;
+                }
+            }
+
+            .featured-image {
+                background-color: var(--contrast-2);
+                background-position: center center;
+                background-size: 75px auto;
+                background-repeat: no-repeat;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+
+                @include mobile {
+                    height: 125px;
+                    width: 100%;
+                    border-radius: 0;
+                    border-top-left-radius: 3px;
+                    border-top-right-radius: 3px;
+                    background-size: 50px auto;
+                }
+            }
+
+            .content-wrap {
+                padding: 30px;
+            }
+
+            h3 {
+                margin-bottom: 10px;
+            }
+
+            .excerpt {
+                line-height: 1.4em;
+                font-size: 16px;
+            }
+        }
+
+        .solution:hover {
+            .overlay {
+                opacity: 1;
+
+                &:before {
+                    top: 50%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

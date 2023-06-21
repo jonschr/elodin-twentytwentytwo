@@ -21,18 +21,23 @@
 :where(.entry-content > .gb-container),
 :where(.gb-is-root-block > .gb-container),
 :where(.gb-root-block-generateblocks-container > .gb-container),
-:where(.block-library-block__reusable-block-container > .gb-container) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+:where(.block-library-block__reusable-block-container > .gb-container),
+:where(.prefooter > .gb-container) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-left: 25px;
+    margin-right: 25px;
 
     @include tablet {
-        padding-top: 45px;
-        padding-bottom: 45px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     @include mobile {
         padding-top: 25px;
         padding-bottom: 25px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

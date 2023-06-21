@@ -1,0 +1,41 @@
+.loop-layout-das_services.loop-container {
+    justify-content: center;
+    margin-bottom: -20px;
+
+    @include mobile {
+        justify-content: flex-start;
+    }
+
+    .entry {
+        padding: 20px;
+        width: 220px;
+        text-align: center;
+        margin: 20px 0;
+        position: relative;
+        background-color: transparent;
+
+        @include mobile {
+            width: calc(100% / 2 - 20px);
+            padding: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .featured-image {
+            width: 100px;
+            height: 100px;
+            background-color: var(--contrast-2);
+            margin: 0 auto 15px;
+            border-radius: 100%;
+            background-size: 50px auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+}

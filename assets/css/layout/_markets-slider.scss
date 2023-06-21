@@ -1,0 +1,55 @@
+.loop-layout-markets_slider.loop-container {
+    .entry {
+        padding: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        position: relative;
+        border-radius: 3px;
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 3px;
+        }
+
+        .featured-image {
+            padding-top: 75%;
+            width: 100%;
+            display: block;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 3px;
+        }
+
+        .content-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(black, 0.8));
+            padding: 30px 10px 10px;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        h3 {
+            color: white;
+            font-size: 18px;
+        }
+    }
+
+    .slick-dots {
+        bottom: -40px;
+
+        li button {
+            &:before {
+                font-size: 20px;
+                color: var(--contrast-2);
+            }
+        }
+    }
+}

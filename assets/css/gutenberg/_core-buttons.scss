@@ -14,9 +14,12 @@
     display: inline-block !important;
     position: static;
     border-radius: 3px;
+    background-color: var(--accent);
+    color: white;
 
     &:hover {
-        filter: brightness(102%);
+        background-color: var(--accent-2);
+        color: white;
     }
 
     @include mobile {

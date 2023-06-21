@@ -52,3 +52,52 @@ $wide: 1200px;
         @content;
     }
 }
+
+/* ==========================================================================
+   Font
+   ========================================================================== */
+
+@font-face {
+    font-family: 'bit';
+    src: url('../font/Bitsumishi.woff2') format('woff2'),
+        url('../font/Bitsumishi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('../font/AvenirNextLTPro-Bold.woff2') format('woff2'),
+        url('../font/AvenirNextLTPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('../font/AvenirNextLTPro-It.woff2') format('woff2'),
+        url('../font/AvenirNextLTPro-It.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('../font/AvenirNextLTPro-Regular.woff2') format('woff2'),
+        url('../font/AvenirNextLTPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'noa';
+    src: url('../font/NoaLTStd-Regular.woff2') format('woff2'),
+        url('../font/NoaLTStd-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -33,7 +33,9 @@
    Make title black
    ========================================================================== */
 
-body.post-type-page {
+body.post-type-page,
+body.post-type-services,
+body.post-type-markets {
     .edit-post-visual-editor__post-title-wrapper {
         @extend .make-title-black;
     }
@@ -50,11 +52,34 @@ body.post-type-post {
 }
 
 /* ==========================================================================
+   Markets show layout
+   ========================================================================== */
+
+body.post-type-markets {
+    .is-root-container {
+        &:before {
+            content: '';
+            height: 0;
+            background-color: red;
+            position: static;
+            display: block;
+            width: 100%;
+            padding-top: 69%;
+            background-image: url('../images/market-admin-header.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+
+/* ==========================================================================
    Cross out title
    ========================================================================== */
 
 body.content-title-hidden,
-body.post-type-page {
+body.post-type-page,
+body.post-type-services {
     .edit-post-visual-editor__post-title-wrapper {
         @extend .cross-out-title;
     }

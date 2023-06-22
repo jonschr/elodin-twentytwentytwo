@@ -1,3 +1,13 @@
 body.separate-containers .featured-image {
     margin-top: 0;
 }
+
+body .site-content {
+    display: block;
+}
+
+body.blog {
+    .site-content {
+        display: flex;
+    }
+}

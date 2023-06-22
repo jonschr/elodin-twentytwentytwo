@@ -1,0 +1,101 @@
+body.single-markets {
+    background-color: white;
+
+    .entry-content {
+        margin: 0;
+    }
+
+    .wrap {
+        margin: 0 auto;
+    }
+
+    .markets-intro-wrap {
+        background-color: var(--base);
+        width: 100%;
+        border-bottom: 10px solid var(--accent);
+        position: relative;
+        padding: 90px 25px;
+
+        @include tablet {
+            padding: 60px 25px;
+        }
+
+        @include mobile {
+            padding: 25px;
+        }
+
+        h1 {
+            color: var(--contrast-2);
+        }
+
+        .featured-image {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center center;
+            z-index: 5;
+            filter: saturate(0);
+            opacity: 0.15;
+        }
+
+        @include desktop {
+            text-align: center;
+        }
+
+        .wrap {
+            max-width: 700px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .excerpt {
+            margin-bottom: 20px;
+
+            @include desktop {
+                font-size: 21px;
+            }
+        }
+    }
+
+    .markets-projects-wrap {
+        background-color: var(--contrast-2);
+        padding: 90px 25px;
+
+        @include tablet {
+            padding: 60px 25px;
+        }
+
+        @include mobile {
+            padding: 25px;
+        }
+
+        .wrap {
+            max-width: 1200px;
+        }
+
+        h4.recently-completed {
+            color: white !important;
+
+            a {
+                color: white !important;
+            }
+        }
+    }
+
+    .markets-solutions-wrap {
+        background-color: var(--base);
+        padding: 90px 25px;
+
+        @include tablet {
+            padding: 60px 25px;
+        }
+
+        @include mobile {
+            padding: 25px;
+        }
+
+        .wrap {
+            max-width: 960px;
+        }
+    }
+}

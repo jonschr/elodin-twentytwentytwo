@@ -89,12 +89,41 @@ body .gform_wrapper.gravity-theme {
         margin: 0 !important;
     }
 
+    input.gform_button,
     input.gform-button {
         @extend .btn;
 
+        background-color: var(--accent) !important;
+        color: white !important;
         text-transform: uppercase !important;
 
         margin-bottom: 0;
         cursor: pointer;
+
+        &:hover {
+            background-color: var(--accent-2);
+        }
+    }
+}
+
+.gb-container-511b9c79 {
+    p {
+        display: none;
+    }
+}
+
+#gform_fields_2 {
+    p {
+        display: none;
+    }
+
+    input.gform-button {
+        height: 47px !important;
+        padding: 0 !important;
+        background-color: var(--accent-3) !important;
+
+        &:hover {
+            background-color: var(--accent-4);
+        }
     }
 }

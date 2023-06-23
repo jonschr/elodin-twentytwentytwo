@@ -1,0 +1,65 @@
+.loop-container.loop-layout-simple {
+    h3 {
+        margin-bottom: 5px;
+    }
+
+    .featured-image {
+        margin-top: 0;
+    }
+
+    p.date {
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: rgba(black, 0.5);
+    }
+
+    p {
+        font-size: 17px;
+        line-height: 1.4em;
+    }
+
+    .readmore {
+        margin-top: 15px;
+
+        .btn {
+            background-color: var(--accent-3);
+            color: white;
+            padding: 8px 20px !important;
+
+            &:hover {
+                background-color: var(--accent-4);
+            }
+        }
+    }
+
+    .entry {
+        padding: 0;
+        box-shadow: $boxshadow;
+        background-color: white;
+    }
+
+    .info {
+        padding: 30px;
+    }
+
+    @include desktop {
+        .loop-item-inner {
+            display: flex;
+            justify-content: center;
+
+            .featured-image {
+                width: 300px;
+                display: block;
+                background-size: cover;
+                background-position: center center;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+
+            .info {
+                width: calc(100% - 300px);
+                // min-height: 250px;
+            }
+        }
+    }
+}

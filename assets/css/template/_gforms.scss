@@ -105,25 +105,3 @@ body .gform_wrapper.gravity-theme {
         }
     }
 }
-
-.gb-container-511b9c79 {
-    p {
-        display: none;
-    }
-}
-
-#gform_fields_2 {
-    p {
-        display: none;
-    }
-
-    input.gform-button {
-        height: 47px !important;
-        padding: 0 !important;
-        background-color: var(--accent-3) !important;
-
-        &:hover {
-            background-color: var(--accent-4);
-        }
-    }
-}

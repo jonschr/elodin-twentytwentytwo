@@ -1,0 +1,53 @@
+#gform_3 {
+    #field_3_7 {
+        .ginput_container {
+            margin-top: 10px;
+        }
+
+        span.ginput_price {
+            display: none;
+        }
+
+        .gfield_checkbox,
+        .gfield_radio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            input {
+                display: none;
+            }
+
+            label {
+                background-color: var(--accent);
+                padding: 15px;
+                border-radius: 3px;
+                display: block;
+                text-align: center;
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                cursor: pointer;
+            }
+
+            input:checked + label,
+            label:hover {
+                background-color: var(--accent-2);
+            }
+        }
+    }
+
+    input.ginput_total {
+        padding: 0;
+        background-color: transparent;
+        color: white;
+    }
+}

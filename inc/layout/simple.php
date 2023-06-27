@@ -20,7 +20,8 @@ function elodin_simple_each() {
 	$content = apply_filters( 'the_content', apply_filters( 'the_content', get_the_content() ) );
     $excerpt = apply_filters( 'the_content', apply_filters( 'the_content', get_the_excerpt() ) );
 	$background = get_the_post_thumbnail_url( get_the_ID(), 'large' );
-    $date = human_time_diff( get_the_modified_time('U') );
+    $date = human_time_diff( get_the_time('U') );
+
     
     $wordcount = str_word_count( $content );
     // $date = get_the_date();

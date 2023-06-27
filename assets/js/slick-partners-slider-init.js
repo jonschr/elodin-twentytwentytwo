@@ -1,5 +1,3 @@
-AOS.init();
-
 jQuery(document).ready(function ($) {
     $('.partners-slider').slick({
         dots: false,

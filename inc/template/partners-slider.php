@@ -11,6 +11,20 @@ function partners_footer() {
     
     if ($partners_query->have_posts()) {
         
+        ?>
+        <style>
+            body {
+                padding-bottom: 55px;
+            }
+        </style>
+        <?php
+        
+        // Slick
+        wp_enqueue_script( 'slick-main-script' );
+        wp_enqueue_script( 'slick-partners-slider-init' );
+        wp_enqueue_style( 'slick-main-styles' );
+        wp_enqueue_style( 'slick-main-theme' );
+        
         echo '<div class="partners-footer">';
             echo '<div class="partners-wrap">';
                 echo '<div class="partners-slider">';
@@ -19,23 +33,32 @@ function partners_footer() {
                         
                         $partners_query->the_post();
                         
-                        echo '<div class="partner-item">';
-                            echo '<div class="partner-item-inner">';
-                        
-                                //* Global vars
-                                global $post;
-                                $id = get_the_ID();
+                        //* Global vars
+                        global $post;
+                        $id = get_the_ID();
 
-                                //* Vars
-                                $title = get_the_title();
-                                $permalink = get_the_permalink();
-                                $content = apply_filters( 'the_content', apply_filters( 'the_content', get_the_content() ) );
-                                $background = get_the_post_thumbnail_url( get_the_ID(), 'large' );
+                        //* Vars
+                        $title = get_the_title();
+                        $permalink = get_the_permalink();
+                        $content = apply_filters( 'the_content', apply_filters( 'the_content', get_the_content() ) );
+                        $background = get_the_post_thumbnail_url( get_the_ID(), 'large' );
+                        
+                        // Get the featured image ID
+                        $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+
+                        // Get the 'medium' size image URL
+                        $image_url = wp_get_attachment_image_src($thumbnail_id, 'medium');
+                        
+                        if ( !$background )
+                            continue;
+                                                    
+                        echo '<div class="partner-item">';
+                                // Output the image HTML
+                                echo '<img class="partner-image" src="' . $image_url[0] . '" alt="Featured Image">';
             
-                                if ( $background ) 
-                                    printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
+                                // if ( $background ) 
+                                //     printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
                             
-                            echo '</div>';
                         echo '</div>';
                         
                     }
@@ -51,7 +74,7 @@ function partners_footer() {
     ?>
     <script type="text/javascript">
         jQuery(window).on('load', function( $ ) {
-            // silence            
+            
         });
     </script>
     <?php

@@ -1,0 +1,29 @@
+.partners-footer {
+    background-color: red;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 25px 0;
+    z-index: 50;
+
+    .partners-wrap {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .partner-item {
+        max-width: 150px;
+
+        .partner-item-inner {
+            .featured-image {
+                padding-top: 45%;
+                width: 100%;
+                height: 0;
+                background-size: contain;
+                background-position: center center;
+                margin: 0;
+            }
+        }
+    }
+}

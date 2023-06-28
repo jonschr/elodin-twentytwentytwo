@@ -43,10 +43,11 @@
 
             .endorsement-content {
                 padding: 20px 25px;
-                border-radius: 8px;
+                border-radius: 0;
                 background-color: var(--base);
                 margin-bottom: 25px;
                 position: relative;
+                box-shadow: -8px -8px 0 0 var(--accent);
 
                 p {
                     color: var(--contrast-2);

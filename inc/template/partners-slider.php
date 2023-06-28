@@ -1,6 +1,10 @@
 <?php
 
 function partners_footer() {
+    
+    // bail if this is the front page
+    if ( is_front_page() )
+        return;
                 
     $args = array(
         'post_type' => 'partners',

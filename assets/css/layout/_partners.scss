@@ -6,6 +6,17 @@
     padding: 15px 0;
     z-index: 50;
 
+    .partners-slider {
+        opacity: 0;
+        transition: 0.5s opacity ease;
+        height: 25px;
+
+        &.slick-initialized {
+            opacity: 1;
+            height: auto;
+        }
+    }
+
     .partners-wrap {
         margin: 0 auto;
         width: 100%;

@@ -206,13 +206,20 @@ function tallgrass_properties_amenities() {
 
 function tallgrass_properties_community_amenities() {
     $community_amenities = apply_filters( 'the_content', get_post_meta( get_the_ID(), 'community_amenities', true ) );
+    $community_amenities_image = get_post_meta( get_the_ID(), 'community_amenities_image', true );
+    
+    if ( $community_amenities_image ) {
+        $community_amenities_image = wp_get_attachment_image_url( $community_amenities_image, 'large' );
+    } else {
+        $community_amenities_image = '/wp-content/uploads/2023/06/community-amenities.jpg';
+    }
     
     if ( !$community_amenities )
         return;
         
     echo '<div class="section-community-amenities section-checkerboard">';
         echo '<div class="image column">';
-            echo '<div class="the-image" style="background-image:url(/wp-content/uploads/2023/06/community-amenities.jpg);"></div>';
+            printf( '<div class="the-image" style="background-image:url(%s);"></div>', $community_amenities_image );
         echo '</div>';
         echo '<div class="content column">';
             echo '<div class="content-wrap">';
@@ -226,6 +233,13 @@ function tallgrass_properties_community_amenities() {
 
 function tallgrass_properties_area_amenities() {
    $area_amenities = apply_filters( 'the_content', get_post_meta( get_the_ID(), 'area_amenities', true ) );
+   $area_amenities_image = get_post_meta( get_the_ID(), 'area_amenities_image', true );
+    
+    if ( $area_amenities_image ) {
+        $area_amenities_image = wp_get_attachment_image_url( $area_amenities_image, 'large' );
+    } else {
+        $area_amenities_image = '/wp-content/uploads/2023/06/area-amenities.jpg';
+    }
     
     if ( !$area_amenities )
         return;
@@ -238,7 +252,7 @@ function tallgrass_properties_area_amenities() {
             echo '</div>';
         echo '</div>';
         echo '<div class="image column">';
-            echo '<div class="the-image" style="background-image:url(/wp-content/uploads/2023/06/area-amenities.jpg);"></div>';
+            printf( '<div class="the-image" style="background-image:url(%s);"></div>', $area_amenities_image );
         echo '</div>';
     echo '</div>';
     

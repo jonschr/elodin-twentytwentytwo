@@ -110,6 +110,10 @@ function ettt_enqueue_everything() {
         CHILD_THEME_VERSION
     );
     
+    wp_register_script( 'velocity', get_stylesheet_directory_uri() . '/assets/js/velocity.min.js', array( 'jquery' ), null );
+    wp_register_script( 'velocityui', get_stylesheet_directory_uri() . '/assets/js/velocity.ui.min.js', array( 'velocity' ), null );
+    wp_register_script( 'page-scroll', get_stylesheet_directory_uri() . '/assets/js/page-scroll.js', array( 'velocityui' ), null );
+    
     // wp_enqueue_script(
     //     'all-scripts',
     //     get_stylesheet_directory_uri() . '/assets/dist/scripts.min.js',

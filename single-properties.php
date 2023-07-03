@@ -106,9 +106,12 @@ function tallgrass_properties_slider() {
     // bail if we don't have enough images
     if ( $count < 5 )
         return;
-    
+        
     // drop the first image
     array_shift( $property_images );
+    
+    wp_enqueue_style( 'rentfetch-fancybox-style' );
+    wp_enqueue_script( 'rentfetch-fancybox-script' );
         
     wp_enqueue_script( 'slick-main-script' );
     wp_enqueue_script( 'slick-single-property-slider-init' );
@@ -118,7 +121,7 @@ function tallgrass_properties_slider() {
     echo '<div class="section-slider">';
         echo '<div class="single-property-slider">';
             foreach( $property_images as $image ) {
-                printf( '<div class="slide"><div class="image" style="background-image:url(%s);"></div></div>', $image['url'] );
+                printf( '<div class="slide"><div class="image" style="background-image:url(%s);"><a data-fancybox="single-properties" class="overlay" href="%s"></a></div></div>', $image['url'], $image['url'] );
             }            
         echo '</div>';
         
@@ -131,16 +134,30 @@ function tallgrass_properties_slider() {
 }
 
 function tallgrass_properties_availability() {
-    
+        
     $availability_script = get_post_meta( get_the_ID(), 'availability_script', true );
+    $availability_headline = get_post_meta( get_the_ID(), 'availability_headline', true );
+    $gravity_forms_shortcode = get_post_meta( get_the_ID(), 'gravity_forms_shortcode', true );
+    $choose_availability_functionality = get_post_meta( get_the_ID(), 'choose_availability_functionality', true );
+        
+    if ( !$availability_headline ) 
+        $availability_headline = 'Availability';
     
-    if ( !$availability_script )
+    if ( !$availability_script && !$gravity_forms_shortcode )
         return;
     
     echo '<div class="section-availability" id="availability">';
         echo '<div class="wrap">';
-            echo '<h2>Availability</h2>';
-            echo $availability_script;
+            printf( '<h2>%s</h2>', $availability_headline );
+                        
+            if ( $choose_availability_functionality == 'script' || !$choose_availability_functionality ) {
+                echo $availability_script;
+            } elseif ( $choose_availability_functionality == 'gform' ) {
+                echo '<div class="form-wrap">';
+                    echo do_shortcode( $gravity_forms_shortcode );
+                echo '</div>';
+            }
+                
         echo '</div>';
     echo '</div>';
 }

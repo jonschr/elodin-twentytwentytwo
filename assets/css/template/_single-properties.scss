@@ -206,6 +206,12 @@ body.properties-template-default {
                 display: block;
                 background-size: cover;
                 background-position: center center;
+                position: relative;
+
+                .overlay {
+                    position: absolute;
+                    inset: 0;
+                }
             }
         }
 
@@ -247,6 +253,17 @@ body.properties-template-default {
 
         @include mobile {
             padding: 25px;
+        }
+
+        .form-wrap {
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+            padding: 30px;
+            background-color: var(--base);
+            border-radius: 3px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.05);
         }
     }
 

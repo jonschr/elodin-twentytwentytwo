@@ -57,7 +57,7 @@ function solutions_each( $id ) {
     
     printf( '<a href="%s" class="overlay"></a>', $permalink );
 	
-    if ( $background ) 
+    // if ( $background ) 
         printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
         
     echo '<div class="content-wrap">';

@@ -1,0 +1,23 @@
+blockquote.wp-block-quote.is-style-default {
+    padding: 0;
+    border: none;
+    font-style: normal;
+
+    p {
+        font-style: italic;
+    }
+
+    cite {
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 10px;
+        font-family: bit;
+        font-style: normal;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

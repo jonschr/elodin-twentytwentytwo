@@ -16,6 +16,15 @@
             grid-template-columns: 200px 1fr;
             position: relative;
 
+            .post-edit-link {
+                position: relative;
+                z-index: 30;
+
+                &:hover {
+                    color: white;
+                }
+            }
+
             @include mobile {
                 grid-template-columns: 1fr;
             }
@@ -50,6 +59,9 @@
                 background-repeat: no-repeat;
                 border-top-left-radius: 3px;
                 border-bottom-left-radius: 3px;
+                position: relative;
+                z-index: 30;
+                transition: background-color 0.3s ease;
 
                 @include mobile {
                     height: 125px;
@@ -83,6 +95,14 @@
                     top: 50%;
                     opacity: 1;
                 }
+            }
+
+            .featured-image {
+                // background-color: var(--accent-2);
+            }
+
+            .post-edit-link {
+                color: white;
             }
         }
     }

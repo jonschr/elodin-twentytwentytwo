@@ -1,0 +1,11 @@
+.site-header .inside-header {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .site-logo {
+        margin-top: -35px;
+        margin-bottom: -25px;
+        position: relative;
+        z-index: 50;
+    }
+}

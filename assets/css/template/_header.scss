@@ -9,3 +9,35 @@
         z-index: 50;
     }
 }
+
+.sticky-navigation-logo {
+    // position: relative;
+
+    img.is-logo-image {
+        height: 100px;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+    }
+}
+
+.site-logo.mobile-header-logo {
+    img.is-logo-image {
+        height: 100px;
+        position: absolute;
+        z-index: 999;
+        top: -10px;
+    }
+}
+
+#mobile-menu {
+    .menu[aria-hidden='false'] {
+        padding-top: 30px;
+    }
+}
+
+#secondary-navigation {
+    @include notdesktop {
+        display: none;
+    }
+}

@@ -9,7 +9,7 @@ body .gform_wrapper.gravity-theme {
     }
 
     .gfield_required_text {
-        color: var(--accent);
+        color: red;
     }
 
     .ginput_container {
@@ -21,7 +21,7 @@ body .gform_wrapper.gravity-theme {
         }
     }
 
-    input:not([type='submit']),
+    input:not([type='submit']):not([type='checkbox']):not([type='radio']),
     select {
         min-height: 47px;
     }
@@ -85,8 +85,8 @@ body .gform_wrapper.gravity-theme {
     }
 
     .gform_footer.before {
-        padding: 0 !important;
-        margin: 0 !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
     }
 
     .gform_footer,

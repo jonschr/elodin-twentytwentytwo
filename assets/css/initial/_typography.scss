@@ -32,3 +32,11 @@ h3 {
         margin-top: 0;
     }
 }
+
+.has-text-color a {
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+    }
+}

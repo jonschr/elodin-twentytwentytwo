@@ -38,6 +38,8 @@ function ettt_gutenberg_assets() {
 add_action( 'wp_enqueue_scripts', 'ettt_enqueue_everything' );
 function ettt_enqueue_everything() {
     
+    wp_enqueue_style( 'dashicons' );
+    
     // Theme styles
 	wp_enqueue_style( 'theme-styles', get_bloginfo( 'stylesheet_directory') . '/assets/dist/theme-style.css', array(), CHILD_THEME_VERSION );
 	    

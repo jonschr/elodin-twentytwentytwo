@@ -8,8 +8,12 @@ body .gform_wrapper.gravity-theme {
         margin-bottom: 0;
     }
 
+    .gform_fields {
+        grid-row-gap: 30px;
+    }
+
     .gfield_required_text {
-        color: var(--accent);
+        color: var(--red-dark);
     }
 
     .ginput_container {
@@ -21,16 +25,56 @@ body .gform_wrapper.gravity-theme {
         }
     }
 
-    input:not([type='submit']),
+    span.ginput_price {
+        opacity: 0.5;
+        font-size: 0.8em;
+    }
+
+    input:not([type='submit']):not([type='checkbox']):not([type='radio']),
     select {
         min-height: 47px;
     }
 
-    input:not([type='submit']),
+    input:not([type='submit']):not([type='button']),
     textarea,
     select {
         background-color: white;
+        border: 1px solid #e8eaec;
         color: var(--contrast);
+    }
+
+    .gchoice {
+        margin-bottom: 8px;
+
+        &:first-child {
+            margin-top: 8px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            font-size: 16px !important;
+        }
+    }
+
+    .gsection {
+        // border-bottom: 1px solid var(--red) !important;
+        margin-bottom: 15px !important;
+        // padding-bottom: 15px !important;
+
+        .gsection_title {
+            margin-bottom: 10px !important;
+        }
+
+        .gsection_description {
+            font-style: italic;
+            margin-bottom: 0;
+            padding: 5px 15px !important;
+            background-color: #e8eaec;
+            border-radius: 20px;
+        }
     }
 
     // Description
@@ -48,6 +92,10 @@ body .gform_wrapper.gravity-theme {
                 margin-bottom: 0;
             }
         }
+    }
+
+    .gfield_label {
+        font-weight: 700;
     }
 
     // Description
@@ -85,8 +133,8 @@ body .gform_wrapper.gravity-theme {
     }
 
     .gform_footer.before {
-        padding: 0 !important;
-        margin: 0 !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
     }
 
     .gform_footer,
@@ -99,5 +147,14 @@ body .gform_wrapper.gravity-theme {
             margin-bottom: 0;
             cursor: pointer;
         }
+    }
+
+    .gform_page_footer {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .gf_progressbar_percentage.percentbar_red {
+        background-color: var(--red-dark);
     }
 }

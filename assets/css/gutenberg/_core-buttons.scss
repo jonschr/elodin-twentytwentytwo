@@ -71,3 +71,15 @@
 .read-more.button {
     @extend .btn;
 }
+
+input[type='button'].button {
+    @extend .btn;
+
+    background-color: var(--accent) !important;
+    color: white !important;
+
+    &:hover {
+        background-color: var(--accent-2) !important;
+        color: white !important;
+    }
+}

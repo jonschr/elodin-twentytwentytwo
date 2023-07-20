@@ -1,0 +1,43 @@
+.site-header .inside-header {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .site-logo {
+        margin-top: -70px;
+        margin-bottom: -60px;
+        position: relative;
+        z-index: 50;
+    }
+}
+
+.sticky-navigation-logo {
+    // position: relative;
+
+    img.is-logo-image {
+        height: 150px;
+        position: absolute;
+        z-index: 999;
+        top: -40px;
+    }
+}
+
+.site-logo.mobile-header-logo {
+    img.is-logo-image {
+        height: 100px;
+        position: absolute;
+        z-index: 999;
+        top: -10px;
+    }
+}
+
+#mobile-menu {
+    .menu[aria-hidden='false'] {
+        padding-top: 30px;
+    }
+}
+
+#secondary-navigation {
+    @include notdesktop {
+        display: none;
+    }
+}

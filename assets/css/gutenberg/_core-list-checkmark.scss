@@ -10,7 +10,7 @@ ol.is-style-checkmark {
     > li {
         position: relative;
         list-style: none;
-        padding-left: 40px;
+        padding-left: 30px;
         margin-bottom: 8px;
         line-height: 1.4;
 
@@ -31,7 +31,51 @@ ol.is-style-checkmark {
             // transform: translateY(5px);
             left: 0;
             top: 0;
-            color: var(--accent);
+            color: var(--red-dark);
+        }
+
+        > ul,
+        > ol {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+ul.is-style-checkmark-white,
+ol.is-style-checkmark-white {
+    margin-left: 0;
+    padding-left: 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    > li {
+        position: relative;
+        list-style: none;
+        padding-left: 30px;
+        margin-bottom: 8px;
+        line-height: 1.4;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include mobile {
+            padding-left: 30px;
+        }
+
+        &:before {
+            content: '\f147';
+            font-family: 'dashicons';
+            font-size: 1.5em;
+            position: absolute;
+            line-height: 1em;
+            // transform: translateY(5px);
+            left: 0;
+            top: 0;
+            color: var(--white);
         }
 
         > ul,

@@ -70,6 +70,10 @@ wp.domReady(() => {
             name: 'checkmark',
             label: 'Checkmark',
         },
+        {
+            name: 'checkmark-white',
+            label: 'Checkmark (white)',
+        },
     ]);
 
     // wp.blocks.registerBlockStyle('core/heading', [

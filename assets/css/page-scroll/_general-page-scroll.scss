@@ -3,6 +3,8 @@
    ========================================================================== */
 
 body.page-scroll-animations {
+    background-color: black;
+
     &:before {
         /* never visible - this is used in jQuery to check the current MQ */
         content: 'mobile';
@@ -30,7 +32,7 @@ body.page-scroll-animations {
 body.page-scroll-animations {
     .cd-vertical-nav {
         position: fixed;
-        z-index: 1;
+        z-index: 10000;
         right: 3%;
         top: 50%;
         bottom: auto;
@@ -50,17 +52,25 @@ body.page-scroll-animations {
             height: 40px;
             width: 40px;
             overflow: hidden;
-            text-indent: 100%;
+            text-decoration: none;
+            // text-indent: 100%;
             white-space: nowrap;
-            background-color: red;
+            // background-color: red;
+            color: white;
+            font-family: dashicons;
+            font-size: 40px;
+
+            span.dashicons {
+                font-size: 40px;
+            }
 
             &.cd-prev {
-                -webkit-transform: rotate(180deg);
-                -moz-transform: rotate(180deg);
-                -ms-transform: rotate(180deg);
-                -o-transform: rotate(180deg);
-                transform: rotate(180deg);
-                margin-bottom: 10px;
+                // -webkit-transform: rotate(180deg);
+                // -moz-transform: rotate(180deg);
+                // -ms-transform: rotate(180deg);
+                // -o-transform: rotate(180deg);
+                // transform: rotate(180deg);
+                margin-bottom: 20px;
             }
 
             &.inactive {
@@ -91,19 +101,19 @@ body.page-scroll-animations {
 }
 
 .cd-section:first-of-type > div {
-    background-color: #2b334f;
+    background-color: black;
 }
 .cd-section:nth-of-type(2) > div {
-    background-color: #2e5367;
+    background-color: black;
 }
 .cd-section:nth-of-type(3) > div {
-    background-color: #267481;
+    background-color: black;
 }
 .cd-section:nth-of-type(4) > div {
-    background-color: #fcb052;
+    background-color: black;
 }
 .cd-section:nth-of-type(5) > div {
-    background-color: #f06a59;
+    background-color: black;
 }
 
 /*

@@ -1,0 +1,190 @@
+.scene-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 300px;
+    color: black;
+    text-align: center;
+}
+
+[data-depth] {
+    position: absolute;
+    // background-color: red;
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.scene-container-1 {
+    .background {
+        background-image: url('/wp-content/uploads/2023/07/theatre-section-1.jpg');
+        background-size: cover;
+        background-position: center center;
+        left: -2.5%;
+        top: -2.5%;
+        height: 105%;
+        width: 105%;
+    }
+    .smoke {
+        background-image: url('/wp-content/uploads/2023/07/smoke-section-1.png');
+        background-size: cover;
+        background-position: center center;
+        left: -2.5%;
+        top: -7%;
+        height: 90%;
+        width: 105%;
+        opacity: 0.9;
+    }
+
+    .curtains {
+        background-image: url('/wp-content/uploads/2023/07/curtains.png');
+        background-size: 100% 100%;
+        background-position: center center;
+        left: -5%;
+        right: -7.5%;
+        top: -5%;
+        height: 105%;
+        width: 114%;
+        pointer-events: none;
+    }
+
+    img.mirror-left {
+        left: 18%;
+        bottom: 17.5%;
+        width: 10%;
+        min-width: 100px;
+        height: auto !important;
+        box-shadow: 0 10px 20px 0 rgba(black, 0.5);
+    }
+
+    img.mirror-right {
+        right: 18%;
+        bottom: 17.5%;
+        width: 10%;
+        min-width: 100px;
+        height: auto !important;
+        box-shadow: 0 10px 20px 0 rgba(black, 0.5);
+    }
+
+    img.text {
+        top: 15%;
+        left: 32.5%;
+        width: 35%;
+        height: auto !important;
+    }
+}
+
+.scene-container-2 {
+    .background {
+        background-image: url('/wp-content/uploads/2023/07/back-2.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        left: -2.5%;
+        top: -2.5%;
+        height: 105%;
+        width: 105%;
+    }
+
+    .curtains-left {
+        left: 0;
+        top: 0;
+        width: 15%;
+        height: auto !important;
+        pointer-events: none;
+    }
+
+    .curtains-right {
+        right: -5%;
+        top: 0;
+        width: 15%;
+        height: auto !important;
+        pointer-events: none;
+    }
+
+    img.text {
+        top: 22.5%;
+        left: 32.5%;
+        width: 35%;
+        height: auto !important;
+    }
+
+    img.sword {
+        right: 3%;
+        width: 23%;
+        height: auto !important;
+        bottom: 5%;
+    }
+
+    img.bull {
+        left: 5%;
+        width: 23%;
+        height: auto !important;
+        bottom: 5%;
+    }
+
+    img.chand {
+        width: 15%;
+        height: auto !important;
+        top: 0%;
+        left: 42.5%;
+    }
+}
+
+.scene-container-3 {
+    .background {
+        background-image: url('/wp-content/uploads/2023/07/table.jpg');
+        background-size: cover;
+        background-position: center center;
+        left: -2.5%;
+        top: -2.5%;
+        height: 105%;
+        width: 105%;
+    }
+
+    .smoke {
+        background-image: url('/wp-content/uploads/2023/07/snoke.png');
+        background-size: cover;
+        background-position: center right;
+        left: -5%;
+        top: -5%;
+        height: 110%;
+        width: 110%;
+    }
+
+    img.cards {
+        height: auto !important;
+        width: 35%;
+        right: 15%;
+        top: 35%;
+    }
+
+    img.book {
+        height: auto !important;
+        left: 20%;
+        width: 25%;
+        top: 17.5%;
+    }
+
+    img.coin {
+        height: auto !important;
+        left: 45%;
+        width: 5%;
+        top: 30%;
+    }
+
+    img.cups {
+        height: auto !important;
+        right: 20%;
+        width: 30%;
+        top: 10%;
+    }
+}

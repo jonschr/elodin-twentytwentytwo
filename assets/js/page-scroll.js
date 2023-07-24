@@ -346,7 +346,7 @@ jQuery(document).ready(function ($) {
                 animationVisible = 'translateUp.delay';
                 break;
             case 'opacity':
-                animDuration = 700;
+                animDuration = 1000; // change
                 animationTop = 'hide.scaleUp';
                 animationBottom = 'hide.scaleDown';
                 break;
@@ -662,11 +662,11 @@ jQuery.Velocity.RegisterEffect('translateUp.delay', {
 //opacity
 jQuery.Velocity.RegisterEffect('hide.scaleUp', {
     defaultDuration: 1,
-    calls: [[{ opacity: '0', scale: '1.2' }, 1]],
+    calls: [[{ opacity: '0', scale: '2' }, 1]], // change the scale value to 1.2 to reestablish the original size
 });
 jQuery.Velocity.RegisterEffect('hide.scaleDown', {
     defaultDuration: 1,
-    calls: [[{ opacity: '0', scale: '0.8' }, 1]],
+    calls: [[{ opacity: '0', scale: '0.2' }, 1]], // change the scale value to 0.8 to reestablish the original size
 });
 //parallax
 jQuery.Velocity.RegisterEffect('translateUp.half', {

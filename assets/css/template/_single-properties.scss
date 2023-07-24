@@ -350,7 +350,18 @@ body.properties-template-default {
             }
 
             .floorplan-rent-range {
-                display: none;
+                @include desktop {
+                    width: 100%;
+                    max-width: 300px;
+                }
+
+                a.button {
+                    @extend .btn;
+                }
+
+                p.rent_range {
+                    display: none;
+                }
             }
         }
     }

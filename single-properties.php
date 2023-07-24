@@ -196,7 +196,91 @@ function tallgrass_properties_video() {
 }
 
 function tallgrass_properties_floorplans() {
-    rentfetch_single_property_floorplans();
+    
+    // bail if this section isn't set to display
+    $single_property_components = get_field( 'single_property_components', 'option' );
+    if ( $single_property_components['enable_floorplans_display'] === false )
+        return;
+        
+    // bail if this property doesn't have an ID
+    if ( !get_post_meta( get_the_ID(), 'property_id', true ) )
+        return;
+    
+    
+    // bail if this property doesn't have any floorplans
+    $floorplans = get_posts( array(
+        'post_type' => 'floorplans',
+        'posts_per_page' => -1,
+        'meta_query' => array(
+            array(
+                'key' => 'property_id',
+                'value' => get_post_meta( get_the_ID(), 'property_id', true ),
+                'compare' => '='
+            )
+        )
+    ) );
+    
+    if ( !$floorplans )
+        return;
+    
+    // looks like we're doing this...
+    
+    global $post;
+    
+    $id = esc_attr( get_the_ID() );
+    $property_id = esc_attr( get_post_meta( $id, 'property_id', true ) );
+    
+    // grab the gravity forms lightbox, if enabled on this page
+    do_action( 'rentfetch_do_gform_lightbox' );
+    
+    // get the possible values for the beds
+    $beds = rentfetch_get_meta_values( 'beds', 'floorplans' );
+    $beds = array_unique( $beds );
+    asort( $beds );
+    
+    echo '<div class="wrap-floorplans single-properties-section"><div class="floorplans-wrap single-properties-section-wrap" id="floorplans">';
+    
+        echo '<h2>Floorplans</h2>';
+    
+        // loop through each of the possible values, so that we can do markup around that
+        foreach( $beds as $bed ) {
+            
+            $args = array(
+                'post_type' => 'floorplans',
+                'posts_per_page' => -1,
+                'orderby' => 'meta_value_num',
+                'meta_key' => 'beds',
+                'order' => 'ASC',
+                'meta_query' => array(
+                    array(
+                        'key'   => 'property_id',
+                        'value' => $property_id,
+                    ),
+                    array(
+                        'key' => 'beds',
+                        'value' => $bed,
+                    ),
+                ),
+            );
+            
+            $floorplans_query = new WP_Query( $args );
+                
+            if ( $floorplans_query->have_posts() ) {
+                echo '<h3>';
+                    echo apply_filters( 'rentfetch_get_bedroom_number_label', $label = null, $bed );
+                echo '</h3>';
+                echo '<div class="floorplan-in-archive">';
+                    while ( $floorplans_query->have_posts() ) : $floorplans_query->the_post(); 
+                        do_action( 'rentfetch_do_floorplan_in_archive', $post->ID );                    
+                    endwhile;
+                echo '</div>'; // .floorplans
+                
+            }
+            
+            wp_reset_postdata();
+        }
+    
+    echo '</div></div>';
 }
 
 function tallgrass_properties_amenities() {

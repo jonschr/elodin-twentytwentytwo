@@ -298,10 +298,37 @@ body.properties-template-default {
         background-color: var(--base);
         padding: 120px 25px;
 
+        h2 {
+            @include notmobile {
+                margin-bottom: 40px;
+            }
+        }
+
         .floorplans-wrap {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+
+            .floorplan-in-archive {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .floorplans {
+                margin-bottom: 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+
+            .floorplan-slider {
+                background-color: white;
+                border-radius: 3px;
+                box-shadow: $boxshadow;
+            }
 
             summary {
                 background-color: white;

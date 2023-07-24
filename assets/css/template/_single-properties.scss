@@ -162,6 +162,8 @@ body.properties-template-default {
     .section-description {
         text-align: center;
         padding: 60px 25px;
+        background-color: var(--accent);
+        color: white;
 
         @include mobile {
             padding: 25px;

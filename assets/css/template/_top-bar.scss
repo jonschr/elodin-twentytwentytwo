@@ -1,21 +1,27 @@
 div.top-bar {
+    justify-content: flex-end;
+    margin-right: 0 !important;
+
+    a {
+        &:hover {
+            color: var(--contrast-3);
+        }
+    }
+
+    @include mobile {
+        justify-content: center;
+    }
     .inside-top-bar {
-        justify-content: flex-end;
+        // .widget {
+        //     &:first-child {
+        //         margin-left: 0 !important;
+        //         margin-right: auto;
+        //     }
 
-        @include mobile {
-            justify-content: center;
-        }
-
-        .widget {
-            &:first-child {
-                margin-left: 0 !important;
-                margin-right: auto;
-            }
-
-            &:last-child {
-                margin-right: 0 !important;
-            }
-        }
+        //     &:last-child {
+        //         margin-right: 0 !important;
+        //     }
+        // }
     }
     p {
         margin-bottom: 0;

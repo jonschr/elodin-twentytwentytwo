@@ -140,7 +140,7 @@ jQuery(document).ready(function ($) {
 
         visibleSection
             .children('div')
-            .velocity(animationVisible, 1, function () {
+            .velocity(animationVisible, 5, function () {
                 visibleSection.css('opacity', 1);
                 topSection.css('opacity', 1);
                 bottomSection.css('opacity', 1);
@@ -346,7 +346,7 @@ jQuery(document).ready(function ($) {
                 animationVisible = 'translateUp.delay';
                 break;
             case 'opacity':
-                animDuration = 1000; // change
+                animDuration = 3000; // change
                 animationTop = 'hide.scaleUp';
                 animationBottom = 'hide.scaleDown';
                 break;
@@ -657,16 +657,16 @@ jQuery.Velocity.RegisterEffect('scaleUp.moveDown', {
 //catch up
 jQuery.Velocity.RegisterEffect('translateUp.delay', {
     defaultDuration: 1,
-    calls: [[{ translateY: '0%' }, 0.8, { delay: 100 }]],
+    calls: [[{ translateY: '0%' }, 0.2, { delay: 500 }]],
 });
 //opacity
 jQuery.Velocity.RegisterEffect('hide.scaleUp', {
     defaultDuration: 1,
-    calls: [[{ opacity: '0', scale: '2' }, 1]], // change the scale value to 1.2 to reestablish the original size
+    calls: [[{ opacity: '0', scale: '4' }, 1]], // change the scale value to 1.2 to reestablish the original size
 });
 jQuery.Velocity.RegisterEffect('hide.scaleDown', {
     defaultDuration: 1,
-    calls: [[{ opacity: '0', scale: '0.2' }, 1]], // change the scale value to 0.8 to reestablish the original size
+    calls: [[{ opacity: '0', scale: '0.4' }, 1]], // change the scale value to 0.8 to reestablish the original size
 });
 //parallax
 jQuery.Velocity.RegisterEffect('translateUp.half', {

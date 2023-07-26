@@ -44,32 +44,12 @@ gulp.task('editor-style', function () {
         .pipe(gulp.dest('assets/dist/'));
 });
 
-//! JAVASCRIPT
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
-
-//script paths
-var jsFiles = 'assets/js/**/*.js',
-    jsDest = 'assets/dist/';
-
-gulp.task('scripts', function () {
-    return gulp
-        .src(jsFiles)
-        .pipe(concat('scripts.js'))
-        .pipe(gulp.dest(jsDest))
-        .pipe(rename('scripts.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(jsDest));
-});
-
 //* Watchers
 gulp.task('dev', function () {
     gulp.watch(
         'assets/css/**/*.scss',
         gulp.series(['style-dev', 'gutenberg-style', 'editor-style'])
     );
-    gulp.watch('assets/js/**/*.js', gulp.series(['scripts']));
 });
 
 gulp.task('prod', function () {
@@ -77,7 +57,6 @@ gulp.task('prod', function () {
         'assets/css/**/*.scss',
         gulp.series(['style-prod', 'gutenberg-style', 'editor-style'])
     );
-    gulp.watch('assets/js/**/*.js', gulp.series(['scripts']));
 });
 
 //* Set the default task to dev

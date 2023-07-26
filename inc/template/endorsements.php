@@ -38,8 +38,13 @@ function endorsements_loop_shortcode() {
                         //* Markup
                         echo '<blockquote class="endorsement">';
                         
-                            if ( $content )
-                                printf( '<div class="endorsement-content">%s</div>', $content );
+                            if ( $content ) {
+                                echo '<div class="endorsement-content">';
+                                    echo $content;
+                                    edit_post_link( 'Edit endorsement', '<small>', '</small>' );
+                                echo '</div>';
+                                
+                            }
                                                             
                             if ( $title ) {
                                 echo '<figcaption>';

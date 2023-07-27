@@ -48,17 +48,20 @@ gulp.task('editor-style', function () {
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var path = require('path');
 
 //script paths
-var jsFiles = 'assets/js/**/*.js',
-    jsDest = 'assets/dist/';
+var jsFiles = 'assets/js/**/*.js';
+var jsDest = 'assets/dist/';
 
 gulp.task('scripts', function () {
     return gulp
         .src(jsFiles)
-        .pipe(concat('scripts.js'))
-        .pipe(gulp.dest(jsDest))
-        .pipe(rename('scripts.min.js'))
+        .pipe(
+            rename(function (path) {
+                path.basename += '.min';
+            })
+        )
         .pipe(uglify())
         .pipe(gulp.dest(jsDest));
 });

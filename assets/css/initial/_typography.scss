@@ -32,3 +32,9 @@ h3 {
         margin-top: 0;
     }
 }
+
+.gb-container {
+    @include mobile {
+        text-align: left;
+    }
+}

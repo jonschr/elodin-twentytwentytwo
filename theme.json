@@ -12,22 +12,22 @@
             "fontSizes": [
                 {
                     "slug": "small",
-                    "size": "14px",
+                    "size": "15px",
                     "name": "Small"
                 },
                 {
                     "slug": "normal",
-                    "size": "18px",
+                    "size": "17px",
                     "name": "Normal"
                 },
                 {
                     "slug": "large",
-                    "size": "24px",
+                    "size": "22px",
                     "name": "Large"
                 },
                 {
                     "slug": "larger",
-                    "size": "29px",
+                    "size": "25px",
                     "name": "Larger"
                 }
             ]

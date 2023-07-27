@@ -1,4 +1,8 @@
 body.full-width-content.first-block-is-section {
+    .site-header {
+        z-index: 999;
+    }
+
     @include desktop {
         .site-header {
             background-color: transparent;
@@ -9,7 +13,7 @@ body.full-width-content.first-block-is-section {
         }
 
         .main-navigation.navigation-clone {
-            background-color: white;
+            background-color: var(--contrast);
         }
 
         .main-navigation:not(.navigation-clone) .main-nav > ul > li > a {

@@ -70,6 +70,10 @@ wp.domReady(() => {
             name: 'checkmark',
             label: 'Checkmark',
         },
+        {
+            name: 'red',
+            label: 'Red',
+        },
     ]);
 
     // wp.blocks.registerBlockStyle('core/heading', [

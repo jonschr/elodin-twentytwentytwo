@@ -63,6 +63,8 @@
 .gform_footer input[type='submit'] {
     @extend .btn;
 
+    border-radius: 3px;
+
     &:last-child {
         margin-bottom: 0;
         margin-right: 0;

@@ -8,6 +8,10 @@ body .gform_wrapper.gravity-theme {
         margin-bottom: 0;
     }
 
+    .gform_required_legend {
+        display: none;
+    }
+
     .gfield_required_text {
         color: var(--accent);
     }

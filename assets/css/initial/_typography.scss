@@ -35,6 +35,23 @@ h3 {
 
 .gb-container {
     @include mobile {
-        text-align: left;
+        text-align: left !important;
+    }
+}
+
+p.has-small-font-size {
+    letter-spacing: 0.1em;
+}
+
+/* ==========================================================================
+   Shadow
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+p {
+    &.has-white-color {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
     }
 }

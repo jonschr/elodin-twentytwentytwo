@@ -59,31 +59,31 @@ function ettt_enqueue_everything() {
         true
     );
     
-    // // AOS script: https://michalsnik.github.io/aos/
-    // wp_enqueue_script(
-    //     'aos-script',
-    //     'https://unpkg.com/aos@2.3.1/dist/aos.js',
-    //     array('jquery'),
-    //     CHILD_THEME_VERSION,
-    //     true
-    // );
+    // AOS script: https://michalsnik.github.io/aos/
+    wp_enqueue_script(
+        'aos-script',
+        'https://unpkg.com/aos@2.3.1/dist/aos.js',
+        array('jquery'),
+        CHILD_THEME_VERSION,
+        true
+    );
     
-    // // AOS init
-    // wp_enqueue_script(
-    //     'aos-script',
-    //     get_stylesheet_directory_uri() . '/assets/dist/aos-init.js',
-    //     array('aos-script'),
-    //     CHILD_THEME_VERSION,
-    //     true
-    // );
+    // AOS init
+    wp_enqueue_script(
+        'aos-init',
+        get_stylesheet_directory_uri() . '/assets/dist/aos-init.min.js',
+        array('aos-script'),
+        CHILD_THEME_VERSION,
+        true
+    );
     
-    // // AOS style: https://michalsnik.github.io/aos/
-    // wp_enqueue_style(
-    //     'aos-style',
-    //     'https://unpkg.com/aos@2.3.1/dist/aos.css',
-    //     array(),
-    //     CHILD_THEME_VERSION
-    // );    
+    // AOS style: https://michalsnik.github.io/aos/
+    wp_enqueue_style(
+        'aos-style',
+        'https://unpkg.com/aos@2.3.1/dist/aos.css',
+        array(),
+        CHILD_THEME_VERSION
+    );    
 
     // Slick
     wp_register_script(

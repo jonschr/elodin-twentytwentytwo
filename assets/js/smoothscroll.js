@@ -1,55 +1,69 @@
 jQuery(document).ready(function ($) {
-    $("a[href^='#']").on('click', function (event) {
-        event.preventDefault();
-        var target = document.querySelector(event.target.getAttribute('href'));
+    $(".smooth-scroll[href^='#'], .menu-item > a[href^='#']").on(
+        'click',
+        function (event) {
+            event.preventDefault();
+            var target = document.querySelector(
+                this.href.substring(this.href.indexOf('#'))
+            );
 
-        if (target) {
-            var offset = target.offsetTop;
-            $('html, body').animate({ scrollTop: offset }, 'slow', function () {
-                // Add the "active" class to the clicked anchor link
-                $(
-                    "a[href='" + event.target.getAttribute('href') + "']"
-                ).addClass('active');
-            });
+            if (target) {
+                var offset = target.offsetTop;
+                $('html, body').animate(
+                    { scrollTop: offset },
+                    'slow',
+                    function () {
+                        $(
+                            ".smooth-scroll[href='" +
+                                target.id +
+                                "'], .menu-item > a[href='" +
+                                target.id +
+                                "']"
+                        ).addClass('active');
+                    }
+                );
+            }
         }
-    });
+    );
 
     $(window).on('scroll', function () {
         var scrollPosition = $(window).scrollTop();
         var closestTarget = null;
         var closestDistance = Infinity;
 
-        $("a[href^='#']").each(function () {
-            var target = document.querySelector($(this).attr('href'));
+        $(".smooth-scroll[href^='#'], .menu-item > a[href^='#']").each(
+            function () {
+                var target = document.querySelector(
+                    this.href.substring(this.href.indexOf('#'))
+                );
 
-            if (target) {
-                var targetOffset = target.offsetTop;
-                var targetHeight = $(target).outerHeight();
+                if (target) {
+                    var targetOffset = target.offsetTop;
+                    var targetHeight = $(target).outerHeight();
+                    var distance = Math.abs(scrollPosition - targetOffset);
 
-                var distance = Math.abs(scrollPosition - targetOffset);
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestTarget = $(this);
+                    }
 
-                if (distance < closestDistance) {
-                    closestDistance = distance;
-                    closestTarget = $(this);
-                }
-
-                if (
-                    scrollPosition >= targetOffset &&
-                    scrollPosition < targetOffset + targetHeight
-                ) {
-                    // Remove the "active" class from all anchor links
-                    $("a[href^='#']").removeClass('active');
-                    // Add the "active" class to the anchor link pointing to the in-view element
-                    $(this).addClass('active');
+                    if (
+                        scrollPosition >= targetOffset &&
+                        scrollPosition < targetOffset + targetHeight
+                    ) {
+                        $(
+                            ".smooth-scroll[href^='#'], .menu-item > a[href^='#']"
+                        ).removeClass('active');
+                        $(this).addClass('active');
+                    }
                 }
             }
-        });
+        );
 
-        // Add the "active" class to the closest anchor link to the scroll position if no in-view element found
         if (!closestTarget.hasClass('active')) {
-            // Remove the "active" class from all anchor links
-            $("a[href^='#']").removeClass('active');
-            // Add the "active" class to the closest anchor link
+            $(
+                ".smooth-scroll[href^='#'], .menu-item > a[href^='#']"
+            ).removeClass('active');
             closestTarget.addClass('active');
         }
     });

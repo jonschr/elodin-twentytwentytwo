@@ -4,4 +4,18 @@
     @include mobile {
         padding: 25px;
     }
+
+    .widget_nav_menu {
+        li {
+            a {
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 800;
+
+                &:hover {
+                    color: var(--accent);
+                }
+            }
+        }
+    }
 }

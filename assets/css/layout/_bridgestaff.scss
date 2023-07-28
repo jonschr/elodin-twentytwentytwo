@@ -1,0 +1,96 @@
+.loop-container.loop-layout-bridgestaff {
+    margin-top: 0;
+    padding-top: 0;
+
+    .entry {
+        .featured-image {
+            background-color: black;
+            height: 0;
+            padding-top: 100%;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 3px;
+            position: relative;
+
+            .overlay-link {
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                text-transform: uppercase;
+                text-decoration: none;
+                text-align: center;
+                background-color: rgba(red, 0.8);
+                opacity: 0;
+                border-radius: 3px;
+                transition: 0.5s all ease;
+
+                span.overlay-text {
+                    display: block;
+                    line-height: 1.2;
+                    transform: translateY(200%);
+                    opacity: 0;
+                    transition: 0.5s all ease;
+                }
+            }
+        }
+
+        .more-link-wrap {
+            padding: 15px 0;
+            text-align: center;
+
+            h3 {
+                margin-bottom: 5px;
+            }
+
+            span.jobtitle {
+                font-size: 15px;
+                letter-spacing: 0.1em;
+            }
+
+            p.contact {
+                margin-top: 15px;
+                margin-bottom: 0;
+
+                a {
+                    text-decoration: none;
+
+                    &.linkedin {
+                        color: #6dc3e8;
+
+                        &:hover {
+                            color: var(--accent);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .entry:hover {
+        .featured-image {
+            .overlay-link {
+                opacity: 1;
+
+                span.overlay-text {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+.fancybox__container .staff-content {
+    p.phone {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    a.button {
+        @extend .btn;
+
+        border-radius: 3px;
+    }
+}

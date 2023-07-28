@@ -76,15 +76,19 @@ wp.domReady(() => {
         },
     ]);
 
-    // wp.blocks.registerBlockStyle('core/heading', [
-    //     {
-    //         name: 'default',
-    //         label: 'Default',
-    //         isDefault: true,
-    //     },
-    //     {
-    //         name: 'red-line',
-    //         label: 'Red line',
-    //     },
-    // ]);
+    wp.blocks.registerBlockStyle('core/separator', [
+        {
+            name: 'default',
+            label: 'Default',
+            isDefault: true,
+        },
+        {
+            name: 'small',
+            label: 'Small',
+        },
+    ]);
+
+    wp.domReady(function () {
+        wp.blocks.unregisterBlockStyle('core/separator', 'dots'); // Unregister the 'checkmark' style
+    });
 });

@@ -1,0 +1,12 @@
+ul.is-style-red {
+    padding-left: 0;
+    margin-left: 20px;
+
+    li {
+        margin-left: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--accent);
+        font-size: 16px;
+    }
+}

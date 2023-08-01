@@ -7,8 +7,8 @@ let timeoutId = null;
 // Function to run on mouse move
 function handleMouseMove(e) {
     const { width, height } = container.getBoundingClientRect();
-    const x = e.clientX / width;
-    const y = e.clientY / height;
+    const x = (e.clientX - width / 2) / width;
+    const y = (e.clientY - height / 2) / height;
 
     // For each layer, create an animation to the mouse position
     layers.forEach((layer) => {

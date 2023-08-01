@@ -9,6 +9,22 @@ body.page-scroll-animations {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        .full {
+            background-size: cover;
+            background-position: center center;
+            left: -2.5%;
+            top: -2.5%;
+            height: 105%;
+            width: 105%;
+
+            &[data-depth='1'] {
+                left: -7.5%;
+                top: -5%;
+                height: 115%;
+                width: 115%;
+            }
+        }
     }
 
     h1 {
@@ -59,10 +75,6 @@ body.page-scroll-animations {
         }
     }
 
-    // .dot:hover {
-    //     background-color: white;
-    // }
-
     .pulse {
         position: absolute;
         top: 0;
@@ -90,69 +102,14 @@ body.page-scroll-animations {
     }
 
     .scene-container-1 {
-        .background {
-            background-image: url('/wp-content/uploads/2023/07/theatre-section-1.jpg');
-            background-size: cover;
-            background-position: center center;
-            left: -2.5%;
-            top: -2.5%;
-            height: 105%;
-            width: 105%;
-        }
-        .smoke {
-            background-image: url('/wp-content/uploads/2023/07/smoke-section-1.png');
-            background-size: cover;
-            background-position: center center;
-            left: -2.5%;
-            top: -7%;
-            height: 90%;
-            width: 105%;
-            opacity: 0.9;
-        }
-
-        .curtains {
-            background-image: url('/wp-content/uploads/2023/07/curtains.png');
-            background-size: cover;
-            background-position: center center;
-            left: -5%;
-            right: -7.5%;
-            top: -5%;
-            height: 105%;
-            width: 114%;
-            pointer-events: none;
-        }
-
-        img.mirror-left {
-            left: 18%;
-            bottom: 17.5%;
-            width: 10%;
-            min-width: 100px;
-            height: auto !important;
-        }
-
         .dot-mirror-left {
             left: 20%;
             bottom: 50%;
         }
 
-        img.mirror-right {
-            right: 18%;
-            bottom: 17.5%;
-            width: 10%;
-            min-width: 100px;
-            height: auto !important;
-        }
-
         .dot-mirror-right {
             right: 19%;
             bottom: 25%;
-        }
-
-        img.text {
-            top: 15%;
-            left: 32.5%;
-            width: 35%;
-            height: auto !important;
         }
     }
 
@@ -168,58 +125,80 @@ body.page-scroll-animations {
         }
 
         .curtains-left {
-            left: 0;
-            top: 0;
+            left: -50px;
+            top: -50px;
             width: 15%;
             height: auto !important;
             pointer-events: none;
         }
 
         .curtains-right {
-            right: -5%;
-            top: 0;
+            right: -50px;
+            top: -50px;
             width: 15%;
             height: auto !important;
             pointer-events: none;
         }
 
-        img.text {
-            top: 22.5%;
-            left: 32.5%;
-            width: 35%;
-            height: auto !important;
+        .text-2-full {
+            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/words-1.png');
         }
 
-        img.sword {
-            right: 3%;
-            width: 23%;
-            height: auto !important;
-            bottom: 5%;
+        .sword-full {
+            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/box-full.png');
+            background-position: bottom center;
         }
+
+        .chandelier-full {
+            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/chandelier-full.png');
+            // background-position: top center;
+        }
+
+        .text-full {
+            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/chandelier-full.png');
+        }
+        .bull-full {
+            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/bull-full.png');
+            background-position: bottom center;
+        }
+
+        // img.text {
+        //     top: 22.5%;
+        //     left: 32.5%;
+        //     width: 35%;
+        //     height: auto !important;
+        // }
+
+        // img.sword {
+        //     right: 3%;
+        //     width: 23%;
+        //     height: auto !important;
+        //     bottom: 5%;
+        // }
 
         .dot-sword {
             right: 20%;
             bottom: 35%;
         }
 
-        img.bull {
-            left: 5%;
-            width: 23%;
-            height: auto !important;
-            bottom: 5%;
-        }
+        // img.bull {
+        //     left: 5%;
+        //     width: 23%;
+        //     height: auto !important;
+        //     bottom: 5%;
+        // }
 
         .dot-bull {
             left: 10%;
             bottom: 15%;
         }
 
-        img.chand {
-            width: 15%;
-            height: auto !important;
-            top: 0%;
-            left: 42.5%;
-        }
+        // img.chand {
+        //     width: 15%;
+        //     height: auto !important;
+        //     top: 0%;
+        //     left: 42.5%;
+        // }
     }
 
     .scene-container-3 {
@@ -238,6 +217,7 @@ body.page-scroll-animations {
             background-size: cover;
             background-position: center right;
             left: -5%;
+            right: -5%;
             top: -5%;
             height: 110%;
             width: 110%;

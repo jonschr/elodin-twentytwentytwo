@@ -89,6 +89,14 @@ function ettt_enqueue_everything() {
 		CHILD_THEME_VERSION,
 		true
 	); 
+    
+    wp_register_script(
+		'image-positioning',
+        get_stylesheet_directory_uri() . '/assets/js/image-positioning.js',
+		'',
+		CHILD_THEME_VERSION,
+		true
+	); 
 
     // Slick
     wp_register_script(

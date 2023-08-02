@@ -3,22 +3,18 @@ const sections = Array.from(
     document.querySelectorAll('.cd-section .inner-container')
 );
 
-// get the number of sections
 const sectionCount = sections.length;
-
 const nextButton = document.querySelector('a.cd-next');
 const prevButton = document.querySelector('a.cd-prev');
 const slideLinks = Array.from(document.querySelectorAll('a[data-slide]'));
 
-// Configuration variables
 let scaleInFrom = 0.4;
 let scaleOutTo = 4;
-let durationIn = 3; // duration of animation in seconds for next section
-let durationOut = 3; // duration of animation in seconds for current section
+let durationIn = 3;
+let durationOut = 3;
 
 let scrollEnabled = true;
 
-// Initial setup
 sections.forEach((section, index) => {
     gsap.set(section, {
         scale: index === 0 ? 1 : 0,
@@ -26,18 +22,24 @@ sections.forEach((section, index) => {
     });
 });
 
-// Function to animate transition between sections
+const throttle = (func, limit) => {
+    let inThrottle;
+    return (...args) => {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => (inThrottle = false), limit);
+        }
+    };
+};
+
 const transition = (nextIndex) => {
     if (nextIndex != currentSectionIndex && scrollEnabled) {
         scrollEnabled = false;
         let currentSection = sections[currentSectionIndex];
         let nextSection = sections[nextIndex];
-
-        // Update button visibility based on next section
         toggleButtonVisibility(nextIndex);
-
         if (currentSectionIndex < nextIndex) {
-            // Moving forward
             gsap.to(currentSection, {
                 scale: scaleOutTo,
                 autoAlpha: 0,
@@ -52,7 +54,6 @@ const transition = (nextIndex) => {
                 scrollEnabled = true;
             });
         } else {
-            // Moving backward
             gsap.to(currentSection, {
                 scale: scaleInFrom,
                 autoAlpha: 0,
@@ -70,43 +71,37 @@ const transition = (nextIndex) => {
     }
 };
 
-// Event listeners for click
 nextButton.addEventListener('click', () => transition(currentSectionIndex + 1));
 prevButton.addEventListener('click', () => transition(currentSectionIndex - 1));
 slideLinks.forEach((link) => {
     link.addEventListener('click', () => {
         let slideNumber = parseInt(link.getAttribute('data-slide'));
-        transition(slideNumber - 1); // subtract 1 to match array index (0-based)
+        transition(slideNumber - 1);
     });
 });
 
-// Event listener for scroll
-window.addEventListener('wheel', (event) => {
-    if (scrollEnabled) {
-        if (event.deltaY > 0) {
-            // only scroll down if not on last section
-            console.log('Count: ' + sections.length);
-            console.log('Current+1: ' + (currentSectionIndex + 1));
-
-            if (currentSectionIndex < sections.length - 1) {
-                transition(currentSectionIndex + 1);
+window.addEventListener(
+    'wheel',
+    throttle((event) => {
+        if (scrollEnabled) {
+            if (event.deltaY > 0) {
+                if (currentSectionIndex < sections.length - 1) {
+                    transition(currentSectionIndex + 1);
+                }
+            } else {
+                if (currentSectionIndex > 0) {
+                    transition(currentSectionIndex - 1);
+                }
             }
-        } else {
-            // only scroll up if not going previous to the first section
-            if (currentSectionIndex > 0) {
-                transition(currentSectionIndex - 1);
-            }
+            event.preventDefault();
         }
-        event.preventDefault();
-    }
-});
+    }, 100)
+);
 
-// Function to toggle button visibility
 const toggleButtonVisibility = (sectionIndex) => {
     nextButton.style.display =
         sectionIndex === sections.length - 1 ? 'none' : 'block';
     prevButton.style.display = sectionIndex === 0 ? 'none' : 'block';
 };
 
-// Initial call to set button visibility
 toggleButtonVisibility(currentSectionIndex);

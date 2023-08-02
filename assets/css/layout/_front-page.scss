@@ -114,161 +114,44 @@ body.page-scroll-animations {
     }
 
     .scene-container-2 {
-        .background {
-            background-image: url('/wp-content/uploads/2023/07/back-2.jpg');
-            background-size: cover;
-            background-position: bottom center;
-            left: -2.5%;
-            top: -2.5%;
-            height: 105%;
-            width: 105%;
-        }
-
-        .curtains-left {
-            left: -50px;
-            top: -50px;
-            width: 15%;
-            height: auto !important;
-            pointer-events: none;
-        }
-
-        .curtains-right {
-            right: -50px;
-            top: -50px;
-            width: 15%;
-            height: auto !important;
-            pointer-events: none;
-        }
-
-        .text-2-full {
-            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/words-1.png');
-        }
-
-        .sword-full {
-            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/box-full.png');
-            background-position: bottom center;
-        }
-
-        .chandelier-full {
-            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/chandelier-full.png');
-            // background-position: top center;
-        }
-
-        .text-full {
-            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/chandelier-full.png');
-        }
-        .bull-full {
-            background-image: url('http://money-magicians.local/wp-content/uploads/2023/07/bull-full.png');
-            background-position: bottom center;
-        }
-
-        // img.text {
-        //     top: 22.5%;
-        //     left: 32.5%;
-        //     width: 35%;
-        //     height: auto !important;
-        // }
-
-        // img.sword {
-        //     right: 3%;
-        //     width: 23%;
-        //     height: auto !important;
-        //     bottom: 5%;
-        // }
-
         .dot-sword {
             right: 20%;
             bottom: 35%;
         }
 
-        // img.bull {
-        //     left: 5%;
-        //     width: 23%;
-        //     height: auto !important;
-        //     bottom: 5%;
-        // }
-
         .dot-bull {
             left: 10%;
             bottom: 15%;
         }
-
-        // img.chand {
-        //     width: 15%;
-        //     height: auto !important;
-        //     top: 0%;
-        //     left: 42.5%;
-        // }
     }
 
     .scene-container-3 {
-        .background {
-            background-image: url('/wp-content/uploads/2023/07/table.jpg');
-            background-size: cover;
-            background-position: center center;
-            left: -2.5%;
-            top: -2.5%;
-            height: 105%;
-            width: 105%;
-        }
-
-        .smoke {
-            background-image: url('/wp-content/uploads/2023/07/snoke.png');
-            background-size: cover;
-            background-position: center right;
-            left: -5%;
-            right: -5%;
-            top: -5%;
-            height: 110%;
-            width: 110%;
-        }
-
-        img.cards {
-            height: auto !important;
-            width: 35%;
-            right: 15%;
-            top: 35%;
-        }
-
         .dot-cards {
-            top: 37%;
-            right: 25%;
-        }
-
-        img.book {
-            height: auto !important;
-            left: 20%;
-            width: 25%;
-            top: 17.5%;
+            bottom: 37%;
+            right: 30%;
         }
 
         .dot-book {
-            left: 25%;
-            top: 30%;
-        }
-
-        img.coin {
-            height: auto !important;
-            left: 45%;
-            width: 5%;
-            top: 30%;
+            left: 30%;
+            top: 50%;
         }
 
         .dot-coin {
-            left: 45.5%;
-            top: 31%;
+            left: 48%;
+            top: 48%;
         }
 
-        img.cups {
-            height: auto !important;
-            right: 20%;
-            width: 30%;
-            top: 10%;
-        }
-
-        .dot-cups {
-            top: 12%;
+        .dot-cups-red {
+            top: 22%;
             right: 43%;
+        }
+        .dot-cups-blue {
+            top: 24%;
+            right: 34%;
+        }
+        .dot-cups-green {
+            top: 23%;
+            right: 26%;
         }
     }
 }

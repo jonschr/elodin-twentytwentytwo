@@ -16,7 +16,36 @@ wp_enqueue_script( 'pulse-animations' );
 get_header();
 ?>
 
-
+<section id="section-3" class="cd-section">
+   <div class="inner-container">
+       <div class="scene-container scene-container-3">
+         <!-- <div class="background" data-depth="0.3"></div> -->
+         <!-- <div alt="" class="smoke" data-depth="0.45"></div> -->
+         
+         <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-bkg.jpg');"></div>
+         <div class="full" data-depth="0.45" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-smoke.png');"></div>
+         <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-cards.png');"></div>
+         <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-cups.png');"></div>
+         <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-book.png');"></div>
+         <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-coin.png');"></div>
+         
+         
+         <!-- <img src="/wp-content/uploads/2023/07/cards.png" alt="" class="cards" data-depth="0.4"> -->
+         <a href="#" data-slide="3" class="dot dot-cards" data-depth="0.4"><div class="pulse"></div></a>
+         
+         <!-- <img src="/wp-content/uploads/2023/07/book.png" alt="" class="book" data-depth="0.4"> -->
+         <a href="#" data-slide="3" class="dot dot-book" data-depth="0.35"><div class="pulse"></div></a>
+         
+         <!-- <img src="/wp-content/uploads/2023/07/cups-1.png" alt="" class="cups" data-depth="0.4"> -->
+         <a href="#" data-slide="3" class="dot dot-cups-red" data-depth="0.45"><div class="pulse"></div></a>
+         <a href="#" data-slide="3" class="dot dot-cups-blue" data-depth="0.45"><div class="pulse"></div></a>
+         <a href="#" data-slide="3" class="dot dot-cups-green" data-depth="0.45"><div class="pulse"></div></a>
+         
+         <!-- <img src="/wp-content/uploads/2023/07/chip.png" alt="" class="coin" data-depth="0.4"> -->
+         <a href="#" data-slide="3" class="dot dot-coin" data-depth="0.42"><div class="pulse"></div></a>
+      </div>
+   </div>
+</section>
 
 <section id="section-1" class="cd-section visible">
    <div class="inner-container">
@@ -59,25 +88,7 @@ get_header();
    </div>
 </section>
 
-<section id="section-3" class="cd-section">
-   <div class="inner-container">
-       <div class="scene-container scene-container-3">
-         <div class="background" data-depth="0.3"></div>
-         <div alt="" class="smoke" data-depth="0.45"></div>
-         <img src="/wp-content/uploads/2023/07/cards.png" alt="" class="cards" data-depth="0.4">
-         <a href="#" data-slide="3" class="dot dot-cards" data-depth="0.4"><div class="pulse"></div></a>
-         
-         <img src="/wp-content/uploads/2023/07/book.png" alt="" class="book" data-depth="0.4">
-         <a href="#" data-slide="3" class="dot dot-book" data-depth="0.35"><div class="pulse"></div></a>
-         
-         <img src="/wp-content/uploads/2023/07/cups-1.png" alt="" class="cups" data-depth="0.4">
-         <a href="#" data-slide="3" class="dot dot-cups" data-depth="0.45"><div class="pulse"></div></a>
-         
-         <img src="/wp-content/uploads/2023/07/chip.png" alt="" class="coin" data-depth="0.4">
-         <a href="#" data-slide="3" class="dot dot-coin" data-depth="0.42"><div class="pulse"></div></a>
-      </div>
-   </div>
-</section> -->
+
 <nav>
    <ul class="cd-vertical-nav">
       <li><a href="#0" class="cd-prev"><span class="dashicons dashicons-arrow-up-alt"></span></a></li>

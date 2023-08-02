@@ -24,8 +24,8 @@ get_header();
          <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-left.png');"></div>         
          <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-right.png');"></div>
          <div class="full" data-depth="0.45" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-smoke.png');"></div>
-         <div class="full" data-depth="0.6" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-words.png');"></div>
-         <div class="full" data-depth="1" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-curtains.png');"></div>
+         <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-words.png');"></div>
+         <div class="full" data-depth="0.6" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-curtains.png');"></div>
          
          <!-- mirror left button -->
          <a href="#" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button" data-depth="0.5">

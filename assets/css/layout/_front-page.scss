@@ -1,6 +1,12 @@
 body.page-scroll-animations {
     overflow: hidden;
 
+    .inner-container {
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        will-change: transform, opacity;
+    }
+
     // scenes
     .scene-container {
         position: relative;

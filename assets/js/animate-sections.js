@@ -20,6 +20,7 @@ sections.forEach((section, index) => {
         scale: index === 0 ? 1 : 0,
         autoAlpha: index === 0 ? 1 : 0,
     });
+    section.style.willChange = 'transform, opacity'; // Add this line
 });
 
 const throttle = (func, limit) => {

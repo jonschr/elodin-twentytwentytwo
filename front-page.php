@@ -22,10 +22,10 @@ get_header();
          
          <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg.jpg');"></div>
          
-         <!-- <a href="#" data-slide="3" class="dot dot-mirror-left" data-depth="0.5"><div class="pulse"></div></a> -->
+         <a href="#" data-slide="3" class="dot dot-mirror-left" data-depth="0.5"><div class="pulse"></div></a>
          <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-left.png');"></div>
          
-         <!-- <a href="#" data-slide="3" class="dot dot-mirror-right" data-depth="0.5"><div class="pulse"></div></a> -->
+         <a href="#" data-slide="3" class="dot dot-mirror-right" data-depth="0.5"><div class="pulse"></div></a>
          <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-right.png');"></div>
          
          <div class="full" data-depth="0.45" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-smoke.png');"></div>
@@ -36,9 +36,9 @@ get_header();
    </div>
 </section>
 
-<section id="section-2" class="cd-section" style="display: none;">
-   <div class="inner-container">
-       <div class="scene-container scene-container-2">
+<section id="section-2" class="cd-section">
+   <div class="inner-container" style="opacity: 0;">
+       <div class="scene-container scene-container-2" >
          
          <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-bkg.jpg');"></div>
          <div class="full" data-depth="0.5" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-curtains.png');"></div>
@@ -49,7 +49,6 @@ get_header();
          <div class="full" data-depth="0.36" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-hat.png');"></div>
          <div class="full" data-depth="0.6" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-chandelier.png');"></div>
        
-       
          <a href="#" data-slide="3" class="dot dot-bull" data-depth="0.5"><div class="pulse"></div></a>
          <a href="#" data-slide="3" class="dot dot-sword" data-depth="0.5"><div class="pulse"></div></a>
        
@@ -57,8 +56,8 @@ get_header();
    </div>
 </section>
 
-<section id="section-3" class="cd-section" style="display: none;">
-   <div class="inner-container">
+<section id="section-3" class="cd-section">
+   <div class="inner-container" style="opacity: 0;">
        <div class="scene-container scene-container-3">
          
          <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-bkg.jpg');"></div>

@@ -11,7 +11,8 @@ wp_enqueue_script( 'gsap' );
 wp_enqueue_script( 'gsap-mouse-animation' );
 wp_enqueue_script( 'gsap-animate-sections' );
 wp_enqueue_script( 'pulse-animations' );
-// wp_enqueue_script( 'image-positioning' );
+wp_enqueue_script( 'popper' );
+wp_enqueue_script( 'popper-init' );
 
 get_header();
 ?>
@@ -19,19 +20,30 @@ get_header();
 <section id="section-1" class="cd-section visible">
    <div class="inner-container">
        <div class="scene-container scene-container-1">
-         
          <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg.jpg');"></div>
-         
-         <a href="#" data-slide="3" class="dot dot-mirror-left" data-depth="0.5"><div class="pulse"></div></a>
-         <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-left.png');"></div>
-         
-         <a href="#" data-slide="3" class="dot dot-mirror-right" data-depth="0.5"><div class="pulse"></div></a>
+         <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-left.png');"></div>         
          <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-right.png');"></div>
-         
          <div class="full" data-depth="0.45" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-smoke.png');"></div>
          <div class="full" data-depth="0.6" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-words.png');"></div>
          <div class="full" data-depth="1" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-curtains.png');"></div>
-                  
+         
+         <!-- mirror left button -->
+         <a href="#" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button" data-depth="0.5">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-mirror-left" class="popper-tooltip" role="tooltip">
+            Mirror left tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
+         
+         <!-- mirror right button -->
+         <a href="#" data-slide="3" class="dot dot-mirror-right" id="button-mirror-right" class="popper-button" data-depth="0.5">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-mirror-right" class="popper-tooltip" role="tooltip">
+            Mirror right tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
       </div>
    </div>
 </section>
@@ -42,15 +54,32 @@ get_header();
          
          <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-bkg.jpg');"></div>
          <div class="full" data-depth="0.5" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-curtains.png');"></div>
-         
          <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-smoke.png');"></div>
          <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-words.png');"></div>
          <div class="full" data-depth="0.36" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-box.png');"></div>
          <div class="full" data-depth="0.36" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-hat.png');"></div>
          <div class="full" data-depth="0.6" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-chandelier.png');"></div>
        
-         <a href="#" data-slide="3" class="dot dot-bull" data-depth="0.5"><div class="pulse"></div></a>
-         <a href="#" data-slide="3" class="dot dot-sword" data-depth="0.5"><div class="pulse"></div></a>
+         <!-- <a href="#" data-slide="3" class="dot dot-bull" data-depth="0.5"><div class="pulse"></div></a> -->
+         <!-- <a href="#" data-slide="3" class="dot dot-sword" data-depth="0.5"><div class="pulse"></div></a> -->
+         
+         <!-- bull button -->
+         <a href="#" data-slide="3" class="dot dot-bull" id="button-bull" class="popper-button" data-depth="0.5">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-bull" class="popper-tooltip" role="tooltip">
+            Bull tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
+         
+         <!-- sword button -->
+         <a href="#" data-slide="3" class="dot dot-sword" id="button-sword" class="popper-button" data-depth="0.5">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-sword" class="popper-tooltip" role="tooltip">
+            Sword tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
        
       </div>
    </div>
@@ -67,12 +96,59 @@ get_header();
          <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-book.png');"></div>
          <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-coin.png');"></div>
          
-         <a href="#" data-slide="3" class="dot dot-cards" data-depth="0.4"><div class="pulse"></div></a>
-         <a href="#" data-slide="3" class="dot dot-book" data-depth="0.35"><div class="pulse"></div></a>         
-         <a href="#" data-slide="3" class="dot dot-cups-red" data-depth="0.45"><div class="pulse"></div></a>
-         <a href="#" data-slide="3" class="dot dot-cups-blue" data-depth="0.45"><div class="pulse"></div></a>
-         <a href="#" data-slide="3" class="dot dot-cups-green" data-depth="0.45"><div class="pulse"></div></a>
-         <a href="#" data-slide="3" class="dot dot-coin" data-depth="0.42"><div class="pulse"></div></a>
+         <!-- cards button -->
+         <a href="#" data-slide="3" class="dot dot-cards" id="button-cards" class="popper-button" data-depth="0.4">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-cards" class="popper-tooltip" role="tooltip">
+            Cards tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
+
+         <!-- book button -->
+         <a href="#" data-slide="3" class="dot dot-book" id="button-book" class="popper-button" data-depth="0.35">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-book" class="popper-tooltip" role="tooltip">
+            Book tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
+
+         <!-- cups-red button -->
+         <a href="#" data-slide="3" class="dot dot-cups-red" id="button-cups-red" class="popper-button" data-depth="0.45">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-cups-red" class="popper-tooltip" role="tooltip">
+            Cups Red tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
+
+         <!-- cups-blue button -->
+         <a href="#" data-slide="3" class="dot dot-cups-blue" id="button-cups-blue" class="popper-button" data-depth="0.45">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-cups-blue" class="popper-tooltip" role="tooltip">
+            Cups Blue tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
+
+         <!-- cups-green button -->
+         <a href="#" data-slide="3" class="dot dot-cups-green" id="button-cups-green" class="popper-button" data-depth="0.45">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-cups-green" class="popper-tooltip" role="tooltip">
+            Cups Green tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
+
+         <!-- coin button -->
+         <a href="#" data-slide="3" class="dot dot-coin" id="button-coin" class="popper-button" data-depth="0.42">
+            <div class="pulse"></div>
+         </a>
+         <div id="tooltip-coin" class="popper-tooltip" role="tooltip">
+            Coin tooltip
+            <div class="popper-arrow" data-popper-arrow></div>
+         </div>
          
       </div>
    </div>

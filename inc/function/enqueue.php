@@ -128,5 +128,21 @@ function ettt_enqueue_everything() {
         array(),
         CHILD_THEME_VERSION
     );
+    
+    wp_register_script(
+        'popper',
+        'https://unpkg.com/@popperjs/core@2',
+        '',
+        CHILD_THEME_VERSION,
+        true
+    );
+    
+    wp_register_script(
+        'popper-init',
+        get_stylesheet_directory_uri() . '/assets/js/popper-init.js',
+        array('popper'),
+        CHILD_THEME_VERSION,
+        true
+    );
     	
 }

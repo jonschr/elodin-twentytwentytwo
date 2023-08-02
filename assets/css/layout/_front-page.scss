@@ -1,6 +1,7 @@
 body.page-scroll-animations {
     overflow: hidden;
 
+    // scenes
     .scene-container {
         position: relative;
         height: 100vh;
@@ -27,22 +28,15 @@ body.page-scroll-animations {
         }
     }
 
-    h1 {
-        font-size: 300px;
-        color: black;
-        text-align: center;
-    }
-
+    // positioning for individual items
     [data-depth] {
         position: absolute;
-        // background-color: red;
         height: 30px;
         width: 30px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         will-change: transform;
-        // pointer-events: none;
     }
 
     .dot {
@@ -67,10 +61,10 @@ body.page-scroll-animations {
             border-width: 5px;
 
             .pulse {
-                // animation: pulseAnimation 0.8s ease-in-out;
+                animation: pulseAnimation 0.8s ease-in-out;
                 background-color: rgba(white, 0.6);
-                transform: scale(3);
-                opacity: 1;
+                // transform: scale(3);
+                // opacity: 1;
             }
         }
     }
@@ -103,13 +97,13 @@ body.page-scroll-animations {
 
     .scene-container-1 {
         .dot-mirror-left {
-            left: 20%;
+            left: 22%;
             bottom: 50%;
         }
 
         .dot-mirror-right {
-            right: 19%;
-            bottom: 25%;
+            right: 22%;
+            bottom: 30%;
         }
     }
 
@@ -142,16 +136,16 @@ body.page-scroll-animations {
         }
 
         .dot-cups-red {
-            top: 22%;
+            top: 26%;
             right: 43%;
         }
         .dot-cups-blue {
-            top: 24%;
-            right: 34%;
+            top: 30%;
+            right: 32%;
         }
         .dot-cups-green {
-            top: 23%;
-            right: 26%;
+            top: 27%;
+            right: 22%;
         }
     }
 }

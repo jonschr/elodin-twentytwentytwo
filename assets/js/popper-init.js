@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createTooltip('button-mirror-right', 'tooltip-mirror-right');
     createTooltip('button-bull', 'tooltip-bull');
     createTooltip('button-sword', 'tooltip-sword');
-    createTooltip('button-cards', 'tooltip-cards');
     createTooltip('button-book', 'tooltip-book');
     createTooltip('button-cups-red', 'tooltip-cups-red');
     createTooltip('button-cups-blue', 'tooltip-cups-blue');

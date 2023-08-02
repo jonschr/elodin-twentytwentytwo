@@ -96,57 +96,48 @@ get_header();
          <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-book.png');"></div>
          <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-coin.png');"></div>
          
-         <!-- cards button -->
-         <a href="#" data-slide="3" class="dot dot-cards" id="button-cards" class="popper-button" data-depth="0.4">
-            <div class="pulse"></div>
-         </a>
-         <div id="tooltip-cards" class="popper-tooltip" role="tooltip">
-            Cards tooltip
-            <div class="popper-arrow" data-popper-arrow></div>
-         </div>
-
          <!-- book button -->
-         <a href="#" data-slide="3" class="dot dot-book" id="button-book" class="popper-button" data-depth="0.35">
+         <a href="/see-inside/" class="dot dot-book" id="button-book" class="popper-button" data-depth="0.35">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-book" class="popper-tooltip" role="tooltip">
-            Book tooltip
+            See inside
             <div class="popper-arrow" data-popper-arrow></div>
          </div>
 
          <!-- cups-red button -->
-         <a href="#" data-slide="3" class="dot dot-cups-red" id="button-cups-red" class="popper-button" data-depth="0.45">
+         <a href="/about" class="dot dot-cups-red" id="button-cups-red" class="popper-button" data-depth="0.45">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-cups-red" class="popper-tooltip" role="tooltip">
-            Cups Red tooltip
+            About the book
             <div class="popper-arrow" data-popper-arrow></div>
          </div>
 
          <!-- cups-blue button -->
-         <a href="#" data-slide="3" class="dot dot-cups-blue" id="button-cups-blue" class="popper-button" data-depth="0.45">
+         <a href="https://www.amazon.com/dp/1265432961" target="_blank" class="dot dot-cups-blue" id="button-cups-blue" class="popper-button" data-depth="0.45">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-cups-blue" class="popper-tooltip" role="tooltip">
-            Cups Blue tooltip
+            Buy the book
             <div class="popper-arrow" data-popper-arrow></div>
          </div>
 
          <!-- cups-green button -->
-         <a href="#" data-slide="3" class="dot dot-cups-green" id="button-cups-green" class="popper-button" data-depth="0.45">
+         <a href="/author" class="dot dot-cups-green" id="button-cups-green" class="popper-button" data-depth="0.45">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-cups-green" class="popper-tooltip" role="tooltip">
-            Cups Green tooltip
+            Meet the author
             <div class="popper-arrow" data-popper-arrow></div>
          </div>
 
          <!-- coin button -->
-         <a href="#" data-slide="3" class="dot dot-coin" id="button-coin" class="popper-button" data-depth="0.42">
+         <a href="/endorsements" class="dot dot-coin" id="button-coin" class="popper-button" data-depth="0.42">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-coin" class="popper-tooltip" role="tooltip">
-            Coin tooltip
+            Endorsements
             <div class="popper-arrow" data-popper-arrow></div>
          </div>
          

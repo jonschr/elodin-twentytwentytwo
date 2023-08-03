@@ -23,27 +23,30 @@ get_header();
          <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg.jpg');"></div>
          <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-left.png');"></div>         
          <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-right.png');"></div>
-         <div class="full" data-depth="0.45" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-smoke.png');"></div>
-         <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-words.png');"></div>
-         <div class="full" data-depth="0.6" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-curtains.png');"></div>
+         <!-- <div class="full" data-depth="0.45" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-smoke.png');"></div> -->
+         <!-- <div class="full" data-depth="0.35" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-words.png');"></div> -->
+         <!-- <div class="full" data-depth="0.6" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-curtains.png');"></div> -->
+         
+         <!-- if we're going to do it in one layer...  -->
+         <div class="full" data-depth="0.5" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg-foreground.png');"></div>
          
          <!-- mirror left button -->
          <a href="#" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button" data-depth="0.5">
             <div class="pulse"></div>
          </a>
-         <div id="tooltip-mirror-left" class="popper-tooltip" role="tooltip">
+         <a href="#" data-slide="3" id="tooltip-mirror-left" class="popper-tooltip" role="tooltip">
             Mirror left tooltip
             <div class="popper-arrow" data-popper-arrow></div>
-         </div>
+         </a>
          
          <!-- mirror right button -->
          <a href="#" data-slide="3" class="dot dot-mirror-right" id="button-mirror-right" class="popper-button" data-depth="0.5">
             <div class="pulse"></div>
          </a>
-         <div id="tooltip-mirror-right" class="popper-tooltip" role="tooltip">
+         <a href="#" data-slide="3" id="tooltip-mirror-right" class="popper-tooltip" role="tooltip">
             Mirror right tooltip
             <div class="popper-arrow" data-popper-arrow></div>
-         </div>
+         </a>
       </div>
    </div>
 </section>
@@ -53,12 +56,14 @@ get_header();
        <div class="scene-container scene-container-2" >
          
          <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-bkg.jpg');"></div>
-         <div class="full" data-depth="0.5" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-curtains.png');"></div>
-         <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-smoke.png');"></div>
-         <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-words.png');"></div>
+         <!-- <div class="full" data-depth="0.5" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-curtains.png');"></div> -->
+         <!-- <div class="full" data-depth="0.35" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-smoke.png');"></div> -->
+         <!-- <div class="full" data-depth="0.4" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-words.png');"></div> -->
          <div class="full" data-depth="0.36" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-box.png');"></div>
          <div class="full" data-depth="0.36" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-hat.png');"></div>
-         <div class="full" data-depth="0.6" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-chandelier.png');"></div>
+         <!-- <div class="full" data-depth="0.6" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-chandelier.png');"></div> -->
+         
+         <div class="full" data-depth="0.5" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-foreground-bkg.png');"></div>
        
          <!-- <a href="#" data-slide="3" class="dot dot-bull" data-depth="0.5"><div class="pulse"></div></a> -->
          <!-- <a href="#" data-slide="3" class="dot dot-sword" data-depth="0.5"><div class="pulse"></div></a> -->

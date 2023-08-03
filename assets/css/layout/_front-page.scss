@@ -63,6 +63,7 @@ body.page-scroll-animations {
         cursor: pointer;
         pointer-events: all !important;
         z-index: 999999999 !important;
+        overflow: visible;
 
         .pulse {
             transition: 0.3s all ease;

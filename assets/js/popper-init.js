@@ -1,8 +1,7 @@
 const tooltips = [];
+let activeTooltip = null;
 
-// Wrap function calls in a DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
-    // create each tooltip
     createTooltip('button-mirror-left', 'tooltip-mirror-left');
     createTooltip('button-mirror-right', 'tooltip-mirror-right');
     createTooltip('button-bull', 'tooltip-bull');
@@ -32,10 +31,10 @@ function createTooltip(buttonId, tooltipId) {
     tooltips.push(popperInstance);
 
     function show() {
-        // Make the tooltip visible
+        if (activeTooltip) {
+            activeTooltip.hide();
+        }
         tooltip.setAttribute('data-show', '');
-
-        // Enable the event listeners
         popperInstance.setOptions((options) => ({
             ...options,
             modifiers: [
@@ -43,16 +42,12 @@ function createTooltip(buttonId, tooltipId) {
                 { name: 'eventListeners', enabled: true },
             ],
         }));
-
-        // Update its position
         popperInstance.update();
+        activeTooltip = { hide };
     }
 
     function hide() {
-        // Hide the tooltip
         tooltip.removeAttribute('data-show');
-
-        // Disable the event listeners
         popperInstance.setOptions((options) => ({
             ...options,
             modifiers: [
@@ -63,13 +58,8 @@ function createTooltip(buttonId, tooltipId) {
     }
 
     const showEvents = ['mouseenter', 'focus'];
-    const hideEvents = ['mouseleave', 'blur'];
 
     showEvents.forEach((event) => {
         button.addEventListener(event, show);
-    });
-
-    hideEvents.forEach((event) => {
-        button.addEventListener(event, hide);
     });
 }

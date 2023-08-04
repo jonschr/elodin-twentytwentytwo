@@ -20,15 +20,15 @@ get_header();
 <section id="section-1" class="cd-section visible">
    <div class="inner-container">
        <div class="scene-container scene-container-1">
-         <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg.jpg');"></div>
-         <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-left.png');"></div>         
-         <div class="full" data-depth="0.35" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-right.png');"></div>
-         <!-- <div class="full" data-depth="0.45" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-smoke.png');"></div> -->
-         <!-- <div class="full" data-depth="0.35" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-words.png');"></div> -->
-         <!-- <div class="full" data-depth="0.6" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-curtains.png');"></div> -->
+         <div class="full" data-depth="0.3" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg.jpg);"></div>
+         <div class="full" data-depth="0.35" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-left.png);"></div>         
+         <div class="full" data-depth="0.35" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-right.png);"></div>
+         <!-- <div class="full" data-depth="0.45" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-smoke.png);"></div> -->
+         <!-- <div class="full" data-depth="0.35" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-words.png);"></div> -->
+         <!-- <div class="full" data-depth="0.6" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-curtains.png);"></div> -->
          
          <!-- if we're going to do it in one layer...  -->
-         <div class="full" data-depth="0.5" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg-foreground.png');"></div>
+         <div class="full" data-depth="0.5" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg-foreground.png);"></div>
          
          <!-- mirror left button -->
          <a href="#" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button" data-depth="0.5">
@@ -55,15 +55,15 @@ get_header();
    <div class="inner-container" style="opacity: 0;">
        <div class="scene-container scene-container-2" >
          
-         <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-bkg.jpg');"></div>
-         <!-- <div class="full" data-depth="0.5" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-curtains.png');"></div> -->
-         <!-- <div class="full" data-depth="0.35" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-smoke.png');"></div> -->
-         <!-- <div class="full" data-depth="0.4" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-words.png');"></div> -->
-         <div class="full" data-depth="0.36" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-box.png');"></div>
-         <div class="full" data-depth="0.36" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-hat.png');"></div>
-         <!-- <div class="full" data-depth="0.6" style="background-image:url('<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-chandelier.png');"></div> -->
+         <div class="full" data-depth="0.3" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-bkg.jpg);"></div>
+         <!-- <div class="full" data-depth="0.5" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-curtains.png);"></div> -->
+         <!-- <div class="full" data-depth="0.35" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-smoke.png);"></div> -->
+         <!-- <div class="full" data-depth="0.4" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-words.png);"></div> -->
+         <div class="full" data-depth="0.36" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-box.png);"></div>
+         <div class="full" data-depth="0.36" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-hat.png);"></div>
+         <!-- <div class="full" data-depth="0.6" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-chandelier.png);"></div> -->
          
-         <div class="full" data-depth="0.5" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-foreground-bkg.png');"></div>
+         <div class="full" data-depth="0.5" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-foreground-bkg.png);"></div>
        
          <!-- <a href="#" data-slide="3" class="dot dot-bull" data-depth="0.5"><div class="pulse"></div></a> -->
          <!-- <a href="#" data-slide="3" class="dot dot-sword" data-depth="0.5"><div class="pulse"></div></a> -->
@@ -94,12 +94,12 @@ get_header();
    <div class="inner-container" style="opacity: 0;">
        <div class="scene-container scene-container-3">
          
-         <div class="full" data-depth="0.3" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-bkg.jpg');"></div>
-         <div class="full" data-depth="0.45" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-smoke.png');"></div>
-         <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-cards.png');"></div>
-         <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-cups.png');"></div>
-         <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-book.png');"></div>
-         <div class="full" data-depth="0.4" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-coin.png');"></div>
+         <div class="full" data-depth="0.3" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-bkg.jpg);"></div>
+         <div class="full" data-depth="0.45" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-smoke.png);"></div>
+         <div class="full" data-depth="0.4" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-cards.png);"></div>
+         <div class="full" data-depth="0.4" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-cups.png);"></div>
+         <div class="full" data-depth="0.4" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-book.png);"></div>
+         <div class="full" data-depth="0.4" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-coin.png);"></div>
          
          <!-- book button -->
          <a href="/see-inside/" class="dot dot-book" id="button-book" class="popper-button" data-depth="0.35">

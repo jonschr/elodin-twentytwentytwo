@@ -31,21 +31,21 @@ get_header();
          <div class="full" data-depth="0.5" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg-foreground.png);"></div>
          
          <!-- mirror left button -->
-         <a href="#" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button">
+         <a href="/about" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <a href="#" data-slide="3" id="tooltip-mirror-left" class="popper-tooltip" role="tooltip">
-            Mirror left tooltip
+         <a href="/about" data-slide="3" id="tooltip-mirror-left" class="popper-tooltip" role="tooltip">
+            About The Book
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
         
          
          <!-- mirror right button -->
-         <a href="#" data-slide="3" class="dot dot-mirror-right" id="button-mirror-right" class="popper-button">
+         <a href="/endorsements" data-slide="3" class="dot dot-mirror-right" id="button-mirror-right" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <a href="#" data-slide="3" id="tooltip-mirror-right" class="popper-tooltip" role="tooltip">
-            Mirror right tooltip
+         <a href="/endorsements" data-slide="3" id="tooltip-mirror-right" class="popper-tooltip" role="tooltip">
+            What People Are Saying
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
       </div>
@@ -70,22 +70,22 @@ get_header();
          <!-- <a href="#" data-slide="3" class="dot dot-sword" data-depth="0.5"><div class="pulse"></div></a> -->
          
          <!-- bull button -->
-         <a href="#" data-slide="3" class="dot dot-bull" id="button-bull" class="popper-button">
+         <a href="/about" data-slide="3" class="dot dot-bull" id="button-bull" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <div id="tooltip-bull" class="popper-tooltip" role="tooltip">
-            Bull tooltip
+         <a href="/about" id="tooltip-bull" class="popper-tooltip" role="tooltip">
+            About The Book
             <div class="popper-arrow" data-popper-arrow></div>
-         </div>
+         </a>
          
          <!-- sword button -->
-         <a href="#" data-slide="3" class="dot dot-sword" id="button-sword" class="popper-button">
+         <a href="/endorsements" data-slide="3" class="dot dot-sword" id="button-sword" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <div id="tooltip-sword" class="popper-tooltip" role="tooltip">
-            Sword tooltip
+         <a href="/endorsements" id="tooltip-sword" class="popper-tooltip" role="tooltip">
+            What People Are Saying
             <div class="popper-arrow" data-popper-arrow></div>
-         </div>
+         </a>
        
       </div>
    </div>
@@ -106,46 +106,46 @@ get_header();
          <a href="/see-inside/" class="dot dot-book" id="button-book" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <div id="tooltip-book" class="popper-tooltip" role="tooltip">
+         <a href="/see-inside/" id="tooltip-book" class="popper-tooltip" role="tooltip">
             See inside
             <div class="popper-arrow" data-popper-arrow></div>
-         </div>
+         </a>
 
          <!-- cups-red button -->
          <a href="/about" class="dot dot-cups-red" id="button-cups-red" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <div id="tooltip-cups-red" class="popper-tooltip" role="tooltip">
+         <a href="/about" id="tooltip-cups-red" class="popper-tooltip" role="tooltip">
             About the book
             <div class="popper-arrow" data-popper-arrow></div>
-         </div>
+         </a>
 
          <!-- cups-blue button -->
          <a href="https://www.amazon.com/dp/1265432961" target="_blank" class="dot dot-cups-blue" id="button-cups-blue" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <div id="tooltip-cups-blue" class="popper-tooltip" role="tooltip">
+         <a href="https://www.amazon.com/dp/1265432961" id="tooltip-cups-blue" class="popper-tooltip" role="tooltip">
             Buy the book
             <div class="popper-arrow" data-popper-arrow></div>
-         </div>
+         </a>
 
          <!-- cups-green button -->
          <a href="/author" class="dot dot-cups-green" id="button-cups-green" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <div id="tooltip-cups-green" class="popper-tooltip" role="tooltip">
+         <a href="/author" id="tooltip-cups-green" class="popper-tooltip" role="tooltip">
             Meet the author
             <div class="popper-arrow" data-popper-arrow></div>
-         </div>
+         </a>
 
          <!-- coin button -->
          <a href="/endorsements" class="dot dot-coin" id="button-coin" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <div id="tooltip-coin" class="popper-tooltip" role="tooltip">
+         <a href="/endorsements" id="tooltip-coin" class="popper-tooltip" role="tooltip">
             Endorsements
             <div class="popper-arrow" data-popper-arrow></div>
-         </div>
+         </a>
          
       </div>
    </div>
@@ -154,8 +154,8 @@ get_header();
 
 <nav>
    <ul class="cd-vertical-nav">
-      <li><a href="#0" class="cd-prev"><span class="dashicons dashicons-arrow-up-alt"></span></a></li>
-      <li><a href="#0" class="cd-next"><span class="dashicons dashicons-arrow-down-alt"></span></a></li>
+      <li><a href="#" class="cd-prev"><span class="dashicons dashicons-arrow-up-alt"></span></a></li>
+      <li><a href="#" class="cd-next"><span class="dashicons dashicons-arrow-down-alt"></span></a></li>
    </ul>
 </nav> 
 

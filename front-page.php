@@ -13,6 +13,7 @@ wp_enqueue_script( 'gsap-animate-sections' );
 wp_enqueue_script( 'pulse-animations' );
 wp_enqueue_script( 'popper' );
 wp_enqueue_script( 'popper-init' );
+wp_enqueue_script( 'interactivity' );
 
 get_header();
 ?>
@@ -21,8 +22,8 @@ get_header();
    <div class="inner-container">
        <div class="scene-container scene-container-1">
          <div class="full" data-depth="0.3" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg.jpg);"></div>
-         <div class="full" data-depth="0.35" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-left.png);"></div>         
-         <div class="full" data-depth="0.35" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-mirror-right.png);"></div>
+         <div class="full mirror-left" data-depth="0.35"></div>         
+         <div class="full mirror-right" data-depth="0.35"></div>
          <!-- <div class="full" data-depth="0.45" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-smoke.png);"></div> -->
          <!-- <div class="full" data-depth="0.35" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-words.png);"></div> -->
          <!-- <div class="full" data-depth="0.6" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-curtains.png);"></div> -->

@@ -144,5 +144,13 @@ function ettt_enqueue_everything() {
         CHILD_THEME_VERSION,
         true
     );
+    
+    wp_register_script(
+        'interactivity',
+        get_stylesheet_directory_uri() . '/assets/js/interactivity.js',
+        array( 'gsap', 'jquery' ),
+        CHILD_THEME_VERSION,
+        true
+    );
     	
 }

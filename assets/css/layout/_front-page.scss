@@ -112,6 +112,24 @@ body.page-scroll-animations {
     }
 
     .scene-container-1 {
+        .mirror-right {
+            background-image: url('../images/scene-1-mirror-right.png');
+            transition: background-image 1s;
+        }
+
+        .mirror-right-active {
+            background-image: url('../images/scene-1-mirror-right-active.png');
+        }
+
+        .mirror-left {
+            background-image: url('../images/scene-1-mirror-left.png');
+            transition: background-image 1s;
+        }
+
+        .mirror-left-active {
+            background-image: url('../images/scene-1-mirror-left-active.png');
+        }
+
         .dot-mirror-left {
             left: 22%;
             bottom: 50%;

@@ -14,6 +14,7 @@ wp_enqueue_script( 'pulse-animations' );
 wp_enqueue_script( 'popper' );
 wp_enqueue_script( 'popper-init' );
 wp_enqueue_script( 'interactivity' );
+wp_enqueue_script( 'preload-images' );
 
 get_header();
 ?>

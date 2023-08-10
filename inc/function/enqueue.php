@@ -153,6 +153,14 @@ function ettt_enqueue_everything() {
         true
     );
     
+     wp_register_script(
+        'preload-images',
+        get_stylesheet_directory_uri() . '/assets/js/preload-images.js',
+        array( 'jquery' ),
+        CHILD_THEME_VERSION,
+        true
+    );
+    
     wp_enqueue_script(
         'mainsite-fadein-later',
         get_stylesheet_directory_uri() . '/assets/js/mainsite-fadein-later.js',

@@ -32,20 +32,20 @@ get_header();
          <div class="full" data-depth="0.5" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg-foreground.png);"></div>
          
          <!-- mirror left button -->
-         <a href="/about" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button">
+         <a href="/about?fadein" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <a href="/about" data-slide="3" id="tooltip-mirror-left" class="popper-tooltip" role="tooltip">
+         <a href="/about?fadein" data-slide="3" id="tooltip-mirror-left" class="popper-tooltip" role="tooltip">
             About The Book
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
         
          
          <!-- mirror right button -->
-         <a href="/endorsements" data-slide="3" class="dot dot-mirror-right" id="button-mirror-right" class="popper-button">
+         <a href="/endorsements?fadein" data-slide="3" class="dot dot-mirror-right" id="button-mirror-right" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <a href="/endorsements" data-slide="3" id="tooltip-mirror-right" class="popper-tooltip" role="tooltip">
+         <a href="/endorsements?fadein" data-slide="3" id="tooltip-mirror-right" class="popper-tooltip" role="tooltip">
             What People Are Saying
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
@@ -71,19 +71,19 @@ get_header();
          <!-- <a href="#" data-slide="3" class="dot dot-sword" data-depth="0.5"><div class="pulse"></div></a> -->
          
          <!-- bull button -->
-         <a href="/about" data-slide="3" class="dot dot-bull" id="button-bull" class="popper-button">
+         <a href="/about?fadein" data-slide="3" class="dot dot-bull" id="button-bull" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <a href="/about" id="tooltip-bull" class="popper-tooltip" role="tooltip">
+         <a href="/about?fadein" id="tooltip-bull" class="popper-tooltip" role="tooltip">
             About The Book
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
          
          <!-- sword button -->
-         <a href="/endorsements" data-slide="3" class="dot dot-sword" id="button-sword" class="popper-button">
+         <a href="/endorsements?fadein" data-slide="3" class="dot dot-sword" id="button-sword" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <a href="/endorsements" id="tooltip-sword" class="popper-tooltip" role="tooltip">
+         <a href="/endorsements?fadein" id="tooltip-sword" class="popper-tooltip" role="tooltip">
             What People Are Saying
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
@@ -104,7 +104,7 @@ get_header();
          <div class="full" data-depth="0.4" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-coin.png);"></div>
          
          <!-- book button -->
-         <a href="/see-inside/" class="dot dot-book" id="button-book" class="popper-button">
+         <a href="/see-inside/?fadein" class="dot dot-book" id="button-book" class="popper-button">
             <div class="pulse"></div>
          </a>
          <a href="/see-inside/" id="tooltip-book" class="popper-tooltip" role="tooltip">
@@ -113,10 +113,10 @@ get_header();
          </a>
 
          <!-- cups-red button -->
-         <a href="/about" class="dot dot-cups-red" id="button-cups-red" class="popper-button">
+         <a href="/about?fadein" class="dot dot-cups-red" id="button-cups-red" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <a href="/about" id="tooltip-cups-red" class="popper-tooltip" role="tooltip">
+         <a href="/about?fadein" id="tooltip-cups-red" class="popper-tooltip" role="tooltip">
             About the book
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
@@ -131,19 +131,19 @@ get_header();
          </a>
 
          <!-- cups-green button -->
-         <a href="/author" class="dot dot-cups-green" id="button-cups-green" class="popper-button">
+         <a href="/author?fadein" class="dot dot-cups-green" id="button-cups-green" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <a href="/author" id="tooltip-cups-green" class="popper-tooltip" role="tooltip">
+         <a href="/author?fadein" id="tooltip-cups-green" class="popper-tooltip" role="tooltip">
             Meet the author
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
 
          <!-- coin button -->
-         <a href="/endorsements" class="dot dot-coin" id="button-coin" class="popper-button">
+         <a href="/endorsements?fadein" class="dot dot-coin" id="button-coin" class="popper-button">
             <div class="pulse"></div>
          </a>
-         <a href="/endorsements" id="tooltip-coin" class="popper-tooltip" role="tooltip">
+         <a href="/endorsements?fadein" id="tooltip-coin" class="popper-tooltip" role="tooltip">
             Endorsements
             <div class="popper-arrow" data-popper-arrow></div>
          </a>

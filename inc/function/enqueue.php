@@ -37,7 +37,7 @@ function ettt_gutenberg_assets() {
  */
 add_action( 'wp_enqueue_scripts', 'ettt_enqueue_everything' );
 function ettt_enqueue_everything() {
-    
+        
     wp_enqueue_style( 'dashicons' );
     
     // Theme styles
@@ -58,7 +58,7 @@ function ettt_enqueue_everything() {
 	);
     
     // GSAP animation library
-    wp_register_script(
+    wp_enqueue_script(
 		'gsap',
         'https://unpkg.co/gsap@3/dist/gsap.min.js',
 		'',
@@ -152,5 +152,13 @@ function ettt_enqueue_everything() {
         CHILD_THEME_VERSION,
         true
     );
-    	
+    
+    wp_enqueue_script(
+        'mainsite-fadein-later',
+        get_stylesheet_directory_uri() . '/assets/js/mainsite-fadein-later.js',
+        array( 'gsap' ),
+        CHILD_THEME_VERSION,
+        true
+    );
+        	
 }

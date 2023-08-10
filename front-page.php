@@ -31,16 +31,17 @@ get_header();
          <div class="full" data-depth="0.5" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-1-bkg-foreground.png);"></div>
          
          <!-- mirror left button -->
-         <a href="#" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button" data-depth="0.5">
+         <a href="#" data-slide="3" class="dot dot-mirror-left" id="button-mirror-left" class="popper-button">
             <div class="pulse"></div>
          </a>
          <a href="#" data-slide="3" id="tooltip-mirror-left" class="popper-tooltip" role="tooltip">
             Mirror left tooltip
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
+        
          
          <!-- mirror right button -->
-         <a href="#" data-slide="3" class="dot dot-mirror-right" id="button-mirror-right" class="popper-button" data-depth="0.5">
+         <a href="#" data-slide="3" class="dot dot-mirror-right" id="button-mirror-right" class="popper-button">
             <div class="pulse"></div>
          </a>
          <a href="#" data-slide="3" id="tooltip-mirror-right" class="popper-tooltip" role="tooltip">
@@ -69,7 +70,7 @@ get_header();
          <!-- <a href="#" data-slide="3" class="dot dot-sword" data-depth="0.5"><div class="pulse"></div></a> -->
          
          <!-- bull button -->
-         <a href="#" data-slide="3" class="dot dot-bull" id="button-bull" class="popper-button" data-depth="0.5">
+         <a href="#" data-slide="3" class="dot dot-bull" id="button-bull" class="popper-button">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-bull" class="popper-tooltip" role="tooltip">
@@ -78,7 +79,7 @@ get_header();
          </div>
          
          <!-- sword button -->
-         <a href="#" data-slide="3" class="dot dot-sword" id="button-sword" class="popper-button" data-depth="0.5">
+         <a href="#" data-slide="3" class="dot dot-sword" id="button-sword" class="popper-button">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-sword" class="popper-tooltip" role="tooltip">
@@ -102,7 +103,7 @@ get_header();
          <div class="full" data-depth="0.4" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-3-coin.png);"></div>
          
          <!-- book button -->
-         <a href="/see-inside/" class="dot dot-book" id="button-book" class="popper-button" data-depth="0.35">
+         <a href="/see-inside/" class="dot dot-book" id="button-book" class="popper-button">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-book" class="popper-tooltip" role="tooltip">
@@ -111,7 +112,7 @@ get_header();
          </div>
 
          <!-- cups-red button -->
-         <a href="/about" class="dot dot-cups-red" id="button-cups-red" class="popper-button" data-depth="0.45">
+         <a href="/about" class="dot dot-cups-red" id="button-cups-red" class="popper-button">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-cups-red" class="popper-tooltip" role="tooltip">
@@ -120,7 +121,7 @@ get_header();
          </div>
 
          <!-- cups-blue button -->
-         <a href="https://www.amazon.com/dp/1265432961" target="_blank" class="dot dot-cups-blue" id="button-cups-blue" class="popper-button" data-depth="0.45">
+         <a href="https://www.amazon.com/dp/1265432961" target="_blank" class="dot dot-cups-blue" id="button-cups-blue" class="popper-button">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-cups-blue" class="popper-tooltip" role="tooltip">
@@ -129,7 +130,7 @@ get_header();
          </div>
 
          <!-- cups-green button -->
-         <a href="/author" class="dot dot-cups-green" id="button-cups-green" class="popper-button" data-depth="0.45">
+         <a href="/author" class="dot dot-cups-green" id="button-cups-green" class="popper-button">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-cups-green" class="popper-tooltip" role="tooltip">
@@ -138,7 +139,7 @@ get_header();
          </div>
 
          <!-- coin button -->
-         <a href="/endorsements" class="dot dot-coin" id="button-coin" class="popper-button" data-depth="0.42">
+         <a href="/endorsements" class="dot dot-coin" id="button-coin" class="popper-button">
             <div class="pulse"></div>
          </a>
          <div id="tooltip-coin" class="popper-tooltip" role="tooltip">

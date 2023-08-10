@@ -43,8 +43,8 @@ body.page-scroll-animations {
     // positioning for individual items
     [data-depth] {
         position: absolute;
-        height: 30px;
-        width: 30px;
+        // height: 30px;
+        // width: 30px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -54,6 +54,7 @@ body.page-scroll-animations {
     }
 
     .dot {
+        position: absolute;
         width: 30px;
         height: 30px;
         border-radius: 100%;

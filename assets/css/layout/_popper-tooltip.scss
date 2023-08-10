@@ -1,12 +1,14 @@
 .popper-tooltip {
     background: black;
-    color: white;
+    color: white !important;
+    text-decoration: none !important;
     font-weight: bold;
     padding: 8px 12px;
     font-size: 14px;
     border-radius: 4px;
     display: none;
     z-index: 999999;
+    transition: 0.3s background-color ease;
 }
 
 .popper-tooltip[data-show] {

@@ -146,8 +146,16 @@ function ettt_enqueue_everything() {
     );
     
     wp_register_script(
-        'interactivity',
-        get_stylesheet_directory_uri() . '/assets/js/interactivity.js',
+        'interactivity-scene-1',
+        get_stylesheet_directory_uri() . '/assets/js/interactivity-scene-1.js',
+        array( 'gsap', 'jquery' ),
+        CHILD_THEME_VERSION,
+        true
+    );
+    
+    wp_register_script(
+        'interactivity-scene-2',
+        get_stylesheet_directory_uri() . '/assets/js/interactivity-scene-2.js',
         array( 'gsap', 'jquery' ),
         CHILD_THEME_VERSION,
         true

@@ -13,7 +13,8 @@ wp_enqueue_script( 'gsap-animate-sections' );
 wp_enqueue_script( 'pulse-animations' );
 wp_enqueue_script( 'popper' );
 wp_enqueue_script( 'popper-init' );
-wp_enqueue_script( 'interactivity' );
+wp_enqueue_script( 'interactivity-scene-1' );
+wp_enqueue_script( 'interactivity-scene-2' );
 wp_enqueue_script( 'preload-images' );
 
 get_header();
@@ -50,6 +51,8 @@ get_header();
             What People Are Saying
             <div class="popper-arrow" data-popper-arrow></div>
          </a>
+         
+         <div class="scrolldown" data-depth="0.6">Scroll down</div>
       </div>
    </div>
 </section>
@@ -58,7 +61,7 @@ get_header();
    <div class="inner-container" style="opacity: 0;">
        <div class="scene-container scene-container-2" >
          
-         <div class="full" data-depth="0.3" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-bkg.jpg);"></div>
+         <div class="full scene-2-bkg" data-depth="0.3"></div>
          <!-- <div class="full" data-depth="0.5" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-curtains.png);"></div> -->
          <!-- <div class="full" data-depth="0.35" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-smoke.png);"></div> -->
          <!-- <div class="full" data-depth="0.4" style="background-image:url(<?php // echo get_stylesheet_directory_uri(); ?>/assets/images/scene-2-words.png);"></div> -->

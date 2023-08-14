@@ -139,9 +139,48 @@ body.page-scroll-animations {
             right: 22%;
             bottom: 30%;
         }
+
+        .scrolldown {
+            background-color: transparent;
+            border-radius: 20px;
+            display: block;
+            bottom: 40px;
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+            line-height: 1;
+            padding: 12px 20px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            border: 3px solid white;
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: background-color 1s, color 1s; /* Add transition for smooth color change */
+            animation: bounceColors 4s infinite;
+        }
+
+        @keyframes bounceColors {
+            0%,
+            100% {
+                background-color: rgba(0, 0, 0, 0.7);
+                color: white;
+            }
+            50% {
+                background-color: white;
+                color: black;
+            }
+        }
     }
 
     .scene-container-2 {
+        .scene-2-bkg {
+            background-image: url('../images/scene-2-bkg.jpg');
+            transition: background-image 1s;
+        }
+
+        .scene-2-bkg.animate-background {
+            background-image: url('../images/scene-2-bkg-active.jpg');
+        }
+
         .dot-sword {
             right: 20%;
             bottom: 35%;

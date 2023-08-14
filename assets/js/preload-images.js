@@ -2,6 +2,7 @@
 var imageUrls = [
     '/wp-content/themes/money-magicians-theme/assets/images/scene-1-mirror-left-active.png',
     '/wp-content/themes/money-magicians-theme/assets/images/scene-1-mirror-right-active.png',
+    '/wp-content/themes/money-magicians-theme/assets/images/scene-2-bkg-active.jpg',
 ];
 
 // Preload function

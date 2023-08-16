@@ -141,5 +141,14 @@ function ettt_enqueue_everything() {
         CHILD_THEME_VERSION
     );
     
+    // Youtube remove related videos on Oembed
+    wp_enqueue_script(
+        'remove-youtube-related-videos-from-oembeds',
+        get_stylesheet_directory_uri() . '/assets/js/remove-youtube-related-videos-from-oembeds.js',
+        array('jquery'),
+        CHILD_THEME_VERSION,
+        true
+    );
+    
 	
 }

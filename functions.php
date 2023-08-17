@@ -16,3 +16,16 @@ foreach ( glob( CHILD_THEME_DIR . "/inc/*/*.php", GLOB_NOSORT ) as $filename ){
 }
 
 add_filter( 'media_library_infinite_scrolling', '__return_true' );
+
+add_action( 'wp_footer', 'output_block_names' );
+function output_block_names() {
+    $blocks = parse_blocks( get_post()->post_content );
+    $block_names = array_map( function( $block ) {
+        return $block['blockName'];
+    }, $blocks );
+    echo '<script>';
+    echo 'console.log(' . json_encode( $block_names ) . ');';
+    echo '</script>';
+}
+    
+    

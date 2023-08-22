@@ -1,5 +1,18 @@
 AOS.init();
 
+// Get all the iframes present on the page
+const iframes = document.querySelectorAll('iframe');
+
+// Loop through each iframe to check if it contains "youtube.com" in its src
+for (const iframe of iframes) {
+    const src = iframe.getAttribute('src');
+    if (src.includes('youtube.com')) {
+        // Append ?rel=0 to the existing src
+        const modifiedSrc = src + '&rel=0';
+        iframe.setAttribute('src', modifiedSrc);
+    }
+}
+
 jQuery(document).ready(function ($) {
     $('.single-property-slider').slick({
         dots: false,
@@ -93,7 +106,7 @@ const swiper = new Swiper('.swiper', {
     autoHeight: false,
     autoplay: false,
     // Default parameters
-    slidesPerView: 2.3,
+    slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 30,
     loop: true,
@@ -104,14 +117,9 @@ const swiper = new Swiper('.swiper', {
     breakpoints: {
         // when window width is >= 480
         480: {
-            slidesPerView: 1,
+            slidesPerView: 1.3,
         },
-        640: {
-            slidesPerView: 2,
-        },
-        960: {
-            slidesPerView: 3,
-        },
+
         1025: {
             slidesPerView: 2.3,
         },

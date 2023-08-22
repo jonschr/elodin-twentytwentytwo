@@ -45,4 +45,8 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     animation: pulseAnimation 2s infinite;
+
+    @include notdesktop {
+        display: none;
+    }
 }

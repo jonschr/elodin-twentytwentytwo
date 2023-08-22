@@ -37,3 +37,24 @@ a.top {
         margin: 0 auto 5px auto !important;
     }
 }
+
+a.resident-portal-footer {
+    font-weight: 700;
+    cursor: pointer;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 15px;
+    border: 2px solid white;
+    display: inline-block;
+    position: static;
+    border-radius: 10px;
+    line-height: 1;
+    transition: 0.3s all ease;
+    text-align: center;
+
+    &:hover {
+        border-color: var(--accent);
+        color: white;
+        background-color: var(--accent);
+    }
+}

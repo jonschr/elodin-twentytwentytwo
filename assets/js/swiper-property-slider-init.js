@@ -3,7 +3,7 @@ const swiper = new Swiper('.swiper', {
     autoHeight: false,
     autoplay: false,
     // Default parameters
-    slidesPerView: 2.3,
+    slidesPerView: 1.3,
     slidesPerGroup: 1,
     spaceBetween: 30,
     loop: true,
@@ -13,15 +13,10 @@ const swiper = new Swiper('.swiper', {
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 480
-        480: {
-            slidesPerView: 1,
+        600: {
+            slidesPerView: 2.3,
         },
-        640: {
-            slidesPerView: 2,
-        },
-        960: {
-            slidesPerView: 3,
-        },
+
         1025: {
             slidesPerView: 2.3,
         },

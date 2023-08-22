@@ -1,0 +1,40 @@
+.insurances-loop {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include mobile {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .insurance {
+        position: relative;
+        box-shadow: $boxshadow;
+
+        .featured-image {
+            height: 0;
+            padding-top: 20%;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 10%;
+        }
+
+        .content {
+            position: absolute;
+            inset: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            background-color: var(--accent-transparency);
+            transition: 0.5s all ease;
+            border-radius: 3px;
+
+            h3 {
+                color: white;
+            }
+        }
+    }
+}

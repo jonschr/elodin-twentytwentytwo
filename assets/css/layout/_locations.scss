@@ -1,0 +1,73 @@
+.loop-container.loop-layout-locations {
+    .entry {
+        @include desktop {
+            margin-bottom: 50px;
+        }
+
+        .info {
+            margin-bottom: 15px;
+
+            p {
+                margin-bottom: 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .team-member {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        align-items: center;
+        box-shadow: $boxshadow;
+        margin-bottom: 15px;
+        background-color: white;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        .featured-image {
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            background-color: var(--accent);
+            height: 100%;
+
+            @include notdesktop {
+                background-position: top center;
+            }
+        }
+
+        .content {
+            padding: 60px;
+
+            @include mobile {
+                padding: 20px;
+            }
+
+            h3 {
+                @include desktop {
+                    font-size: 24px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .buttons {
+                .btn {
+                    display: inline-block;
+                    margin-right: 5px;
+                    background-color: var(--accent);
+                    color: white;
+
+                    &:hover {
+                        background-color: var(--accent-2);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

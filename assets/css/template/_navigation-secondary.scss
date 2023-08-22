@@ -2,3 +2,9 @@
     padding-left: 20px !important;
     padding-right: 10px !important;
 }
+
+@include notdesktop {
+    #secondary-navigation {
+        display: none;
+    }
+}

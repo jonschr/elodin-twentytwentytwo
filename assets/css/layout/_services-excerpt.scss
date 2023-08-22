@@ -1,0 +1,33 @@
+.loop-container.loop-layout-services {
+    .entry {
+        background-color: white;
+        position: relative;
+        box-shadow: $boxshadow;
+        border-radius: 3px;
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+
+            border-radius: 3px;
+            overflow: hidden;
+            transition: 0.3s box-shadow ease-in-out;
+
+            &:hover {
+                box-shadow: 0 0 0 5px var(--accent);
+            }
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+
+        .featured-image {
+            margin: 0;
+        }
+
+        .post-edit-link {
+            display: none;
+        }
+    }
+}

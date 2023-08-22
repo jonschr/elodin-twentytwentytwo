@@ -1,0 +1,74 @@
+.teammembers-loop {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include mobile {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .team-member {
+        background-color: white;
+        box-shadow: $boxshadow;
+        position: relative;
+
+        .featured-image {
+            margin: 0;
+            height: 0;
+            padding-top: 120%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            opacity: 0;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 900;
+            transition: 0.3s all ease;
+            text-decoration: none;
+            padding: 30px;
+        }
+
+        .buttons {
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+
+            .btn {
+                background-color: white;
+                display: block;
+                width: 100%;
+                color: var(--accent);
+                text-align: center;
+                margin: 5px 0;
+                text-transform: none;
+                font-weight: 800;
+                letter-spacing: 0;
+
+                &:hover {
+                    background-color: var(--contrast);
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .team-member:hover {
+        .overlay {
+            opacity: 1;
+            background-color: var(--accent-transparency);
+        }
+    }
+}

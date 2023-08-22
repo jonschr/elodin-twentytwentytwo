@@ -59,6 +59,31 @@ function ettt_enqueue_everything() {
         true
     );
     
+    // Fancybox
+    wp_register_style(
+        'fancybox-main-theme',
+        'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css',
+        array(),
+        CHILD_THEME_VERSION
+    );
+    
+    wp_register_script(
+        'fancybox-main-script',
+        'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js',
+        array('jquery'),
+        CHILD_THEME_VERSION,
+        true
+    );
+    
+    wp_register_script(
+        'fancybox-team-init',
+        get_stylesheet_directory_uri() . '/assets/dist/fancybox-enqueue-team.min.js',
+        array('fancybox-main-script'),
+        CHILD_THEME_VERSION,
+        true
+    );
+    
+    
     // // AOS script: https://michalsnik.github.io/aos/
     // wp_enqueue_script(
     //     'aos-script',

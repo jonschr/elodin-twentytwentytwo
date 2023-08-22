@@ -1,0 +1,22 @@
+.fancybox__backdrop {
+    z-index: 50;
+    background-color: var(--accent-transparency) !important;
+}
+
+.f-button {
+    background-color: transparent !important;
+    outline: none !important;
+}
+
+.team-fancybox-content {
+    max-width: 960px !important;
+}
+
+.fancybox__container {
+    z-index: 9999999999 !important;
+}
+
+.fancybox__content > .f-button.is-close-btn {
+    color: white !important;
+    outline: none !important;
+}

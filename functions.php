@@ -7,7 +7,7 @@
  */
 
 
-define( 'CHILD_THEME_VERSION', '0.4' );
+define( 'CHILD_THEME_VERSION', '0.5' );
 define( 'CHILD_THEME_DIR', dirname( __FILE__ ) );
 
 //* Include everything in /lib
@@ -27,5 +27,9 @@ function output_block_names() {
     echo 'console.log(' . json_encode( $block_names ) . ');';
     echo '</script>';
 }
-    
+
+add_action('after_setup_theme', 'disable_custom_colors');
+function disable_custom_colors() {
+    add_theme_support('disable-custom-colors');
+}
     

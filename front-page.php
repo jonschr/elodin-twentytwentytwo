@@ -20,6 +20,20 @@ wp_enqueue_script( 'preload-images' );
 get_header();
 ?>
 
+<script>
+   jQuery(document).ready(function($) {
+      function redirectOnLoad() {
+         if ($(window).width() < 767 || $(window).height() > $(window).width()) {
+            window.location.href = '/about';
+         }
+      }
+      
+      $(window).on('load', redirectOnLoad);
+      $(window).on('resize', redirectOnLoad);
+   });
+</script>
+
+
 <section id="section-1" class="cd-section visible">
    <div class="inner-container">
        <div class="scene-container scene-container-1">

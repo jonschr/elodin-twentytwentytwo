@@ -5,15 +5,17 @@
 .btn {
     font-weight: bold;
     cursor: pointer;
-    padding: 13px 20px !important;
+    padding: 17px 35px 15px !important;
     text-decoration: none !important;
-    font-size: 13px !important;
+    font-size: 16px !important;
     letter-spacing: 0.1em;
     text-transform: uppercase !important;
     border-width: 2px !important;
     display: inline-block !important;
     position: static;
     border-radius: 3px;
+    line-height: 0.8;
+    position: static;
 
     &:hover {
         filter: brightness(102%);

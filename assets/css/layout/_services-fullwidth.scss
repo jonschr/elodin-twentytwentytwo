@@ -5,6 +5,7 @@ body .loop-container.loop-layout-services_fullwidth {
     grid-gap: 0;
     align-items: center;
     justify-items: center;
+    margin: 0;
 
     @include mobile {
         > :last-child:nth-child(odd) {

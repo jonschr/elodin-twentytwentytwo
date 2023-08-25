@@ -32,6 +32,8 @@ body .loop-container.loop-layout-services_fullwidth {
 
         .overlay {
             z-index: 10;
+            position: absolute;
+            inset: 0;
         }
 
         .content {

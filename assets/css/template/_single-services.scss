@@ -16,6 +16,12 @@ body.single-services {
             var(--base) 60px,
             #fcfbf6 100%
         );
+
+        h1 {
+            @include desktop {
+                font-size: 50px;
+            }
+        }
     }
 
     .wrap {

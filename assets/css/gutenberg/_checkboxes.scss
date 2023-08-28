@@ -12,7 +12,15 @@ ol.is-style-checkmark {
         list-style: none;
         padding-left: 40px;
         margin-bottom: 8px;
-        line-height: 1.4;
+        padding-bottom: 8px;
+        line-height: 1.2;
+        border-bottom: 1px solid rgba(#735e22, 0.12);
+
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+        }
 
         &:last-child {
             margin-bottom: 0;

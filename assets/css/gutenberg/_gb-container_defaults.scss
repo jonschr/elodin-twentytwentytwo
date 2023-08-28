@@ -23,12 +23,12 @@
 :where(.gb-is-root-block > .gb-container),
 :where(.gb-root-block-generateblocks-container > .gb-container),
 :where(.block-library-block__reusable-block-container > .gb-container) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 90px;
+    padding-bottom: 90px;
 
     @include tablet {
-        padding-top: 45px;
-        padding-bottom: 45px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     @include mobile {

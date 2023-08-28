@@ -42,6 +42,8 @@ add_action( 'enqueue_block_editor_assets', 'ettt_gutenberg_assets');
  */
 function ettt_enqueue_everything() {
     
+    wp_enqueue_style( 'dashicons' );
+    
     // Theme styles
 	wp_enqueue_style( 
         'theme-styles', 

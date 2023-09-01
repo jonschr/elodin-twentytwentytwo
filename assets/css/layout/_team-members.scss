@@ -2,6 +2,7 @@
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 15px;
 
     @include mobile {
         grid-template-columns: 1fr 1fr;

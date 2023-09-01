@@ -1,5 +1,7 @@
 <?php
 
+
+
 // wordpress standard header
 get_header();
 
@@ -44,6 +46,10 @@ if ( have_posts() ) {
                 
         echo '</div>';
         
+        connected_teammembers();
+        
+        services_section();
+                
     } // end while
     
     

@@ -122,9 +122,51 @@ function team_member_location_each( $id ) {
                 printf( '<h2>%s</h2>', $title );
 				        
             echo $content;
+						
+			echo '<h2>Services</h2>';
+			$services = get_post_meta( $id, 'teammembers_to_services', true );
+			if ( $services ) {
+				echo '<div class="loop-columns-3 loop-container loop-container-align-left loop-layout-services_photo">';
+					foreach( $services as $service ) {
+						
+						wp_enqueue_style( 'gsq-styles' );
+						
+						$args = array(
+							'post_type' => 'services',
+							'p' => $service,
+						);
+						
+						// The Query
+						$custom_query = new WP_Query( $args );
+						
+						// The Loop
+						if ( $custom_query->have_posts() ) {
+
+							while ( $custom_query->have_posts() ) {
+								
+								$custom_query->the_post();
+
+								printf( '<div class="%s">', implode( ' ', get_post_class() ) );
+									echo '<div class="loop-item-inner">';
+										do_action( 'add_loop_layout_services_photo' );
+									echo '</div>';
+								echo '</div>';
+
+							}
+							
+							// Restore postdata
+							wp_reset_postdata();
+
+						}
+					}
+				echo '</div>';
+			} else {
+				printf( '<p><em>%s does not take insurance.</em></p>', $title );
+			}
 			
+			echo '<h2>Insurance taken</h2>';
 			if ( $insurances ) {
-				echo '<h2>Insurance taken</h2>';
+				
 				echo '<div class="insurances-loop">';
 					foreach( $insurances as $insurance ) {
 						insurance_each( $insurance );

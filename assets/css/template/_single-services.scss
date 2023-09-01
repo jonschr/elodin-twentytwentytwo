@@ -42,4 +42,54 @@ body.single-services {
             }
         }
     }
+
+    .connected-teammembers {
+        padding: 60px 25px;
+        background-color: var(--base);
+
+        @include mobile {
+            padding: 25px;
+        }
+
+        .wrap {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+
+            h2 {
+                text-transform: capitalize;
+            }
+        }
+
+        .teammembers-loop {
+            grid-template-columns: repeat(4, 1fr);
+
+            @include notdesktop {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    .services-section {
+        padding: 60px 25px;
+        background-color: white;
+
+        @include mobile {
+            padding: 25px;
+        }
+
+        .wrap {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+
+            h2 {
+                text-transform: capitalize;
+            }
+        }
+    }
 }

@@ -51,13 +51,13 @@ function ettt_enqueue_everything() {
     );
     
     // Smoothscroll
-    wp_enqueue_script(
-        'smoothscroll-script',
-        get_stylesheet_directory_uri() . '/assets/dist/smoothscroll.min.js',
-        array('jquery'),
-        CHILD_THEME_VERSION,
-        true
-    );
+    // wp_enqueue_script(
+    //     'smoothscroll-script',
+    //     get_stylesheet_directory_uri() . '/assets/dist/smoothscroll.min.js',
+    //     array('jquery'),
+    //     CHILD_THEME_VERSION,
+    //     true
+    // );
     
     // AOS script: https://michalsnik.github.io/aos/
     wp_enqueue_script(

@@ -1,0 +1,79 @@
+.loop-container.loop-layout-news {
+    .entry {
+        background-color: white;
+        position: relative;
+        box-shadow: 5px 5px 10px 0 rgba(black, 0.07);
+        border-radius: 3px;
+
+        .loop-item-inner {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+
+            .post-edit-link {
+                background-color: black;
+                padding: 5px;
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                z-index: 5;
+                color: white;
+                font-size: 14px;
+                letter-spacing: 0;
+                text-decoration: none;
+                display: inline-block;
+                line-height: 1;
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-image {
+                margin: 0;
+                min-height: 100%;
+                width: 100%;
+                background-size: cover;
+                background-position: center center;
+                z-index: 3;
+                position: relative;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+
+                @include mobile {
+                    min-height: 150px;
+                    border-radius: 3px 3px 0 0;
+                }
+            }
+
+            .content {
+                padding: 40px;
+
+                @include mobile {
+                    padding: 30px;
+                }
+
+                .excerpt {
+                    margin-bottom: 30px;
+
+                    @include mobile {
+                        p {
+                            font-size: 16px;
+                            letter-spacing: 0.05em;
+                        }
+                    }
+                }
+
+                .btn {
+                    background-color: var(--accent);
+                    color: var(--white-color);
+                    text-align: center;
+
+                    &:hover {
+                        background-color: var(--accent-2);
+                        color: var(--white-color);
+                    }
+                }
+            }
+        }
+    }
+}

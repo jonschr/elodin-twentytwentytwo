@@ -57,6 +57,33 @@ $wide: 1200px;
    Font
    ========================================================================== */
 
+@font-face {
+    font-family: 'nexa';
+    src: url('font/Nexa-Bold.woff2') format('woff2'),
+        url('font/Nexa-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nexa';
+    src: url('font/Nexa-Light.woff2') format('woff2'),
+        url('font/Nexa-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nexa';
+    src: url('font/NexaRegular.woff2') format('woff2'),
+        url('font/NexaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 // @font-face {
 //     font-family: 'nexa';
 //     src: url('font/NexaBold.woff2') format('woff2'),

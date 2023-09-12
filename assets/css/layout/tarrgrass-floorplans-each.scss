@@ -1,0 +1,136 @@
+.wrap-floorplans .floorplans-wrap .floorplan-in-archive {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+
+    .floorplans {
+        margin-bottom: 0;
+        text-align: center;
+        background-color: #f2f2f2;
+        box-shadow: $boxshadow;
+        height: 100%;
+        padding: 0;
+        width: 100%;
+        overflow: hidden; /* Hide content that exceeds the column width */
+        white-space: nowrap; /* Prevent text from wrapping */
+        text-overflow: ellipsis;
+
+        .floorplan-inner {
+            display: block;
+            position: relative;
+            width: 100%;
+
+            .floorplan-images-wrap {
+                width: 100% !important;
+                margin-bottom: 0 !important;
+
+                .floorplan-slider {
+                    background-color: white;
+                    width: 100% !important;
+                    max-width: 100% !important;
+
+                    .floorplan-slide {
+                        // height: 200px;
+                        width: 100% !important;
+                        position: relative;
+
+                        img {
+                            // display: none !important;
+                            position: absolute;
+                            inset: 0;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+
+            .floorplan-content {
+                padding: 25px;
+
+                h3.floorplan-title {
+                    font-family: 'Montserrat';
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    font-weight: 500;
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+
+                p.info {
+                    margin-top: 0;
+                    padding-top: 0;
+                    text-align: center;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    span {
+                        font-size: 16px;
+                        padding: 35px 0 0 !important;
+                        margin: 0 !important;
+
+                        &:before {
+                            background-position: center center;
+                            width: 100%;
+                            // display: none;
+                        }
+
+                        &.floorplan-beds:before {
+                            background-image: url('../images/beds.svg');
+                        }
+                        &.floorplan-baths:before {
+                            background-image: url('../images/baths.svg');
+                        }
+                        &.floorplan-sqft_range:before {
+                            background-image: url('../images/sqrft.svg');
+                        }
+                    }
+                }
+            }
+
+            .floorplan-rent-range {
+                width: 100% !important;
+                float: none;
+                padding: 0 10px 15px;
+
+                .floorplan-buttons {
+                    display: flex;
+                    justify-content: center;
+
+                    a.button {
+                        @extend .btn;
+                        margin: 0 5px;
+                        width: 100%;
+                        display: block;
+
+                        float: none;
+                    }
+                }
+
+                p.rent_range {
+                    display: none;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    h2 {
+        @include notmobile {
+            margin-bottom: 40px;
+        }
+    }
+}

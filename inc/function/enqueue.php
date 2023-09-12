@@ -114,6 +114,18 @@ function ettt_enqueue_everything() {
         CHILD_THEME_VERSION
     );
     
+    /////////////////////////////////////
+    // PROPERTIES SINGLE CUSTOMIZATION //
+    /////////////////////////////////////
+    
+    wp_register_script(
+        'properties-single-collapse-subnav',
+        get_stylesheet_directory_uri() . '/assets/js/properties-single-collapse-subnav.js',
+        array('jquery'),
+        CHILD_THEME_VERSION,
+        true
+    );
+    
     ////////////
     // SWIPER //
     ////////////

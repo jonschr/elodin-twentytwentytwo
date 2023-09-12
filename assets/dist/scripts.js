@@ -1,5 +1,15 @@
 AOS.init();
 
+jQuery(document).ready(function ($) {
+    // when the user clicks .toggle-subnav, toggle the .open class on .toggle-subnav, and toggle the .active class on .nav-content
+    $('.toggle-subnav').click(function (event) {
+        event.preventDefault();
+        $(this).toggleClass('open');
+        $('.nav-content').toggleClass('active');
+        return false; // Add this line to prevent the click event from scrolling to the top of the page
+    });
+});
+
 // Get all the iframes present on the page
 const iframes = document.querySelectorAll('iframe');
 
@@ -65,17 +75,19 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
     $("a[href^='#']:not(.menu-bar-items a)").on('click', function (event) {
-        event.preventDefault();
-        var href = $(this).attr('href');
+        if (!$(this).hasClass('toggle-subnav')) {
+            event.preventDefault();
+            var href = $(this).attr('href');
 
-        if (href === '#') {
-            // Scroll to the top
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-            });
-        } else {
-            scrollToElement(href);
+            if (href === '#') {
+                // Scroll to the top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                });
+            } else {
+                scrollToElement(href);
+            }
         }
     });
 
@@ -106,7 +118,7 @@ const swiper = new Swiper('.swiper', {
     autoHeight: false,
     autoplay: false,
     // Default parameters
-    slidesPerView: 1,
+    slidesPerView: 1.3,
     slidesPerGroup: 1,
     spaceBetween: 30,
     loop: true,
@@ -116,8 +128,8 @@ const swiper = new Swiper('.swiper', {
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 480
-        480: {
-            slidesPerView: 1.3,
+        600: {
+            slidesPerView: 2.3,
         },
 
         1025: {

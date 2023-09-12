@@ -74,8 +74,8 @@ body.properties-template-default {
             position: absolute;
             bottom: 0;
             padding: 0 25px 60px;
-            width: 100%;
             z-index: 20;
+            max-width: calc(100% - 50px);
 
             @include mobile {
                 padding: 25px;
@@ -114,11 +114,43 @@ body.properties-template-default {
        ========================================================================== */
 
     .section-nav {
-        background-color: var(--base);
+        background-color: white;
+
+        .toggle-subnav {
+            display: none;
+            background-color: white;
+            text-align: center;
+            padding: 20px 30px;
+            position: static;
+            line-height: 1;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 5px;
+            color: var(--contrast);
+            text-decoration: none !important;
+            margin: 0;
+
+            &.open {
+                background-color: var(--base);
+            }
+
+            @include mobile {
+                display: block;
+            }
+        }
 
         .nav-content {
             margin: 0 auto;
             text-align: center;
+
+            @include mobile {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
 
             .nav-item {
                 display: inline-block;
@@ -140,6 +172,7 @@ body.properties-template-default {
                     color: var(--contrast);
                     text-decoration: none !important;
                     margin: 0;
+                    background-color: white;
 
                     &:hover {
                         color: var(--accent);
@@ -298,36 +331,26 @@ body.properties-template-default {
         background-color: var(--base);
         padding: 120px 25px;
 
-        h2 {
-            @include notmobile {
-                margin-bottom: 40px;
+        .floorplan-images-wrap {
+            @include mobile {
+                margin: 0 0 35px;
+                width: 100%;
             }
         }
 
+        @include mobile {
+            padding: 25px;
+        }
+
         .floorplans-wrap {
-            width: 100%;
-            max-width: 1200px;
+            width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
 
             .floorplan-in-archive {
                 &:last-child {
                     margin-bottom: 0;
                 }
-            }
-
-            .floorplans {
-                margin-bottom: 0;
-
-                &:last-child {
-                    margin-bottom: 0;
-                    padding-bottom: 0;
-                }
-            }
-
-            .floorplan-slider {
-                background-color: white;
-                border-radius: 3px;
-                box-shadow: $boxshadow;
             }
 
             summary {
@@ -338,29 +361,6 @@ body.properties-template-default {
                 h3 {
                     font-family: 'Montserrat';
                     font-size: 18px;
-                }
-            }
-
-            h3.floorplan-title {
-                font-family: 'Montserrat';
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                font-weight: 500;
-                font-size: 18px;
-            }
-
-            .floorplan-rent-range {
-                @include desktop {
-                    width: 100%;
-                    max-width: 300px;
-                }
-
-                a.button {
-                    @extend .btn;
-                }
-
-                p.rent_range {
-                    display: none;
                 }
             }
         }

@@ -29,10 +29,15 @@ function tallgrass_properties_hero() {
 
 function tallgrass_properties_nav() {
     
+    wp_enqueue_script( 'properties-single-collapse-subnav' );
+    
     global $post;
     
     echo '<div class="section-nav">';
+    
         echo '<div class="wrap">';
+        
+            echo '<a class="toggle-subnav" href="#">Quick links <span class="dashicons dashicons-arrow-down-alt2"></span></a>';
             
             echo '<div class="nav-content">';
             

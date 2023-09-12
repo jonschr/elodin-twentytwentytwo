@@ -1,16 +1,18 @@
 jQuery(document).ready(function ($) {
     $("a[href^='#']:not(.menu-bar-items a)").on('click', function (event) {
-        event.preventDefault();
-        var href = $(this).attr('href');
+        if (!$(this).hasClass('toggle-subnav')) {
+            event.preventDefault();
+            var href = $(this).attr('href');
 
-        if (href === '#') {
-            // Scroll to the top
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-            });
-        } else {
-            scrollToElement(href);
+            if (href === '#') {
+                // Scroll to the top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                });
+            } else {
+                scrollToElement(href);
+            }
         }
     });
 

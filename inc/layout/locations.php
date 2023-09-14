@@ -50,7 +50,7 @@ function md_output_locations_each() {
 	
 	//* Markup
 	
-    printf( '<a class="overlay" target="_blank" href="https://maps.google.com/?q=Murphy\'s Deli %s %s"></a>', $title, $address );
+    printf( '<a class="overlay" target="_blank" href="https://maps.google.com/?q=Hightower Cafe %s %s"></a>', $title, $address );
     
     echo '<div class="info">';
     

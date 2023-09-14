@@ -1,5 +1,30 @@
 .site-header {
-    border-top: 15px solid var(--accent);
+    @include notmobile {
+        border-top: 20px solid var(--accent);
+    }
+
+    &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        height: 2px;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+        background-color: white;
+        z-index: 0;
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        height: 2px;
+        right: 0;
+        top: 0;
+        transform: translateY(-10px);
+        background-color: white;
+        z-index: 0;
+    }
 
     .inside-header {
         padding-top: 0;
@@ -8,25 +33,34 @@
 
     .site-logo {
         position: absolute;
-        top: -10px;
+        top: -20px;
+        border-radius: 100%;
+        box-shadow: 0 0 0 5px rgba(black, 0.05);
     }
 }
 
 .main-navigation.sticky-navigation-transition {
-    border-top: 10px solid var(--accent);
+    @include notmobile {
+        border-top: 10px solid var(--accent);
+    }
 
     .navigation-branding {
         .sticky-navigation-logo {
             position: absolute;
             top: -15px;
+            left: 30px;
 
             img.is-logo-image {
                 height: 100px;
+                width: 100px;
+                border-radius: 100%;
+                box-shadow: 0 0 0 3px rgba(black, 0.05);
+                padding: 0;
             }
         }
     }
 }
 
 #mobile-header {
-    border-top: 10px solid var(--accent);
+    // border-top: 10px solid var(--accent);
 }

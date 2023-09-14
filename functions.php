@@ -7,7 +7,7 @@
  */
 
 
-define( 'CHILD_THEME_VERSION', '1.5' );
+define( 'CHILD_THEME_VERSION', '1.5.1' );
 define( 'CHILD_THEME_DIR', dirname( __FILE__ ) );
 
 //* Include everything in /lib
@@ -28,7 +28,7 @@ function remove_rf_promotions_conditionally() {
     }
 }
 
-add_action( 'rentfetch_do_floorplan_each_button', 'tallgrass_add_availability_button', 10 );
+// add_action( 'rentfetch_do_floorplan_each_button', 'tallgrass_add_availability_button', 10 );
 function tallgrass_add_availability_button() {
     
     $inquire_url = esc_url( get_post_meta( get_the_ID(), 'availability_url', true ) );
@@ -42,9 +42,7 @@ function tallgrass_add_brochure_button() {
     
     $brochure_id = get_post_meta( get_the_ID(), 'brochure', true );
     $brochure_url = wp_get_attachment_url( $brochure_id );
-    
-    // var_dump( $brochure );
-    
-    if ( $brochure_id )
-        printf( '<a target="_blank" href="%s" class="button">Brochure</a>', $brochure_id );
+        
+    if ( $brochure_url )
+        printf( '<a target="_blank" href="%s" class="button">View Flyer</a>', $brochure_url );
 }

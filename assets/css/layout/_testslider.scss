@@ -1,0 +1,106 @@
+.testslider {
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .tests {
+        padding: 12px;
+        height: inherit !important;
+
+        @media (max-width: 600px) {
+            padding: 0;
+        }
+
+        .featured-image {
+            margin: 0 !important;
+            padding-top: 25% !important;
+            height: 0 !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+
+        h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .inner {
+            background-color: rgba(white, 0.07);
+            height: 100%;
+
+            > div {
+                padding: 8px 15px;
+
+                border-bottom: 1px solid rgba(white, 0.05);
+
+                &.title-terms {
+                    padding-top: 15px;
+
+                    p.terms {
+                        line-height: 1.1;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1 !important; /* number of lines to show */
+                        -webkit-box-orient: vertical;
+                        line-clamp: 1 !important;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+.testslider-arrow-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    > .next,
+    .prev {
+        display: inline-block;
+    }
+
+    .dashicons {
+        font-size: 30px;
+        width: 30px;
+        display: block;
+        margin: 0 10px 0 0;
+        cursor: pointer;
+        color: rgba(white, 0.7);
+
+        &:hover {
+            color: white;
+        }
+    }
+}

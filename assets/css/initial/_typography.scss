@@ -21,6 +21,11 @@ h6 {
     &:last-child {
         margin-bottom: 0;
     }
+
+    strong {
+        color: var(--accent);
+        font-weight: inherit;
+    }
 }
 
 h1,
@@ -30,5 +35,11 @@ h3 {
 
     &:first-child {
         margin-top: 0;
+    }
+}
+
+.entry-content > .gb-container {
+    @include mobile {
+        text-align: left !important;
     }
 }

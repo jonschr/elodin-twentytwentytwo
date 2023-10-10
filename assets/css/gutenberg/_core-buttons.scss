@@ -5,7 +5,8 @@
 .btn {
     font-weight: bold;
     cursor: pointer;
-    padding: 13px 20px !important;
+    padding: 18px 30px !important;
+    border-radius: 30px;
     text-decoration: none !important;
     font-size: 13px !important;
     letter-spacing: 0.1em;
@@ -13,10 +14,10 @@
     border-width: 2px !important;
     display: inline-block !important;
     position: static;
-    border-radius: 3px;
+    line-height: 1;
 
     &:hover {
-        filter: brightness(102%);
+        // filter: brightness(102%);
     }
 
     @include mobile {

@@ -1,0 +1,18 @@
+.main-navigation.sticky-navigation-transition .site-logo img,
+.main-navigation.sticky-navigation-transition
+    .navigation-search
+    input[type='search'],
+.main-navigation.sticky-navigation-transition .navigation-branding img {
+    @include mobile {
+        height: 60px !important;
+    }
+}
+
+.main-navigation.sticky-navigation-transition .main-nav > ul > li > a,
+.sticky-navigation-transition .menu-toggle,
+.main-navigation.sticky-navigation-transition .menu-bar-item > a,
+.sticky-navigation-transition .navigation-branding .main-title {
+    @include mobile {
+        line-height: 60px !important;
+    }
+}

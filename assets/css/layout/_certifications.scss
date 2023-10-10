@@ -1,0 +1,29 @@
+.facetwp-template[data-name='certifications'] {
+    .certifications {
+        padding: 25px;
+        background-color: var(--white-color);
+        margin-bottom: 25px;
+
+        h3 {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        p.state-of-texas-method-id {
+            text-transform: uppercase;
+            color: var(--contrast-3);
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+}

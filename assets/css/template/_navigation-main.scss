@@ -9,19 +9,29 @@
                     }
 
                     a {
-                        @extend .btn;
+                        // @extend .btn;
 
                         @include notmobile {
                             background-color: var(--accent);
                             border-radius: 3px;
                             color: white;
-                            padding: 15px 20px !important;
+                            padding: 18px 30px !important;
                             line-height: 1;
                             transition: 0.3s all ease;
+                            transform: translate(0, 0, 0);
+                            border-radius: 30px;
+                            font-weight: 600;
+                            background: linear-gradient(
+                                173deg,
+                                #47b0a1 0%,
+                                #1c5fa6 60%,
+                                #162964 90%
+                            );
 
                             &:hover {
-                                filter: brightness(102%);
                                 color: white;
+                                padding-left: 35px !important;
+                                padding-right: 35px !important;
                             }
                         }
                     }

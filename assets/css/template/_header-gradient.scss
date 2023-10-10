@@ -1,0 +1,15 @@
+.site-header {
+    &:before {
+        content: '';
+        height: 5px;
+        width: 100%;
+        display: block;
+        // background-color: red;
+        background: linear-gradient(
+            47deg,
+            #47b0a1 0%,
+            #1c5fa6 60%,
+            #162964 90%
+        );
+    }
+}

@@ -93,6 +93,14 @@ function ettt_enqueue_everything() {
         CHILD_THEME_VERSION,
         true
     );
+    
+    wp_register_script(
+        'slick-testslider-init',
+        get_stylesheet_directory_uri() . '/assets/js/slick-testslider-init.js',
+        array('slick-main-script'),
+        CHILD_THEME_VERSION,
+        true
+    );
 
     wp_register_style(
         'slick-main-styles',

@@ -3,5 +3,10 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
+
+    @include mobile {
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
 }

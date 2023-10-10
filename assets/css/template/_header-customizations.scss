@@ -62,5 +62,15 @@
 }
 
 #mobile-header {
-    // border-top: 10px solid var(--accent);
+    position: relative;
+
+    .site-logo.mobile-header-logo {
+        img {
+            top: -5px;
+            position: absolute !important;
+            height: auto !important;
+            width: 70px !important;
+            max-width: inherit !important;
+        }
+    }
 }

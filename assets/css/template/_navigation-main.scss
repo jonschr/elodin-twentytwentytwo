@@ -1,3 +1,23 @@
+#menu-main > li > a {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media (min-width: 600px) {
+    .site-header .main-navigation .main-nav ul li.nav-button {
+        margin-left: 0;
+    }
+
+    #menu-main > li {
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .main-navigation.sticky-navigation-transition {
+        border-top: 10px solid var(--accent);
+    }
+}
+
 .site-header {
     .main-navigation {
         .main-nav {

@@ -40,6 +40,16 @@ wp.domReady(() => {
         },
     ]);
 
+    wp.domReady(() => {
+        wp.blocks.unregisterBlockStyle('core/separator', [
+            'default',
+            'wide',
+            'dots',
+            'dashes',
+            'custom',
+        ]);
+    });
+
     // wp.blocks.registerBlockStyle('core/heading', [
     //     {
     //         name: 'default',

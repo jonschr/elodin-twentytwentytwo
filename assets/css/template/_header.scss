@@ -1,0 +1,16 @@
+.site-header,
+.has-sticky-branding.is_stuck {
+    &:before {
+        content: '';
+        height: 5px;
+        width: 100%;
+        display: block;
+        background: linear-gradient(
+            90deg,
+            #16274c 0%,
+            #79aed5 31.61%,
+            #eac254 71.43%,
+            #f1661c 100%
+        );
+    }
+}

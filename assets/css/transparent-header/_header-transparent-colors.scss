@@ -22,4 +22,10 @@ body.full-width-content.first-block-is-section {
             color: white;
         }
     }
+
+    .site-branding,
+    .site-logo {
+        position: relative;
+        z-index: 20;
+    }
 }

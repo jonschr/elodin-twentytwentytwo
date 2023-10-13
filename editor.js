@@ -10,8 +10,8 @@ wp.domReady(() => {
     wp.blocks.unregisterBlockType('core/column');
     wp.blocks.unregisterBlockType('core/cover');
     wp.blocks.unregisterBlockType('core/media-text');
-    wp.blocks.unregisterBlockType('generateblocks/button-container');
-    wp.blocks.unregisterBlockType('generateblocks/button');
+    // wp.blocks.unregisterBlockType('generateblocks/button-container');
+    // wp.blocks.unregisterBlockType('generateblocks/button');
 });
 
 //* Add alt styles
@@ -39,6 +39,11 @@ wp.domReady(() => {
             label: 'Checkmark',
         },
     ]);
+
+    wp.blocks.unregisterBlockStyle('core/button', 'default');
+    wp.blocks.unregisterBlockStyle('core/button', 'outline');
+    wp.blocks.unregisterBlockStyle('core/button', 'squared');
+    wp.blocks.unregisterBlockStyle('core/button', 'fill');
 
     // wp.blocks.registerBlockStyle('core/heading', [
     //     {

@@ -1,0 +1,20 @@
+.loop-container.loop-layout-services_photo {
+    .entry {
+        h3 > a {
+            transition: 0.3s color ease;
+        }
+
+        .featured-image {
+            border-radius: 3px;
+            transition: 0.3s box-shadow ease;
+        }
+        &:hover {
+            h3 > a {
+                color: var(--contrast-3);
+            }
+            .featured-image {
+                box-shadow: 0 0 0 5px var(--contrast-3);
+            }
+        }
+    }
+}

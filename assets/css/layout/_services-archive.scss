@@ -1,0 +1,45 @@
+.loop-layout-services.loop-container.loop-columns-1 {
+    .entry {
+        background-color: white;
+        box-shadow: $boxshadow;
+        overflow: visible;
+        position: relative;
+
+        .services-content {
+            padding: 25px;
+            
+            @include desktop {
+                padding-right: 40px;
+            }
+        }
+
+        h3 {
+            font-family: recoleta;
+            font-weight: 600;
+            font-size: 45px;
+            text-transform: none;
+            color: var(--contrast);
+
+            > a {
+                color: var(--contrast);
+                transition: 0.3s all ease;
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            transition: 0.3s all ease;
+        }
+
+        &:hover {
+            .overlay {
+                box-shadow: 0 0 0 5px var(--contrast-3);
+            }
+
+            h3 > a {
+                color: var(--contrast-3);
+            }
+        }
+    }
+}

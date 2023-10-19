@@ -1,7 +1,7 @@
 <?php
 
 function insurance_each( $id ) {
-    
+        
     echo '<div class="insurance">';
     
         //* Global vars

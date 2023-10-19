@@ -40,8 +40,7 @@ function team_member_each( $id ) {
 	$background = get_the_post_thumbnail_url( $id, 'large' );
 	$booking_link = get_post_meta( $id, 'booking_link', true );
 	$excerpt = apply_filters( 'the_content', apply_filters( 'the_content', get_the_excerpt( $id ) ) );
-	$insurances = get_post_meta( $id, 'teammembers_to_insurance', true );
-	
+	$insurances = get_post_meta( $id, 'teammembers_to_insurance', true );	
 	
 	// get the content from a post of id $id
 	$content_post = get_post( $id );
@@ -71,6 +70,8 @@ function team_member_each( $id ) {
 								
 			if ( $credentials )
 				printf( '<p class="credentials"><em>%s</em></p>', $credentials );
+				
+			edit_post_link();
 							
 		echo '</div>';
 		
@@ -129,13 +130,19 @@ function team_member_each( $id ) {
 			}
 			
 			echo '<h2>Insurance taken</h2>';
+			
 			if ( $insurances ) {
 				
 				echo '<div class="insurances-loop">';
-					foreach( $insurances as $insurance ) {
+				
+					foreach ( $insurances as $insurance ) {
+						
 						insurance_each( $insurance );
+						
 					}
+				
 				echo '</div>';
+				
 			} else {
 				printf( '<p><em>%s does not take insurance.</em></p>', $title );
 			}

@@ -1,0 +1,16 @@
+body .loop-container.loop-layout-partners {
+    .entry {
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.07);
+        border: none;
+
+        .loop-item-inner {
+            padding-top: 45%;
+            box-shadow: none;
+
+            .featured-image {
+                top: 20%;
+                bottom: 20%;
+            }
+        }
+    }
+}

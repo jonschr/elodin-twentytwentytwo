@@ -50,6 +50,8 @@ function elodin_locations_each() {
 			
 		if ( $fax )
 			printf( '<p class="fax"><strong>Fax:</strong> %s</p>', $fax );
+			
+		edit_post_link();
 		
 	echo '</div>';
         		
@@ -65,6 +67,11 @@ function elodin_locations_each() {
 }
 
 function team_member_location_each( $id ) {
+	
+	// bail if it's not published
+	$post_status = get_post_status( $id );
+	if ( $post_status !== 'publish' )
+		return;
 	
 	wp_enqueue_style( 'fancybox-main-theme' );
     wp_enqueue_script( 'fancybox-main-script' );
@@ -97,7 +104,7 @@ function team_member_location_each( $id ) {
 								
 			if ( $excerpt )
 				echo $excerpt;
-				
+												
 			echo '<div class="buttons">';
 			
 				if ( $content )
@@ -108,6 +115,8 @@ function team_member_location_each( $id ) {
 					
 			echo '</div>';
 			
+			edit_post_link();
+						
 		echo '</div>';
 		
 	echo '</div>';
@@ -161,21 +170,26 @@ function team_member_location_each( $id ) {
 					}
 				echo '</div>';
 			} else {
-				printf( '<p><em>%s does not take insurance.</em></p>', $title );
+				printf( '<p><em>No services found.</em></p>', $title );
 			}
 			
 			echo '<h2>Insurance taken</h2>';
+			
 			if ( $insurances ) {
 				
 				echo '<div class="insurances-loop">';
-					foreach( $insurances as $insurance ) {
+				
+					foreach ( $insurances as $insurance ) {
+						
 						insurance_each( $insurance );
+						
 					}
+				
 				echo '</div>';
+				
 			} else {
 				printf( '<p><em>%s does not take insurance.</em></p>', $title );
 			}
-				
 			        
         echo '</div>'; // #trainings-content-%s
 	}

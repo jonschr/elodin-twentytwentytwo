@@ -3,13 +3,11 @@
    ========================================================================== */
 
 .btn {
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
-    padding: 13px 20px !important;
+    padding: 18px 25px !important;
     text-decoration: none !important;
-    font-size: 13px !important;
-    letter-spacing: 0.1em;
-    text-transform: uppercase !important;
+    font-size: 18px !important;
     border-width: 2px !important;
     display: inline-block !important;
     position: static;
@@ -79,4 +77,18 @@
 
 .read-more.button {
     @extend .btn;
+}
+
+/* ==========================================================================
+   Outline
+   ========================================================================== */
+
+.wp-block-buttons .wp-block-button.is-style-outline {
+    .wp-block-button__link {
+        &:hover {
+            color: white !important;
+            background-color: var(--accent) !important;
+            border-color: var(--accent) !important;
+        }
+    }
 }

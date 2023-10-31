@@ -3,6 +3,8 @@
    ========================================================================== */
 
 :where(.entry-content > .gb-container) {
+    overflow: hidden;
+
     @include tablet {
         padding-left: 40px;
         padding-right: 40px;

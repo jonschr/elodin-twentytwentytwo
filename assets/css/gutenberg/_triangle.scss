@@ -1,0 +1,42 @@
+.triangle-top {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 20px;
+        background-color: var(--contrast);
+        // background-image: url('../images/triangle.svg');
+        background-size: contain;
+        background-repeat: repeat-x;
+        -webkit-mask-image: url('../images/triangle.svg');
+        mask-image: url('../images/triangle.svg');
+    }
+
+    &.green {
+        &:after {
+            background-color: var(--accent);
+        }
+    }
+
+    &.blue {
+        &:after {
+            background-color: var(--contrast);
+        }
+    }
+
+    &.white {
+        &:after {
+            background-color: var(--white-color);
+        }
+    }
+
+    &.base {
+        &:after {
+            background-color: var(--base);
+        }
+    }
+}

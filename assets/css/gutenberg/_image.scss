@@ -1,0 +1,7 @@
+.truck-image {
+    img {
+        @include notmobile {
+            max-width: 1000%;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.loop-container.loop-layout-loit_staff {
+    .entry {
+        padding: 15px;
+        box-shadow: $boxshadow;
+        background-color: white;
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 5px;
+            line-height: 1.2;
+            font-size: 17px;
+            color: var(--contrast-2);
+
+            span.label {
+                display: block;
+                font-style: italic;
+            }
+
+            span.item {
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 1;
+                display: block;
+            }
+        }
+
+        p.job-title {
+            color: var(--contrast-3);
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            font-size: 14px;
+        }
+    }
+}

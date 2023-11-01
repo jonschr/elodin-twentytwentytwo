@@ -7,16 +7,20 @@
     cursor: pointer;
     padding: 13px 20px !important;
     text-decoration: none !important;
-    font-size: 13px !important;
-    letter-spacing: 0.1em;
-    text-transform: uppercase !important;
-    border-width: 2px !important;
+    font-size: 16px !important;
+    font-weight: 500;
     display: inline-block !important;
     position: static;
     border-radius: 3px;
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    transition: all 0.3s ease-in-out;
 
     &:hover {
-        filter: brightness(102%);
+        border-color: var(--contrast-3);
+        color: var(--contrast-3);
+        background-color: transparent;
     }
 
     @include mobile {
@@ -34,10 +38,6 @@
         @include mobile {
             display: block;
             width: 100%;
-        }
-
-        .wp-block-button__link {
-            @extend .btn;
         }
     }
 
@@ -79,4 +79,92 @@
 
 .read-more.button {
     @extend .btn;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.wp-block-button__link {
+    @extend .btn;
+
+    //* Contrast
+
+    &.has-contrast-color {
+        color: var(--contrast);
+    }
+
+    &.has-contrast-background-color {
+        background-color: transparent !important;
+        border-color: var(--contrast);
+
+        &:hover {
+            background-color: var(--contrast) !important;
+            color: var(--white-color) !important;
+        }
+    }
+
+    //* Contrast-2
+
+    &.has-contrast-2-color {
+        color: var(--contrast-2);
+    }
+
+    &.has-contrast-2-background-color {
+        background-color: transparent !important;
+        border-color: var(--contrast-2);
+
+        &:hover {
+            background-color: var(--contrast-2) !important;
+            color: var(--white-color) !important;
+        }
+    }
+
+    //* Contrast-3
+
+    &.has-contrast-3-color {
+        color: var(--contrast-3);
+    }
+
+    &.has-contrast-3-background-color {
+        background-color: transparent !important;
+        border-color: var(--contrast-3);
+
+        &:hover {
+            background-color: var(--contrast-3) !important;
+            color: var(--white-color) !important;
+        }
+    }
+
+    //* Accent
+
+    &.has-accent-color {
+        color: var(--accent);
+    }
+
+    &.has-accent-background-color {
+        background-color: transparent !important;
+        border-color: var(--accent);
+
+        &:hover {
+            background-color: var(--accent) !important;
+            color: var(--contrast) !important;
+        }
+    }
+
+    //* White
+
+    &.has-white-color-color {
+        color: var(--white-color);
+    }
+
+    &.has-white-color-background-color {
+        background-color: transparent !important;
+        border-color: var(--white-color);
+
+        &:hover {
+            background-color: var(--white-color) !important;
+            color: var(--contrast) !important;
+        }
+    }
 }

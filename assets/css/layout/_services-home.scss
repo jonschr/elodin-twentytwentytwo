@@ -1,0 +1,75 @@
+.loop-container.loop-layout-services_home_loit {
+    .entry {
+        margin-bottom: 60px;
+        position: relative;
+
+        @include desktop {
+            padding-right: 40px;
+        }
+
+        .overlay {
+            position: absolute !important;
+            inset: 0 !important;
+            z-index: 30 !important;
+            display: block !important;
+        }
+
+        .loop-item-inner > * {
+            z-index: 5;
+            position: relative;
+        }
+
+        .excerpt {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; /* number of lines to show */
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .featured-image-container {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        margin-bottom: 15px;
+
+        .featured-image {
+            position: absolute;
+            inset: 0;
+            // background-color: red;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: 10;
+        }
+
+        .featured-bkg {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            display: block;
+            background-color: var(--accent);
+            z-index: 5;
+            opacity: 0;
+            transition: 0.3s all ease;
+        }
+    }
+
+    .entry:hover {
+        .featured-bkg {
+            transform: translateX(-50%) translateY(-35%);
+            opacity: 1;
+        }
+    }
+}

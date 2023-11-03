@@ -11,7 +11,7 @@ wp.domReady(() => {
     wp.blocks.unregisterBlockType('core/cover');
     wp.blocks.unregisterBlockType('core/media-text');
     wp.blocks.unregisterBlockType('generateblocks/button-container');
-    wp.blocks.unregisterBlockType('generateblocks/button');
+    // wp.blocks.unregisterBlockType('generateblocks/button');
 });
 
 //* Add alt styles

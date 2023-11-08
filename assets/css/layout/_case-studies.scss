@@ -1,0 +1,47 @@
+.loop-container.loop-layout-casestudies {
+    padding-top: 0;
+
+    .entry {
+        background-color: white;
+        box-shadow: $boxshadow;
+        padding: 25px;
+        position: relative;
+        overflow: visible;
+
+        a.overlay {
+            position: absolute;
+            inset: 0;
+            transition: 0.3s all ease;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .loop-item-inner {
+            height: 0;
+            padding-top: 55%;
+
+            .the-content {
+                position: absolute;
+                inset: 0;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .content-inner {
+                    h3 {
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .entry:hover {
+        a.overlay {
+            box-shadow: 0 0 0 5px var(--contrast-3);
+        }
+    }
+}

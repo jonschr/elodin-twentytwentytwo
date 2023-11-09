@@ -19,3 +19,9 @@ h3.wp-block-heading {
 .gb-block-image + .wp-block-heading {
     margin-top: 15px;
 }
+
+.wp-block-heading {
+    strong {
+        font-weight: inherit;
+    }
+}

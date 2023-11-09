@@ -7,7 +7,7 @@
  */
 
 
-define( 'CHILD_THEME_VERSION', '0.12' );
+define( 'CHILD_THEME_VERSION', '0.13' );
 define( 'CHILD_THEME_DIR', dirname( __FILE__ ) );
 
 //* Include everything in /lib

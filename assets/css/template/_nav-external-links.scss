@@ -1,4 +1,5 @@
-.menu a[target='_blank']:after {
+.menu a[target='_blank']:after,
+.secondary-menu a[target='_blank']:after {
     content: '\f504';
     font-family: 'dashicons';
     opacity: 0.5;

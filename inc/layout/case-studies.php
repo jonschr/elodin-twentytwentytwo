@@ -30,10 +30,13 @@ function elodin_casestudies_each() {
 	if ( $permalink )
 		printf( '<a class="overlay" href="%s"></a>', $permalink );
 			
-	if ( $background )
+	if ( $background ) {
 		printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
+		$class = 'featured-exists';
+	}
+	
     
-    echo '<div class="the-content">';
+    printf( '<div class="the-content %s">', $class );
     
         echo '<div class="content-inner">';
     

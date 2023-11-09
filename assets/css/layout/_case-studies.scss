@@ -18,7 +18,16 @@
 
         .loop-item-inner {
             height: 0;
-            padding-top: 55%;
+            padding-top: 30%;
+
+            .featured-image {
+                position: absolute;
+                inset: 10%;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: 0.3s all ease;
+            }
 
             .the-content {
                 position: absolute;
@@ -27,6 +36,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                &.featured-exists {
+                    opacity: 0;
+                }
 
                 .content-inner {
                     h3 {

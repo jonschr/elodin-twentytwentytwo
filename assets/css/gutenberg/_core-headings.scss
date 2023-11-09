@@ -15,3 +15,7 @@ h3.wp-block-heading {
         margin-top: 0;
     }
 }
+
+.gb-block-image + .wp-block-heading {
+    margin-top: 15px;
+}

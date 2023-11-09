@@ -26,8 +26,7 @@ function elodin_loit_staff_each() {
 	$best_concert_attended = get_post_meta( $id, 'best_concert_attended', true );
 	$linkedin_link = get_post_meta( $id, 'linkedin_link', true );
 				
-	if ( $background )
-		printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
+    printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
 
 	if ( $title )
 		printf( '<h3>%s</h3>', $title );
@@ -56,5 +55,5 @@ function elodin_loit_staff_each() {
         printf( '<p class="fav best-concert"><span class="label">Best concert attended</span><span class="item">%s</span></p>', $best_concert_attended );
         
     if ( $linkedin_link )
-        printf( '<p><a href="%s" target="_blank">LinkedIn</a></p>', $linkedin_link );
+        printf( '<p><a class="linked-in" href="%s" target="_blank"><span class="dashicons dashicons-linkedin"></span></a></p>', $linkedin_link );
 }

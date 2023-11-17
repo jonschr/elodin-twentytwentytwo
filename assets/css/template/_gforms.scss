@@ -50,11 +50,20 @@ body .gform_wrapper.gravity-theme {
         }
     }
 
+    input[type='checkbox'] {
+        width: 25px;
+        height: 25px;
+    }
+
+    .ginput_container_checkbox {
+        margin-top: 8px;
+    }
+
     label.gform-field-label {
-        font-size: 14px;
+        font-size: 16px;
         // line-height: 0;
         letter-spacing: 0;
-        margin-top: 8px;
+        // margin-top: 8px;
     }
 
     // Description

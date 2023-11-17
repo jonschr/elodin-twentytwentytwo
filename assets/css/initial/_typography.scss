@@ -32,3 +32,12 @@ h3 {
         margin-top: 0;
     }
 }
+
+p {
+    &.has-larger-font-size {
+        @include mobile {
+            font-size: 24px !important;
+            line-height: 1.4;
+        }
+    }
+}

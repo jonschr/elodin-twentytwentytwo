@@ -36,7 +36,11 @@ wp.domReady(() => {
         },
         {
             name: 'checkmark',
-            label: 'Checkmark',
+            label: 'Yellow Checkmark',
+        },
+        {
+            name: 'checkmark-green',
+            label: 'Green Checkmark',
         },
     ]);
 

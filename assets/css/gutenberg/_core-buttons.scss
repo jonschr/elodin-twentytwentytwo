@@ -3,30 +3,30 @@
    ========================================================================== */
 
 .btn {
-    font-weight: bold;
-    cursor: pointer;
-    padding: 13px 20px !important;
-    text-decoration: none !important;
-    font-size: 16px !important;
-    font-weight: 500;
-    display: inline-block !important;
-    position: static;
-    border-radius: 3px;
-    background-color: transparent;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-    transition: all 0.3s ease-in-out;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 13px 20px !important;
+	text-decoration: none !important;
+	font-size: 16px !important;
+	font-weight: 500;
+	display: inline-block !important;
+	position: static;
+	border-radius: 3px;
+	background-color: transparent;
+	border: 2px solid var(--accent);
+	color: var(--accent);
+	transition: all 0.3s ease-in-out;
 
-    &:hover {
-        border-color: var(--contrast-3);
-        color: var(--contrast-3);
-        background-color: transparent;
-    }
+	&:hover {
+		border-color: var(--contrast-3);
+		color: var(--contrast-3);
+		background-color: transparent;
+	}
 
-    @include mobile {
-        display: block;
-        width: 100%;
-    }
+	@include mobile {
+		display: block;
+		width: 100%;
+	}
 }
 
 /* ==========================================================================
@@ -34,20 +34,20 @@
    ========================================================================== */
 
 .wp-block-buttons {
-    .wp-block-button {
-        @include mobile {
-            display: block;
-            width: 100%;
-        }
-    }
+	.wp-block-button {
+		@include mobile {
+			display: block;
+			width: 100%;
+		}
+	}
 
-    &:last-child {
-        margin-top: 30px;
-    }
+	&:last-child {
+		margin-top: 30px;
+	}
 
-    &:first-child {
-        margin-top: 0;
-    }
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 /* ==========================================================================
@@ -55,9 +55,9 @@
    ========================================================================== */
 
 .gb-button-wrapper {
-    .gb-button {
-        @extend .btn;
-    }
+	.gb-button {
+		@extend .btn;
+	}
 }
 
 /* ==========================================================================
@@ -65,12 +65,12 @@
    ========================================================================== */
 
 .gform_footer input[type='submit'] {
-    @extend .btn;
+	@extend .btn;
 
-    &:last-child {
-        margin-bottom: 0;
-        margin-right: 0;
-    }
+	&:last-child {
+		margin-bottom: 0;
+		margin-right: 0;
+	}
 }
 
 /* ==========================================================================
@@ -78,7 +78,7 @@
    ========================================================================== */
 
 .read-more.button {
-    @extend .btn;
+	@extend .btn;
 }
 
 /* ==========================================================================
@@ -86,85 +86,116 @@
    ========================================================================== */
 
 .wp-block-button__link {
-    @extend .btn;
+	@extend .btn;
 
-    //* Contrast
+	//* Contrast
 
-    &.has-contrast-color {
-        color: var(--contrast);
-    }
+	&.has-contrast-color {
+		color: var(--contrast);
+	}
 
-    &.has-contrast-background-color {
-        background-color: transparent !important;
-        border-color: var(--contrast);
+	&.has-contrast-background-color {
+		background-color: transparent !important;
+		border-color: var(--contrast);
 
-        &:hover {
-            background-color: var(--contrast) !important;
-            color: var(--white-color) !important;
-        }
-    }
+		&:hover {
+			background-color: var(--contrast) !important;
+			color: var(--white-color) !important;
+		}
+	}
 
-    //* Contrast-2
+	//* Contrast-2
 
-    &.has-contrast-2-color {
-        color: var(--contrast-2);
-    }
+	&.has-contrast-2-color {
+		color: var(--contrast-2);
+	}
 
-    &.has-contrast-2-background-color {
-        background-color: transparent !important;
-        border-color: var(--contrast-2);
+	&.has-contrast-2-background-color {
+		background-color: transparent !important;
+		border-color: var(--contrast-2);
 
-        &:hover {
-            background-color: var(--contrast-2) !important;
-            color: var(--white-color) !important;
-        }
-    }
+		&:hover {
+			background-color: var(--contrast-2) !important;
+			color: var(--white-color) !important;
+		}
+	}
 
-    //* Contrast-3
+	//* Contrast-3
 
-    &.has-contrast-3-color {
-        color: var(--contrast-3);
-    }
+	&.has-contrast-3-color {
+		color: var(--contrast-3);
+	}
 
-    &.has-contrast-3-background-color {
-        background-color: transparent !important;
-        border-color: var(--contrast-3);
+	&.has-contrast-3-background-color {
+		background-color: transparent !important;
+		border-color: var(--contrast-3);
 
-        &:hover {
-            background-color: var(--contrast-3) !important;
-            color: var(--white-color) !important;
-        }
-    }
+		&:hover {
+			background-color: var(--contrast-3) !important;
+			color: var(--white-color) !important;
+		}
+	}
 
-    //* Accent
+	//* Accent
 
-    &.has-accent-color {
-        color: var(--accent);
-    }
+	&.has-accent-color {
+		color: var(--accent);
+	}
 
-    &.has-accent-background-color {
-        background-color: transparent !important;
-        border-color: var(--accent);
+	&.has-accent-background-color {
+		background-color: transparent !important;
+		border-color: var(--accent);
 
-        &:hover {
-            background-color: var(--accent) !important;
-            color: var(--contrast) !important;
-        }
-    }
+		&:hover {
+			background-color: var(--accent) !important;
+			color: var(--contrast) !important;
+		}
+	}
+	//* Accent 2
 
-    //* White
+	&.has-accent-2-color {
+		color: var(--accent-2);
+	}
 
-    &.has-white-color-color {
-        color: var(--white-color);
-    }
+	&.has-accent-2-background-color {
+		background-color: transparent !important;
+		border-color: var(--accent-2);
 
-    &.has-white-color-background-color {
-        background-color: transparent !important;
-        border-color: var(--white-color);
+		&:hover {
+			background-color: var(--accent-2) !important;
+			color: var(--contrast) !important;
+		}
+	}
 
-        &:hover {
-            background-color: var(--white-color) !important;
-            color: var(--contrast) !important;
-        }
-    }
+	//* White
+
+	&.has-white-color-color {
+		color: var(--white-color);
+	}
+
+	&.has-white-color-background-color {
+		background-color: transparent !important;
+		border-color: var(--white-color);
+
+		&:hover {
+			background-color: var(--white-color) !important;
+			color: var(--contrast) !important;
+		}
+	}
+
+	//* Base
+
+	&.has-base-color {
+		color: var(--base);
+	}
+
+	&.has-base-background-color {
+		background-color: transparent !important;
+		border-color: var(--base);
+
+		&:hover {
+			background-color: var(--base) !important;
+			color: var(--contrast) !important;
+		}
+	}
 }

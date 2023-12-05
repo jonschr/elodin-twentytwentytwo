@@ -2,7 +2,8 @@
    Generic
    ========================================================================== */
 
-.btn {
+.btn,
+.gform-theme-button {
 	font-weight: bold;
 	cursor: pointer;
 	padding: 13px 20px !important;
@@ -16,13 +17,16 @@
 	border-radius: 3px;
 	background-color: transparent;
 	border: 2px solid var(--accent);
-	color: var(--accent);
+	color: var(--contrast);
 	transition: all 0.3s ease-in-out;
+	background-color: transparent !important;
+	border-color: var(--contrast);
 
 	&:hover {
-		border-color: var(--contrast-3);
-		color: var(--contrast-3);
-		background-color: transparent;
+		border-color: var(--contrast) !important;
+		color: var(--contrast) !important;
+		background-color: var(--contrast) !important;
+		color: var(--white-color) !important;
 	}
 
 	@include mobile {

@@ -9,19 +9,27 @@
 					}
 
 					a {
-						@extend .btn;
-
 						@include notmobile {
-							background-color: var(--accent);
+							font-weight: bold;
+							cursor: pointer;
+							font-size: 14px !important;
+							font-weight: 600;
+							text-transform: uppercase;
+							letter-spacing: 0.05em;
+							padding: 13px 20px !important;
+							border: 2px solid var(--accent) !important;
+							border-color: var(--accent) !important;
+							background-color: transparent !important;
 							border-radius: 3px;
-							color: white;
+							color: var(--accent) !important;
 							padding: 15px 20px !important;
 							line-height: 1;
 							transition: 0.3s all ease;
 
 							&:hover {
-								filter: brightness(102%);
-								color: white;
+								color: var(--contrast) !important;
+								background-color: var(--accent) !important;
+								border-color: var(--accent) !important;
 							}
 						}
 					}

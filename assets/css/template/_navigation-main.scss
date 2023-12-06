@@ -41,3 +41,7 @@
         }
     }
 }
+
+.sticky-enabled .main-navigation.is_stuck {
+    z-index: 50 !important;
+}

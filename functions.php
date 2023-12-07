@@ -7,7 +7,7 @@
  */
 
 
-define( 'CHILD_THEME_VERSION', '0.8' );
+define( 'CHILD_THEME_VERSION', '0.15' );
 define( 'CHILD_THEME_DIR', dirname( __FILE__ ) );
 
 //* Include everything in /lib
@@ -24,36 +24,28 @@ add_filter( 'media_library_infinite_scrolling', '__return_true' );
  */
 function handle_splashviewed_cookie() {
 	
-	// bail if we're not on the splash page
+	// bail if we're not on the home page
 	if ( !is_page( 11 ))
 		return;
 	
-	// Check if the 'splashviewed' cookie is set
-	if (!isset($_COOKIE['splashviewed'])) {
-		
-		// Redirect to /splash
-		wp_redirect('/splash');
-		
-		// Set the 'splashviewed' cookie for 3 hours
-		setcookie('splashviewed', true, time() + 3 * 3600, COOKIEPATH, COOKIE_DOMAIN);
-		
+	if (!isset($_GET['splash'])) {
+		// redirect to /splash
+		wp_redirect( '/splash' );
 	}
 }
-add_action('template_redirect', 'handle_splashviewed_cookie');
+add_action( 'template_redirect', 'handle_splashviewed_cookie' );
 
 /**
  * On the splash page, redirect to home after 12 seconds
  *
  */
 function redirect_from_splash_to_home_after_delay() {
-	
+			
 	// bail if we're not on the splash page
-	if ( !is_page( 1752 ) )
-		return;
+	if ( !is_page( 'splash' ) )
+		return;		
 	
-	// Set the 'splashviewed' cookie for 3 hours
-	setcookie('splashviewed', true, time() + 3 * 3600, COOKIEPATH, COOKIE_DOMAIN);
+	echo '<meta http-equiv="refresh" content="12.5;url=/?splash=viewed">'; // Replace with your target URL
 	
-    echo '<meta http-equiv="refresh" content="14;url=/">';
 }
-add_action('wp_head', 'redirect_from_splash_to_home_after_delay');
+add_action( 'wp_head', 'redirect_from_splash_to_home_after_delay');

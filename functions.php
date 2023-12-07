@@ -7,7 +7,7 @@
  */
 
 
-define( 'CHILD_THEME_VERSION', '0.15' );
+define( 'CHILD_THEME_VERSION', '0.16' );
 define( 'CHILD_THEME_DIR', dirname( __FILE__ ) );
 
 //* Include everything in /lib
@@ -49,3 +49,7 @@ function redirect_from_splash_to_home_after_delay() {
 	
 }
 add_action( 'wp_head', 'redirect_from_splash_to_home_after_delay');
+
+add_filter( 'generate_logo_href', function() {
+    return "/?splash=viewed";
+} );

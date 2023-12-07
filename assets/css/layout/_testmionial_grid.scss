@@ -1,0 +1,12 @@
+.loop-container.loop-layout-testimonial_grid {
+	.testimonial-content {
+		p {
+			color: var(--contrast);
+			font-size: 18px;
+
+			@include mobile {
+				font-size: 16px;
+			}
+		}
+	}
+}

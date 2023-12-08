@@ -34,3 +34,18 @@
 		letter-spacing: 0.05em;
 	}
 }
+
+.staff {
+	.button {
+		@extend .btn;
+
+		color: var(--white-color);
+		background-color: transparent !important;
+		border-color: var(--white-color) !important;
+
+		&:hover {
+			background-color: var(--white-color) !important;
+			color: var(--contrast) !important;
+		}
+	}
+}

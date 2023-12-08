@@ -1,0 +1,36 @@
+.staff-content.ginlined-content {
+	.info {
+		margin-bottom: 25px;
+	}
+	h2,
+	h3 {
+		color: var(--contrast-2);
+	}
+
+	h2 {
+		margin-bottom: 15px;
+	}
+
+	h3 {
+		margin-top: 30px;
+	}
+
+	ul {
+		margin-left: 30px;
+	}
+
+	p,
+	li {
+		line-height: 1.4;
+		font-size: 18px;
+	}
+
+	a.button {
+		@extend .btn;
+	}
+
+	p.title {
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+}

@@ -18,37 +18,37 @@ $medium: 960px;
 $wide: 1200px;
 
 @mixin mobile {
-    @media (max-width: #{$thin}) {
-        @content;
-    }
+	@media (max-width: #{$thin}) {
+		@content;
+	}
 }
 
 @mixin tablet {
-    @media (min-width: #{$thin}) and (max-width: #{$medium}) {
-        @content;
-    }
+	@media (min-width: #{$thin}) and (max-width: #{$medium}) {
+		@content;
+	}
 }
 
 @mixin notdesktop {
-    @media (max-width: #{$medium}) {
-        @content;
-    }
+	@media (max-width: #{$medium}) {
+		@content;
+	}
 }
 
 @mixin notmobile {
-    @media (min-width: #{$thin}) {
-        @content;
-    }
+	@media (min-width: #{$thin}) {
+		@content;
+	}
 }
 
 @mixin desktop {
-    @media (min-width: #{$medium}) {
-        @content;
-    }
+	@media (min-width: #{$medium}) {
+		@content;
+	}
 }
 
 @mixin desktop-wide {
-    @media (min-width: #{$wide}) {
-        @content;
-    }
+	@media (min-width: #{$wide}) {
+		@content;
+	}
 }

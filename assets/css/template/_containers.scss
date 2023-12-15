@@ -1,0 +1,56 @@
+body.right-sidebar {
+	.site-content {
+		gap: 80px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		display: grid;
+		grid-template-columns: 1fr 300px;
+		width: 100%;
+
+		@media (max-width: 1200px) {
+			padding: 25px;
+		}
+
+		@include notdesktop {
+			grid-template-columns: 1fr;
+			padding: 25px;
+			gap: 25px;
+		}
+
+		.content-area {
+			width: 100%;
+
+			.site-main {
+				margin: 0;
+
+				header.entry-header {
+					margin-bottom: 1em;
+
+					h1.entry-title {
+						font-size: 50px;
+					}
+				}
+
+				.inside-article {
+					padding: 0;
+
+					.entry-content {
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		.sidebar.is-right-sidebar {
+			width: 100%;
+
+			.inside-right-sidebar {
+				margin: 0;
+
+				.widget {
+					padding: 0;
+				}
+			}
+		}
+	}
+}

@@ -18,7 +18,7 @@ add_action( 'after_setup_theme', 'ettt_gutenberg_editor_style_setup' );
  * Add editor-level assets
  */
 function ettt_gutenberg_assets() {
-
+	
 	wp_enqueue_script(
 		'ettt-editor',
 		get_stylesheet_directory_uri() . '/editor.js',
@@ -85,11 +85,42 @@ function ettt_enqueue_everything() {
 	//     CHILD_THEME_VERSION
 	// );    
 
+	wp_enqueue_script(
+		'tooltipster-script',
+		get_stylesheet_directory_uri() . '/vendor/tooltipster/dist/js/tooltipster.bundle.min.js',
+		array('jquery'),
+		CHILD_THEME_VERSION,
+		true
+	);
+	
+	wp_enqueue_script(
+		'tooltipster-script-init',
+		get_stylesheet_directory_uri() . '/assets/js/tooltipster-init.js',
+		array('tooltipster-script'),
+		CHILD_THEME_VERSION,
+		true
+	);
+	
+	wp_enqueue_style(
+		'tooltipster-style',
+		get_stylesheet_directory_uri() . '/vendor/tooltipster/dist/css/tooltipster.bundle.min.css',
+		array(),
+		CHILD_THEME_VERSION
+	);
+	
 	// Slick
 	wp_register_script(
 		'slick-main-script',
 		get_stylesheet_directory_uri() . '/vendor/slick/slick.min.js',
 		array('jquery'),
+		CHILD_THEME_VERSION,
+		true
+	);
+	
+	wp_register_script(
+		'slick-awards-init',
+		get_stylesheet_directory_uri() . '/assets/js/slick-awards-init.js',
+		array('slick-main-script'),
 		CHILD_THEME_VERSION,
 		true
 	);

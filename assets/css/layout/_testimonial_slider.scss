@@ -2,7 +2,7 @@ body .loop-container.loop-layout-testimonial_slider {
 	position: relative;
 	margin-top: 40px;
 	opacity: 0;
-	max-height: 0;
+	// max-height: 0;
 
 	&.slick-initialized {
 		opacity: 1;

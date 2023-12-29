@@ -1,0 +1,70 @@
+.loop-container.loop-layout-awards_slider {
+	padding-bottom: 30px;
+
+	.entry,
+	.hentry {
+		width: auto !important;
+
+		a.tooltip {
+			display: block;
+		}
+
+		img.wp-post-image {
+			max-height: 175px;
+			width: auto !important;
+		}
+	}
+
+	.slick-arrow {
+		position: absolute;
+		bottom: -15px;
+		top: auto;
+		left: 50%;
+		width: 30px;
+		height: 30px;
+
+		&:before {
+			color: var(--contrast-2);
+			font-size: 30px;
+		}
+
+		&.slick-prev {
+			transform: translateX(-70%);
+
+			&:before {
+				content: '\f340';
+				font-family: 'dashicons';
+			}
+		}
+
+		&.slick-next {
+			transform: translateX(70%);
+
+			&:before {
+				content: '\f344';
+				font-family: 'dashicons';
+			}
+		}
+	}
+}
+
+.tooltipster-base {
+	.tooltipster-content {
+		background-color: black;
+		padding: 10px !important;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 1.6;
+		display: block;
+	}
+
+	&:after {
+	}
+
+	.tooltipster-arrow-background {
+	}
+}
+
+.tooltipster-arrow-background {
+	border-bottom-color: black !important;
+}

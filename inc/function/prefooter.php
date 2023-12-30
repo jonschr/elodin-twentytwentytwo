@@ -15,6 +15,10 @@ register_sidebar( array(
 add_action( 'generate_footer', 'ettt_add_prefooter', 3 );
 function ettt_add_prefooter() {
 	
+	// contact page
+	if ( is_page( 13 ) )
+		return;
+	
 	// echo '<div class="prefooter">';
 		dynamic_sidebar( 'prefooter' );
 	// echo '</div>';

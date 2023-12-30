@@ -1,0 +1,66 @@
+.loop-container.loop-layout-locations {
+	.entry {
+		box-shadow: $boxshadow;
+		position: relative;
+		transition: 0.3s all ease;
+		background-color: white;
+
+		.loop-item-inner {
+		}
+
+		.content {
+			padding: 15px;
+		}
+
+		.featured-image {
+			display: block;
+			height: 0;
+			padding-top: 35%;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.overlay {
+			position: absolute;
+			inset: 0;
+			transition: 0.3s all ease;
+			z-index: 10;
+		}
+
+		h3 {
+			font-size: 22px;
+			margin-bottom: 10px;
+			color: var(--contrast-2);
+		}
+
+		p {
+			font-size: 16px;
+			margin-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		p.address {
+		}
+
+		p.phone {
+			font-weight: bold;
+
+			.phone-link {
+				position: relative;
+				z-index: 20;
+				text-decoration: none;
+
+				&:hover {
+					color: var(--contrast-2);
+				}
+			}
+		}
+	}
+
+	.entry:hover {
+		box-shadow: 0 0 0 5px var(--accent);
+	}
+}

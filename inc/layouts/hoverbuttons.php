@@ -16,9 +16,9 @@ function hoverbuttons_func( $atts ) {
 				</div>
 				<div class="back">
 					<div class="text-wrap">
-						<h3>Thing 1</h3>
-						<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-						<p><a class="hoverbutton-button" href="#">Learn more</a></p>
+						<h3>Patents</h3>
+						<p>To protect your idea for a device or method</p>
+						<p><a class="hoverbutton-button" href="/practices/u-s-international-patents/">Learn more</a></p>
 					</div>
 				</div>
 			</div>
@@ -32,9 +32,9 @@ function hoverbuttons_func( $atts ) {
 				</div>
 				<div class="back">
 					<div class="text-wrap">
-						<h3>Thing 2</h3>
-						<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-						<p><a class="hoverbutton-button" href="#">Learn more</a></p>
+						<h3>Trademarks</h3>
+						<p>To protect your brand name and logo</p>
+						<p><a class="hoverbutton-button" href="/practices/u-s-international-trademarks/">Learn more</a></p>
 					</div>
 				</div>
 			</div>
@@ -48,9 +48,9 @@ function hoverbuttons_func( $atts ) {
 				</div>
 				<div class="back">
 					<div class="text-wrap">
-						<h3>Thing 3</h3>
-						<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-						<p><a class="hoverbutton-button" href="#">Learn more</a></p>
+						<h3>Copyright</h3>
+						<p>To protect your written work, visual art, or music</p>
+						<p><a class="hoverbutton-button" href="/practices/copyright-protection-licensing/">Learn more</a></p>
 					</div>
 				</div>
 			</div>
@@ -64,9 +64,9 @@ function hoverbuttons_func( $atts ) {
 				</div>
 				<div class="back">
 					<div class="text-wrap">
-						<h3>Thing 4</h3>
-						<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-						<p><a class="hoverbutton-button" href="#">Learn more</a></p>
+						<h3>Legal Advice</h3>
+						<p>To determine the best way to protect and defend your idea</p>
+						<p><a class="hoverbutton-button" href="/practices/ip-rights-opinions-counseling/">Learn more</a></p>
 					</div>
 				</div>
 			</div>

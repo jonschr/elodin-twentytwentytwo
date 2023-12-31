@@ -11,39 +11,7 @@ function hoverbuttons_func( $atts ) {
 			<div class="hoverbutton">
 				<div class="front">
 					<div class="logo-wrap">
-						<img class="logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/lightbulb.svg'; ?>" alt="">
-					</div>
-				</div>
-				<div class="back">
-					<div class="text-wrap">
-						<h3>Patents</h3>
-						<p>To protect your idea for a device or method</p>
-						<p><a class="hoverbutton-button" href="/practices/u-s-international-patents/">Learn more</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="hoverbutton-wrap">            
-			<div class="hoverbutton">
-				<div class="front">
-					<div class="logo-wrap">
-						<img class="logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/lightbulb.svg'; ?>" alt="">
-					</div>
-				</div>
-				<div class="back">
-					<div class="text-wrap">
-						<h3>Trademarks</h3>
-						<p>To protect your brand name and logo</p>
-						<p><a class="hoverbutton-button" href="/practices/u-s-international-trademarks/">Learn more</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="hoverbutton-wrap">            
-			<div class="hoverbutton">
-				<div class="front">
-					<div class="logo-wrap">
-						<img class="logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/lightbulb.svg'; ?>" alt="">
+						<img class="logo copyright" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/copyright.svg'; ?>" alt="">
 					</div>
 				</div>
 				<div class="back">
@@ -59,7 +27,23 @@ function hoverbuttons_func( $atts ) {
 			<div class="hoverbutton">
 				<div class="front">
 					<div class="logo-wrap">
-						<img class="logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/lightbulb.svg'; ?>" alt="">
+						<img class="logo patents" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/lightbulb.svg'; ?>" alt="">
+					</div>
+				</div>
+				<div class="back">
+					<div class="text-wrap">
+						<h3>Patents</h3>
+						<p>To protect your idea for a device or method</p>
+						<p><a class="hoverbutton-button" href="/practices/u-s-international-patents/">Learn more</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hoverbutton-wrap">            
+			<div class="hoverbutton">
+				<div class="front">
+					<div class="logo-wrap">
+						<img class="logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/law.svg'; ?>" alt="">
 					</div>
 				</div>
 				<div class="back">
@@ -67,6 +51,22 @@ function hoverbuttons_func( $atts ) {
 						<h3>Legal Advice</h3>
 						<p>To determine the best way to protect and defend your idea</p>
 						<p><a class="hoverbutton-button" href="/practices/ip-rights-opinions-counseling/">Learn more</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hoverbutton-wrap">            
+			<div class="hoverbutton">
+				<div class="front">
+					<div class="logo-wrap">
+						<img class="logo trademarks" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/circle-r.svg'; ?>" alt="">
+					</div>
+				</div>
+				<div class="back">
+					<div class="text-wrap">
+						<h3>Trademarks</h3>
+						<p>To protect your brand name and logo</p>
+						<p><a class="hoverbutton-button" href="/practices/u-s-international-trademarks/">Learn more</a></p>
 					</div>
 				</div>
 			</div>

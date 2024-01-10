@@ -1,0 +1,14 @@
+@media (min-width: 1200px) {
+	.site-header {
+		overflow: visible;
+		z-index: 500;
+	}
+
+	.site-logo {
+		// position: relative;
+		> a {
+			position: absolute;
+			transform: translateY(-65px);
+		}
+	}
+}

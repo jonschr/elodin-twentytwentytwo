@@ -1,0 +1,34 @@
+.loop-columns-1.loop-layout-services {
+	.entry {
+		background-color: white;
+		box-shadow: $boxshadow;
+		position: relative;
+		border-radius: 3px;
+
+		@include desktop {
+			padding-right: 40px;
+
+			.featured-image {
+				border-top-left-radius: 3px;
+				border-bottom-left-radius: 3px;
+			}
+		}
+
+		.overlay {
+			inset: 0;
+			position: absolute;
+			transition: 0.3s all ease;
+			border-radius: 3px;
+		}
+
+		h3 a {
+			color: var(--contrast);
+		}
+	}
+
+	.entry:hover {
+		.overlay {
+			box-shadow: 0 0 0 5px var(--accent);
+		}
+	}
+}

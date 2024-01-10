@@ -9,8 +9,6 @@
 					}
 
 					a {
-						// @extend .btn;
-
 						@include notmobile {
 							background-color: var(--accent);
 							border-radius: 3px;
@@ -18,10 +16,9 @@
 							padding: 15px 20px !important;
 							line-height: 1;
 							transition: 0.3s all ease;
-							font-size: 16px !important;
 
 							&:hover {
-								filter: brightness(102%);
+								background-color: var(--accent-2);
 								color: white;
 							}
 						}

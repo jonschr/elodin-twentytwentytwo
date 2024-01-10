@@ -7,7 +7,7 @@
 	cursor: pointer;
 	padding: 15px 25px !important;
 	text-decoration: none !important;
-	font-size: 18px !important;
+	font-size: 15px !important;
 	font-weight: 600;
 	display: inline-block !important;
 	position: static;
@@ -84,4 +84,29 @@
 .wp-block-button a.wp-block-button__link,
 .wp-block-button div.wp-block-button__link {
 	@extend .btn;
+}
+
+/* ==========================================================================
+   Nav buttons
+   ========================================================================== */
+
+.nav-button > a {
+	@include desktop {
+		font-weight: bold;
+		cursor: pointer;
+		padding: 15px 25px !important;
+		text-decoration: none !important;
+		font-size: 15px !important;
+		font-weight: 600;
+		display: inline-block !important;
+		position: static;
+		border-radius: 3px;
+		background-color: var(--accent);
+		color: white;
+
+		&:hover {
+			background-color: var(--accent-2);
+			color: white;
+		}
+	}
 }

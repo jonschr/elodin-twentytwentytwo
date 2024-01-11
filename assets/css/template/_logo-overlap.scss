@@ -12,3 +12,20 @@
 		}
 	}
 }
+
+.site-logo.mobile-header-logo {
+	img {
+		height: 60px !important;
+		width: auto !important;
+	}
+}
+
+.menu-toggle {
+	line-height: 60px !important;
+}
+
+#secondary-navigation {
+	@include notdesktop {
+		display: none;
+	}
+}

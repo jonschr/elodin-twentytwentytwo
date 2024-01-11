@@ -9,6 +9,11 @@ function elodin_projects_each() {
 	wp_enqueue_style('slick-main-styles');
 	wp_enqueue_style('slick-main-theme');
 	wp_enqueue_script( 'projects-sliders' );
+	
+	//* GLIGHTBOX
+	wp_enqueue_script( 'glightbox-script' );
+	wp_enqueue_script( 'glightbox-init' );
+	wp_enqueue_style( 'glightbox-style' );
 
 	//* Global vars
 	global $post;
@@ -24,7 +29,7 @@ function elodin_projects_each() {
 		
 			foreach( $images as $image ) {
 				$background = wp_get_attachment_image_url( $image, 'large' );
-				printf( '<div class="the-image-slide"><div class="featured-image" style="background-image:url( %s )"></div></div>', $background );
+				printf( '<div class="the-image-slide"><a class="glightbox" href="%s" data-gallery="gallery-%s"><div class="featured-image" style="background-image:url( %s )"></div></a></div>', $background, $id, $background );
 			}
 		
 		echo '</div>'; 

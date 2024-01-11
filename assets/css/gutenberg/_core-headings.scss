@@ -15,3 +15,11 @@ h3.wp-block-heading {
 		margin-top: 0;
 	}
 }
+
+.gb-headline,
+.has-text-color {
+	strong {
+		font-weight: inherit;
+		color: var(--accent-2);
+	}
+}

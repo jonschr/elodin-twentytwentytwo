@@ -52,3 +52,124 @@ $wide: 1200px;
 		@content;
 	}
 }
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+	font-family: 'mbf';
+	src: url('../font/MBFMoonlander.woff2') format('woff2'),
+		url('../font/MBFMoonlander.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-Thin.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-ThinItalic.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-ThinItalic.woff') format('woff');
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-Regular.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-RegularItalic.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-RegularItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-MediumItalic.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-LightItalic.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-Medium.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-Light.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-BoldItalic.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-Black.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-Bold.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'brandon';
+	src: url('../font/BrandonGrotesque-BlackItalic.woff2') format('woff2'),
+		url('../font/BrandonGrotesque-BlackItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}

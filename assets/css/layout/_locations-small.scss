@@ -1,39 +1,21 @@
 .loop-container.loop-layout-locations_small {
-	justify-content: center;
-	margin: 0;
+	@include notmobile {
+		justify-content: center;
+	}
+
+	margin-top: 0;
+	margin-bottom: 0;
 
 	.entry {
-		// box-shadow: $boxshadow;
 		position: relative;
 		transition: 0.3s all ease;
 		border-radius: 3px;
-		// background-color: white;
-
-		@include mobile {
-			margin-bottom: 5px;
-		}
-
-		// .loop-item-inner {
-		// 	display: grid;
-		// 	grid-template-columns: 100px 1fr;
-		// 	height: 100%;
-
-		// 	@include mobile {
-		// 		grid-template-columns: 50px 1fr;
-		// 	}
-		// }
 
 		.content {
-			padding: 10px;
+			@include notmobile {
+				padding: 10px;
+			}
 		}
-
-		// .featured-image {
-		// 	display: block;
-		// 	// height: 0;
-		// 	// padding-top: 35%;
-		// 	background-size: cover;
-		// 	background-position: center;
-		// }
 
 		.overlay {
 			position: absolute;
@@ -64,12 +46,6 @@
 
 			&:last-child {
 				margin-bottom: 0;
-			}
-		}
-
-		p.address {
-			@include mobile {
-				display: none;
 			}
 		}
 

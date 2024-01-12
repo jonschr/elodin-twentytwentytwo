@@ -1,0 +1,12 @@
+.mobile-header-navigation .site-logo {
+	@include mobile {
+		margin-left: 25px !important;
+	}
+}
+.mobile-header-logo {
+	img.is-logo-image {
+		@include mobile {
+			height: 60px !important;
+		}
+	}
+}

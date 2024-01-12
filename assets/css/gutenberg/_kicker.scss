@@ -1,3 +1,7 @@
 .is-style-kicker {
 	color: var(--accent);
+
+	@include mobile {
+		margin-bottom: 5px;
+	}
 }

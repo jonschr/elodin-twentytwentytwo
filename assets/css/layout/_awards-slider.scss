@@ -17,7 +17,10 @@
 
 	.slick-arrow {
 		position: absolute;
-		bottom: -15px;
+		@include desktop {
+			bottom: -15px;
+		}
+		bottom: 0px;
 		top: auto;
 		left: 50%;
 		width: 30px;

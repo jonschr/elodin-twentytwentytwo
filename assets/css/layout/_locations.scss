@@ -1,12 +1,17 @@
 .loop-container.loop-layout-locations {
 	.entry {
-		box-shadow: $boxshadow;
+		@include notmobile {
+			box-shadow: $boxshadow;
+			background-color: white;
+		}
+
 		position: relative;
 		transition: 0.3s all ease;
-		background-color: white;
 
 		.content {
-			padding: 15px;
+			@include notmobile {
+				padding: 15px;
+			}
 		}
 
 		.featured-image {
@@ -15,6 +20,9 @@
 			padding-top: 35%;
 			background-size: cover;
 			background-position: center;
+			@include mobile {
+				margin-bottom: 10px;
+			}
 		}
 
 		.overlay {
@@ -28,11 +36,20 @@
 			font-size: 22px;
 			margin-bottom: 10px;
 			color: var(--contrast-2);
+
+			@include mobile {
+				font-size: 18px;
+			}
 		}
 
 		p {
 			font-size: 16px;
 			margin-bottom: 5px;
+			line-height: 1.4;
+
+			@include mobile {
+				font-size: 14px;
+			}
 
 			&:last-child {
 				margin-bottom: 0;

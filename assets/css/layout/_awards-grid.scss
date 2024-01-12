@@ -1,0 +1,33 @@
+.loop-container.loop-layout-awards_grid {
+	.entry {
+		background-color: white;
+		box-shadow: $boxshadow;
+		position: relative;
+
+		.loop-item-inner {
+			padding-top: 70%;
+			height: 0;
+			position: relative;
+
+			.featured-image {
+				margin: 0;
+				position: absolute;
+				inset: 20px;
+				background-size: contain;
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+
+		.post-edit-link {
+			position: absolute;
+			top: auto;
+			left: 5px;
+			right: auto;
+			bottom: 5px;
+			font-size: 16px;
+			z-index: 50;
+			font-size: 16px;
+		}
+	}
+}

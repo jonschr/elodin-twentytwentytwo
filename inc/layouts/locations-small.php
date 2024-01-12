@@ -31,8 +31,8 @@ function elodin_locations_small_each() {
 	if ( $permalink )
 		printf( '<a class="overlay" href="%s">%s Patent Attorney</a>', $permalink, $title  );
 			
-	if ( $background )
-		printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
+	// if ( $background )
+	// 	printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
 	
 	echo '<div class="content">';
 

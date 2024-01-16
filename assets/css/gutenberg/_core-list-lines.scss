@@ -1,0 +1,29 @@
+ul.is-style-lines,
+ol.is-style-lines {
+	margin-left: 0;
+	padding-left: 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	> li {
+		position: relative;
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 8px;
+		padding-bottom: 8px;
+		line-height: 1.4;
+		border-bottom: 1px solid rgba(black, 0.1);
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+
+		@include mobile {
+			padding-left: 30px;
+		}
+	}
+}

@@ -1,4 +1,17 @@
 .loop-container.loop-layout-testimonial_grid {
+	padding-top: 0 !important;
+
+	.entry {
+		@include mobile {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+
+			&:first-child {
+				padding-top: 0 !important;
+			}
+		}
+	}
+
 	.testimonial-content {
 		p {
 			color: var(--contrast);

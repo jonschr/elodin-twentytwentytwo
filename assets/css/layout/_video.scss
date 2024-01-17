@@ -1,0 +1,14 @@
+.loop-container.loop-layout-videos {
+	.entry {
+		margin-bottom: 60px;
+
+		h3 {
+			font-size: 22px;
+			color: var(--contrast-2);
+
+			@include mobile {
+				font-size: 18px;
+			}
+		}
+	}
+}

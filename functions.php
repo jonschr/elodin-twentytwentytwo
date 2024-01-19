@@ -6,8 +6,7 @@
  * Only edit this file if you have direct access to it on your server (to fix errors if they happen).
  */
 
-
-define( 'CHILD_THEME_VERSION', '0.1' );
+define( 'CHILD_THEME_VERSION', '0.2' );
 define( 'CHILD_THEME_DIR', dirname( __FILE__ ) );
 
 //* Include everything in /lib

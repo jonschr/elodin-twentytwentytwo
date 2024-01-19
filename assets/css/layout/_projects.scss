@@ -1,0 +1,87 @@
+/* ==========================================================================
+   All templates
+   ========================================================================== */
+
+.projects-slider,
+.facetwp-template[data-name='projects'] {
+	position: relative;
+	margin-bottom: 0 !important;
+
+	.hentry {
+		position: relative;
+
+		.overlay {
+			position: absolute;
+			inset: 0;
+		}
+
+		.featured-image {
+			height: 0;
+			padding-top: 55%;
+			background-size: cover;
+			background-position: center center;
+			border-radius: 5px;
+			margin: 0 0 15px;
+			transition: 0.3s all ease;
+		}
+
+		h3 {
+			color: white;
+			font-size: 18px;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+
+		p.price {
+			margin-bottom: 0;
+			color: var(--accent);
+			font-size: 16px;
+		}
+	}
+
+	.hentry:hover {
+		.featured-image {
+			box-shadow: 0 0 0 5px var(--white-color);
+		}
+	}
+
+	ul.slick-dots {
+		position: absolute;
+		bottom: 0;
+		transform: translateY(170%);
+		z-index: 30;
+
+		li {
+			button {
+				&:before {
+					color: white;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Slider only
+   ========================================================================== */
+
+.projects-slider {
+	.hentry {
+		margin: 0 10px;
+		padding-top: 5px;
+	}
+}
+
+/* ==========================================================================
+   Just the search 
+   ========================================================================== */
+
+.facetwp-template[data-name='projects'] {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+
+	.hentry {
+	}
+}

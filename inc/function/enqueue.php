@@ -95,6 +95,14 @@ function ettt_enqueue_everything() {
     );
     
     wp_register_script(
+        'single-project-slider-init',
+        get_stylesheet_directory_uri() . '/assets/js/projects-single-slider-init.js',
+        array('slick-main-script'),
+        CHILD_THEME_VERSION,
+        true
+    );
+    
+    wp_register_script(
         'projects-slider-init',
         get_stylesheet_directory_uri() . '/assets/js/projects-slider-init.js',
         array('slick-main-script'),

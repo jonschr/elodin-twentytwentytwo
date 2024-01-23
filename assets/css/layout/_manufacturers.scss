@@ -1,0 +1,115 @@
+/* ==========================================================================
+   All templates
+   ========================================================================== */
+
+.manufacturers-slider,
+.manufacturers-grid {
+	position: relative;
+	margin-bottom: 0 !important;
+
+	.hentry {
+		position: relative;
+
+		.featured-image {
+			height: 0;
+			padding-top: 55%;
+			background-size: cover;
+			background-position: center center;
+			border-radius: 5px;
+			margin: 0 0 15px;
+			transition: 0.3s all ease;
+			position: relative;
+
+			.overlay {
+				position: absolute;
+				inset: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				// opacity: 0;
+				transition: 0.3s all ease;
+
+				.overlay-wrap {
+					max-width: 200px;
+					width: 100%;
+
+					.btn {
+						@extend .btn;
+
+						display: block;
+						width: 100%;
+						margin: 5px 0;
+						padding: 15px !important;
+						background-color: var(--accent);
+						color: white;
+						text-align: center;
+						display: block;
+						position: static;
+					}
+				}
+			}
+		}
+
+		h3 {
+			font-size: 18px;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+
+		p.price {
+			margin-bottom: 0;
+			color: var(--accent);
+			font-size: 16px;
+		}
+	}
+
+	.hentry:hover {
+		.featured-image {
+			box-shadow: 0 0 0 5px var(--white-color);
+		}
+
+		.overlay {
+			opacity: 1;
+		}
+	}
+
+	ul.slick-dots {
+		position: absolute;
+		bottom: 0;
+		transform: translateY(170%);
+		z-index: 30;
+
+		li {
+			button {
+				&:before {
+					color: white;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Slider only
+   ========================================================================== */
+
+.manufacturers-slider {
+	.hentry {
+		margin: 0 10px;
+		padding-top: 5px;
+	}
+}
+
+/* ==========================================================================
+   Just the search 
+   ========================================================================== */
+
+.manufacturers-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 25px;
+
+	.hentry {
+	}
+}

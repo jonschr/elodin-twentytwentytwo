@@ -108,6 +108,22 @@ function ettt_enqueue_everything() {
 		CHILD_THEME_VERSION
 	);
 	
+	wp_register_script(
+		'single-manufacturer-slider-init',
+		get_stylesheet_directory_uri() . '/assets/js/manufacturers-single-slider-init.js',
+		array('slick-main-script'),
+		CHILD_THEME_VERSION,
+		true
+	);
+	
+	wp_register_script(
+		'manufacturers-slider-init',
+		get_stylesheet_directory_uri() . '/assets/js/manufacturers-slider-init.js',
+		array('slick-main-script'),
+		CHILD_THEME_VERSION,
+		true
+	);
+	
 	// Dashicons
 	wp_enqueue_style( 'dashicons' );
 		

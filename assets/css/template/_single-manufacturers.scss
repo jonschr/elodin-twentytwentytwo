@@ -3,31 +3,15 @@ body.single-manufacturers {
 		max-width: 100%;
 		display: block;
 	}
+
 	.site-content {
 		display: block;
 	}
 
-	.single-manufactuers-section {
+	.single-manufacturers-section {
 		padding: 60px 25px;
-		background-color: black;
-		color: white;
 		position: relative;
 		overflow: hidden;
-
-		&.info {
-			background-color: #1d1a1f;
-		}
-
-		&.images-singular {
-			min-height: 40vh;
-			padding: 0;
-		}
-
-		&.other-manufacturers {
-			@include desktop {
-				padding-bottom: 80px;
-			}
-		}
 
 		@include mobile {
 			padding: 25px;
@@ -40,53 +24,12 @@ body.single-manufacturers {
 		}
 	}
 
-	.notes {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 80px;
+	.info {
+		background-color: var(--base);
 
-		@include mobile {
-			gap: 20px;
-			grid-template-columns: 1fr;
-		}
-	}
-
-	h2.address {
-		font-weight: 800;
-
-		span.address {
-			display: block;
-		}
-
-		span.location {
-			display: block;
-			font-size: 0.8em;
-			opacity: 0.4;
-
-			span.city {
-				&:after {
-					content: ', ';
-				}
-			}
-
-			span.state {
-				&:after {
-					content: ' ';
-				}
-			}
-		}
-	}
-
-	.stats {
-		span {
-			&:after {
-				content: '\00B7';
-				margin: 0 0.5em;
-			}
-
-			&:last-child:after {
-				display: none;
-			}
+		.excerpt {
+			margin-top: 30px;
+			max-width: 960px;
 		}
 	}
 
@@ -105,7 +48,7 @@ body.single-manufacturers {
 		margin: 0;
 		padding-left: 0;
 		padding-right: 0;
-		padding-bottom: 90px;
+		padding-bottom: 25px;
 		padding-top: 25px;
 
 		@include mobile {

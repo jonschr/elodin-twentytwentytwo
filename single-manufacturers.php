@@ -2,18 +2,15 @@
 
 get_header();
 
+single_manufacturer_info();
+
 single_manufacturer_images();
 	
-single_manufacturer_info();
-	
-single_manufacturer_details();
 
-echo '<div class="single-manufacturers-section other-properties">';
-	echo do_shortcode('[manufacturers_slider]');
-echo '</div>';
+	
+// single_manufacturer_details();
 
 get_footer(); 
-
 
 
 function single_manufacturer_images() {
@@ -32,63 +29,22 @@ function single_manufacturer_images() {
 }
 function single_manufacturer_info() {
 	
-	$beds = get_post_meta( get_the_ID(), 'beds', true );
-	$baths = get_post_meta( get_the_ID(), 'baths', true );
-	$square_footage = get_post_meta( get_the_ID(), 'square_footage', true );
-	$address = get_post_meta( get_the_ID(), 'address', true );
-	$city = get_post_meta( get_the_ID(), 'city', true );
-	$state = get_post_meta( get_the_ID(), 'state', true );
-	$zip = get_post_meta( get_the_ID(), 'zip', true );
-	$price = get_post_meta( get_the_ID(), 'price', true );
+	$title = get_the_title();
+	$url = get_post_meta( get_the_ID(), 'url', true );
+	$excerpt = apply_filters( 'the_content', get_the_excerpt() );
 	
 	echo '<div class="single-manufacturers-section info">';
 		echo '<div class="single-manufacturer-wrap">';
 		
-			if ( $beds || $baths || $square_footage ) {
+			if ( $title )
+				printf( '<h1>%s</h1>', $title );
 				
-				echo '<p class="is-style-kicker has-accent-color stats">';
-				
-					if ( $beds )
-						printf( '<span class="beds">%s Beds</span>', $beds );
-						
-					if ( $baths )
-						printf( '<span class="baths">%s Baths</span>', $baths );
-						
-					if ( $square_footage )
-						printf( '<span class="square-footage">%s Square Feet</span>', $square_footage );
-						
-				echo '</p>';
-			}
+			if ( $url )
+				printf( '<a target="_blank" href="%s">Visit online</a>', $url );
 			
-			if ( $address || $city || $state || $zip ) {
-				
-				echo '<h2 class="address">';
-			
-					if ( $address )
-						printf( '<span class="address">%s</span>', $address );
-						
-				
-					if ( $city || $state || $zip ) {
-						echo '<span class="location">';
-						
-							if ( $city )
-								printf( '<span class="city">%s</span>', $city );
-								
-							if ( $state )
-								printf( '<span class="state">%s</span>', $state );
-								
-							if ( $zip )
-								printf( '<span class="zip">%s</span>', $zip );
-								
-						echo '</span>';
-					}
-					
-				echo '</h2>';
-			
-			}
-			
-			if ( $price )
-				printf( '<p class="price">%s</p>', $price );
+			if ( $excerpt )
+				printf( '<div class="excerpt">%s</div>', $excerpt );
+		
 			
 		echo '</div>';
 	echo '</div>';

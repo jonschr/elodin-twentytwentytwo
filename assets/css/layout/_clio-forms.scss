@@ -44,7 +44,8 @@ h3.lf_success + #lf_form_container > form {
 		h3,
 		#lf_message_block,
 		.buttons,
-		ul.lf_errors {
+		ul.lf_errors,
+		.g-recaptcha {
 			grid-column: 1 / 3;
 		}
 

@@ -24,6 +24,7 @@ body .gform_wrapper.gravity-theme {
 	input:not([type='submit']),
 	select {
 		min-height: 47px;
+		padding-left: 15px;
 	}
 
 	input:not([type='submit']),
@@ -31,6 +32,12 @@ body .gform_wrapper.gravity-theme {
 	select {
 		background-color: white;
 		color: var(--contrast);
+		border: 1px solid rgba(black, 0.2);
+		border-radius: 3px;
+	}
+
+	textarea {
+		padding: 15px;
 	}
 
 	// Description

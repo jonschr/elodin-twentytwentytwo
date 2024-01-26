@@ -35,6 +35,13 @@ function single_manufacturer_info() {
 	$title = get_the_title();
 	$url = get_post_meta( get_the_ID(), 'url', true );
 	$excerpt = apply_filters( 'the_content', get_the_excerpt() );
+	$price_list = get_post_meta( get_the_ID(), 'price_list', true );
+	$program = get_post_meta( get_the_ID(), 'program', true );
+	
+	// get the URL from the $price_list media attachment
+	if ( $price_list ) {
+		$price_list = wp_get_attachment_url( $price_list );
+	}
 	
 	echo '<div class="single-manufacturers-section info">';
 		echo '<div class="single-manufacturer-wrap">';
@@ -47,6 +54,41 @@ function single_manufacturer_info() {
 			
 			if ( $excerpt )
 				printf( '<div class="excerpt">%s</div>', $excerpt );
+			
+			if ( $price_list || $program ) {
+				
+				echo '<p class="buttons">';
+				
+					if ( $price_list )
+						printf( '<a class="btn price-list" target="_blank" href="%s">Price list</a>', $price_list );
+					
+					if ( $program ) {
+						
+							wp_enqueue_script(
+								'glightbox-script'
+							);
+							
+							wp_enqueue_script(
+								'glightbox-init'
+							);
+							
+							wp_enqueue_style(
+								'glightbox-style'
+							);
+						
+						// output the program button, using glightbox to output the content of $program
+						printf( '<a class="btn program glightbox" href="#program-%s" data-gallery="no" data-glightbox="width:960px;height:auto;">Program</a>', get_the_ID() );
+						printf( '<div id="program-%s" style="display: none;" class="">', get_the_ID() );
+							echo '<h2>Program</h2>';
+							echo apply_filters( 'the_content', $program );
+						echo '</div>';
+					}
+					
+						
+				
+				echo '</p>';
+				
+			}
 		
 			
 		echo '</div>';

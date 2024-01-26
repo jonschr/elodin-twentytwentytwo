@@ -1,4 +1,9 @@
 body.single-manufacturers {
+	h1,
+	h2 {
+		color: var(--accent);
+	}
+
 	.site.grid-container {
 		max-width: 100%;
 		display: block;
@@ -26,6 +31,24 @@ body.single-manufacturers {
 
 	.more {
 		background-color: var(--base);
+	}
+
+	.buttons {
+		margin-top: 50px;
+
+		.btn {
+			background-color: var(--accent);
+			color: white;
+			margin: 0 10px 10px 0;
+
+			&:hover {
+				background-color: var(--accent-2);
+			}
+		}
+	}
+
+	.gslide-inline .ginlined-content {
+		padding: 40px;
 	}
 
 	.info {

@@ -19,6 +19,7 @@ function projects_each() {
 	// * Vars
 	$title = get_the_title();
 	$images = get_post_meta( $id, 'images', true );
+	$manufacturers = get_post_meta( get_the_ID(), 'manufacturers', true );
 	
 	$post_classes = get_post_class();
 	$post_class_string = implode(' ', $post_classes);
@@ -49,8 +50,18 @@ function projects_each() {
 				echo '</div>'; // .projects-slider
 			}
 
-			if ( $title ) {
+			if ( $title )
 				printf( '<h3>%s</h3>', $title );
+			
+			if ( $manufacturers ) {
+				echo '<p class="manufacturers">';
+				foreach( $manufacturers as $manufacturers ) {
+					$manufacturer = get_post( $manufacturers );
+					$manufacturer_title = $manufacturer->post_title;
+					$manufacturer_link = get_permalink( $manufacturers );
+					printf( '<span><a href="%s">%s</a></span>', $manufacturer_link, $manufacturer_title );
+				}
+				echo '</p>';
 			}
 			
 		echo '</div>'; // .loop-inner

@@ -14,14 +14,33 @@
 
 .projects.entry,
 .projects.hentry {
+	margin-bottom: 20px;
+
 	.loop-inner {
 		position: relative;
 		width: 100%;
 		max-width: 100%;
 	}
+
 	h3 {
 		font-size: 18px;
 		margin: 0;
+	}
+
+	p.manufacturers {
+		font-size: 15px;
+		text-transform: uppercase;
+		line-height: 1.2;
+
+		> span {
+			&:after {
+				content: ', ';
+			}
+
+			&:last-child:after {
+				content: '';
+			}
+		}
 	}
 
 	.projects-slider {

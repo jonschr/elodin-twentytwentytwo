@@ -22,9 +22,7 @@ function manufacturers_each() {
 	
 	// Markup
 	printf( '<div class="%s">', $post_class_string );
-	
 		
-	
 		if ( $terms && ! is_wp_error( $terms ) ) {
 			foreach ( $terms as $term ) {
 				printf( '<div class="%s"></div>', $term->slug );
@@ -40,7 +38,7 @@ function manufacturers_each() {
 					printf( '<a class="manufacturers-button" href="%s">More information</a>', $permalink );
 				
 				if ( $url )
-					printf( '<a class="manufacturers-button" target="_blank" href="%s">Visit online</a>', $url );
+					printf( '<a class="manufacturers-button visit-online" target="_blank" href="%s">Visit online</a>', $url );
 				
 				echo '</div>';		
 			echo '</div>';

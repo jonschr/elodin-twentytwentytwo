@@ -24,6 +24,10 @@ body.single-manufacturers {
 		}
 	}
 
+	.more {
+		background-color: var(--base);
+	}
+
 	.info {
 		background-color: var(--base);
 
@@ -31,6 +35,17 @@ body.single-manufacturers {
 			margin-top: 30px;
 			max-width: 960px;
 		}
+	}
+
+	.external-manufacturer-url:after {
+		content: '\f504';
+		font-family: 'dashicons';
+		opacity: 0.5;
+		margin-left: 2px;
+		transform: translateY(1.5px);
+		display: inline-block;
+		line-height: 0;
+		font-weight: normal;
 	}
 
 	.photo-single {
@@ -93,30 +108,31 @@ body.single-manufacturers {
 
 		button.slick-arrow {
 			position: absolute;
-			bottom: 25px;
+			bottom: 50px;
 			left: 50%;
 			top: auto;
+			z-index: 30;
+			background-color: var(--accent);
+			height: 40px;
+			width: 40px;
+
+			&:before {
+				font-size: 30px;
+				font-family: 'dashicons';
+			}
 
 			&.slick-next {
-				transform: translateX(100%);
-				height: 30px;
-				width: 30px;
+				transform: translateX(70%);
 
 				&:before {
-					font-size: 30px;
-					font-family: 'dashicons';
 					content: '\f345';
 				}
 			}
 
 			&.slick-prev {
-				transform: translateX(-100%);
-				height: 30px;
-				width: 30px;
+				transform: translateX(-70%);
 
 				&:before {
-					font-size: 30px;
-					font-family: 'dashicons';
 					content: '\f341';
 				}
 			}

@@ -5,6 +5,8 @@ get_header();
 single_manufacturer_info();
 
 single_manufacturer_images();
+
+single_manufacturer_more();
 	
 
 	
@@ -27,6 +29,7 @@ function single_manufacturer_images() {
 	
 
 }
+
 function single_manufacturer_info() {
 	
 	$title = get_the_title();
@@ -40,7 +43,7 @@ function single_manufacturer_info() {
 				printf( '<h1>%s</h1>', $title );
 				
 			if ( $url )
-				printf( '<a target="_blank" href="%s">Visit online</a>', $url );
+				printf( '<a class="external-manufacturer-url" target="_blank" href="%s">Visit online</a>', $url );
 			
 			if ( $excerpt )
 				printf( '<div class="excerpt">%s</div>', $excerpt );
@@ -49,6 +52,7 @@ function single_manufacturer_info() {
 		echo '</div>';
 	echo '</div>';
 }
+
 function single_manufacturer_details() {
 	
 	
@@ -126,5 +130,49 @@ function photo_slider() {
 		}
 	
 	echo '</div>';
+	
+}
+
+function single_manufacturer_more() {
+	
+	$projects = get_post_meta( get_the_ID(), 'projects', true );
+	
+	if ( !$projects )
+		return;
+	
+	$args = array(
+		'post_type' => 'projects',
+		'posts_per_page' => -1,
+		'post__in' => $projects,
+		'orderby' => 'post__in',
+	);
+	
+	$projects = new WP_Query($args);
+	
+	if ($projects->have_posts()) {
+		
+		echo '<div class="single-manufacturers-section more">';
+			echo '<div class="single-manufacturer-wrap">';
+			
+				printf( '<h2>%s Projects</h2>', get_the_title() );
+				
+				echo '<div class="projects-default-grid">';
+				
+					while ($projects->have_posts()) {
+						
+						$projects->the_post();
+						do_action( 'projects_do_each' );
+						
+					}
+				
+				echo '</div>';
+				
+			echo '</div>';
+		echo '</div>';
+		
+		wp_reset_postdata();
+		
+	}
+	
 	
 }

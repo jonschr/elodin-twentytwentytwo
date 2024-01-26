@@ -52,6 +52,19 @@
 							background-color: var(--accent-2);
 						}
 					}
+
+					.visit-online {
+						&:after {
+							content: '\f504';
+							font-family: 'dashicons';
+							opacity: 0.5;
+							margin-left: 2px;
+							transform: translateY(1.5px);
+							display: inline-block;
+							line-height: 0;
+							font-weight: normal;
+						}
+					}
 				}
 			}
 		}
@@ -88,7 +101,7 @@
 		li {
 			button {
 				&:before {
-					color: white;
+					color: var(--accent);
 					font-size: 20px;
 				}
 			}

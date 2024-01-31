@@ -74,6 +74,14 @@ function single_manufacturer_more() {
 
 function photo_slider() {
 	
+	$photos = get_post_meta( get_the_ID(), 'images', true );
+	
+	if ( !is_array( $photos ) )
+		return;
+	
+	if ( count( $photos ) < 4 )
+		return;
+	
 	wp_enqueue_script(
 		'slick-main-script'
 	);
@@ -89,10 +97,12 @@ function photo_slider() {
 	wp_enqueue_script(
 		'single-services-slider-init'
 	);
+	
+	
 		
 	echo '<div class="single-services-section images-multiple">';
 	
-		$photos = get_post_meta( get_the_ID(), 'images', true );
+		
 	
 		foreach ( $photos as $photo ) {
 			

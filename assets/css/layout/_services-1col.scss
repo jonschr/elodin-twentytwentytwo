@@ -1,4 +1,4 @@
-.loop-columns-1.loop-layout-services {
+html body .loop-columns-1.loop-layout-services_excerpt_cardinal {
 	.entry {
 		background-color: white;
 		box-shadow: $boxshadow;
@@ -23,12 +23,46 @@
 
 		h3 a {
 			color: var(--contrast);
+			text-decoration: none;
 		}
 	}
 
 	.entry:hover {
 		.overlay {
 			box-shadow: 0 0 0 5px var(--accent);
+		}
+	}
+}
+
+/* ==========================================================================
+   More spacing between them by default
+   ========================================================================== */
+
+@media (min-width: 960px) {
+	html body .loop-container.loop-layout-services_excerpt_cardinal {
+		&.loop-columns-1 {
+			.loop-item-inner {
+				display: flex;
+				align-items: stretch;
+				justify-content: flex-start;
+
+				.featured-image {
+					padding-top: 0;
+					height: auto;
+					width: 35%;
+					margin-right: 40px;
+					margin-bottom: 0;
+					min-height: 300px;
+					background-size: cover;
+					background-position: center center;
+				}
+
+				.services-content-wrap {
+					width: calc(100% - 30%);
+					display: flex;
+					align-items: center;
+				}
+			}
 		}
 	}
 }

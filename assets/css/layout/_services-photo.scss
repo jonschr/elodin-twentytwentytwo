@@ -1,6 +1,21 @@
-.loop-container.loop-layout-services_photo {
+.loop-container.loop-layout-services_cardinal {
 	.entry {
+		padding: 0;
+		background-color: transparent;
+
+		a.post-edit-link {
+			font-size: 16px;
+		}
+
 		.featured-image {
+			background-color: #f7f7f7;
+			width: 100%;
+			display: block;
+			background-size: cover;
+			background-position: center center;
+			height: 0;
+			padding-top: 56%;
+			margin-bottom: 10px;
 			border-radius: 3px;
 			transition: 0.5s all ease;
 		}
@@ -8,10 +23,15 @@
 		h3 {
 			font-size: 18px;
 			margin: 0;
-		}
 
-		a.post-edit-link {
-			font-size: 16px;
+			a {
+				text-decoration: none;
+				color: inherit;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 	}
 

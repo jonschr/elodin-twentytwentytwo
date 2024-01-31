@@ -1,0 +1,175 @@
+body.single-services {
+	.site.grid-container {
+		max-width: 100%;
+		display: block;
+	}
+
+	.site-content {
+		display: block;
+	}
+
+	.single-services-section {
+		padding: 60px 25px;
+		position: relative;
+		overflow: hidden;
+
+		@include mobile {
+			padding: 25px;
+		}
+
+		.single-services-wrap {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 1200px;
+		}
+	}
+
+	.more {
+		background-color: white;
+	}
+
+	.buttons {
+		margin-top: 50px;
+
+		.btn {
+			background-color: var(--accent);
+			color: white;
+			margin: 0 10px 10px 0;
+
+			&:hover {
+				background-color: var(--accent-2);
+			}
+		}
+	}
+
+	.gslide-inline .ginlined-content {
+		padding: 40px;
+	}
+
+	.info {
+		background-color: var(--base);
+
+		.excerpt {
+			margin-top: 30px;
+			max-width: 960px;
+		}
+	}
+
+	.external-manufacturer-url:after {
+		content: '\f504';
+		font-family: 'dashicons';
+		opacity: 0.5;
+		margin-left: 2px;
+		transform: translateY(1.5px);
+		display: inline-block;
+		line-height: 0;
+		font-weight: normal;
+	}
+
+	.photo-single {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		// inset: 0;
+		object-fit: cover;
+		// left: 50%;
+		// top: 50%;
+		// transform: translate(-50%, -50%);
+	}
+
+	.images-multiple {
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 25px;
+		padding-top: 25px;
+
+		@include mobile {
+			padding-top: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 70px;
+		}
+
+		.slick-track {
+			height: 500px;
+
+			@include tablet {
+				height: 400px;
+			}
+
+			@include mobile {
+				height: 300px;
+			}
+		}
+
+		.manufacturer-photo-slide {
+			height: 100%;
+			position: relative;
+			margin: 0 10px;
+		}
+
+		a.popup-image {
+			height: 100%;
+			position: relative;
+			display: block;
+		}
+
+		img.photo-multiple {
+			position: relative;
+			height: 100% !important;
+			width: auto !important;
+		}
+
+		a.popup-image {
+		}
+
+		button.slick-arrow {
+			position: absolute;
+			bottom: 50px;
+			left: 50%;
+			top: auto;
+			z-index: 30;
+			background-color: var(--accent);
+			height: 40px;
+			width: 40px;
+
+			&:before {
+				font-size: 30px;
+				font-family: 'dashicons';
+			}
+
+			&.slick-next {
+				transform: translateX(70%);
+
+				&:before {
+					content: '\f345';
+				}
+			}
+
+			&.slick-prev {
+				transform: translateX(-70%);
+
+				&:before {
+					content: '\f341';
+				}
+			}
+		}
+
+		ul.slick-dots {
+			position: absolute;
+			z-index: 20;
+			bottom: 25px;
+
+			li {
+				button {
+					&:before {
+						color: white;
+						font-size: 0.8em;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

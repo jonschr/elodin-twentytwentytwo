@@ -1,5 +1,20 @@
-.loop-container.loop-layout-projects {
-	.entry {
+.projects-default-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 25px;
+
+	.inner {
+	}
+}
+
+.loop-container.loop-layout-projects,
+.projects-default-grid {
+	.featured-image {
+		margin: 0 !important;
+	}
+
+	.entry,
+	.inner {
 		h3 {
 			font-size: 18px;
 			margin: 0;
@@ -23,7 +38,6 @@
 
 			.slick-arrow {
 				position: absolute;
-				top: auto;
 				left: auto;
 				right: auto;
 				bottom: auto;

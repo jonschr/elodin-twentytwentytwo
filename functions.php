@@ -35,3 +35,6 @@ function elodin_customize_services_args( $args, $post_type ) {
 	return $args;
 }
 add_filter( 'register_post_type_args', 'elodin_customize_services_args', 10, 2 );
+
+// add an image size, 386 x 216
+add_image_size( 'preview', 386, 216, true );

@@ -15,9 +15,8 @@ function elodin_services_excerpt_cardinal() {
 	$content = get_the_content();
 	
 	$photos = get_post_meta( get_the_ID(), 'images', true );	
-	$url = esc_url( wp_get_attachment_url( $photos[0], 'large' ) );
+	$url = esc_url( wp_get_attachment_url( $photos[0], 'preview' ) );
 	
-
 	//* Markup
 	if ( $content )
 		printf( '<a href="%s" class="overlay"></a>', $permalink );

@@ -30,8 +30,9 @@ function elodin_projects_each() {
 			echo '<div class="projects-slider">';
 			
 				foreach( $images as $image ) {
-					$background = wp_get_attachment_image_url( $image, 'large' );
-					printf( '<div class="the-image-slide"><a class="glightbox" href="%s" data-gallery="gallery-%s"><div class="featured-image" style="background-image:url( %s )"></div></a></div>', $background, $id, $background );
+					$background = wp_get_attachment_image_url( $image, 'preview' );
+					$link = wp_get_attachment_image_url( $image, 'large' );
+					printf( '<div class="the-image-slide"><a class="glightbox" href="%s" data-gallery="gallery-%s"><div class="featured-image" style="background-image:url( %s )"></div></a></div>', $link, $id, $background );
 				}
 			
 			echo '</div>'; 

@@ -102,8 +102,6 @@ function photo_slider() {
 		
 	echo '<div class="single-services-section images-multiple">';
 	
-		
-	
 		foreach ( $photos as $photo ) {
 			
 			$url = wp_get_attachment_url( $photo );

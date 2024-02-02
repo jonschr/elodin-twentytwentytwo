@@ -27,6 +27,14 @@
 		margin: 0;
 	}
 
+	p {
+		margin-bottom: 5px;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
 	p.manufacturers {
 		font-size: 15px;
 		text-transform: uppercase;

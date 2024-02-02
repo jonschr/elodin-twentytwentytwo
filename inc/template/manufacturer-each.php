@@ -47,6 +47,8 @@ function manufacturers_each() {
 		
 		if ( $title )
 			printf( '<h3>%s</h3>', $title );
+		
+		edit_post_link( 'Edit manufacturer', '<small>', '</small>' );
 	
 	echo '</div>'; // post_class
 	

@@ -64,6 +64,8 @@ function projects_each() {
 				echo '</p>';
 			}
 			
+			edit_post_link( 'Edit project', '<small>', '</small>' );
+			
 		echo '</div>'; // .loop-inner
 	echo '</div>'; // post_class
 }

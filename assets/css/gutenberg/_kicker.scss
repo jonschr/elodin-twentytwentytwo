@@ -1,5 +1,49 @@
-.is-style-kicker {
+.is-style-kicker,
+.is-style-kickeryellowcaret,
+.is-style-kickerbluecaret {
+	font-weight: 600;
+	font-size: 20px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	letter-spacing: 0.1em;
+	position: relative;
+
 	@include desktop {
 		margin-bottom: 20px;
+	}
+
+	+ h1.wp-block-heading,
+	+ h2.wp-block-heading,
+	+ h3.wp-block-heading {
+		margin-top: 0;
+	}
+}
+
+.is-style-kickeryellowcaret,
+.is-style-kickerbluecaret {
+	@include desktop {
+		&:before {
+			content: '\f345';
+			font-family: 'dashicons';
+			font-size: 1.3em;
+			position: absolute;
+			line-height: 1em;
+			// transform: translateY(5px);
+			left: 0;
+			top: 0;
+			color: var(--accent);
+			transform: translateX(-100%);
+		}
+	}
+}
+
+.is-style-kickeryellowcaret {
+	&:before {
+		color: var(--accent);
+	}
+}
+.is-style-kickerbluecaret {
+	&:before {
+		color: var(--contrast-2);
 	}
 }

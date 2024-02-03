@@ -8,6 +8,13 @@ ol.is-style-lines {
 		border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 		padding-bottom: 8px;
 		margin-bottom: 8px;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		strong {
+			color: var(--accent);
+			font-weight: inherit;
+		}
 
 		&:last-child {
 			margin-bottom: 0;

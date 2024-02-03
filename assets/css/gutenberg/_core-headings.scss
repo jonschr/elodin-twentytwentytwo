@@ -8,14 +8,6 @@ h3.wp-block-heading {
 	}
 }
 
-.is-style-kicker {
-	+ h1.wp-block-heading,
-	+ h2.wp-block-heading,
-	+ h3.wp-block-heading {
-		margin-top: 0;
-	}
-}
-
 figure + h1.wp-block-heading,
 figure + h2.wp-block-heading,
 figure + h3.wp-block-heading {

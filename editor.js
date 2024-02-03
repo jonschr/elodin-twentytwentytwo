@@ -26,6 +26,14 @@ wp.domReady(() => {
 			name: 'kicker',
 			label: 'Kicker',
 		},
+		{
+			name: 'kickeryellowcaret',
+			label: 'Kicker (yellow caret)',
+		},
+		{
+			name: 'kickerbluecaret',
+			label: 'Kicker (blue caret)',
+		},
 	]);
 
 	wp.blocks.registerBlockStyle('core/list', [

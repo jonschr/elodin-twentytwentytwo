@@ -1,0 +1,10 @@
+body,
+.entry-content {
+	background-color: var(--base);
+}
+
+.entry-content {
+	@include notmobile {
+		padding: 50px 0;
+	}
+}

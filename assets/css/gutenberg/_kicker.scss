@@ -1,3 +1,5 @@
 .is-style-kicker {
-	color: var(--accent);
+	@include desktop {
+		margin-bottom: 20px;
+	}
 }

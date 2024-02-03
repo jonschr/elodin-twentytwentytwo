@@ -15,3 +15,15 @@ h3.wp-block-heading {
 		margin-top: 0;
 	}
 }
+
+figure + h1.wp-block-heading,
+figure + h2.wp-block-heading,
+figure + h3.wp-block-heading {
+	margin-top: 0;
+}
+
+hr + h1.wp-block-heading,
+hr + h2.wp-block-heading,
+hr + h3.wp-block-heading {
+	margin-top: 0;
+}

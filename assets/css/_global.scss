@@ -10,6 +10,46 @@ $headerheighttablet: 60px;
 $headerheightmobile: 60px;
 
 /* ==========================================================================
+   Font
+   ========================================================================== */
+
+@font-face {
+	font-family: 'corbel';
+	src: url('../font/Corbel-Bold.woff2') format('woff2'),
+		url('../font/Corbel-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'corbel';
+	src: url('../font/Corbel-BoldItalic.woff2') format('woff2'),
+		url('../font/Corbel-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'corbel';
+	src: url('../font/Corbel-Italic.woff2') format('woff2'),
+		url('../font/Corbel-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'corbel';
+	src: url('../font/Corbel.woff2') format('woff2'),
+		url('../font/Corbel.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ==========================================================================
    Queries
    ========================================================================== */
 

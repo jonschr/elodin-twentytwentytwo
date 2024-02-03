@@ -1,6 +1,27 @@
 .site-header {
 	.main-navigation {
 		.main-nav {
+			ul#menu-main {
+				> li {
+					&:after {
+						content: '';
+						display: block;
+						width: 1px;
+						height: 15px;
+						background-color: var(--accent);
+						position: absolute;
+						right: -1px;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+
+					&:last-child {
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
 			// Main menu
 			ul {
 				li.nav-button {
@@ -27,7 +48,7 @@
 
 				// Submenu
 				ul {
-					width: 250px;
+					width: 280px;
 
 					li {
 						a {

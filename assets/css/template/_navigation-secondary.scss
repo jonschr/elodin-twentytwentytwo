@@ -1,4 +1,10 @@
 .secondary-navigation.has-top-bar {
-    padding-left: 20px !important;
-    padding-right: 10px !important;
+	padding-left: 20px !important;
+	padding-right: 10px !important;
+}
+
+#secondary-navigation {
+	@include notdesktop {
+		display: none;
+	}
 }

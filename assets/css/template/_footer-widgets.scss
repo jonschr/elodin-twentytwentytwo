@@ -1,7 +1,7 @@
 .footer-widgets-container.grid-container {
-    padding: 70px 40px;
+	padding: 40px 40px;
 
-    @include mobile {
-        padding: 25px;
-    }
+	@include mobile {
+		padding: 25px;
+	}
 }

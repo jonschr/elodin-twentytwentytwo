@@ -3,17 +3,21 @@
    ========================================================================== */
 
 .btn {
-	font-weight: bold;
 	cursor: pointer;
-	padding: 15px 25px !important;
+	// padding: 15px 25px !important;
 	text-decoration: none !important;
 	font-size: 15px !important;
 	font-weight: 600;
+	text-transform: uppercase;
 	display: inline-block !important;
 	position: static;
-	border-radius: 3px;
-
+	border-radius: 0;
 	transition: all 0.3s ease-in-out;
+	letter-spacing: 0.05em;
+	padding: 10px 15px;
+	line-height: 1;
+	font-family: 'Inter';
+	font-weight: 700;
 
 	@include mobile {
 		display: block;
@@ -34,10 +38,10 @@
 	}
 
 	&:last-child {
-		margin-top: 50px;
+		margin-top: 30px;
 
 		@include mobile {
-			margin-top: 20px;
+			margin-top: 15px;
 		}
 	}
 
@@ -84,6 +88,15 @@
 .wp-block-button a.wp-block-button__link,
 .wp-block-button div.wp-block-button__link {
 	@extend .btn;
+
+	&.has-contrast-background-color {
+		color: var(--white-color);
+
+		&:hover {
+			background-color: var(--contrast-2) !important;
+			color: var(--white-color);
+		}
+	}
 }
 
 /* ==========================================================================
@@ -94,19 +107,28 @@
 	@include desktop {
 		font-weight: bold;
 		cursor: pointer;
-		padding: 15px 25px !important;
+		// padding: 15px 25px !important;
 		text-decoration: none !important;
 		font-size: 15px !important;
 		font-weight: 600;
 		display: inline-block !important;
 		position: static;
-		border-radius: 3px;
-		background-color: var(--accent);
-		color: white;
+		border-radius: 0;
+		background-color: var(--accent) !important;
+		color: var(--contrast) !important;
+
+		font-size: 15px !important;
+		font-weight: 600 !important;
+		text-transform: uppercase !important;
+		display: inline-block !important;
+		position: static;
+		transition: all 0.3s ease-in-out;
+		letter-spacing: 0.05em;
+		font-family: 'Inter' !important;
+		font-weight: 700 !important;
 
 		&:hover {
-			background-color: var(--accent-2);
-			color: white;
+			background-color: var(--accent-2) !important;
 		}
 	}
 }

@@ -42,6 +42,14 @@ wp.domReady(() => {
 			name: 'caret',
 			label: 'Caret',
 		},
+		{
+			name: 'lines',
+			label: 'Lines',
+		},
+		{
+			name: 'caps',
+			label: 'Caps',
+		},
 	]);
 
 	// wp.blocks.registerBlockStyle('core/heading', [

@@ -1,0 +1,31 @@
+ul.is-style-lines,
+ol.is-style-lines {
+	margin-left: 0;
+	// padding-left: 0;
+	margin-top: 20px;
+
+	li {
+		border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+		padding-bottom: 8px;
+		margin-bottom: 8px;
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border: none;
+		}
+	}
+
+	list-style: none;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	> ul,
+	> ol {
+		margin-top: 10px;
+		margin-bottom: 15px;
+		list-style: none;
+	}
+}

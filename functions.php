@@ -25,7 +25,7 @@ add_filter( 'media_library_infinite_scrolling', '__return_true' );
 function handle_splashviewed_cookie() {
 	
 	// bail if we're not on the home page
-	if ( !is_page( 11 ))
+	if ( !is_page( 7 ))
 		return;
 	
 	if (!isset($_GET['splash'])) {
@@ -45,11 +45,11 @@ function redirect_from_splash_to_home_after_delay() {
 	if ( !is_page( 'splash' ) )
 		return;		
 	
-	echo '<meta http-equiv="refresh" content="12.5;url=/?splash=viewed">'; // Replace with your target URL
+	echo '<meta http-equiv="refresh" content="12.5;url=/about/?splash=viewed">'; // Replace with your target URL
 	
 }
 add_action( 'wp_head', 'redirect_from_splash_to_home_after_delay');
 
-add_filter( 'generate_logo_href', function() {
-    return "/?splash=viewed";
-} );
+// add_filter( 'generate_logo_href', function() {
+//     return "/?splash=viewed";
+// } );

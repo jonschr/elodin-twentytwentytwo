@@ -42,7 +42,7 @@ function rf_add_property_title_to_floorplan_title( $title ) {
 		
 	return $title;
 }
-// add_filter( 'rentfetch_filter_floorplan_title', 'rf_add_property_title_to_floorplan_title', 10, 1 );
+add_filter( 'rentfetch_filter_floorplan_title', 'rf_add_property_title_to_floorplan_title', 10, 1 );
 
 // How to change the label of a taxonomy
 function ed_change_property_types_label() {

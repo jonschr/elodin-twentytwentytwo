@@ -1,0 +1,15 @@
+@media (min-width: 960px) {
+	.secondary-navigation.has-top-bar,
+	.site-header {
+		position: sticky !important;
+		z-index: 100 !important;
+	}
+
+	.secondary-navigation.has-top-bar {
+		top: 0;
+	}
+
+	.site-header {
+		top: 40px;
+	}
+}

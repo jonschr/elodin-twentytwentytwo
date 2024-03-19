@@ -1,51 +1,51 @@
 {
-    "version": 2,
-    "settings": {
-        "typography": {
-            "dropCap": false,
-            "customFontSize": false,
-            "fontWeight": false,
-            "letterSpacing": false,
-            "fontStyle": false,
-            "lineHeight": false,
-            "textDecoration": false,
-            "fontSizes": [
-                {
-                    "slug": "small",
-                    "size": "14px",
-                    "name": "Small"
-                },
-                {
-                    "slug": "normal",
-                    "size": "18px",
-                    "name": "Normal"
-                },
-                {
-                    "slug": "large",
-                    "size": "24px",
-                    "name": "Large"
-                },
-                {
-                    "slug": "larger",
-                    "size": "29px",
-                    "name": "Larger"
-                }
-            ]
-        },
-        "blocks": {
-            "core/button": {
-                "border": {
-                    "radius": false
-                }
-            },
-            "core/pullquote": {
-                "border": {
-                    "color": true,
-                    "radius": false,
-                    "style": false,
-                    "width": false
-                }
-            }
-        }
-    }
+	"version": 2,
+	"settings": {
+		"typography": {
+			"dropCap": false,
+			"customFontSize": false,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"fontStyle": false,
+			"lineHeight": false,
+			"textDecoration": false,
+			"fontSizes": [
+				{
+					"slug": "small",
+					"size": "16px",
+					"name": "Small"
+				},
+				{
+					"slug": "normal",
+					"size": "22px",
+					"name": "Normal"
+				},
+				{
+					"slug": "large",
+					"size": "24px",
+					"name": "Large"
+				},
+				{
+					"slug": "larger",
+					"size": "29px",
+					"name": "Larger"
+				}
+			]
+		},
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": false
+				}
+			},
+			"core/pullquote": {
+				"border": {
+					"color": true,
+					"radius": false,
+					"style": false,
+					"width": false
+				}
+			}
+		}
+	}
 }

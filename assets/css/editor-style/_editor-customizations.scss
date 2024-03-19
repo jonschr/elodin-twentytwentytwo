@@ -29,11 +29,19 @@
 	}
 }
 
+.fullwidth-blocks {
+	.wp-block {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
 /* ==========================================================================
    Make title black
    ========================================================================== */
 
-body.post-type-page {
+body.post-type-page,
+body.post-type-products {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .make-title-black;
 	}
@@ -44,8 +52,7 @@ body.post-type-page {
    ========================================================================== */
 
 body.post-type-post,
-body.post-type-proficiencies,
-body.post-type-practices {
+body.post-type-proucts {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .give-title-margin;
 	}
@@ -56,7 +63,8 @@ body.post-type-practices {
    ========================================================================== */
 
 body.content-title-hidden,
-body.post-type-page {
+body.post-type-page,
+body.post-type-products {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .cross-out-title;
 	}

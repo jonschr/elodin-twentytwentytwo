@@ -11,8 +11,11 @@
 	font-weight: 600;
 	display: inline-block !important;
 	position: static;
-	border-radius: 3px;
-
+	border-radius: 0;
+	text-transform: uppercase;
+	font-family: 'league';
+	letter-spacing: 0.05em;
+	line-height: 1;
 	transition: all 0.3s ease-in-out;
 
 	@include mobile {
@@ -100,9 +103,12 @@
 		font-weight: 600;
 		display: inline-block !important;
 		position: static;
-		border-radius: 3px;
-		background-color: var(--accent);
-		color: white;
+		border-radius: 0;
+		text-transform: uppercase;
+		font-family: 'league';
+		letter-spacing: 0.05em;
+		line-height: 1;
+		transition: all 0.3s ease-in-out;
 
 		&:hover {
 			background-color: var(--accent-2);

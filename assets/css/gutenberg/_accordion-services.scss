@@ -1,0 +1,39 @@
+.gb-accordion__item {
+	.gb-accordion__toggle {
+		.gb-icon {
+			border: 2px solid #dbdbdb;
+			border-radius: 100%;
+			width: 1.1em;
+			height: 1.1em;
+			padding: 3px 0 0 3px;
+			text-align: center;
+			transition: 0.3s all ease;
+		}
+
+		.gb-button-text {
+			&:before {
+				content: '';
+				width: 35px;
+				height: 5px;
+				display: block;
+				margin: 5px 0 20px;
+				background-color: var(--accent);
+			}
+		}
+
+		&:hover {
+			.gb-button-text {
+				font-weight: bold;
+			}
+		}
+	}
+	.gb-block-is-current {
+		.gb-icon {
+			transform: rotate(90deg);
+		}
+
+		.gb-button-text {
+			font-weight: bold;
+		}
+	}
+}

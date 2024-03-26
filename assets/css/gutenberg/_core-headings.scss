@@ -15,3 +15,50 @@ h3.wp-block-heading {
         margin-top: 0;
     }
 }
+
+h1,
+h2,
+h3 {
+    @include mobile {
+        br {
+            display: none;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    &.is-style-purple-line,
+    &.is-style-green-line,
+    &.is-style-white-line {
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 35px;
+            height: 5px;
+            display: block;
+            margin: 0 0 20px;
+        }
+    }
+
+    &.is-style-purple-line {
+        &:before {
+            background-color: var(--accent);
+        }
+    }
+
+    &.is-style-green-line {
+        &:before {
+            background-color: var(--green);
+        }
+    }
+
+    &.is-style-white-line {
+        &:before {
+            background-color: var(--white-color);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.loop-container.loop-layout-ljb_testimonials {
+    .entry {
+        margin-bottom: 50px;
+
+        &:before {
+            content: '';
+            width: 35px;
+            height: 5px;
+            display: block;
+            margin: 0 0 20px;
+            background-color: var(--accent);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            @include desktop {
+                font-size: 35px;
+                text-transform: none;
+                font-weight: 500;
+                margin-top: 20px;
+                color: var(--accent);
+            }
+        }
+    }
+}

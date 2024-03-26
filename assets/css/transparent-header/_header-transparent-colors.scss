@@ -9,7 +9,7 @@ body.full-width-content.first-block-is-section {
         }
 
         .main-navigation.navigation-clone {
-            background-color: white;
+            background-color: var(--accent);
         }
 
         .main-navigation:not(.navigation-clone) .main-nav > ul > li > a {
@@ -22,4 +22,18 @@ body.full-width-content.first-block-is-section {
             color: white;
         }
     }
+}
+
+body:not(.first-block-is-section) {
+    .site-header {
+        background-color: var(--accent);
+    }
+
+    .main-navigation {
+        background-color: var(--accent);
+    }
+}
+
+.site-header {
+    z-index: 25;
 }

@@ -1,0 +1,15 @@
+img.is-style-shaped-left {
+    mask: url('../images/shape-left.svg') no-repeat;
+    mask-size: contain;
+    -webkit-mask: url('../images/shape-left.svg') no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center left;
+}
+
+img.is-style-shaped-right {
+    mask: url('../images/shape-right.svg') no-repeat;
+    mask-size: contain;
+    -webkit-mask: url('../images/shape-right.svg') no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center right;
+}

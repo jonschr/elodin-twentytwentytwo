@@ -2,6 +2,12 @@
 // Use this in console to see list of blocks that haven't been unregistered
 
 wp.domReady(() => {
+    // Get the list of all registered blocks
+    const registeredBlocks = wp.blocks.getBlockTypes();
+
+    // Output the list to the console
+    console.log(registeredBlocks);
+
     wp.blocks.unregisterBlockType('core/rss');
     wp.blocks.unregisterBlockType('core/tag-cloud');
     wp.blocks.unregisterBlockType('core/text-columns');
@@ -10,8 +16,8 @@ wp.domReady(() => {
     wp.blocks.unregisterBlockType('core/column');
     wp.blocks.unregisterBlockType('core/cover');
     wp.blocks.unregisterBlockType('core/media-text');
-    wp.blocks.unregisterBlockType('generateblocks/button-container');
-    wp.blocks.unregisterBlockType('generateblocks/button');
+    // wp.blocks.unregisterBlockType('generateblocks/button-container');
+    // wp.blocks.unregisterBlockType('generateblocks/button');
 });
 
 //* Add alt styles
@@ -28,6 +34,22 @@ wp.domReady(() => {
         },
     ]);
 
+    wp.blocks.registerBlockStyle('generateblocks/image', [
+        {
+            name: 'default',
+            label: 'Default',
+            isDefault: true,
+        },
+        {
+            name: 'shaped-right',
+            label: 'Shaped Right',
+        },
+        {
+            name: 'shaped-left',
+            label: 'Shaped Left',
+        },
+    ]);
+
     wp.blocks.registerBlockStyle('core/list', [
         {
             name: 'default',
@@ -37,6 +59,25 @@ wp.domReady(() => {
         {
             name: 'checkmark',
             label: 'Checkmark',
+        },
+    ]);
+    wp.blocks.registerBlockStyle('core/heading', [
+        {
+            name: 'default',
+            label: 'Default',
+            isDefault: true,
+        },
+        {
+            name: 'purple-line',
+            label: 'Purple line',
+        },
+        {
+            name: 'green-line',
+            label: 'Green line',
+        },
+        {
+            name: 'white-line',
+            label: 'White line',
         },
     ]);
 

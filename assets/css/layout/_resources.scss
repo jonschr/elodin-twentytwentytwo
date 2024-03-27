@@ -5,6 +5,10 @@
 	grid-template-columns: 1fr 1fr;
 	gap: 60px;
 
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+
 	.entry {
 		margin: 0;
 		width: 100%;

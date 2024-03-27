@@ -1,0 +1,55 @@
+.loop-container.loop-layout-resources {
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 60px;
+
+	.entry {
+		margin: 0;
+		width: 100%;
+		position: relative;
+
+		.image-wrap {
+			padding-top: 55%;
+			margin-bottom: 15px;
+			position: relative;
+
+			.featured-image {
+				position: absolute;
+				background-size: cover;
+				background-position: center center;
+				inset: 0;
+				z-index: 10;
+			}
+
+			.overlay {
+				z-index: 20;
+				position: absolute;
+				inset: 0;
+				background-color: rgba(black, 0.2);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				transition: 0.3s all ease;
+
+				.overlay-inner {
+				}
+			}
+		}
+
+		h3 {
+			color: var(--accent);
+			text-transform: none;
+			font-weight: normal;
+			text-decoration: none;
+		}
+	}
+
+	.entry:hover {
+		.overlay {
+			opacity: 1;
+		}
+	}
+}

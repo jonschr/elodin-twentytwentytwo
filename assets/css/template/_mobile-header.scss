@@ -1,22 +1,45 @@
 #mobile-header {
-    background-color: var(--accent);
+	background-color: var(--accent);
 
-    ul.sub-menu.toggled-on {
-        border: none;
+	ul.sub-menu.toggled-on {
+		border: none;
 
-        > li {
-            border: none;
+		> li {
+			border: none;
 
-            > a {
-                color: white;
-                background-color: var(--accent-2);
-                border: none;
-            }
-        }
+			> a {
+				color: white;
+				background-color: var(--accent-2);
+				border: none;
+			}
+		}
 
-        > li.current-menu-item {
-            > a {
-            }
-        }
-    }
+		> li.current-menu-item {
+			> a {
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.main-navigation.sticky-navigation-transition .site-logo img,
+	.main-navigation.sticky-navigation-transition .navigation-branding img {
+		height: 60px !important;
+	}
+}
+
+@media (max-width: 1024px), (min-width: 1025px) {
+	.main-navigation .main-nav ul li a {
+		line-height: 40px !important;
+	}
+
+	.main-navigation .main-nav ul.sub-menu li a {
+		line-height: 20px !important;
+	}
+	.main-navigation.sticky-navigation-transition .main-nav > ul > li > a,
+	.sticky-navigation-transition .menu-toggle,
+	.main-navigation.sticky-navigation-transition .menu-bar-item > a,
+	.sticky-navigation-transition .navigation-branding .main-title {
+		line-height: 40px !important;
+	}
 }

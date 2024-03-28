@@ -1,39 +1,39 @@
 body.full-width-content.first-block-is-section {
-    @include desktop {
-        .site-header {
-            background-color: transparent;
-        }
+	@include desktop {
+		.site-header {
+			background-color: transparent;
+		}
 
-        .main-navigation {
-            background-color: transparent;
-        }
+		.main-navigation {
+			background-color: transparent;
+		}
 
-        .main-navigation.navigation-clone {
-            background-color: var(--accent);
-        }
+		.main-navigation.navigation-clone {
+			background-color: var(--accent);
+		}
 
-        .main-navigation:not(.navigation-clone) .main-nav > ul > li > a {
-            background-color: transparent;
-            color: white;
-        }
+		.main-navigation:not(.navigation-clone) .main-nav > ul > li > a {
+			background-color: transparent;
+			color: white;
+		}
 
-        .main-title a,
-        .main-title a:hover {
-            color: white;
-        }
-    }
+		.main-title a,
+		.main-title a:hover {
+			color: white;
+		}
+	}
 }
 
 body:not(.first-block-is-section) {
-    .site-header {
-        background-color: var(--accent);
-    }
+	.site-header {
+		background-color: var(--accent);
+	}
 
-    .main-navigation {
-        background-color: var(--accent);
-    }
+	.main-navigation {
+		background-color: var(--accent);
+	}
 }
 
 .site-header {
-    z-index: 25;
+	z-index: 25;
 }

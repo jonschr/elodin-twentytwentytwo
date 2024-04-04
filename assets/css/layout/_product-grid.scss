@@ -1,0 +1,47 @@
+.loop-container.loop-layout-product_grid {
+	margin-top: 0;
+	padding-top: 0;
+
+	.entry {
+		background-color: white;
+		position: relative;
+
+		@include mobile {
+			width: 100%;
+		}
+
+		.overlay {
+			position: absolute;
+			inset: 0;
+			transition: 0.3s all ease;
+		}
+
+		h3 {
+			color: var(--contrast);
+		}
+
+		.featured-image {
+			padding-top: 55%;
+			height: 0;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		.the-content {
+			padding: 15px;
+		}
+
+		.excerpt {
+			p {
+				font-size: 15px;
+				line-height: 1.3;
+			}
+		}
+	}
+
+	.entry:hover {
+		.overlay {
+			box-shadow: 0 0 0 5px var(--accent);
+		}
+	}
+}

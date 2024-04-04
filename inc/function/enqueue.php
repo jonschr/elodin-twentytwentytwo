@@ -100,6 +100,14 @@ function ettt_enqueue_everything() {
 		array(),
 		CHILD_THEME_VERSION
 	);
+	
+	wp_register_script(
+		'single-product-slider-init',
+		get_stylesheet_directory_uri() . '/assets/js/single-product-slider-init.js',
+		array('slick-main-script'),
+		CHILD_THEME_VERSION,
+		true
+	);
 
 	wp_register_style(
 		'slick-main-theme',

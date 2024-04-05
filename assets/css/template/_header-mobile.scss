@@ -1,3 +1,23 @@
-.mobile-header-navigation .site-logo.mobile-header-logo img {
-	height: 60px !important;
+#mobile-header.mobile-header-navigation {
+	background-color: var(--accent) !important;
+	z-index: 99999;
+	position: relative;
+
+	button.menu-toggle {
+		color: white;
+	}
+
+	.site-logo.mobile-header-logo img {
+		height: 40px !important;
+	}
+}
+
+#mobile-menu {
+	ul.menu {
+		> li {
+			> a {
+				color: white;
+			}
+		}
+	}
 }

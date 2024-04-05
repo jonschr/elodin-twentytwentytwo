@@ -1,9 +1,11 @@
-body.home {
-	#primary-menu {
-		ul.menu {
-			> li {
-				> a {
-					color: var(--accent);
+@media (min-width: 1025px) {
+	body.home {
+		#primary-menu {
+			ul.menu {
+				> li {
+					> a {
+						color: var(--accent);
+					}
 				}
 			}
 		}

@@ -2,6 +2,8 @@ body.full-width-content.first-block-is-section {
 	@include desktop {
 		.site-header {
 			background-color: transparent;
+			position: relative;
+			z-index: 1000;
 		}
 
 		.main-navigation {
@@ -9,17 +11,40 @@ body.full-width-content.first-block-is-section {
 		}
 
 		.main-navigation.navigation-clone {
-			background-color: white;
+			background-color: var(--accent);
 		}
 
 		.main-navigation:not(.navigation-clone) .main-nav > ul > li > a {
 			background-color: transparent;
-			color: white;
+			color: var(--white-color);
 		}
 
 		.main-title a,
 		.main-title a:hover {
 			color: white;
+		}
+	}
+}
+
+nav.is_stuck {
+	ul#menu-main {
+		> li {
+			> a {
+				color: var(--white-color);
+			}
+		}
+
+		> li.nav-button {
+			> a {
+				background-color: var(--white-color) !important;
+				color: var(--accent) !important;
+			}
+		}
+	}
+
+	.navigation-branding {
+		img.is-logo-image {
+			height: 50px;
 		}
 	}
 }

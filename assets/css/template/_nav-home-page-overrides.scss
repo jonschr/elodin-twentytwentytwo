@@ -1,0 +1,11 @@
+body.home {
+	#primary-menu {
+		ul.menu {
+			> li {
+				> a {
+					color: var(--accent);
+				}
+			}
+		}
+	}
+}

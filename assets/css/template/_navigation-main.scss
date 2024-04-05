@@ -10,16 +10,20 @@
 
 					a {
 						@include notmobile {
-							background-color: var(--accent);
+							background-color: var(--accent) !important;
 							border-radius: 3px;
-							color: white;
+							color: white !important;
 							padding: 15px 20px !important;
 							line-height: 1;
 							transition: 0.3s all ease;
 
 							&:hover {
-								background-color: var(--accent-2);
-								color: white;
+								background-color: var(--accent-2) !important;
+								color: white !important;
+							}
+
+							&:after {
+								display: none;
 							}
 						}
 					}

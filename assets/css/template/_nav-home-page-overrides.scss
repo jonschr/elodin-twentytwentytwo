@@ -1,10 +1,12 @@
 @media (min-width: 1025px) {
 	body.home {
-		#primary-menu {
-			ul.menu {
-				> li {
-					> a {
-						color: var(--accent);
+		nav:not(.is_stuck) {
+			#primary-menu {
+				ul.menu {
+					> li {
+						> a {
+							color: var(--accent);
+						}
 					}
 				}
 			}

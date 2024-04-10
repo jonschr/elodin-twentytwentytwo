@@ -52,3 +52,34 @@ $wide: 1200px;
 		@content;
 	}
 }
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+	font-family: 'agency';
+	src: url('../font/AgencyFB-Reg.woff2') format('woff2'),
+		url('../font/AgencyFB-Reg.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'hanley';
+	src: url('../font/HanleyPro-Monoline.woff2') format('woff2'),
+		url('../font/HanleyPro-Monoline.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'agency';
+	src: url('../font/AgencyFB-Bold.woff2') format('woff2'),
+		url('../font/AgencyFB-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}

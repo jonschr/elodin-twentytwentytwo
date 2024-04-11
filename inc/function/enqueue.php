@@ -108,6 +108,38 @@ function ettt_enqueue_everything() {
 		CHILD_THEME_VERSION
 	);
 	
+	wp_register_script(
+		'suites-sliders',
+		get_stylesheet_directory_uri() . '/assets/js/suites-sliders.js',
+		array('slick-main-script'),
+		CHILD_THEME_VERSION,
+		true
+	);
+	
+	// GLIGHTBOX
+	wp_register_script(
+	    'glightbox-script',
+	    'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js',
+	    array('jquery'),
+	    CHILD_THEME_VERSION,
+	    true
+	);
+	
+	wp_register_script(
+		'glightbox-init',
+		get_stylesheet_directory_uri() . '/assets/js/glightbox-init.js',
+		array('slick-main-script'),
+		CHILD_THEME_VERSION,
+		true
+	);
+	
+	wp_register_style(
+		'glightbox-style',
+		'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css',
+		array(),
+		CHILD_THEME_VERSION
+	);
+	
 	// Dashicons
 	wp_enqueue_style( 'dashicons' );
 		

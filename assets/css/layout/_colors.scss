@@ -1,0 +1,43 @@
+.color-term-wrapper {
+	.color-type {
+		h3 {
+			color: var(--contrast);
+		}
+
+		ul.colors {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			gap: 25px;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+
+			@include tablet {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@include mobile {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			li {
+				padding: 0;
+				margin: 0;
+
+				.the-color {
+					height: 0;
+					padding-top: 55%;
+					border-radius: 3px;
+					background-size: cover;
+					background-position: center center;
+				}
+
+				.content-wrap {
+					font-size: 16px;
+					line-height: 1.2em;
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+}

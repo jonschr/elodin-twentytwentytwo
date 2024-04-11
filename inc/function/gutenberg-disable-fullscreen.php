@@ -9,15 +9,15 @@ function elodin_disable_fullscreen_mode() {
 		
 	$script = "
 		jQuery( window ).load(function() { 
-            
-            // disable fullscreenmode
+			
+			// disable fullscreenmode
 			const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); 
 			if ( isFullscreenMode ) { 
 				wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); 
 			}
-            
-            // disable publish check
-            wp.data.dispatch('core/editor').disablePublishSidebar();
+			
+			// disable publish check
+			wp.data.dispatch('core/editor').disablePublishSidebar();
 		});
 	";
 	

@@ -1,0 +1,37 @@
+body .na-attractions-categories-wrap {
+	li {
+		button.attraction-type-button {
+			background-color: var(--accent);
+			color: white;
+			transition: 0.3s all ease;
+
+			&.active,
+			&:hover {
+				background-color: var(--accent-2);
+				color: white;
+			}
+		}
+	}
+}
+
+body .attractions-content {
+	h3 {
+		font-size: 18px !important;
+		color: var(--accent);
+	}
+}
+
+body {
+	.na-attractions-wrap {
+		.hentry {
+			transition: 0.3s all ease;
+
+			&.active,
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: var(--base);
+			}
+		}
+	}
+}

@@ -1,9 +1,12 @@
 body .loop-container.loop-layout-staff_grid {
 	.staff {
+		border-radius: 7px;
+		overflow: hidden;
+
 		.more-link-wrap {
-			transform: none;
-			opacity: 1;
-			pointer-events: all;
+			// transform: none;
+			// opacity: 1;
+			// pointer-events: all;
 
 			h3 {
 				font-size: 18px;

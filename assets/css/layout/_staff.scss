@@ -1,0 +1,17 @@
+body .loop-container.loop-layout-staff_grid {
+	.staff {
+		.more-link-wrap {
+			transform: none;
+			opacity: 1;
+			pointer-events: all;
+
+			h3 {
+				font-size: 18px;
+			}
+
+			.jobtitle {
+				font-weight: bold;
+			}
+		}
+	}
+}

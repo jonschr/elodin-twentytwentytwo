@@ -18,3 +18,20 @@ body .loop-container.loop-layout-staff_grid {
 		}
 	}
 }
+
+.staff-content {
+	.info {
+		margin-bottom: 30px;
+	}
+
+	p.title {
+		text-transform: uppercase;
+		line-height: 1.2;
+		font-size: 16px;
+		margin: 15px 0;
+	}
+
+	.button {
+		@extend .btn;
+	}
+}

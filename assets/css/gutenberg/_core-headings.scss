@@ -6,6 +6,12 @@ h3.wp-block-heading {
 	&:first-child {
 		margin-top: 0;
 	}
+
+	&.is-style-gray-line {
+		border-bottom: 3px solid var(--base);
+		padding-bottom: 15px;
+		margin-bottom: 25px;
+	}
 }
 
 .is-style-kicker {
@@ -14,4 +20,9 @@ h3.wp-block-heading {
 	+ h3.wp-block-heading {
 		margin-top: 0;
 	}
+}
+
+sup {
+	font-size: 30% !important;
+	margin-bottom: 1.6em !important;
 }

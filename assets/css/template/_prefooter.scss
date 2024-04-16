@@ -1,5 +1,46 @@
 .prefooter {
-    iframe {
-        margin-bottom: -9px;
-    }
+	iframe {
+		margin-bottom: -9px;
+	}
+
+	.gform_wrapper {
+		.ginput_container {
+			input {
+				border-top: none;
+				border-left: none;
+				border-right: none;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	.gform_footer {
+		.gform_button {
+			@extend .btn;
+
+			font-weight: bold !important;
+			text-transform: uppercase !important;
+			background-color: transparent !important;
+			border: 2px solid var(--accent) !important;
+
+			&:hover {
+				background-color: var(--accent) !important;
+				color: var(--contrast) !important;
+			}
+		}
+	}
+}
+
+ul#menu-footer {
+	li {
+		a {
+			color: white;
+			text-transform: uppercase;
+
+			&:hover {
+				color: var(--accent);
+			}
+		}
+	}
 }

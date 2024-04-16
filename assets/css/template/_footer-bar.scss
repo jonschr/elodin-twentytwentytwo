@@ -1,0 +1,10 @@
+footer.site-info {
+	.inside-site-info {
+		@include desktop {
+			border-top: 2px solid var(--accent);
+			padding-left: 0;
+			padding-right: 0;
+			max-width: 1200px;
+		}
+	}
+}

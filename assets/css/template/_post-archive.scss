@@ -63,5 +63,43 @@ body.single-post {
 				margin-bottom: 60px;
 			}
 		}
+
+		ul.wp-block-latest-posts__list {
+			li {
+				margin-bottom: 25px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			a.wp-block-latest-posts__post-title {
+				text-transform: uppercase;
+				font-weight: bold;
+				color: var(--contrast);
+				display: block;
+				line-height: 1.2;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+body.single-post {
+	h1.entry-title {
+		font-size: 55px;
+	}
+
+	.entry-meta {
+		color: var(--contrast);
+	}
+
+	.entry-content {
+		a {
+			color: var(--contrast);
+		}
 	}
 }

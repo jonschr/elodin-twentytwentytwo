@@ -80,32 +80,3 @@ function colors_func( $atts ) {
 	return ob_get_clean();
 }
 add_shortcode( 'colors', 'colors_func' );
-
-
-$args = array(
-	'post_type' => 'testimonials',
-	'posts_per_page' => '1'
-);
-
-// The Query
-$custom_query = new WP_Query( $args );
-
-// The Loop
-if ( $custom_query->have_posts() ) {
-
-	while ( $custom_query->have_posts() ) {
-		
-		$custom_query->the_post();
-
-		printf( '<div class="%s">', implode( get_post_class(), ' ' ) );
-		
-			get_template_part( 'partials/testimonials', 'footer' );
-
-		echo '</div>';
-
-	}
-	
-	// Restore postdata
-	wp_reset_postdata();
-
-}

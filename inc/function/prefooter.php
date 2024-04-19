@@ -14,8 +14,16 @@ register_sidebar( array(
 //* Display the widget area
 function ettt_add_prefooter() {
 	
+	// Don't display on the join page
+	if ( is_page( 'join' ) )
+		return;
+	
 	// Don't display on the contact page
 	if ( is_page( 'contact' ) )
+		return;
+	
+	// Don't display on the dues page
+	if ( is_page( 'dues' ) )
 		return;
 	
 	dynamic_sidebar( 'prefooter' );

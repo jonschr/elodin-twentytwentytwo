@@ -3,15 +3,19 @@
    ========================================================================== */
 
 .btn {
-	font-weight: bold;
+	font-weight: normal;
+	text-transform: uppercase;
 	cursor: pointer;
 	padding: 15px 25px !important;
 	text-decoration: none !important;
-	font-size: 15px !important;
+	font-size: 16px !important;
 	font-weight: 600;
+	// letter-spacing: -0.1em;
 	display: inline-block !important;
 	position: static;
 	border-radius: 3px;
+	font-family: 'westmount';
+	line-height: 1;
 
 	transition: all 0.3s ease-in-out;
 
@@ -58,8 +62,33 @@
    Gravity forms buttons
    ========================================================================== */
 
-.gform_footer input[type='submit'] {
-	@extend .btn;
+.gform_footer input[type='submit'].gform_button {
+	font-weight: normal;
+	text-transform: uppercase !important;
+	cursor: pointer;
+	padding: 15px 25px !important;
+	text-decoration: none !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	// letter-spacing: -0.1em;
+	display: inline-block !important;
+	position: static;
+	border-radius: 3px;
+	font-family: 'westmount' !important;
+	line-height: 1;
+	background-color: var(--accent) !important;
+
+	&:hover {
+		background-color: var(--accent-2) !important;
+	}
+
+	transition: all 0.3s ease-in-out;
+
+	&.gform-button--width-full {
+		width: 100% !important;
+		max-width: 100%;
+		display: block;
+	}
 
 	&:last-child {
 		margin-bottom: 0;

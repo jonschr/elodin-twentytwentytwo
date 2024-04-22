@@ -18,3 +18,13 @@ foreach ( glob( CHILD_THEME_DIR . "/inc/*/*.php", GLOB_NOSORT ) as $filename ){
 add_filter( 'media_library_infinite_scrolling', '__return_true' );
 
 
+function ko_exclude_categories_from_blog( $query ) {
+	if ( $query->is_home ) {
+		
+		// exclude the upside category from the blog
+		$query->set( 'cat', '-31' );
+	}
+	return $query;
+}
+  
+add_filter( 'pre_get_posts', 'ko_exclude_categories_from_blog' );

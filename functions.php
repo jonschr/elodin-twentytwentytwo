@@ -19,7 +19,7 @@ add_filter( 'media_library_infinite_scrolling', '__return_true' );
 
 
 function ko_exclude_categories_from_blog( $query ) {
-	if ( $query->is_home ) {
+	if ( $query->is_home && is_main_query()) {
 		
 		// exclude the upside category from the blog
 		$query->set( 'cat', '-31' );

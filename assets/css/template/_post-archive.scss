@@ -1,5 +1,7 @@
 body.blog,
-body.single-post {
+body.single-post,
+body.category,
+body.author {
 	.site-main {
 		margin-right: 120px;
 		margin-top: 60px;
@@ -8,6 +10,17 @@ body.single-post {
 		@include notdesktop {
 			padding: 25px;
 			margin: 0;
+		}
+
+		header.page-header {
+			padding: 0;
+			margin-bottom: 30px;
+
+			h1 {
+				img {
+					display: none;
+				}
+			}
 		}
 
 		.post {

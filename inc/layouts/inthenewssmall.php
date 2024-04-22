@@ -1,8 +1,8 @@
 <?php
 
-//* Output each inthenews
-add_action( 'add_loop_layout_inthenews', 'elodin_inthenews_each' );
-function elodin_inthenews_each() {
+//* Output each inthenewssmall
+add_action( 'add_loop_layout_inthenewssmall', 'elodin_inthenewssmall_each' );
+function elodin_inthenewssmall_each() {
 
 	//* Global vars
 	global $post;
@@ -36,33 +36,11 @@ function elodin_inthenews_each() {
 		if ( $date )
 			printf( '<p class="date">%s</p>', $date );
 		
-		if ( $excerpt )
-			echo wp_kses_post( $excerpt );
+		// if ( $excerpt )
+		// 	echo wp_kses_post( $excerpt );
 		
 		if ( $url_button )
 			echo $url_button;
 
 	echo '</div>';
-}
-
-function ko_get_external_link_button( $url ) {
-	// if $url is a youtube link, then do one thing. If not, do another thing
-	if ( strpos( $url, 'youtube' ) !== false ) {
-		$button = sprintf( '<a class="btn popup" href="%s">Watch</a>', $url );
-	} else {
-		$button = sprintf( '<a class="btn" href="%s" target="_blank">Learn more</a>', $url );
-	}
-	
-	return $button;
-}
-
-function ko_get_external_link_overlay( $url ) {
-	// if $url is a youtube link, then do one thing. If not, do another thing
-	if ( strpos( $url, 'youtube' ) !== false ) {
-		$markup = sprintf( '<div class="overlay"><a class="video popup" href="%s"></a></div>', $url );
-	} else {
-		$markup = sprintf( '<div class="overlay"><a class="full" href="%s" target="_blank"></a></div>', $url );
-	}
-	
-	return $markup;
 }

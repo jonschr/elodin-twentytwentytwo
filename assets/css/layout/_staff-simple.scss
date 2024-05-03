@@ -1,0 +1,37 @@
+.loop-container.loop-layout-staff_simple {
+	.entry {
+		background-color: var(--base);
+		box-shadow: none;
+		padding: 40px 25px;
+
+		h3 {
+			font-family: 'westmount';
+			letter-spacing: -0.1em;
+		}
+
+		p.jobtitle {
+			font-size: 18px;
+			color: var(--accent);
+			font-family: 'westmount';
+			letter-spacing: -0.1em;
+			line-height: 0.9;
+		}
+
+		.overlay-link {
+			background-color: rgba(#2a4351, 0.85);
+			font-size: 18px;
+			font-family: 'westmount';
+			letter-spacing: -0.1em;
+			line-height: 0.9;
+		}
+	}
+}
+
+.goverlay {
+	background-color: rgba(#2a4351, 0.85);
+}
+
+.ginlined-content,
+.glightbox-clean .gslide-media {
+	box-shadow: none;
+}

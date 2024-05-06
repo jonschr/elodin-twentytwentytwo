@@ -4,7 +4,7 @@
 
 .make-title-black {
 	background-color: black;
-	margin: 0;
+	margin: 0 !important;
 	padding: 30px 50px;
 
 	@extend h1 !optional;
@@ -21,6 +21,13 @@
 
 .add-bottom-margin {
 	margin-bottom: 30px;
+}
+
+.center-title {
+	h1 {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .cross-out-title {
@@ -51,6 +58,7 @@ body.post-type-page {
 body.post-type-post {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .add-bottom-margin;
+		@extend .center-title;
 	}
 }
 

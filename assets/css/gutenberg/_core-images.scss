@@ -3,3 +3,7 @@
 		border-radius: 3px;
 	}
 }
+
+.wp-block-image:not(:last-child) {
+	margin-bottom: 15px;
+}

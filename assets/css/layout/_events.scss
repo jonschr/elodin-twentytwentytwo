@@ -21,6 +21,7 @@
 	.events {
 		background-color: var(--contrast);
 		color: white;
+		position: relative;
 
 		.featured-image {
 			margin: 0;
@@ -28,6 +29,24 @@
 			padding-top: 55%;
 			background-size: cover;
 			background-repeat: no-repeat;
+		}
+
+		.overlay-link {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			background-color: rgba(#968666, 0.9);
+			inset: 0;
+			text-decoration: none;
+			font-family: 'westmount';
+			line-height: 1;
+			text-transform: uppercase;
+			letter-spacing: 0.01em;
+			font-size: 16px;
+			opacity: 0;
+			transition: 0.3s all ease;
 		}
 
 		.event-content {
@@ -40,7 +59,32 @@
 			p {
 				font-size: 16px;
 				line-height: 1.4;
+				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
+
+		.excerpt {
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.events:hover {
+		.overlay-link {
+			opacity: 1;
+		}
+	}
+}
+
+.gslide-inline .event-lightbox-content {
+	@include desktop {
+		padding: 40px !important;
 	}
 }

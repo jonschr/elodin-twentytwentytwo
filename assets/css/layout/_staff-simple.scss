@@ -15,6 +15,28 @@
 			font-family: 'westmount';
 			letter-spacing: -0.1em;
 			line-height: 0.9;
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		p.email {
+			margin-bottom: 0;
+			font-size: 16px;
+			opacity: 0.7;
+
+			a {
+				color: var(--contrast) !important;
+				text-decoration: none !important;
+			}
+		}
+
+		p.phone {
+			opacity: 0.7;
+			margin-bottom: 0;
+			font-size: 16px;
 		}
 
 		.overlay-link {

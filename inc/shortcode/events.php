@@ -9,6 +9,10 @@ function mve_events( $atts ) {
 	
 	ob_start();
 	
+	wp_enqueue_style( 'ed-glightbox-theme' );
+	wp_enqueue_script( 'ed-glightbox-main' );
+	wp_enqueue_script( 'ed-glightbox-init' );
+	
 	// query for events
 	$args = array(
 		'post_type' => 'events',
@@ -43,11 +47,15 @@ function mve_events( $atts ) {
 			$date = get_post_meta( get_the_ID(), 'event_date', true );
 			$date_human = date( 'F j, Y', strtotime( $date ) );
 			$excerpt = apply_filters( 'the_content', apply_filters( 'the_content', get_the_excerpt() ) );
-			$background = get_the_post_thumbnail_url( get_the_ID(), 'large' );	
+			$background = get_the_post_thumbnail_url( get_the_ID(), 'large' );
+			$content = apply_filters( 'the_content', apply_filters('the_content', get_the_content() ) );
 
 			printf( '<div class="%s">', implode( ' ', get_post_class() ) );
 
 				echo '<div class="loop-item-inner">';
+				
+					if ( $content )
+						printf( '<a href="#event-%s" class="overlay-link event-lightbox" data-gallery="%s"><span class="">View More Information</span></a>', get_the_ID(), get_the_ID() );
 
 					printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
 
@@ -56,12 +64,26 @@ function mve_events( $atts ) {
 						printf( '<h3>%s</h3>', $title );
 						printf( '<p class="date">%s</p>', $date_human );
 						printf( '<div class="excerpt">%s</div>', wp_kses_post( $excerpt ) );
+						
+						edit_post_link( 'Edit this event', '<p>', '</p>' );
 
 					echo '</div>'; // .content
 
 				echo '</div>'; // .loop-item-inner
 
 			echo '</div>';
+			
+			if ( $content ) {
+				printf( '<div id="event-%s" style="display: none;" class="event-lightbox-content">', get_the_ID() );
+				
+					if ( $title )
+						printf( '<h2>%s</h2>', $title );
+				
+					echo wp_kses_post( $content );
+
+				echo '</div>';
+			}
+			
 
 		}
 

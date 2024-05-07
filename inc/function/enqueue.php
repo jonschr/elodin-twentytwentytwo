@@ -108,6 +108,15 @@ function ettt_enqueue_everything() {
 		CHILD_THEME_VERSION
 	);
 	
+	// Slick
+	wp_register_script(
+		'materials-slider-init',
+		get_stylesheet_directory_uri() . '/assets/js/materials-slider-init.js',
+		array('slick-main-script'),
+		CHILD_THEME_VERSION,
+		true
+	);
+	
 	// Dashicons
 	wp_enqueue_style( 'dashicons' );
 		

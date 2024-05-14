@@ -8,6 +8,7 @@
 	padding: 15px 25px !important;
 	text-decoration: none !important;
 	font-size: 15px !important;
+	letter-spacing: 0.1em !important;
 	font-weight: 600;
 	display: inline-block !important;
 	position: static;
@@ -59,8 +60,15 @@
    Gravity forms buttons
    ========================================================================== */
 
+.gform_required_legend {
+	display: none !important;
+}
+
 .gform_footer input[type='submit'] {
 	@extend .btn;
+
+	font-weight: bold !important;
+	text-transform: uppercase !important;
 
 	&:last-child {
 		margin-bottom: 0;

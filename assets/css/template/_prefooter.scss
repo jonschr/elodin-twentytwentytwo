@@ -16,11 +16,9 @@
 	}
 
 	.gform_footer {
-		.gform_button {
+		input.gform_button {
 			@extend .btn;
 
-			font-weight: bold !important;
-			text-transform: uppercase !important;
 			background-color: transparent !important;
 			border: 2px solid var(--accent) !important;
 

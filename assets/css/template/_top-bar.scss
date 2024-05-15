@@ -6,16 +6,18 @@ div.top-bar {
 			justify-content: center;
 		}
 
-		.widget {
-			order: 0 !important;
+		@include notmobile {
+			.widget {
+				order: 0 !important;
 
-			&:first-child {
-				margin-left: 0 !important;
-				margin-right: auto;
-			}
+				&:first-child {
+					margin-left: 0 !important;
+					margin-right: auto;
+				}
 
-			&:last-child {
-				margin-right: 0 !important;
+				&:last-child {
+					margin-right: 0 !important;
+				}
 			}
 		}
 	}

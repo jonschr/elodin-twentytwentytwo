@@ -4,6 +4,10 @@
 	align-items: center;
 	margin-bottom: 15px;
 
+	@include mobile {
+		display: block;
+	}
+
 	a {
 		order: 1;
 		text-decoration: none;
@@ -12,6 +16,12 @@
 	a:not(.wp-block-file__button) {
 		color: var(--contrast);
 		pointer-events: none;
+		font-size: 16px;
+
+		@include mobile {
+			display: block;
+			width: 100%;
+		}
 	}
 
 	.wp-block-file__button {
@@ -25,6 +35,11 @@
 		&:hover {
 			color: var(--white-color);
 			background-color: var(--accent-2);
+		}
+
+		@include mobile {
+			width: auto;
+			margin-top: 5px;
 		}
 	}
 }

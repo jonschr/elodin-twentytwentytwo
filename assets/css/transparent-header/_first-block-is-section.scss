@@ -4,12 +4,15 @@
 		margin-top: $headerheightdesktop;
 	}
 
+	@media (max-width: 1200px) {
+		margin-top: 20px;
+	}
+
 	@include tablet {
-		// margin-top: $headerheighttablet;
 	}
 
 	@include mobile {
-		// margin-top: $headerheightmobile;
+		margin-top: 0;
 	}
 }
 

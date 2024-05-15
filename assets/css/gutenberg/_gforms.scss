@@ -1,0 +1,13 @@
+@media (min-width: 640px) {
+	.gform-theme--foundation .gform_fields {
+		grid-row-gap: 15px;
+		row-gap: 15px;
+	}
+}
+
+.gform_footer {
+	.gform-button--width-full {
+		width: 100% !important;
+		text-align: center !important;
+	}
+}

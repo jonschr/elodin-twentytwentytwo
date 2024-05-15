@@ -22,8 +22,8 @@
 :where(.gb-is-root-block > .gb-container),
 :where(.gb-root-block-generateblocks-container > .gb-container),
 :where(.block-library-block__reusable-block-container > .gb-container) {
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 
 	@include tablet {
 		padding-top: 45px;

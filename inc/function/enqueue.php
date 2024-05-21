@@ -84,6 +84,15 @@ function ettt_enqueue_everything() {
 	//     array(),
 	//     CHILD_THEME_VERSION
 	// );    
+	
+	// Flippers
+	wp_enqueue_script(
+		'flippers',
+		get_stylesheet_directory_uri() . '/assets/js/flippers.js',
+		array('jquery'),
+		CHILD_THEME_VERSION,
+		true
+	);
 
 	// Slick
 	wp_register_script(

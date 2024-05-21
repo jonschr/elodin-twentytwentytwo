@@ -10,16 +10,21 @@
 
 					a {
 						@include notmobile {
-							background-color: var(--accent);
+							background-color: transparent;
 							border-radius: 3px;
-							color: white;
+							color: var(--accent);
+							border: 3px solid var(--gold-light) !important;
 							padding: 15px 20px !important;
+							border-radius: 30px;
 							line-height: 1;
 							transition: 0.3s all ease;
+							text-transform: uppercase;
+							font-weight: bold;
 
 							&:hover {
-								background-color: var(--accent-2);
-								color: white;
+								background-color: var(--accent);
+								color: var(--gold-light);
+								border-color: var(--accent) !important;
 							}
 						}
 					}

@@ -3,7 +3,6 @@
    ========================================================================== */
 
 .btn {
-	font-weight: bold;
 	cursor: pointer;
 	padding: 15px 25px !important;
 	text-decoration: none !important;
@@ -11,7 +10,7 @@
 	font-weight: 600;
 	display: inline-block !important;
 	position: static;
-	border-radius: 3px;
+	border-radius: 30px;
 
 	transition: all 0.3s ease-in-out;
 
@@ -98,9 +97,10 @@
 		font-weight: 600;
 		display: inline-block !important;
 		position: static;
-		border-radius: 3px;
-		background-color: var(--accent);
-		color: white;
+		border-radius: 15px;
+		border: 3px solid var(--accent-3) !important;
+		background-color: transparent;
+		color: var(--accent);
 
 		&:hover {
 			background-color: var(--accent-2);

@@ -15,3 +15,37 @@ h3.wp-block-heading {
 		margin-top: 0;
 	}
 }
+
+h1,
+h2,
+h3 {
+	&.is-style-yellow-line,
+	&.is-style-green-line {
+		&:before {
+			content: '';
+			display: block;
+			width: 150px;
+			height: 10px;
+			background-color: var(--contrast);
+			margin-bottom: 30px;
+
+			@include mobile {
+				margin-bottom: 15px;
+				height: 7px;
+				width: 100px;
+			}
+		}
+	}
+
+	&.is-style-yellow-line {
+		&:before {
+			background-color: var(--gold-light);
+		}
+	}
+
+	&.is-style-green-line {
+		&:before {
+			background-color: var(--accent);
+		}
+	}
+}

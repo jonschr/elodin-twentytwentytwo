@@ -1,0 +1,33 @@
+.flipper:not(.block-editor-block-list__block) {
+	position: relative;
+
+	.front,
+	.back {
+		position: absolute !important;
+		inset: 0;
+		transition: 0.75s all ease;
+	}
+
+	.front {
+		z-index: 10;
+	}
+
+	.back {
+		z-index: 5;
+	}
+
+	&.active {
+		.front {
+			opacity: 0;
+		}
+	}
+}
+
+.flipper.block-editor-block-list__block {
+	padding-top: 0 !important;
+
+	.front,
+	.back {
+		min-height: 300px;
+	}
+}

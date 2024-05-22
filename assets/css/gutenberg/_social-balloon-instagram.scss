@@ -1,6 +1,6 @@
 body #sb_instagram {
 	position: relative;
-	margin: 0 !important;
+	margin: 0 0 5px !important;
 	padding: 0 !important;
 
 	.sbi_follow_btn {
@@ -24,6 +24,7 @@ body #sb_instagram {
 			&:hover {
 				background: var(--accent-2) !important;
 				box-shadow: none !important;
+				color: var(--white-color) !important;
 			}
 		}
 	}

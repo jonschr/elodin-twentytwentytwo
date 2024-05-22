@@ -21,7 +21,7 @@ function elodin_suites_each() {
 
 	//* Vars
 	$title = get_the_title();
-	
+	$excerpt = get_the_excerpt();
 	$images = get_post_meta( $id, 'images', true );
 	
 	echo '<div class="inner">';
@@ -40,6 +40,12 @@ function elodin_suites_each() {
 		
 		if ( $title )
 			printf( '<h3>%s</h3>', $title );
+		
+		if ( $excerpt ) {
+			echo '<div class="excerpt">';
+				echo apply_filters( 'the_content', apply_filters( 'the_content', $excerpt ) );
+			echo '</div>';
+		}
 	
 	echo '</div>'; // .inner
 }

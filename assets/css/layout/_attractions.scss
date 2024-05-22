@@ -1,9 +1,19 @@
 body .na-attractions-categories-wrap {
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
 	li {
 		button.attraction-type-button {
-			background-color: var(--accent);
-			color: white;
+			background-color: #2050ff1a;
+			color: var(--accent);
 			transition: 0.3s all ease;
+			font-weight: bold;
+			font-size: 15px;
+			padding: 20px 15px;
+
+			@include mobile {
+				padding: 10px;
+			}
 
 			&.active,
 			&:hover {

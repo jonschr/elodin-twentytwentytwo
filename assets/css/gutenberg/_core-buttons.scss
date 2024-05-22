@@ -62,9 +62,26 @@
 .gform_footer input[type='submit'] {
 	@extend .btn;
 
+	font-family: 'agency' !important;
+	text-transform: uppercase !important;
+	font-weight: bold !important;
+	padding: 15px 25px !important;
+	text-decoration: none !important;
+	font-size: 18px !important;
+	background-color: var(--accent) !important;
+
+	&:hover {
+		background-color: var(--accent-2) !important;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
 		margin-right: 0;
+	}
+
+	&.gform-button--width-full {
+		width: 100% !important;
+		text-align: center;
 	}
 }
 

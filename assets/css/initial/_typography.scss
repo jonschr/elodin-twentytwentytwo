@@ -21,6 +21,12 @@ h6 {
 	&:last-child {
 		margin-bottom: 0;
 	}
+
+	@include mobile {
+		br {
+			display: none;
+		}
+	}
 }
 
 h1,

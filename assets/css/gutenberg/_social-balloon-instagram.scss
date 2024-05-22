@@ -39,6 +39,12 @@ body #sb_instagram {
 			padding: 0 !important;
 			margin: 0 !important;
 
+			&:last-child {
+				@include mobile {
+					display: none;
+				}
+			}
+
 			&:before {
 				content: '+';
 				position: absolute;

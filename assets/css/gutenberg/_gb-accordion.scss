@@ -1,0 +1,9 @@
+span.gb-icon {
+	transition: 0.3s all ease;
+}
+
+.gb-accordion__item-open {
+	span.gb-icon {
+		transform: rotate(90deg);
+	}
+}

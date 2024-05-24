@@ -10,6 +10,9 @@ function ettt_gutenberg_editor_style_setup() {
 
 	// Enqueue editor styles
 	add_editor_style( "/assets/dist/gutenberg-style.css" );
+	
+	// Typekit
+	add_editor_style( "https://use.typekit.net/vjc8udz.css" );
 
 }
 add_action( 'after_setup_theme', 'ettt_gutenberg_editor_style_setup' );
@@ -46,6 +49,13 @@ function ettt_enqueue_everything() {
 	wp_enqueue_style( 
 		'theme-styles', 
 		get_stylesheet_directory_uri() . '/assets/dist/theme-style.css', 
+		array(), 
+		CHILD_THEME_VERSION 
+	);
+	
+	wp_enqueue_style( 
+		'typekit', 
+		'https://use.typekit.net/vjc8udz.css', 
 		array(), 
 		CHILD_THEME_VERSION 
 	);

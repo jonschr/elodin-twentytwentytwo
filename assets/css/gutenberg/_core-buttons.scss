@@ -108,3 +108,26 @@
 		}
 	}
 }
+
+/* ==========================================================================
+   Outlined
+   ========================================================================== */
+
+.wp-block-button.is-style-outline {
+	.wp-block-button__link {
+		background-color: transparent !important;
+		border-width: 2px;
+
+		&.has-white-color-color {
+			border-color: white !important;
+		}
+
+		&:hover {
+			&.has-white-color-color {
+				background-color: white !important;
+				border-color: white !important;
+				color: var(--contrast) !important;
+			}
+		}
+	}
+}

@@ -12,6 +12,9 @@
 	display: inline-block !important;
 	position: static;
 	border-radius: 3px;
+	font-family: 'proxima-nova';
+	text-transform: uppercase;
+	border-radius: 30px;
 
 	transition: all 0.3s ease-in-out;
 
@@ -116,7 +119,7 @@
 .wp-block-button.is-style-outline {
 	.wp-block-button__link {
 		background-color: transparent !important;
-		border-width: 2px;
+		border-width: 1px;
 
 		&.has-white-color-color {
 			border-color: white !important;

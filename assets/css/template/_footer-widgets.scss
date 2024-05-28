@@ -1,7 +1,16 @@
 .footer-widgets-container.grid-container {
-    padding: 70px 40px;
+	padding: 70px 40px;
 
-    @include mobile {
-        padding: 25px;
-    }
+	@include mobile {
+		padding: 25px;
+	}
+}
+
+.inside-site-info {
+	border-top: 1px solid var(--contrast-3);
+
+	@include desktop {
+		padding: 20px 0 !important;
+		width: 1200px !important;
+	}
 }

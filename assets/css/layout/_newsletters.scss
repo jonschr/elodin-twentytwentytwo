@@ -1,0 +1,37 @@
+.facetwp-template[data-name='newsletters'] {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 40px;
+
+		.newsletters {
+			transition: 0.3s all ease;
+
+			a.featured-thumb {
+				display: block;
+				padding-top: 130%;
+				height: 0;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-color: var(--base);
+				border-radius: 5px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+				margin-bottom: 10px;
+				transition: 0.3s all ease;
+			}
+
+			a.newsletter-link {
+				text-decoration: none;
+				text-align: right;
+				display: block;
+			}
+
+			&:hover {
+				a.featured-thumb {
+					box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07),
+						0 0 0 3px var(--red-dark);
+				}
+			}
+		}
+	}
+}

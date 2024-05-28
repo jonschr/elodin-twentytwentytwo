@@ -1,5 +1,28 @@
 .prefooter {
-    iframe {
-        margin-bottom: -9px;
-    }
+	iframe {
+		margin-bottom: -9px;
+	}
+
+	.widget {
+		.widgettitle {
+			font-size: 20px;
+			letter-spacing: 0.05em;
+			margin-bottom: 20px;
+			font-weight: 400;
+		}
+	}
+
+	.widget_nav_menu {
+		ul.menu {
+			li {
+				a {
+					color: var(--contrast);
+
+					&:hover {
+						color: var(--accent);
+					}
+				}
+			}
+		}
+	}
 }

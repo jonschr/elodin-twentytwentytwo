@@ -23,6 +23,12 @@
 	margin-bottom: 30px;
 }
 
+.post-title-sizing {
+	color: var(--accent);
+	font-size: 60px;
+	line-height: 1;
+}
+
 .center-in-space {
 	h1 {
 		margin-left: auto;
@@ -59,6 +65,10 @@ body.post-type-post {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .add-bottom-margin;
 		@extend .center-in-space;
+
+		h1 {
+			@extend .post-title-sizing;
+		}
 	}
 }
 

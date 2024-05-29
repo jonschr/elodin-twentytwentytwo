@@ -1,0 +1,62 @@
+body.search {
+	.site-content {
+		display: block;
+	}
+
+	.search-form-custom {
+		background-color: var(--accent-2);
+		padding: 60px 25px;
+		text-align: center;
+
+		@include mobile {
+			padding: 25px;
+		}
+
+		.search-form {
+			margin: 0 auto;
+			width: auto;
+			display: block;
+		}
+	}
+
+	.search-results {
+		padding: 60px 25px;
+
+		@include mobile {
+			padding: 25px;
+		}
+
+		a.google-style-link {
+			color: var(--contrast-3);
+			text-decoration: none;
+			font-size: 14px;
+		}
+
+		h2.search-heading {
+			font-size: 35px;
+			margin: 0 0 5px;
+
+			a {
+				text-decoration: none;
+			}
+		}
+
+		p {
+			line-height: 1.4;
+		}
+
+		article {
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.wrap {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+}

@@ -15,8 +15,8 @@ register_sidebar( array(
 function ettt_add_prefooter() {
 	
 	// Don't display on the contact page
-	if ( is_page( 'contact' ) )
-		return;
+	// if ( is_page( 'contact' ) )
+	// 	return;
 	
 	dynamic_sidebar( 'prefooter' );
 	

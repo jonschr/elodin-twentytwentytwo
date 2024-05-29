@@ -4,4 +4,14 @@
 			text-decoration: none;
 		}
 	}
+
+	.wp-block-post-excerpt__more-text {
+		display: block;
+		margin-top: 20px;
+		text-align: right;
+
+		.wp-block-post-excerpt__more-link {
+			text-decoration: none;
+		}
+	}
 }

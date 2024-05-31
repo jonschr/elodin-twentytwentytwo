@@ -5,6 +5,17 @@
 		}
 	}
 
+	.wp-block-post-excerpt__excerpt {
+		line-height: 1.4;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 4; /* number of lines to show */
+		line-clamp: 4;
+		-webkit-box-orient: vertical;
+		font-size: 16px;
+	}
+
 	.wp-block-post-excerpt__more-text {
 		display: block;
 		margin-top: 20px;
@@ -12,6 +23,21 @@
 
 		.wp-block-post-excerpt__more-link {
 			text-decoration: none;
+			position: relative;
+			padding-right: 23px;
+			display: inline-block;
+
+			&:after {
+				content: '\f344';
+				font-family: 'dashicons';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 0.9em;
+				height: 0.9em;
+				line-height: 0.9em;
+			}
 		}
 	}
 }

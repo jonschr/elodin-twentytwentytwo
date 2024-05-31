@@ -1,0 +1,53 @@
+.facetwp-template[data-name='recipes'] {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 20px;
+
+		.wprm_recipe {
+			padding: 0;
+			border-radius: 10px;
+
+			position: relative;
+
+			a.overlay {
+				position: absolute;
+				inset: 0;
+			}
+
+			.featured-image {
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+				margin: 0;
+				display: block;
+				padding-top: 60%;
+				height: 0;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: var(--base);
+				border-radius: 10px;
+				transition: 0.3s all ease;
+				transition: 0.3s all ease;
+			}
+
+			.the-content {
+				padding: 10px;
+			}
+
+			h3 {
+				color: var(--red-dark);
+				font-size: 18px;
+				font-family: 'proxima-nova';
+				text-transform: none;
+				font-weight: bold;
+				line-height: 1.2;
+			}
+
+			&:hover {
+				.featured-image {
+					box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07),
+						0 0 0 3px var(--red-dark);
+				}
+			}
+		}
+	}
+}

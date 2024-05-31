@@ -1,3 +1,22 @@
 .facetwp-facet {
-	margin-bottom: 0 !important;
+	margin-bottom: 25px !important;
+
+	&:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	.fs-wrap {
+		width: 100%;
+	}
+
+	.facetwp-input-wrap {
+		width: 100%;
+	}
+
+	input.facetwp-search {
+		width: 100%;
+		min-width: 100% !important;
+		display: block;
+		padding-right: 0 !important;
+	}
 }

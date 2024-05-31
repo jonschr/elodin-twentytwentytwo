@@ -6,7 +6,7 @@
  * Only edit this file if you have direct access to it on your server (to fix errors if they happen).
  */
 
-define( 'CHILD_THEME_VERSION', '1.5' );
+define( 'CHILD_THEME_VERSION', '1.6' );
 define( 'CHILD_THEME_DIR', dirname( __FILE__ ) );
 
 /**

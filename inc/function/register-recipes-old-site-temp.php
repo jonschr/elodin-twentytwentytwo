@@ -146,3 +146,15 @@ return $query;
 }
 }
 add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
+
+
+add_filter('register_post_type_args', 'modify_old_recipe', 10, 2);
+function modify_old_recipe($args, $post_type) {
+	if ($post_type === 'bean_recipe') {
+		// Modify the arguments as needed
+		$args['show_ui'] = true; // Make it visible in the backend
+		$args['show_in_menu'] = true; // Show it in the menu
+		$args['labels']['menu_name'] = 'Recipes OLD'; // Change the menu name
+	}
+	return $args;
+}

@@ -55,4 +55,16 @@ wp.domReady(() => {
 			label: 'Green fade',
 		},
 	]);
+
+	wp.blocks.registerBlockStyle('core/button', [
+		{
+			name: 'default',
+			label: 'Default',
+			isDefault: true,
+		},
+		{
+			name: 'arrow',
+			label: 'Arrow',
+		},
+	]);
 });

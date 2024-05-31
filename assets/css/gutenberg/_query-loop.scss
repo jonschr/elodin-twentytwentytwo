@@ -26,6 +26,7 @@
 			position: relative;
 			padding-right: 23px;
 			display: inline-block;
+			margin-bottom: 10px;
 
 			&:after {
 				content: '\f344';
@@ -37,6 +38,11 @@
 				font-size: 0.9em;
 				height: 0.9em;
 				line-height: 0.9em;
+				transition: 0.3s all ease;
+			}
+
+			&:hover:after {
+				right: -5px;
 			}
 		}
 	}

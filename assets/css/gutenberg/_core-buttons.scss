@@ -134,3 +134,35 @@
 		}
 	}
 }
+
+/* ==========================================================================
+   Arrows
+   ========================================================================== */
+
+@include desktop {
+	.wp-block-button {
+		&.is-style-arrow {
+			.wp-block-button__link {
+				position: relative;
+				padding-right: 50px !important;
+
+				&:after {
+					content: '\f344';
+					font-family: 'dashicons';
+					position: absolute;
+					right: 25px;
+					top: 50%;
+					transform: translateY(-50%);
+					font-size: 0.9em;
+					height: 0.9em;
+					line-height: 0.9em;
+					transition: 0.3s all ease;
+				}
+
+				&:hover:after {
+					right: 20px;
+				}
+			}
+		}
+	}
+}

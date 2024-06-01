@@ -50,7 +50,7 @@ function add_taxonomy_type() {
 
 
 // Cuisine
-add_action('init', 'add_taxonomy_cuisine');
+// add_action('init', 'add_taxonomy_cuisine');
 function add_taxonomy_cuisine() {
   $cuisine_labels = array(
     'name'              => _x( 'Cuisines', 'taxonomy general name' ),

@@ -1,0 +1,93 @@
+.wprm-recipe-counter {
+	display: none;
+}
+
+.wprm-recipe.wprm-recipe-template-roundup-clean {
+	border: none;
+	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.07);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	.wprm-summary-container {
+		padding: 40px;
+	}
+
+	.wprm-recipe-name {
+		color: var(--accent);
+		display: block;
+		line-height: 1.2;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2; /* number of lines to show */
+		line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
+
+	.wprm-recipe-link-inline-button {
+		margin-top: 10px;
+		text-decoration: none;
+		position: relative;
+		padding-right: 23px !important;
+		display: inline-block;
+		margin-bottom: 10px;
+		background-color: transparent !important;
+		border: none !important;
+		color: var(--accent) !important;
+
+		&:after {
+			content: '\f344';
+			font-family: 'dashicons';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 0.9em;
+			height: 0.9em;
+			line-height: 0.9em;
+			transition: 0.3s all ease;
+		}
+
+		&:hover:after {
+			right: -5px;
+		}
+	}
+
+	.wprm-recipe-summary {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 4; /* number of lines to show */
+		line-clamp: 4;
+		-webkit-box-orient: vertical;
+	}
+}
+
+.wprm-list {
+	grid-template-columns: 1fr 1fr;
+	display: grid;
+	gap: 25px;
+
+	@include notdesktop {
+		grid-template-columns: 1fr;
+	}
+
+	.wprm-recipe {
+		margin-top: 0;
+		margin-bottom: 0;
+
+		.wprm-recipe-summary {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 4; /* number of lines to show */
+			line-clamp: 4;
+			-webkit-box-orient: vertical;
+		}
+
+		.wprm-summary-container {
+			padding: 25px;
+		}
+	}
+}

@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Vars
+   ========================================================================== */
+
+$boxshadow: 0 10px 30px 0 rgba(black, 0.12);
+$marginbottom: 20px;
+
+$headerheightdesktop: 100px;
+$headerheighttablet: 60px;
+$headerheightmobile: 60px;
+
+/* ==========================================================================
+   Queries
+   ========================================================================== */
+
+$thin: 600px;
+$medium: 960px;
+$wide: 1200px;
+
+@mixin mobile {
+	@media (max-width: #{$thin}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$thin}) and (max-width: #{$medium}) {
+		@content;
+	}
+}
+
+@mixin notdesktop {
+	@media (max-width: #{$medium}) {
+		@content;
+	}
+}
+
+@mixin notmobile {
+	@media (min-width: #{$thin}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$medium}) {
+		@content;
+	}
+}
+
+@mixin desktop-wide {
+	@media (min-width: #{$wide}) {
+		@content;
+	}
+}
+
+body.wprm_recipe-template-default {
+	.wprm-recipe-container {
+		background-color: var(--base);
+		background-image: url('/wp-content/uploads/2024/05/bkg-texture.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		background-attachment: fixed;
+		padding-top: 300px;
+		overflow: visible;
+		padding-bottom: 60px;
+
+		h3 {
+			margin-top: 30px !important;
+			margin-bottom: 15px;
+			font-weight: 400 !important;
+
+			&:first-child {
+				margin-top: 0 !important;
+			}
+		}
+
+		.wprm-recipe {
+			overflow: visible;
+		}
+
+		.image-wrap {
+			margin-top: -300px;
+		}
+
+		.recipe-container {
+			padding: 40px 40px 40px;
+			border-radius: 15px;
+			background-color: var(--white-color);
+			box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+
+			.wprm-recipe-template-cutout-container {
+				width: 100%;
+				max-width: 700px;
+				margin: 0 auto;
+
+				.wprm-recipe-template-cutout-header {
+					padding: 60px 0 30px;
+					text-align: center;
+
+					h2.wprm-recipe-name {
+						line-height: 1;
+						font-size: 60px;
+						font-weight: 400 !important;
+						margin-bottom: 15px;
+					}
+				}
+
+				.wprm-recipe-ingredients-container {
+					padding: 30px 0;
+				}
+
+				.wprm-recipe-instructions-container {
+					padding: 30px 0;
+				}
+
+				.wprm-recipe-video-container {
+					padding: 30px 0;
+				}
+
+				.wprm-recipe-notes-container {
+					padding: 30px 0;
+				}
+
+				.wprm-recipe-nutrition-container {
+					padding: 30px 0;
+				}
+			}
+		}
+	}
+
+	.site-content {
+		.entry-content {
+			> p:first-child {
+				display: none;
+			}
+		}
+	}
+}

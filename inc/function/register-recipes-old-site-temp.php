@@ -2,7 +2,7 @@
 
 
 
-add_action( 'init', 'create_post_type' );
+// add_action( 'init', 'create_post_type' );
 function create_post_type() {
   register_post_type( 'bean_recipe',
     array(
@@ -20,7 +20,7 @@ function create_post_type() {
 }
 
 // Bean Type
-add_action('init', 'add_taxonomy_type');
+// add_action('init', 'add_taxonomy_type');
 function add_taxonomy_type() {
   $type_labels = array(
     'name'              => _x( 'Bean Types', 'taxonomy general name' ),
@@ -49,37 +49,37 @@ function add_taxonomy_type() {
 }
 
 
-// Cuisine
-// add_action('init', 'add_taxonomy_cuisine');
-function add_taxonomy_cuisine() {
-  $cuisine_labels = array(
-    'name'              => _x( 'Cuisines', 'taxonomy general name' ),
-    'singular_name'     => _x( 'Cuisine', 'taxonomy singular name' ),
-    'search_items'      => __( 'Search Cuisines' ),
-    'all_items'         => __( 'All Cuisines' ),
-    'parent_item'       => __( 'Parent Cuisine' ),
-    'parent_item_colon' => __( 'Parent Cuisine:' ),
-    'edit_item'         => __( 'Edit Cuisine' ),
-    'update_item'       => __( 'Update Cuisine' ),
-    'add_new_item'      => __( 'Add New Cuisine' ),
-    'new_item_name'     => __( 'New Cuisine Name' ),
-    'menu_name'         => __( 'Cuisines' ),
-  );
+// // Cuisine
+// // add_action('init', 'add_taxonomy_cuisine');
+// function add_taxonomy_cuisine() {
+//   $cuisine_labels = array(
+//     'name'              => _x( 'Cuisines', 'taxonomy general name' ),
+//     'singular_name'     => _x( 'Cuisine', 'taxonomy singular name' ),
+//     'search_items'      => __( 'Search Cuisines' ),
+//     'all_items'         => __( 'All Cuisines' ),
+//     'parent_item'       => __( 'Parent Cuisine' ),
+//     'parent_item_colon' => __( 'Parent Cuisine:' ),
+//     'edit_item'         => __( 'Edit Cuisine' ),
+//     'update_item'       => __( 'Update Cuisine' ),
+//     'add_new_item'      => __( 'Add New Cuisine' ),
+//     'new_item_name'     => __( 'New Cuisine Name' ),
+//     'menu_name'         => __( 'Cuisines' ),
+//   );
 
-  register_taxonomy(
-    'cuisine', 'bean_recipe',
-    array(
-      'hierarchical' => true,
-      'labels' => $cuisine_labels,
-      'rewrite' => false,
-      'update_count_callback' => '_update_post_term_count',
-    )
-  );
-}
+//   register_taxonomy(
+//     'cuisine', 'bean_recipe',
+//     array(
+//       'hierarchical' => true,
+//       'labels' => $cuisine_labels,
+//       'rewrite' => false,
+//       'update_count_callback' => '_update_post_term_count',
+//     )
+//   );
+// }
 
 
 // Nutrition Attribute
-add_action('init', 'add_taxonomy_nutrition');
+// add_action('init', 'add_taxonomy_nutrition');
 function add_taxonomy_nutrition() {
   $nutrition_labels = array(
     'name'              => _x( 'Nutrition Attributes', 'taxonomy general name' ),
@@ -107,7 +107,7 @@ function add_taxonomy_nutrition() {
 }
 
 // collection
-add_action('init', 'add_taxonomy_collection');
+// add_action('init', 'add_taxonomy_collection');
 function add_taxonomy_collection() {
   $collection_labels = array(
     'name'              => _x( 'Collections', 'taxonomy general name' ),
@@ -145,10 +145,10 @@ $query->set( 'post_type', $post_types );
 return $query;
 }
 }
-add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
+// add_filter( 'pre_get_posts', 'add_custom_types_to_tax' );
 
 
-add_filter('register_post_type_args', 'modify_old_recipe', 10, 2);
+// add_filter('register_post_type_args', 'modify_old_recipe', 10, 2);
 function modify_old_recipe($args, $post_type) {
 	if ($post_type === 'bean_recipe') {
 		// Modify the arguments as needed

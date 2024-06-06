@@ -35,8 +35,16 @@ wp.domReady(() => {
 			isDefault: true,
 		},
 		{
-			name: 'checkmark',
-			label: 'Checkmark',
+			name: 'checkmark-green',
+			label: 'Checkmark green',
+		},
+		{
+			name: 'checkmark-white',
+			label: 'Checkmark white',
+		},
+		{
+			name: 'checkmark-yellow',
+			label: 'Checkmark yellow',
 		},
 	]);
 

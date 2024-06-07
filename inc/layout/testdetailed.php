@@ -95,7 +95,7 @@ function elodin_testdetailed_each() {
 		if ( $title )
 			printf( '<h3>%s</h3>', $title );
 			
-		epa_methods_detailed();
+		// epa_methods_detailed();
 			
 		// if ( $terms )
 		// 	printf( '<p class="terms">%s</p>', $terms_string );

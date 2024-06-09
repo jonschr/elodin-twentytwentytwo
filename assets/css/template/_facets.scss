@@ -1,0 +1,57 @@
+.facetwp-facet {
+	margin-bottom: 0 !important;
+
+	.fs-wrap {
+		width: 100%;
+	}
+
+	.facetwp-input-wrap {
+		width: 100%;
+	}
+
+	input.facetwp-search {
+		width: 100%;
+		min-width: 100% !important;
+		display: block;
+		padding-right: 0 !important;
+		// background-color: transparent;
+		// color: white;
+		// border: none;
+		// border-bottom: 2px solid white;
+		// padding-left: 0;
+		// outline: none !important;
+
+		&::placeholder {
+			// color: rgba(white, 0.4) !important;
+		}
+	}
+
+	.facetwp-icon:before {
+		margin-right: 5px;
+		// display: none !important;
+		background-size: 15px 15px !important;
+		// background-image: url('/wp-content/uploads/2024/05/np_search_1868256_FFFFFF.svg') !important;
+	}
+
+	.facetwp-facet-search {
+	}
+
+	.fs-label-wrap {
+		// border-radius: 3px;
+	}
+
+	.fs-label-wrap .fs-label {
+		line-height: 37px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.fs-arrow {
+		right: 12px;
+	}
+
+	a.facetwp-reset {
+		color: white !important;
+		text-decoration: none;
+	}
+}

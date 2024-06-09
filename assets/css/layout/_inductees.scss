@@ -1,0 +1,47 @@
+.inductees {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+
+	@include tablet {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 25px;
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		gap: 25px;
+	}
+
+	.people {
+		.featured-image {
+			padding-top: 130%;
+			height: 0;
+			background-color: var(--base);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.the-info {
+			padding-top: 15px;
+
+			h3 {
+				font-size: 18px;
+				margin-bottom: 0;
+				line-height: 1.2;
+			}
+
+			p {
+				font-size: 16px;
+			}
+
+			p.induction-year {
+				text-transform: uppercase;
+				opacity: 0.5;
+				font-size: 15px;
+				font-weight: 500;
+				line-height: 1.2;
+			}
+		}
+	}
+}

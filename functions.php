@@ -18,3 +18,11 @@ foreach ( glob( CHILD_THEME_DIR . "/inc/*/*.php", GLOB_NOSORT ) as $filename ){
 add_filter( 'media_library_infinite_scrolling', '__return_true' );
 
 
+add_action('admin_head', 'gallery_customization');
+function gallery_customization() {
+  echo '<style>
+	#peoplephotos .acf-gallery {
+		height: 200px !important;
+	} 
+  </style>';
+}

@@ -3,16 +3,14 @@
    ========================================================================== */
 
 .btn {
-	font-weight: bold;
+	font-weight: 800;
 	cursor: pointer;
 	padding: 15px 25px !important;
 	text-decoration: none !important;
 	font-size: 15px !important;
-	font-weight: 600;
 	display: inline-block !important;
 	position: static;
 	border-radius: 3px;
-
 	transition: all 0.3s ease-in-out;
 
 	@include mobile {
@@ -27,6 +25,7 @@
 
 .wp-block-buttons {
 	margin-top: 30px;
+	margin-bottom: 30px;
 
 	@include mobile {
 		margin-top: 20px;
@@ -36,10 +35,31 @@
 		margin-top: 0;
 	}
 
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	.wp-block-button {
 		@include mobile {
 			display: block;
 			width: 100%;
+		}
+
+		&.is-style-play {
+			.wp-block-button__link {
+				text-align: left !important;
+				padding-left: 50px !important;
+				position: relative;
+
+				&:before {
+					content: '\f522';
+					font-family: 'dashicons';
+					font-size: 1.7em;
+					position: absolute;
+					left: 20px;
+					top: 6px;
+				}
+			}
 		}
 	}
 }
@@ -94,8 +114,8 @@
 		cursor: pointer;
 		padding: 15px 25px !important;
 		text-decoration: none !important;
-		font-size: 15px !important;
-		font-weight: 600;
+		// font-size: 15px !important;
+		// font-weight: 600;
 		display: inline-block !important;
 		position: static;
 		border-radius: 3px;

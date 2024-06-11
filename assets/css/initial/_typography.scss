@@ -1,5 +1,6 @@
 body {
 	font-size: 18px;
+	--wp--preset--font-size--small: 16px;
 }
 
 p:last-child,
@@ -34,5 +35,5 @@ h3 {
 }
 
 p.has-text-color a {
-    color: inherit;
+	color: inherit;
 }

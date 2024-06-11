@@ -1,42 +1,47 @@
 .triangle-top {
-    position: relative;
+	position: relative;
 
-    &:after {
-        position: absolute;
-        content: '';
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 20px;
-        background-color: var(--contrast);
-        // background-image: url('../images/triangle.svg');
-        background-size: contain;
-        background-repeat: repeat-x;
-        -webkit-mask-image: url('../images/triangle.svg');
-        mask-image: url('../images/triangle.svg');
-    }
+	&:before {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 20px;
+		background-color: var(--contrast);
+		// background-image: url('../images/triangle.svg');
+		background-size: contain;
+		background-repeat: repeat-x;
+		-webkit-mask-image: url('../images/triangle.svg');
+		mask-image: url('../images/triangle.svg');
+		z-index: 20;
 
-    &.green {
-        &:after {
-            background-color: var(--accent);
-        }
-    }
+		@include mobile {
+			display: none;
+		}
+	}
 
-    &.blue {
-        &:after {
-            background-color: var(--contrast);
-        }
-    }
+	&.green {
+		&:before {
+			background-color: var(--accent);
+		}
+	}
 
-    &.white {
-        &:after {
-            background-color: var(--white-color);
-        }
-    }
+	&.blue {
+		&:before {
+			background-color: var(--contrast);
+		}
+	}
 
-    &.base {
-        &:after {
-            background-color: var(--base);
-        }
-    }
+	&.white {
+		&:before {
+			background-color: var(--white-color);
+		}
+	}
+
+	&.base {
+		&:before {
+			background-color: var(--base);
+		}
+	}
 }

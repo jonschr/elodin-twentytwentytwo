@@ -2,10 +2,11 @@
    Padding on the frontend
    ========================================================================== */
 
-:where(.entry-content > .gb-container) {
+:where(.entry-content > .gb-container),
+:where(.gb-is-root-block > .gb-container) {
 	@include tablet {
-		padding-left: 40px;
-		padding-right: 40px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 
 	@media (max-width: 1260px) {
@@ -53,6 +54,7 @@
 
 .gb-container > .gb-container {
 	position: relative;
+	z-index: 10;
 }
 
 /* ==========================================================================

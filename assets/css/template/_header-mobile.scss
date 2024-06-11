@@ -4,5 +4,7 @@
 
 .navigation-branding img,
 .site-logo.mobile-header-logo {
-	margin: 10px 0 10px 25px !important;
+	@include mobile {
+		margin: 10px 0 10px 25px !important;
+	}
 }

@@ -10,9 +10,14 @@ div.top-bar {
 		}
 
 		@include mobile {
-			justify-content: center;
-			padding-left: 25px;
-			padding-right: 25px;
+			// justify-content: center;
+			text-align: left;
+			padding: 10px 20px;
+
+			.widget {
+				width: 100%;
+				margin: 0;
+			}
 		}
 
 		.widget {

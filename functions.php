@@ -19,3 +19,14 @@ add_filter( 'media_library_infinite_scrolling', '__return_true' );
 
 
 
+// add_filter( 'generate_sticky_navigation_logo_output', 'my_cutsom_stuff' );
+function my_cutsom_stuff( $output ) {
+	
+	$title = esc_html( get_bloginfo( 'name' ) );
+	$description = get_bloginfo( 'description' );
+	
+	if ( $title )
+		$title = sprintf( '<div class="sticky-navigation-title">%s</div>', $title );
+	
+	return $output . $title;
+}

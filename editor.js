@@ -2,15 +2,15 @@
 // Use this in console to see list of blocks that haven't been unregistered
 
 wp.domReady(() => {
-    wp.blocks.unregisterBlockType('core/rss');
-    wp.blocks.unregisterBlockType('core/tag-cloud');
-    wp.blocks.unregisterBlockType('core/text-columns');
-    wp.blocks.unregisterBlockType('core/verse');
-    wp.blocks.unregisterBlockType('core/columns');
-    wp.blocks.unregisterBlockType('core/column');
-    wp.blocks.unregisterBlockType('core/cover');
-    wp.blocks.unregisterBlockType('core/media-text');
-    wp.blocks.unregisterBlockType('generateblocks/button-container');
+    // wp.blocks.unregisterBlockType('core/rss');
+    // wp.blocks.unregisterBlockType('core/tag-cloud');
+    // wp.blocks.unregisterBlockType('core/text-columns');
+    // wp.blocks.unregisterBlockType('core/verse');
+    // wp.blocks.unregisterBlockType('core/columns');
+    // wp.blocks.unregisterBlockType('core/column');
+    // wp.blocks.unregisterBlockType('core/cover');
+    // wp.blocks.unregisterBlockType('core/media-text');
+    // wp.blocks.unregisterBlockType('generateblocks/button-container');
     // wp.blocks.unregisterBlockType('generateblocks/button');
 });
 

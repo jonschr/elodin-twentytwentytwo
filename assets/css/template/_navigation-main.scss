@@ -1,43 +1,45 @@
 .site-header {
-    .main-navigation {
-        .main-nav {
-            // Main menu
-            ul {
-                li.nav-button {
-                    @include notmobile {
-                        margin-left: 20px;
-                    }
+	.main-navigation {
+		.main-nav {
+			// Main menu
+			ul {
+				li.nav-button {
+					@include notmobile {
+						margin-left: 20px;
+					}
 
-                    a {
-                        @extend .btn;
+					a {
+						@include notmobile {
+							background-color: var(--accent);
+							border-radius: 3px;
+							color: white;
+							padding: 15px 20px !important;
+							line-height: 1;
+							transition: 0.3s all ease;
 
-                        @include notmobile {
-                            background-color: var(--accent);
-                            border-radius: 3px;
-                            color: white;
-                            padding: 15px 20px !important;
-                            line-height: 1;
-                            transition: 0.3s all ease;
+							&:hover {
+								background-color: var(--accent-2);
+								color: white;
+							}
+						}
+					}
+				}
 
-                            &:hover {
-                                filter: brightness(102%);
-                                color: white;
-                            }
-                        }
-                    }
-                }
+				// Submenu
+				ul {
+					width: 250px;
 
-                // Submenu
-                ul {
-                    width: 250px;
+					li {
+						a {
+							padding: 15px 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-                    li {
-                        a {
-                            padding: 15px 20px;
-                        }
-                    }
-                }
-            }
-        }
-    }
+.sticky-enabled .main-navigation.is_stuck {
+	z-index: 50 !important;
 }

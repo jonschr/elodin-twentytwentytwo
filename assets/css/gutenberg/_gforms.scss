@@ -1,0 +1,10 @@
+body {
+	.gform-theme--api,
+	.gform-theme--framework {
+		--gf-ctrl-label-color-req: var(--accent);
+	}
+}
+
+input.gform_button.button.gform-button--width-full {
+	width: 100% !important;
+}

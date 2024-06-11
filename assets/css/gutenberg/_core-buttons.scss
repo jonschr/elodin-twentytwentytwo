@@ -8,12 +8,19 @@
 	padding: 15px 25px !important;
 	text-decoration: none !important;
 	font-size: 15px !important;
-	font-weight: 600;
+	text-transform: uppercase;
+	font-weight: 900;
 	display: inline-block !important;
 	position: static;
 	border-radius: 3px;
-
+	background: linear-gradient(0deg, var(--accent) 0%, var(--accent-2) 100%);
+	letter-spacing: 0.05em;
 	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		box-shadow: 0 0 0 3px var(--contrast-2), 0 0 0 5px white;
+		color: white;
+	}
 
 	@include mobile {
 		display: block;
@@ -61,6 +68,28 @@
 .gform_footer input[type='submit'] {
 	@extend .btn;
 
+	cursor: pointer;
+	padding: 15px 25px !important;
+	text-decoration: none !important;
+	font-size: 15px !important;
+	font-weight: 800 !important;
+	letter-spacing: 0.05em !important;
+	display: inline-block !important;
+	text-transform: uppercase !important;
+	position: static;
+	border: none !important;
+	border-radius: 3px;
+	background-color: var(--accent);
+	color: white;
+	transition: 0.3s all ease;
+	background: linear-gradient(0deg, var(--accent) 0%, var(--accent-2) 100%);
+	width: 100% !important;
+
+	&:hover {
+		box-shadow: 0 0 0 3px var(--contrast-2), 0 0 0 5px white;
+		color: white;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
 		margin-right: 0;
@@ -101,9 +130,15 @@
 		border-radius: 3px;
 		background-color: var(--accent);
 		color: white;
+		transition: 0.3s all ease;
+		background: linear-gradient(
+			0deg,
+			var(--accent) 0%,
+			var(--accent-2) 100%
+		);
 
 		&:hover {
-			background-color: var(--accent-2);
+			box-shadow: 0 0 0 3px var(--contrast-2), 0 0 0 5px white;
 			color: white;
 		}
 	}

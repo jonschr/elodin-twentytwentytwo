@@ -1,0 +1,6 @@
+.navigation-branding img {
+	@include desktop {
+		width: 130px !important;
+		height: auto !important;
+	}
+}

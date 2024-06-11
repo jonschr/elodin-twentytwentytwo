@@ -1,69 +1,63 @@
 jQuery(document).ready(function ($) {
-    var anchorLinks = $("a[href^='#']:not([href='#'])"); // Select anchor links that start with '#' but not equal to '#'
+	$("a[href^='#']").on('click', function (event) {
+		event.preventDefault();
+		var href = event.target.getAttribute('href');
+		if (href === '#') {
+			return;
+		}
+		var target = document.querySelector(href);
 
-    if (anchorLinks.length > 0) {
-        // Check if there are anchor links
-        anchorLinks.on('click', function (event) {
-            event.preventDefault();
-            var target = document.querySelector(
-                event.target.getAttribute('href')
-            );
+		if (target) {
+			var offset = target.offsetTop - 130; // Adjust for 100px header
+			$('html, body').animate({ scrollTop: offset }, 'slow', function () {
+				$("a[href='" + href + "']").addClass('active');
+			});
+		}
+	});
 
-            if (target) {
-                var offset = target.offsetTop;
-                $('html, body').animate(
-                    { scrollTop: offset },
-                    'slow',
-                    function () {
-                        // Add the "active" class to the clicked anchor link
-                        $(
-                            "a[href='" +
-                                event.target.getAttribute('href') +
-                                "']"
-                        ).addClass('active');
-                    }
-                );
-            }
-        });
+	function updateActiveLink() {
+		var scrollPosition = $(window).scrollTop();
+		var closestTarget = null;
+		var closestDistance = Infinity;
 
-        $(window).on('scroll', function () {
-            var scrollPosition = $(window).scrollTop();
-            var closestTarget = null;
-            var closestDistance = Infinity;
+		$("a[href^='#']").each(function () {
+			var href = $(this).attr('href');
+			if (href === '#') {
+				return;
+			}
+			var target = document.querySelector(href);
 
-            anchorLinks.each(function () {
-                var target = document.querySelector($(this).attr('href'));
+			if (target) {
+				var targetOffset = target.offsetTop - 130; // Adjust for 100px header
+				var distance = Math.abs(scrollPosition - targetOffset);
 
-                if (target) {
-                    var targetOffset = target.offsetTop;
-                    var targetHeight = $(target).outerHeight();
+				if (distance < closestDistance) {
+					closestDistance = distance;
+					closestTarget = $(this);
+				}
+			}
+		});
 
-                    var distance = Math.abs(scrollPosition - targetOffset);
+		if (closestTarget) {
+			$("a[href^='#']").removeClass('active');
+			closestTarget.addClass('active');
+		}
+	}
 
-                    if (distance < closestDistance) {
-                        closestDistance = distance;
-                        closestTarget = $(this);
-                    }
+	var lastExecution = 0;
 
-                    if (
-                        scrollPosition >= targetOffset &&
-                        scrollPosition < targetOffset + targetHeight
-                    ) {
-                        // Remove the "active" class from all anchor links
-                        anchorLinks.removeClass('active');
-                        // Add the "active" class to the anchor link pointing to the in-view element
-                        $(this).addClass('active');
-                    }
-                }
-            });
+	$(window).on('scroll', function () {
+		var now = Date.now();
+		if (now - lastExecution < 100) {
+			return;
+		}
+		lastExecution = now;
+		updateActiveLink();
+	});
 
-            // Add the "active" class to the closest anchor link to the scroll position if no in-view element found
-            if (closestTarget && !closestTarget.hasClass('active')) {
-                // Remove the "active" class from all anchor links
-                anchorLinks.removeClass('active');
-                // Add the "active" class to the closest anchor link
-                closestTarget.addClass('active');
-            }
-        });
-    }
+	// Run on pageload
+	updateActiveLink();
+
+	// Run every 2 seconds
+	setInterval(updateActiveLink, 2000);
 });

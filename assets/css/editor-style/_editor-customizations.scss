@@ -44,7 +44,8 @@
    Make title black
    ========================================================================== */
 
-body.post-type-page {
+body.post-type-page,
+body.post-type-locations {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .make-title-black;
 		@extend .remove-top-margin;

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Desktop
+   ========================================================================== */
+
+body {
+	.site-header .header-image {
+		margin-bottom: -40px;
+		margin-top: 10px;
+	}
+
+	.inside-header {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+body {
+	.navigation-branding img,
+	.site-logo.mobile-header-logo img {
+		height: 120px;
+		width: auto;
+		position: absolute;
+		top: -20px;
+	}
+}

@@ -1,0 +1,53 @@
+#gform_wrapper_2 {
+	#gform_fields_2 {
+		align-items: end;
+		grid-template-columns: 1fr 1fr 120px !important;
+
+		@include mobile {
+			grid-template-columns: 1fr !important;
+		}
+
+		> * {
+			width: auto !important;
+		}
+
+		.gfield {
+			grid-column: unset !important;
+		}
+
+		// #field_submit {
+		// 	width: 140px;
+		// 	background-color: red;
+		// }
+
+		// #field_2_1 {
+		// 	width: calc(50%) !important;
+		// }
+
+		// #field_2_3 {
+		// }
+	}
+
+	.gform_footer.before {
+		margin-block-start: 0 !important;
+		display: block !important;
+	}
+}
+
+.gform-theme--framework {
+	--gf-ctrl-label-color-req: var(--accent);
+}
+
+.gform_wrapper {
+	.gfield_label {
+		font-family: 'brandon';
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 14px;
+
+		span.gfield_required {
+			text-transform: none;
+			font-family: 'montserrat';
+		}
+	}
+}

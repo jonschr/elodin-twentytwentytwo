@@ -1,0 +1,25 @@
+#menu-main {
+	> li {
+		> a {
+			position: relative;
+
+			&:after {
+				position: absolute;
+				content: ' ';
+				width: 0;
+				background-color: var(--contrast-2);
+				height: 5px;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+				transition: 0.3s all ease;
+			}
+			&:hover,
+			&.active {
+				&:after {
+					width: 25px;
+				}
+			}
+		}
+	}
+}

@@ -17,9 +17,30 @@
 		.featured-image {
 			padding-top: 130%;
 			height: 0;
-			background-color: var(--base);
+			background-color: var(--white-color);
 			background-size: cover;
 			background-position: center;
+			// border: 1px solid rgba(black, 0.07);
+			border-radius: 3px;
+			position: relative;
+			// box-shadow: 0 5px 10px 0 rgba(black, 0.07);
+		}
+
+		.overlay-link {
+			position: absolute;
+			inset: 0;
+			background-color: rgba(#de0b0b, 0.6);
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			transition: 0.5s all ease;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			font-size: 15px;
+			font-weight: bold;
 		}
 
 		.the-info {
@@ -43,5 +64,130 @@
 				line-height: 1.2;
 			}
 		}
+	}
+
+	.people:hover {
+		.overlay-link {
+			opacity: 1;
+		}
+	}
+}
+
+@media (min-width: 769px) {
+	.goverlay {
+		background: rgba(#0c2b5a, 0.85) !important;
+	}
+}
+
+body .gslide-inline .inductee-lightbox {
+	position: relative;
+	&:after {
+		content: '';
+		background-image: url('/wp-content/uploads/2024/06/tiger-logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		height: 175px;
+		width: 175px;
+
+		@media (max-width: 960px) {
+			display: none;
+		}
+	}
+	@include desktop {
+		padding: 40px;
+	}
+
+	h2 {
+		margin-bottom: 0;
+		line-height: 1.2;
+	}
+
+	p.sport {
+		font-weight: 900;
+		color: rgba(#0c2b5a, 0.3);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		line-height: 1.2;
+	}
+
+	p.info {
+		font-size: 20px;
+		margin: 20px 0;
+		font-weight: bold;
+	}
+
+	ul,
+	ol,
+	li,
+	p {
+		font-size: 18px;
+		line-height: 1.5;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+
+	li {
+		margin-bottom: 5px;
+	}
+
+	ul,
+	ol {
+		margin-bottom: 10px;
+		margin-left: 30px;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	.inductee-permalink {
+		margin-top: 20px;
+		display: none; // hide the link; we'll only show this on the inductees page, nowhere else.
+
+		a {
+			color: var(--contrast);
+		}
+	}
+
+	.gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 10px;
+		margin-bottom: 20px;
+	}
+
+	.gallery-item {
+		flex: 1 1 calc(33.333% - 10px);
+		height: 350px; /* Set the desired height */
+	}
+
+	.gallery-item img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover; /* Ensures the image covers the container without distortion */
+	}
+
+	@media (max-width: 768px) {
+		.gallery-item {
+			flex: 1 1 calc(50% - 10px);
+		}
+	}
+
+	@media (max-width: 480px) {
+		.gallery-item {
+			flex: 1 1 calc(100% - 10px);
+		}
+	}
+}
+
+body.page-id-306 {
+	.inductee-permalink {
+		display: block !important;
 	}
 }

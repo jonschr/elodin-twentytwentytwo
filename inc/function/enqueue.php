@@ -108,6 +108,31 @@ function ettt_enqueue_everything() {
 		CHILD_THEME_VERSION
 	);
 	
+	//* Fancybox
+	wp_enqueue_style( 
+		'glightbox-theme', 
+		'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css',
+		array(),
+		CHILD_THEME_VERSION,
+		'screen'
+	);
+
+	wp_enqueue_script( 
+		'glightbox-main',
+		'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js',
+		'',
+		CHILD_THEME_VERSION,
+		true
+	);
+	
+	wp_enqueue_script(
+		'glightbox-inductees-init',
+		get_stylesheet_directory_uri() . '/assets/js/glightbox-inductees-init.js', 
+		array('glightbox-main'),
+		CHILD_THEME_VERSION, 
+		true
+	);
+	
 	// Dashicons
 	wp_enqueue_style( 'dashicons' );
 		

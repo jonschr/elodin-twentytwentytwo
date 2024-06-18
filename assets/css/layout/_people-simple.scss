@@ -1,7 +1,7 @@
 .people-container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 25px;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 15px;
 
 	@include tablet {
 		grid-template-columns: repeat(3, 1fr);
@@ -14,23 +14,24 @@
 	}
 
 	.people {
-		padding: 15px 25px;
-		box-shadow: 0 5px 15px 0 rgba(black, 0.07);
+		padding: 10px 15px;
+		box-shadow: 0 3px 7px 0 rgba(black, 0.05);
 		text-align: center;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border-radius: 3px;
+		border-radius: 5px;
 		background-color: white;
 
 		@include desktop {
-			min-height: 90px;
+			min-height: 70px;
 		}
 
 		h3 {
-			font-size: 16px;
-			margin-bottom: 5px;
+			font-size: 15px;
+			margin-bottom: 3px;
 			line-height: 1;
+			letter-spacing: 0;
 
 			&:last-child {
 				margin-bottom: 0;

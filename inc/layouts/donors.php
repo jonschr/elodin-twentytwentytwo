@@ -14,11 +14,15 @@ function donors_func( $atts ) {
 		'posts_per_page' => '-1',
 		'meta_query' => array(
 			array(
-				'key' => 'board_member',
-				'value' => true,
-				'compare' => '===',
+				'key' => 'donation_amount',
+				'value' => 0,
+				'compare' => '>',
+				'type' => 'NUMERIC',
 			),
 		),
+		'meta_key' => 'donation_amount',
+		'orderby' => 'meta_value_num',
+		'order' => 'DESC',
 	);
 
 	// The Query

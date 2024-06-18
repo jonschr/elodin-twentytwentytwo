@@ -14,7 +14,7 @@ function lifetimemembers_func( $atts ) {
 		'posts_per_page' => '-1',
 		'meta_query' => array(
 			array(
-				'key' => 'founder',
+				'key' => 'lifetime_member',
 				'value' => true,
 				'compare' => '===',
 			),

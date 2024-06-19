@@ -1,0 +1,5 @@
+p.is-style-kicker {
+	@include mobile {
+		margin-bottom: 5px;
+	}
+}

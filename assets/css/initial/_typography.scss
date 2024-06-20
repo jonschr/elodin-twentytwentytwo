@@ -32,3 +32,19 @@ h3 {
 		margin-top: 0;
 	}
 }
+
+p.has-large-font-size {
+	font-size: 24px !important;
+
+	@include tablet {
+		font-size: 20px !important;
+	}
+
+	@include mobile {
+		font-size: 16px !important;
+	}
+}
+
+p.has-small-font-size {
+	font-size: 16px !important;
+}

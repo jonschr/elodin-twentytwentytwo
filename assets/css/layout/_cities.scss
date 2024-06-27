@@ -1,0 +1,52 @@
+.cities-wrap {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 15px;
+	margin: 10px 0 15px;
+
+	@include tablet {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include mobile {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
+
+	.cities {
+		padding: 25px;
+		background-color: white;
+		box-shadow: 0 5px 10px 0 rgba(black, 0.07);
+		text-align: center;
+		border-radius: 3px;
+		position: relative;
+
+		@include mobile {
+			padding: 15px;
+		}
+
+		a.overlay {
+			position: absolute;
+			inset: 0;
+			transition: 0.3s all ease;
+			cursor: pointer;
+			border-radius: 3px;
+		}
+
+		h3 {
+			text-transform: uppercase;
+			font-size: 16px;
+			letter-spacing: 0.05em;
+
+			@include mobile {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.cities:hover {
+		a.overlay {
+			box-shadow: 0 0 0 3px var(--accent);
+		}
+	}
+}

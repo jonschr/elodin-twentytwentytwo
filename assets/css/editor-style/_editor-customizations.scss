@@ -3,15 +3,9 @@
    ========================================================================== */
 
 .make-title-black {
-<<<<<<< HEAD
     background-color: black;
     margin: 0;
     padding: 30px 50px;
-=======
-	background-color: black;
-	margin: 0 !important;
-	padding: 30px 50px;
->>>>>>> 8d1ec02 (Minor updates to editor style)
 
     @extend h1 !optional;
 
@@ -23,13 +17,6 @@
 
 .give-title-margin {
     margin-bottom: 30px;
-}
-
-.center-in-space {
-	h1 {
-		margin-left: auto;
-		margin-right: auto;
-	}
 }
 
 .cross-out-title {
@@ -57,16 +44,9 @@ body.post-type-page {
    ========================================================================== */
 
 body.post-type-post {
-<<<<<<< HEAD
     .edit-post-visual-editor__post-title-wrapper {
         @extend .give-title-margin;
     }
-=======
-	.edit-post-visual-editor__post-title-wrapper {
-		@extend .add-bottom-margin;
-		@extend .center-in-space;
-	}
->>>>>>> 8d1ec02 (Minor updates to editor style)
 }
 
 /* ==========================================================================

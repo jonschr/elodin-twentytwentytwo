@@ -155,15 +155,22 @@ body .gslide-inline .inductee-lightbox {
 	}
 
 	.gallery {
-		display: flex;
-		flex-wrap: wrap;
 		justify-content: space-between;
 		gap: 10px;
 		margin-bottom: 20px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mobile {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.gallery-item {
-		flex: 1 1 calc(33.333% - 10px);
 		height: 350px; /* Set the desired height */
 	}
 

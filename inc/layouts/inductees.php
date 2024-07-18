@@ -27,7 +27,7 @@ function output_inductees() {
 		echo '</div>'; // .inductees
 		
 	} else {
-		echo 'So sorry! Nothing found.';
+		echo '<p style="background-color: white; padding: 20px; color: black; border-radius: 5px;">So sorry! Nothing found.</p>';
 	}
 }
 add_action( 'do_output_inductees', 'output_inductees' );

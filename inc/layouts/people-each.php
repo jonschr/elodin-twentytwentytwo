@@ -21,7 +21,7 @@ function people_each() {
 	printf( '<div class="featured-image" style="background-image:url(%s);">', $photo_url );
 	
 		if ( $content ) {
-			printf( '<a href="#inductee-%s" class="overlay-link inductee-lightbox-link" data-gallery="overlay-link-%s"><span class="more-info">More information</span></a>', $post->post_name, (int) get_the_ID() );
+			printf( '<a href="#inductee-%s" class="overlay-link inductee-lightbox-link" data-gallery="inductees"><span class="more-info">More information</span></a>', $post->post_name, (int) get_the_ID() );
 		}
 	
 	echo '</div>'; // .featured-image

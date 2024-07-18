@@ -96,26 +96,19 @@ function people_each() {
 		
 		if ( $content ) {
 			echo '<div class="lightbox-content">';
-				echo wp_kses_post( $content );
+				echo apply_filters( 'the_content', $content );
 			echo '</div>';
 		}
 	
 		//! Output the permalink
-				
-		// if ( is_page( 'inductees' ) ) {
-			
-			// get the current URL.
-			$url = home_url( add_query_arg( null, null ) );
-			
-			// remove all query parameters and store them in a variable.
-			$url = strtok( $url, '?' );
-	
-			// append the staff member's ID, like #staff-%s.
-			$url .= '#inductee-' . $post->post_name;
-	
-			printf( '<p class="inductee-permalink"><a target="_blank" href="%s">Permalink</a></p>', esc_url( $url ) );
-			
-		// }
+		// get the home URL.
+		$url = home_url();
+
+		// append the staff member's ID, like #staff-%s.
+		$url .= '/inductees/#inductee-' . $post->post_name;
+
+		// output the permalink.
+		printf( '<p class="inductee-permalink"><a target="_blank" href="%s">Permalink</a></p>', esc_url( $url ) );
 
 	echo '</div>';
 	

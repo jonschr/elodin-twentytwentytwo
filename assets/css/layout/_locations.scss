@@ -1,78 +1,85 @@
 .loop-container.loop-layout-locations {
-    .entry {
-        @include desktop {
-            margin-bottom: 50px;
-        }
+	.entry {
+		@include desktop {
+			margin-bottom: 50px;
+		}
 
-        .post-edit-link {
-            position: relative;
-            z-index: 20;
-        }
+		.post-edit-link {
+			position: relative;
+			z-index: 20;
+		}
 
-        .info {
-            margin-bottom: 15px;
+		.info {
+			margin-bottom: 15px;
 
-            p {
-                margin-bottom: 0;
+			p {
+				margin-bottom: 0;
 
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 
-    .team-member {
-        display: grid;
-        grid-template-columns: 300px 1fr;
-        align-items: center;
-        box-shadow: $boxshadow;
-        margin-bottom: 15px;
-        background-color: white;
+	.team-member {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+		align-items: center;
+		box-shadow: $boxshadow;
+		margin-bottom: 15px;
+		background-color: white;
 
-        @include mobile {
-            grid-template-columns: 1fr;
-        }
+		.post-edit-link {
+			position: relative;
+			z-index: 20;
+			color: black !important;
+			font-size: 16px;
+		}
 
-        .featured-image {
-            background-size: cover;
-            background-position: center;
-            min-height: 400px;
-            background-color: var(--accent);
-            height: 100%;
+		@include mobile {
+			grid-template-columns: 1fr;
+		}
 
-            @include notdesktop {
-                background-position: top center;
-            }
-        }
+		.featured-image {
+			background-size: cover;
+			background-position: center;
+			min-height: 400px;
+			background-color: var(--accent);
+			height: 100%;
 
-        .content {
-            padding: 60px;
+			@include notdesktop {
+				background-position: top center;
+			}
+		}
 
-            @include mobile {
-                padding: 20px;
-            }
+		.content {
+			padding: 60px;
 
-            h3 {
-                @include desktop {
-                    font-size: 24px;
-                    margin-bottom: 5px;
-                }
-            }
+			@include mobile {
+				padding: 20px;
+			}
 
-            .buttons {
-                .btn {
-                    display: inline-block;
-                    margin-right: 5px;
-                    background-color: var(--accent);
-                    color: white;
+			h3 {
+				@include desktop {
+					font-size: 24px;
+					margin-bottom: 5px;
+				}
+			}
 
-                    &:hover {
-                        background-color: var(--accent-2);
-                        color: white;
-                    }
-                }
-            }
-        }
-    }
+			.buttons {
+				.btn {
+					display: inline-block;
+					margin-right: 5px;
+					background-color: var(--accent);
+					color: white;
+
+					&:hover {
+						background-color: var(--accent-2);
+						color: white;
+					}
+				}
+			}
+		}
+	}
 }

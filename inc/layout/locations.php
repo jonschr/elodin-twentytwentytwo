@@ -115,7 +115,7 @@ function team_member_location_each( $id ) {
 					
 			echo '</div>';
 			
-			edit_post_link();
+			edit_post_link( 'Edit team member', '', '', $id );
 						
 		echo '</div>';
 		

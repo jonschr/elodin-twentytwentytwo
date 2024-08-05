@@ -26,13 +26,11 @@
 	padding-bottom: 60px;
 
 	@include tablet {
-		padding-top: 45px;
-		padding-bottom: 45px;
+		padding: 45px 25px;
 	}
 
 	@include mobile {
-		padding-top: 25px;
-		padding-bottom: 25px;
+		padding: 25px;
 	}
 }
 

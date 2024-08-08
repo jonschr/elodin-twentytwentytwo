@@ -55,7 +55,8 @@ body.post-type-page {
    Give title margin
    ========================================================================== */
 
-body.post-type-post {
+body.post-type-post,
+body.post-type-resources {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .add-bottom-margin;
 		@extend .center-in-space;

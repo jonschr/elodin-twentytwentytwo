@@ -1,0 +1,11 @@
+body.resources-template-default {
+	background-color: white;
+
+	.site.grid-container {
+		padding: 60px 0;
+
+		@media (max-width: 1200px) {
+			padding: 25px;
+		}
+	}
+}

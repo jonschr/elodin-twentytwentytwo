@@ -47,22 +47,22 @@ add_filter( 'rentfetch_filter_floorplan_title', 'rf_add_property_title_to_floorp
 // How to change the label of a taxonomy
 function ed_change_property_types_label() {
     global $wp_taxonomies;
-    $labels = $wp_taxonomies['propertytypes']->labels;
-    $labels->name = 'Thingies';
-    $labels->singular_name = 'Thingie';
-    $labels->add_new = 'Add Thingie';
-    $labels->add_new_item = 'Add Thingie';
-    $labels->edit_item = 'Edit Thingie';
-    $labels->new_item = 'Thingie';
-    $labels->view_item = 'View Thingie';
-    $labels->search_items = 'Search Thingies';
-    $labels->not_found = 'No Thingies found';
-    $labels->not_found_in_trash = 'No Thingies found in Trash';
-    $labels->all_items = 'All Thingies';
-    $labels->menu_name = 'Thingie';
-    $labels->name_admin_bar = 'Thingie';
+    $labels = $wp_taxonomies['floorplancategory']->labels;
+    $labels->name = 'Communities';
+    $labels->singular_name = 'Communitie';
+    $labels->add_new = 'Add Communitie';
+    $labels->add_new_item = 'Add Communitie';
+    $labels->edit_item = 'Edit Communitie';
+    $labels->new_item = 'Communitie';
+    $labels->view_item = 'View Communitie';
+    $labels->search_items = 'Search Communities';
+    $labels->not_found = 'No Communities found';
+    $labels->not_found_in_trash = 'No Communities found in Trash';
+    $labels->all_items = 'All Communities';
+    $labels->menu_name = 'Communitie';
+    $labels->name_admin_bar = 'Communitie';
 }
-// add_action( 'wp_loaded', 'ed_change_property_types_label' );
+add_action( 'wp_loaded', 'ed_change_property_types_label' );
 
 // sync a single property manually
 function rfs_start_sync_single_property() {
@@ -83,3 +83,55 @@ function rfs_start_sync_single_property() {
 	
 }
 // add_action( 'wp_footer', 'rfs_start_sync_single_property' );
+
+
+function test_phone_number_formatting() {
+	$unformatted_numbers = [
+		'2124567890',
+		'212-456-7890',
+		'212.456.7890',
+		'212 456 7890',
+		'(212)456-7890',
+		'(212)-456-7890',
+		'(970) 736-3239',
+		'(970) 736 3239',
+		'(970) 736.3239',
+		'+12124567890',
+		'+212-456-7890',
+		'+212 456 7890',
+		'+212.456.7890',
+		'+1-212-456-7890',
+		'+1 212.456.7890',
+		'+1 (212) 456.7890',
+		'+1 (212) 456-7890',
+		'+1 (212)-456-7890',
+		'1-212-456-7890',
+		'1 (212) 456-7890',
+		'1-(212)-456-7890',
+		'1 (212) 456.7890',
+		'(112) 456.7890',
+		'+1124567890',
+	];
+	
+	echo '<table>';
+	echo '<tr>';
+		echo '<th>Unformatted</th>';
+		echo '<th>Formatted</th>';
+		echo '<th>Link</th>';
+	echo '</tr>';
+	
+	foreach( $unformatted_numbers as $unformatted_number ) {
+		$display_phone_formatted = rentfetch_format_phone_number( $unformatted_number );
+		$tel_link_phone_formatted = rentfetch_format_phone_number_link( $unformatted_number, 'tel' );
+		$tel_link_phone_formatted = 'tel:' . $tel_link_phone_formatted;
+		echo '<tr>';
+			printf( '<td>%s</td>', $unformatted_number );
+			printf( '<td>%s</td>', $display_phone_formatted );
+			printf( '<td>%s</td>', $tel_link_phone_formatted );
+		echo '</tr>';
+		
+	}
+	
+	echo '</table>';
+}
+add_action( 'wp_footer', 'test_phone_number_formatting' );

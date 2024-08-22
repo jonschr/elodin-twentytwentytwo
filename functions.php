@@ -134,4 +134,4 @@ function test_phone_number_formatting() {
 	
 	echo '</table>';
 }
-add_action( 'wp_footer', 'test_phone_number_formatting' );
+// add_action( 'wp_footer', 'test_phone_number_formatting' );

@@ -20,6 +20,26 @@
 			transition: 0.3s all ease;
 			position: relative;
 			overflow: hidden;
+			opacity: 0.9;
+			z-index: 2;
+
+			&:after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background-color: rgba(black, 0.3);
+				z-index: -1;
+			}
+
+			.logo {
+				position: absolute;
+				inset: 25% 20%;
+				background-size: contain;
+				background-position: center center;
+				background-repeat: no-repeat;
+				z-index: 10;
+				transition: 1s all ease;
+			}
 
 			.overlay {
 				position: absolute;
@@ -31,6 +51,7 @@
 				transition: 0.3s all ease;
 				background-color: rgba(black, 0.3);
 				border-radius: 3px;
+				z-index: 20;
 
 				.overlay-wrap {
 					max-width: 200px;
@@ -89,6 +110,10 @@
 
 		.overlay {
 			opacity: 1;
+		}
+
+		.logo {
+			opacity: 0;
 		}
 	}
 

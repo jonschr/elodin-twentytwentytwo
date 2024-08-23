@@ -7,6 +7,7 @@ function manufacturers_each() {
 	$title = get_the_title();
 	$terms = get_the_terms( get_the_ID(), 'manufacturerstatus' );
 	$photos = get_post_meta( get_the_ID(), 'photos', true );
+	$logo = get_post_meta( get_the_ID(), 'logo', true );
 	$url = get_post_meta( get_the_ID(), 'url', true );	
 	$permalink = get_the_permalink();
 	
@@ -30,6 +31,10 @@ function manufacturers_each() {
 		}
 	
 		printf( '<div class="featured-image" style="background-image:url(%s);">', $first_photo_url );
+		
+			if ( $logo ) {
+				printf( '<div class="logo" style="background-image:url(%s);"></div>', wp_get_attachment_image_src($logo, 'large')[0] );;
+			}
 		
 			echo '<div class="overlay">';
 				echo '<div class="overlay-wrap">';

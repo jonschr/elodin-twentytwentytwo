@@ -1,65 +1,65 @@
-.resources-wrap.resources-featured-wrap {
-	.resources {
-	}
-}
+// .resources-wrap.resources-featured-wrap {
+// 	.resources {
+// 	}
+// }
 
-@include desktop {
-	.resources-wrap.resources-featured-wrap {
-		gap: 0;
-		margin-bottom: -100px;
-		z-index: 10;
-		position: relative;
-		text-align: center;
-		padding-top: 60px;
-		width: calc(100% + 80px);
-		margin-left: -40px;
+// @include desktop {
+// 	.resources-wrap.resources-featured-wrap {
+// 		gap: 0;
+// 		margin-bottom: -100px;
+// 		z-index: 10;
+// 		position: relative;
+// 		text-align: center;
+// 		padding-top: 60px;
+// 		width: calc(100% + 80px);
+// 		margin-left: -40px;
 
-		.resources {
-			transition: 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+// 		.resources {
+// 			transition: 0.2s cubic-bezier(0.33, 1, 0.68, 1);
 
-			h3.resource-title {
-				display: block !important;
-			}
+// 			h3.resource-title {
+// 				display: block !important;
+// 			}
 
-			.resource-content-below {
-				display: none !important;
-			}
+// 			.resource-content-below {
+// 				display: none !important;
+// 			}
 
-			.resource-content-inner {
-				width: 100%;
-				max-width: 500px;
-			}
+// 			.resource-content-inner {
+// 				width: 100%;
+// 				max-width: 500px;
+// 			}
 
-			.featured-wrap {
-				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-				border-radius: 10px;
-				padding-top: 55%;
-				overflow: hidden;
-			}
+// 			.featured-wrap {
+// 				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+// 				border-radius: 10px;
+// 				padding-top: 55%;
+// 				overflow: hidden;
+// 			}
 
-			&:hover {
-				transform: scale(1.2) translateY(-2em);
-				z-index: 20;
-			}
-		}
+// 			&:hover {
+// 				transform: scale(1.2) translateY(-2em);
+// 				z-index: 20;
+// 			}
+// 		}
 
-		> :nth-child(1) {
-			transform: rotate(-5deg) translateX(20px) translateY(10px);
-		}
-		> :nth-child(2) {
-			transform: rotate(1deg) translateY(-40px);
-		}
-		> :nth-child(3) {
-			transform: rotate(-3deg) translateX(-20px) translateY(-20px);
-		}
-	}
-}
+// 		> :nth-child(1) {
+// 			transform: rotate(-5deg) translateX(20px) translateY(10px);
+// 		}
+// 		> :nth-child(2) {
+// 			transform: rotate(1deg) translateY(-40px);
+// 		}
+// 		> :nth-child(3) {
+// 			transform: rotate(-3deg) translateX(-20px) translateY(-20px);
+// 		}
+// 	}
+// }
 
-@include notdesktop {
-	.resources-wrap.resources-featured-wrap {
-		display: grid;
-		grid-template-columns: 1fr;
-		.resources {
-		}
-	}
-}
+// @include notdesktop {
+// 	.resources-wrap.resources-featured-wrap {
+// 		display: grid;
+// 		grid-template-columns: 1fr;
+// 		.resources {
+// 		}
+// 	}
+// }

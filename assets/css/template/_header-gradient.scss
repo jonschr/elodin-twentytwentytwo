@@ -1,0 +1,13 @@
+.site-header {
+	&:after {
+		content: '';
+		display: block;
+		background: linear-gradient(
+			90deg,
+			var(--contrast-3) 10%,
+			var(--accent-2) 60%,
+			var(--contrast-6) 90%
+		);
+		height: 8px;
+	}
+}

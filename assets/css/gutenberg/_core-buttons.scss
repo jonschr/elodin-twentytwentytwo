@@ -3,12 +3,11 @@
    ========================================================================== */
 
 .btn {
-	font-weight: bold;
 	cursor: pointer;
 	padding: 15px 25px !important;
 	text-decoration: none !important;
 	font-size: 15px !important;
-	font-weight: 600;
+	font-weight: 800;
 	display: inline-block !important;
 	position: static;
 	border-radius: 3px;
@@ -19,6 +18,11 @@
 		display: block;
 		width: 100%;
 	}
+}
+
+a.ers-button {
+	font-weight: 800 !important;
+	border-radius: 3px !important;
 }
 
 /* ==========================================================================

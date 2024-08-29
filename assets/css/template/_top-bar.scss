@@ -1,6 +1,12 @@
 div.top-bar {
-	.inside-top-bar {
+	@include mobile {
+		display: none;
+	}
+	.inside-top-bar.grid-container {
 		justify-content: flex-end;
+		max-width: 100%;
+		padding-left: 25px;
+		padding-right: 25px;
 
 		@include mobile {
 			justify-content: center;

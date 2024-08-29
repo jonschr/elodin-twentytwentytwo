@@ -1,0 +1,14 @@
+.resources-wrap {
+	.resources-each {
+		.resource-content-wrap {
+			@include desktop {
+				padding-left: 60px;
+				padding-right: 60px;
+			}
+
+			h3.resource-title {
+				text-shadow: 2px 2px 10px rgba(black, 0.9);
+			}
+		}
+	}
+}

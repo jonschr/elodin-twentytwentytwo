@@ -9,6 +9,19 @@ $headerheightdesktop: 100px;
 $headerheighttablet: 60px;
 $headerheightmobile: 60px;
 
+body {
+	--ers-locked: var(--accent-2);
+	--ers-unlocked: #0093b8;
+	--ers-accent: #0093b8;
+	--ers-accent-active: #0093b8;
+	--ers-dark: var(--contrast);
+	// --ers-unlocked: var(--contrast-6);
+}
+
+strong {
+	font-weight: 900 !important;
+}
+
 /* ==========================================================================
    Queries
    ========================================================================== */

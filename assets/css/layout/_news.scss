@@ -1,0 +1,31 @@
+.news-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+
+	.news {
+		a.featured-image {
+			height: 0;
+			padding-top: 55%;
+			background-color: var(--contrast);
+			display: block;
+			margin: 0 0 10px;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			border-radius: 3px;
+			transition: 0.3s all ease;
+		}
+
+		&:hover {
+			a.featured-image {
+				box-shadow: 0 0 0 8px var(--contrast-6);
+			}
+		}
+
+		h3 {
+			font-weight: 800;
+			font-size: 20px;
+		}
+	}
+}

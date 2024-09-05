@@ -1,0 +1,15 @@
+body.single-resources {
+	header.entry-header {
+		margin-bottom: 15px;
+
+		h1,
+		p {
+			margin-bottom: 0;
+		}
+
+		p.resource-subtitle {
+			font-size: 20px;
+			font-style: italic;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+body.classes-template-default {
+	figure.wp-block-post-featured-image {
+		position: absolute;
+		inset: 0;
+
+		> img {
+			height: 100%;
+		}
+	}
+}

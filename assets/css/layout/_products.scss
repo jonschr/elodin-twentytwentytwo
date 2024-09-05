@@ -1,0 +1,26 @@
+.loop-container.loop-layout-products {
+	.products {
+		position: relative;
+
+		.featured-image {
+			height: 0;
+			padding-top: 75%;
+			border-radius: 3px;
+			margin: 0 0 10px;
+			transition: 0.3s all ease;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.overlay {
+			inset: 0;
+			position: absolute;
+		}
+	}
+
+	.products:hover {
+		.featured-image {
+			box-shadow: 0 0 0 5px var(--accent);
+		}
+	}
+}

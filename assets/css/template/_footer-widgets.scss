@@ -6,8 +6,12 @@
 	}
 }
 
+.site-footer {
+	background-color: white;
+}
+
 .inside-site-info {
-	border-top: 1px solid var(--contrast-3);
+	// border-top: 1px solid var(--contrast-3);
 
 	@include desktop {
 		padding: 20px 0 !important;

@@ -1,0 +1,29 @@
+.carousel-meadowhawk {
+	opacity: 0;
+	height: 50px;
+
+	&.slick-initialized {
+		opacity: 1;
+		height: auto;
+	}
+
+	.item {
+		padding: 0 60px;
+		position: relative;
+
+		&:after {
+			content: '';
+			height: 1em;
+			// background-color: red;
+			width: 1.5em;
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateX(50%) translateY(-50%);
+			background-image: url('../images/dragonfly.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+}

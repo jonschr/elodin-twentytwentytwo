@@ -6,4 +6,19 @@
 
 .wp-block-image {
 	margin-bottom: 15px;
+
+	img {
+		border-radius: 5px;
+	}
+}
+
+.wp-block-image {
+	&.alignright,
+	&.alignleft {
+		img {
+			@include mobile {
+				width: 100% !important;
+			}
+		}
+	}
 }

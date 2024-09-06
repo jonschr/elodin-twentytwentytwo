@@ -171,3 +171,20 @@
 		}
 	}
 }
+
+/* ==========================================================================
+   Gravity forms
+   ========================================================================== */
+
+.gform-button--width-full {
+	width: 100% !important;
+}
+
+legend.gfield_label,
+label.gfield_label {
+	font-weight: bold !important;
+
+	span.gfield_required {
+		color: var(--accent);
+	}
+}

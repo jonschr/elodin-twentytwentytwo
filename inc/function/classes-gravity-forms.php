@@ -3,9 +3,13 @@
 add_filter( 'gform_pre_render_3', 'elodin_populate_classes' );
 function elodin_populate_classes( $form ) {
 	  
+  // Get the current page's slug
+  global $post;
+  $current_slug = $post->post_name;
+  
   foreach( $form['fields'] as &$field ) {
 	
-		// field ID number
+		// Field ID number where you want to populate choices
 		if( 5 === $field->id ) {
 			
 			$args = array(
@@ -19,6 +23,8 @@ function elodin_populate_classes( $form ) {
 			// The Loop
 			if ( $custom_query->have_posts() ) {
 
+				$choices = array(); // Ensure choices is defined
+
 				while ( $custom_query->have_posts() ) {
 					
 					$custom_query->the_post();
@@ -26,20 +32,25 @@ function elodin_populate_classes( $form ) {
 					$title = get_the_title();
 					$slug = get_post_field( 'post_name', get_post() );
 
-					$choices[] = array(
+					$choice = array(
 						'text' => $title,
 						'value' => $slug
 					);
 
+					// Check if this choice matches the current page slug
+					if ( $slug === $current_slug ) {
+						$choice['isSelected'] = true;
+					}
+
+					$choices[] = $choice;
 				}
 				
 				// Restore postdata
 				wp_reset_postdata();
-
 			}
-		
+
+			// Assign the choices to the field
 			$field['choices'] = $choices;
-			
 		} 
 	} 
 	

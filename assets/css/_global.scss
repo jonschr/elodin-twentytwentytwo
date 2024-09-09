@@ -52,3 +52,113 @@ $wide: 1200px;
 		@content;
 	}
 }
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: normal;
+	font-weight: 900;
+	src: url('../font/ambit/Ambit-Black.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: italic;
+	font-weight: 900;
+	src: url('../font/ambit/Ambit-BlackItalic.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../font/ambit/Ambit-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: italic;
+	font-weight: 700;
+	src: url('../font/ambit/Ambit-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: normal;
+	font-weight: 200;
+	src: url('../font/ambit/Ambit-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: italic;
+	font-weight: 200;
+	src: url('../font/ambit/Ambit-ExtraLightItalic.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../font/ambit/Ambit-Italic.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../font/ambit/Ambit-Light.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: italic;
+	font-weight: 300;
+	src: url('../font/ambit/Ambit-LightItalic.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/ambit/Ambit-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../font/ambit/Ambit-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: italic;
+	font-weight: 600;
+	src: url('../font/ambit/Ambit-SemiBoldItalic.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: normal;
+	font-weight: 100;
+	src: url('../font/ambit/Ambit-Thin.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'ambit';
+	font-style: italic;
+	font-weight: 100;
+	src: url('../font/ambit/Ambit-ThinItalic.ttf') format('truetype');
+}
+@font-face {
+	font-display: auto;
+	font-family: 'roadway';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/roadway/Roadway.otf') format('opentype');
+}

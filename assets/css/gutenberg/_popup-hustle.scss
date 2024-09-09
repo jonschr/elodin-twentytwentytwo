@@ -1,0 +1,36 @@
+.hustle-group-title {
+	.hustle-title {
+		color: var(--contrast) !important;
+		font-family: var(--gp-font--roadway) !important;
+		text-transform: none !important;
+		font-size: 28px !important;
+	}
+
+	.hustle-subtitle {
+		font-family: var(--gb-font--ambit) !important;
+		color: var(--contrast) !important;
+		font-size: 32px !important;
+	}
+}
+
+.hustle-group-content {
+	p {
+		color: var(--contrast) !important;
+	}
+}
+
+.hustle-button {
+	border-radius: 3px !important;
+	background-color: var(--accent) !important;
+	border-color: var(--accent) !important;
+	border-radius: 3px !important;
+}
+
+.hustle-layout-content {
+	background-color: var(--base) !important;
+}
+
+.hustle-input {
+	border: 1px solid rgba(black, 0.2) !important;
+	border-radius: 3px !important;
+}

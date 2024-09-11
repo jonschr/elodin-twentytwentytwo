@@ -1,4 +1,10 @@
 .resources-wrap {
+	@include mobile {
+		&.columns-2 {
+			grid-template-columns: 1fr !important;
+		}
+	}
+
 	.resources-each {
 		.resource-content-wrap {
 			@include desktop {

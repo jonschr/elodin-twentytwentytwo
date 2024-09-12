@@ -1,0 +1,9 @@
+body.blog,
+body.archive {
+	.site-main {
+		@include notdesktop {
+			padding: 20px;
+			margin: 0;
+		}
+	}
+}

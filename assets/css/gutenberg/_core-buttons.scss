@@ -27,6 +27,7 @@
 
 .wp-block-buttons {
 	margin-top: 30px;
+	margin-bottom: 30px;
 
 	@include mobile {
 		margin-top: 20px;
@@ -34,6 +35,10 @@
 
 	&:first-child {
 		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
 	}
 
 	.wp-block-button {
@@ -107,4 +112,15 @@
 			color: white;
 		}
 	}
+}
+
+/* ==========================================================================
+   Gforms buttons
+   ========================================================================== */
+
+.gform-button--width-full {
+	@extend .btn;
+
+	width: 100% !important;
+	text-align: center;
 }

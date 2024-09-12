@@ -10,6 +10,9 @@ function ettt_gutenberg_editor_style_setup() {
 
 	// Enqueue editor styles
 	add_editor_style( "/assets/dist/gutenberg-style.css" );
+	
+	// Add dashicons
+	wp_enqueue_style( 'dashicons' );
 
 }
 add_action( 'after_setup_theme', 'ettt_gutenberg_editor_style_setup' );

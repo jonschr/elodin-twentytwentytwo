@@ -1,0 +1,76 @@
+body.location-template-default {
+	.site-content {
+		display: block;
+		margin: 60px auto;
+
+		@include mobile {
+			padding: 25px;
+			margin: 0;
+		}
+
+		iframe {
+			margin-bottom: -8px;
+		}
+
+		.single-info {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			box-shadow: $boxshadow;
+			margin-bottom: 90px;
+
+			@include mobile {
+				grid-template-columns: 1fr;
+			}
+
+			.info {
+				background-color: white;
+				padding: 60px;
+
+				@include notdesktop {
+					padding: 25px;
+				}
+
+				.entry-header {
+					margin-bottom: 30px;
+				}
+
+				h1.entry-title {
+					font-size: 35px;
+					margin-bottom: 5px;
+				}
+
+				p.address {
+					font-size: 20px;
+				}
+
+				.btn-orange {
+					background-color: var(--accent);
+					color: white;
+					margin-top: 30px;
+
+					&:hover {
+						background-color: var(--accent-2);
+					}
+				}
+			}
+
+			.map {
+				position: relative;
+
+				iframe {
+					@include notmobile {
+						position: absolute;
+						height: 100%;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.multiple-info {
+			h2 {
+				font-size: 30px;
+			}
+		}
+	}
+}

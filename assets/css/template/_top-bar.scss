@@ -1,6 +1,6 @@
 div.top-bar {
 	@include mobile {
-		display: none;
+		// display: none;
 	}
 	.inside-top-bar.grid-container {
 		justify-content: flex-end;
@@ -22,6 +22,12 @@ div.top-bar {
 
 			&:last-child {
 				margin-right: 0 !important;
+			}
+
+			@include notdesktop {
+				> .gb-container > p {
+					display: none;
+				}
 			}
 		}
 	}

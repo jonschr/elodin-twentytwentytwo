@@ -1,0 +1,26 @@
+.buildingtypes-loop-grid {
+	.buildingtypes {
+		.gb-container[style*='background-image'] {
+			transition: 0.3s all ease;
+		}
+
+		&:hover {
+			.gb-container[style*='background-image'] {
+				box-shadow: 0 0 0 3px var(--white-color);
+			}
+		}
+	}
+}
+
+.buildingtypes-loop-grid-detailed {
+	.buildingtypes {
+		.gb-container-link {
+			transition: 0.3s all ease;
+			border-radius: 3px;
+
+			&:hover {
+				box-shadow: 0 0 0 3px var(--contrast);
+			}
+		}
+	}
+}

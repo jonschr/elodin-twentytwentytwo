@@ -1,7 +1,7 @@
 div.top-bar {
 	.inside-top-bar {
-		// padding-top: 5px;
-		// padding-bottom: 5px;
+		padding-top: 0;
+		padding-bottom: 0;
 
 		@include notmobile {
 			display: flex;
@@ -11,8 +11,8 @@ div.top-bar {
 
 		@include mobile {
 			// justify-content: center;
-			text-align: left;
-			padding: 10px 20px;
+			text-align: right;
+			padding: 5px;
 
 			.widget {
 				width: 100%;
@@ -22,6 +22,12 @@ div.top-bar {
 
 		.widget {
 			order: 1;
+
+			@include mobile {
+				&.widget_text {
+					display: none;
+				}
+			}
 
 			@include notmobile {
 				margin-right: 5px;

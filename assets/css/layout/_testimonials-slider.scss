@@ -1,0 +1,42 @@
+body .loop-container.loop-layout-testimonial_slider {
+	.testimonials {
+		padding: 0;
+
+		.testimonial-content {
+			margin-bottom: 30px;
+
+			p {
+				line-height: 1.6;
+				font-style: italic;
+				font-size: 22px;
+			}
+		}
+	}
+
+	ul.slick-dots {
+		text-align: left;
+		margin-top: 20px;
+		position: static;
+
+		li {
+			margin: 0 10px 0 0;
+
+			button {
+				&:before {
+					border: 2px solid var(--contrast);
+					border-radius: 100%;
+					background-color: transparent;
+					content: '';
+				}
+			}
+		}
+
+		li.slick-active {
+			button {
+				&:before {
+					background-color: var(--contrast);
+				}
+			}
+		}
+	}
+}

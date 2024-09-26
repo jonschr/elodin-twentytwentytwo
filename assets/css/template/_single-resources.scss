@@ -1,0 +1,58 @@
+body.single-resources {
+	background-color: var(--base);
+
+	.site.grid-container {
+		padding: 60px 0;
+
+		a {
+			color: var(--contrast-3);
+		}
+
+		@media (max-width: 1250px) {
+			padding: 25px;
+		}
+		// width: 100%;
+		// max-width: 100%;
+
+		h1,
+		h2 {
+			color: var(--contrast-3);
+			letter-spacing: 0;
+		}
+
+		.resources-header-wrap {
+			display: grid;
+			gap: 60px;
+			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: 60px;
+			align-items: center;
+
+			@include mobile {
+				grid-template-columns: 1fr;
+				gap: 40px;
+			}
+		}
+
+		.resource-content {
+			margin-bottom: 60px;
+		}
+
+		.buttons {
+			margin-top: 30px;
+
+			.btn {
+				margin: 0 15px 15px 0;
+
+				&.pdfurl {
+					background-color: var(--white-color) !important;
+					color: var(--contrast-3) !important;
+
+					&:hover {
+						background-color: var(--contrast-3) !important;
+						color: white !important;
+					}
+				}
+			}
+		}
+	}
+}

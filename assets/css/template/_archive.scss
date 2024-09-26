@@ -20,6 +20,14 @@ body.archive {
 			grid-template-columns: repeat(3, 1fr);
 			gap: 40px;
 
+			@include notdesktop {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include mobile {
+				grid-template-columns: 1fr;
+			}
+
 			.entry {
 				.featured-image {
 					margin: 0;

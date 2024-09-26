@@ -1,0 +1,22 @@
+.resources-wrap {
+	.resources {
+		background-color: var(--contrast-3);
+		border-radius: 3px;
+
+		.featured-image {
+			background-color: transparent;
+			opacity: 0.1;
+			background-size: 40% auto;
+			background-repeat: no-repeat;
+			background-position: 5% 5%;
+		}
+
+		.lock-icon-wrap.unlocked {
+			background-color: var(--accent);
+
+			.lock-icon {
+				color: var(--contrast-3);
+			}
+		}
+	}
+}

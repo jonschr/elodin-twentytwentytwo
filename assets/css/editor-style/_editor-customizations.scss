@@ -44,7 +44,8 @@
    Make title black
    ========================================================================== */
 
-body.post-type-page {
+body.post-type-page,
+body.block-element-type {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .make-title-black;
 		@extend .remove-top-margin;
@@ -67,7 +68,8 @@ body.post-type-post {
    ========================================================================== */
 
 body.content-title-hidden,
-body.post-type-page {
+body.post-type-page,
+body.block-element-type {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .cross-out-title;
 	}

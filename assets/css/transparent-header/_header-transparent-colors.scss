@@ -1,4 +1,9 @@
-body.full-width-content.first-block-is-section {
+body.full-width-content.first-block-is-section:not(.page-id-73772) {
+	.site-logo {
+		z-index: 999;
+		position: relative;
+	}
+
 	@include desktop {
 		.site-header {
 			background-color: transparent;
@@ -9,12 +14,12 @@ body.full-width-content.first-block-is-section {
 		}
 
 		.main-navigation.navigation-clone {
-			background-color: white;
+			background-color: var(--contrast-3);
 		}
 
 		.main-navigation:not(.navigation-clone) .main-nav > ul > li > a {
-			background-color: transparent;
-			color: white;
+			// background-color: transparent;
+			// color: white;
 		}
 
 		.main-title a,

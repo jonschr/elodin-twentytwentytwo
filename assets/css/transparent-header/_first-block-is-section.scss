@@ -13,7 +13,7 @@
 	}
 }
 
-body.first-block-is-section {
+body.first-block-is-section:not(.page-id-73772) {
 	header.site-header {
 		// margin-bottom is negative so that the header is not counted in the height of the first block
 		@include desktop {

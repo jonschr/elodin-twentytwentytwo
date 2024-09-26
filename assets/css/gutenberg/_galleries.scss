@@ -1,0 +1,17 @@
+.wp-block-gallery {
+	margin: 30px 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.blocks-gallery-item {
+		img {
+			box-shadow: 0 0 10px 0 rgba(black, 0.15);
+		}
+	}
+}

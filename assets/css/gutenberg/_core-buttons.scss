@@ -7,11 +7,13 @@
 	cursor: pointer;
 	padding: 15px 25px !important;
 	text-decoration: none !important;
-	font-size: 15px !important;
+	font-size: 12px !important;
 	font-weight: 600;
 	display: inline-block !important;
 	position: static;
 	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 
 	transition: all 0.3s ease-in-out;
 
@@ -99,17 +101,19 @@
 		cursor: pointer;
 		padding: 15px 25px !important;
 		text-decoration: none !important;
-		font-size: 15px !important;
-		font-weight: 600;
+		font-size: 12px !important;
+		font-weight: 600 !important;
 		display: inline-block !important;
 		position: static;
 		border-radius: 3px;
-		background-color: var(--accent);
-		color: white;
+		background-color: var(--accent) !important;
+		color: var(--contrast-3) !important;
+		text-transform: uppercase !important;
+		letter-spacing: 0.05em;
 
 		&:hover {
-			background-color: var(--accent-2);
-			color: white;
+			background-color: var(--accent-2) !important;
+			color: var(--contrast-3) !important;
 		}
 	}
 }
@@ -123,4 +127,16 @@
 
 	width: 100% !important;
 	text-align: center;
+}
+
+body a#calendly-inline-button-widget {
+	@extend .btn;
+
+	background-color: var(--accent) !important;
+	color: var(--contrast-3) !important;
+	text-align: center !important;
+
+	&:hover {
+		background-color: var(--accent-2) !important;
+	}
 }

@@ -1,0 +1,22 @@
+.paging-navigation {
+	text-align: center;
+
+	.page-numbers {
+		padding: 8px 12px !important;
+		text-decoration: none;
+		background-color: var(--base);
+		display: inline-block;
+		line-height: 1;
+		font-size: 14px;
+		font-weight: 500;
+
+		&.dots {
+			background-color: transparent;
+		}
+
+		&.current {
+			background-color: var(--contrast-3);
+			color: var(--white-color);
+		}
+	}
+}

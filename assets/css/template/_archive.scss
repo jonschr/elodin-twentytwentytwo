@@ -5,5 +5,54 @@ body.archive {
 			padding: 20px;
 			margin: 0;
 		}
+
+		header.page-header {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.page-title {
+			color: var(--contrast-3);
+		}
+
+		.posts-grid-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 40px;
+
+			.entry {
+				.featured-image {
+					margin: 0;
+					height: 0;
+					width: 100%;
+					padding-top: 56.5%;
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center center;
+					display: block;
+					background-color: black;
+				}
+
+				h3 {
+					margin-top: 10px;
+					text-transform: none;
+					letter-spacing: 0;
+					font-family: 'Inter';
+					font-size: 18px;
+					font-weight: 500;
+					margin-bottom: 0;
+					color: var(--contrast-3);
+
+					a {
+						color: var(--contrast-3);
+						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
 	}
 }

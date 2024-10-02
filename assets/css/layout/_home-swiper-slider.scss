@@ -1,0 +1,19 @@
+.nav_outside {
+	margin-top: -10px;
+	margin-bottom: -10px;
+
+	.gutslider-nav {
+		right: 15px !important;
+		top: 35px !important;
+	}
+
+	.swiper-wrapper {
+		padding: 10px 0;
+	}
+
+	.swiper-slide {
+		border-radius: 3px !important;
+		overflow: hidden;
+		box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+	}
+}

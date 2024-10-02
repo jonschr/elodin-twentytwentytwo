@@ -93,6 +93,14 @@ function ettt_enqueue_everything() {
 		CHILD_THEME_VERSION,
 		true
 	);
+	
+	wp_register_script(
+		'projects-sliders',
+		get_stylesheet_directory_uri() . '/assets/js/projects-sliders.js',
+		array('slick-main-script'),
+		CHILD_THEME_VERSION,
+		true
+	);
 
 	wp_register_style(
 		'slick-main-styles',
@@ -104,6 +112,30 @@ function ettt_enqueue_everything() {
 	wp_register_style(
 		'slick-main-theme',
 		get_stylesheet_directory_uri() . '/vendor/slick/slick-theme.css',
+		array(),
+		CHILD_THEME_VERSION
+	);
+	
+	// GLIGHTBOX
+	wp_register_script(
+	    'glightbox-script',
+	    'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js',
+	    array('jquery'),
+	    CHILD_THEME_VERSION,
+	    true
+	);
+	
+	wp_register_script(
+		'glightbox-init',
+		get_stylesheet_directory_uri() . '/assets/js/glightbox-init.js',
+		array('slick-main-script'),
+		CHILD_THEME_VERSION,
+		true
+	);
+	
+	wp_register_style(
+		'glightbox-style',
+		'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css',
 		array(),
 		CHILD_THEME_VERSION
 	);

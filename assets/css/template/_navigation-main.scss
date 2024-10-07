@@ -27,11 +27,38 @@
 
 				// Submenu
 				ul {
-					width: 250px;
+					width: 300px;
 
-					li {
-						a {
-							padding: 15px 20px;
+					@include desktop {
+						&:before {
+							content: '';
+							background-color: transparent;
+							border: 12px solid transparent;
+							border-color: transparent transparent var(--base)
+								transparent;
+							top: 0;
+							left: 20px;
+							transform: translateY(-100%);
+							position: absolute;
+							z-index: 30;
+						}
+
+						li {
+							a {
+								padding: 5px 20px;
+							}
+
+							&:first-child {
+								a {
+									padding-top: 15px;
+								}
+							}
+
+							&:last-child {
+								a {
+									padding-bottom: 20px;
+								}
+							}
 						}
 					}
 				}

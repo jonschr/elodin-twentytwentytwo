@@ -1,0 +1,18 @@
+.gb-accordion__item {
+	&:after {
+		content: '';
+		position: absolute;
+		background-color: var(--base);
+		height: 40px;
+		width: 40px;
+		right: 0;
+		bottom: 0;
+		transform: translateX(50%) translateY(50%);
+		border-radius: 100%;
+		background-image: url(../images/mark-only-white.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		border: 8px solid var(--base);
+		background-position: center center;
+	}
+}

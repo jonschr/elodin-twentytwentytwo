@@ -64,27 +64,6 @@ function ed_change_property_types_label() {
 }
 // add_action( 'wp_loaded', 'ed_change_property_types_label' );
 
-// sync a single property manually
-function rfs_start_sync_single_property() {
-	
-	//! Yardi notes
-	// any fake property id return a 1020 error
-	// p0556894 returns a 1050 error
-	
-	//! RealPage notes
-	// there's a SiteID and a PmcID. The SiteID is the property ID, and the PmcID is the rental company ID
-	// RealPage doesn't have any property information or photos
-	
-	// define what to sync
-	// rfs_sync_single_property( $property_id = '4818691', $integration = 'realpage' ); // Mason street flats
-	// rfs_sync_single_property( $property_id = '4818692', $integration = 'realpage' ); // Max flats
-	// rfs_sync_single_property( $property_id = '4818710', $integration = 'realpage' ); // Oldtown flats
-	rfs_sync_single_property( $property_id = '5194154', $integration = 'realpage' ); // Alpine flats
-	
-}
-// add_action( 'wp_footer', 'rfs_start_sync_single_property' );
-
-
 function test_phone_number_formatting() {
 	$unformatted_numbers = [
 		'2124567890',
@@ -135,3 +114,24 @@ function test_phone_number_formatting() {
 	echo '</table>';
 }
 // add_action( 'wp_footer', 'test_phone_number_formatting' );
+
+
+// sync a single property manually
+function rfs_start_sync_single_property() {
+	
+	//! Yardi notes
+	// any fake property id return a 1020 error
+	// p0556894 returns a 1050 error
+	
+	//! RealPage notes
+	// there's a SiteID and a PmcID. The SiteID is the property ID, and the PmcID is the rental company ID
+	// RealPage doesn't have any property information or photos
+	
+	// define what to sync
+	// rfs_sync_single_property( $property_id = '4818691', $integration = 'realpage' ); // Mason street flats
+	// rfs_sync_single_property( $property_id = '4818692', $integration = 'realpage' ); // Max flats
+	// rfs_sync_single_property( $property_id = '4818710', $integration = 'realpage' ); // Oldtown flats
+	rfs_sync_single_property( $property_id = 'RIVER', $integration = 'rentmanager' ); // Rent manager test
+	
+}
+// add_action( 'wp_footer', 'rfs_start_sync_single_property' );

@@ -27,11 +27,23 @@
 
 				// Submenu
 				ul {
-					width: 250px;
+					width: 325px;
 
 					li {
 						a {
-							padding: 15px 20px;
+							padding: 8px 20px;
+						}
+					}
+
+					li:first-child {
+						a {
+							padding-top: 15px;
+						}
+					}
+
+					li:last-child {
+						a {
+							padding-bottom: 15px;
 						}
 					}
 				}

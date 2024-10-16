@@ -1,0 +1,14 @@
+.wc-block-mini-cart__button {
+	.wc-block-mini-cart__badge {
+		color: white;
+		transition: 0.3s all ease;
+	}
+
+	&:hover {
+		background-color: transparent !important;
+
+		.wc-block-mini-cart__badge {
+			background-color: var(--accent-2) !important;
+		}
+	}
+}

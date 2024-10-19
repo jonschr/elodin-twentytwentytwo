@@ -52,3 +52,79 @@ $wide: 1200px;
 		@content;
 	}
 }
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+	font-family: 'mona';
+	src: url('../font/MonaSansExpanded-Bold.woff2') format('woff2'),
+		url('../font/MonaSansExpanded-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'mona';
+	src: url('../font/MonaSansExpanded-ExtraBold.woff2') format('woff2'),
+		url('../font/MonaSansExpanded-ExtraBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'mona';
+	src: url('../font/MonaSansExpanded-Black.woff2') format('woff2'),
+		url('../font/MonaSansExpanded-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'mona';
+	src: url('../font/MonaSansExpanded-Medium.woff2') format('woff2'),
+		url('../font/MonaSansExpanded-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'mona';
+	src: url('../font/MonaSansExpanded-Regular.woff2') format('woff2'),
+		url('../font/MonaSansExpanded-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'mona';
+	src: url('../font/MonaSansExpanded-SemiBold.woff2') format('woff2'),
+		url('../font/MonaSansExpanded-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'mona';
+	src: url('../font/MonaSansExpanded-Light.woff2') format('woff2'),
+		url('../font/MonaSansExpanded-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'mona';
+	src: url('../font/MonaSansExpanded-ExtraLight.woff2') format('woff2'),
+		url('../font/MonaSansExpanded-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}

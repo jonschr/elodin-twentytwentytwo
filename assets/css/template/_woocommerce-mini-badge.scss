@@ -1,3 +1,16 @@
 .wc-block-mini-cart__badge {
 	color: var(--contrast-3);
 }
+
+span.wc-block-mini-cart__amount {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.wc-block-mini-cart__button {
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: transparent;
+	}
+}

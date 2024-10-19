@@ -5,6 +5,11 @@ body ul.wc-block-grid__products {
 	grid-template-columns: repeat(4, 1fr);
 	margin-top: 40px;
 
+	@include mobile {
+		grid-template-columns: 1fr;
+		grid-gap: 25px;
+	}
+
 	li.wc-block-grid__product {
 		margin: 0;
 		border: none;

@@ -16,6 +16,7 @@ $fax = get_post_meta( get_the_ID(), 'fax', true );
 $url = get_post_meta( get_the_ID(), 'url', true );
 $google_maps_embed = get_post_meta( get_the_ID(), 'google_maps_embed', true );
 $business_hours = get_post_meta( get_the_ID(), 'business_hours', true );
+$location_specialties = get_post_meta( get_the_ID(), 'location_specialties', true );
 
 //* Markup
 echo '<div class="single-info">';
@@ -43,6 +44,10 @@ echo '<div class="single-info">';
 		if ( $business_hours ) {
 			printf( '<p class="business-hours"><strong>Business Hours:</strong> %s</p>', esc_html( $business_hours ) );
 		} 
+		
+		if ( $location_specialties ) {
+			printf( '<p class="location-specialties"><strong>Specialties:</strong> %s</p>', esc_html( $location_specialties ) );
+		}
 		
 		if ( $url ) {
 			printf( '<p class="url"><a class="btn btn-orange" target="_blank" href="%s">Visit online</a></p>', esc_url( $url ) );

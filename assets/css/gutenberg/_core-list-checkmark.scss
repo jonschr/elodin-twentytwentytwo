@@ -1,5 +1,7 @@
 ul.is-style-checkmark,
-ol.is-style-checkmark {
+ol.is-style-checkmark,
+ul.is-style-checkmark-2col,
+ol.is-style-checkmark-2col {
 	margin-left: 0;
 	padding-left: 0;
 
@@ -39,5 +41,13 @@ ol.is-style-checkmark {
 			margin-top: 10px;
 			margin-bottom: 15px;
 		}
+	}
+}
+
+ul.is-style-checkmark-2col,
+ol.is-style-checkmark-2col {
+	@include desktop {
+		column-count: 2;
+		column-gap: 40px;
 	}
 }

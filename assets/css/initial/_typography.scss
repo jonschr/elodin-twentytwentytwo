@@ -33,6 +33,14 @@ h3 {
 	}
 }
 
+figure + h1,
+figure + h2,
+figure + h3 {
+	&.wp-block-heading {
+		margin-top: 0;
+	}
+}
+
 p.has-large-font-size {
 	@include mobile {
 		font-size: 20px !important;

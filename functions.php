@@ -134,4 +134,4 @@ function rfs_start_sync_single_property() {
 	rfs_sync_single_property( $property_id = 'RIVER', $integration = 'rentmanager' ); // Rent manager test
 	
 }
-add_action( 'wp_footer', 'rfs_start_sync_single_property' );
+// add_action( 'wp_footer', 'rfs_start_sync_single_property' );

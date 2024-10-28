@@ -52,3 +52,16 @@ $wide: 1200px;
 		@content;
 	}
 }
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+	font-family: 'sporty';
+	src: url('../font/SportyPro-Bold.woff2') format('woff2'),
+		url('../font/SportyPro-Bold.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}

@@ -15,10 +15,11 @@ div.top-bar {
 
 			&:first-child {
 				margin-left: 0 !important;
-				margin-right: auto;
+				// margin-right: auto;
 			}
 
 			&:last-child {
+				margin-left: auto;
 				margin-right: 0 !important;
 			}
 		}

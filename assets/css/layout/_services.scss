@@ -1,0 +1,28 @@
+.loop-container.loop-layout-services.loop-columns-1 {
+	.services {
+		background-color: white;
+		position: relative;
+
+		a.overlay {
+			position: absolute;
+			inset: 0;
+			transition: 0.3s all ease;
+		}
+
+		&:hover {
+			a.overlay {
+				box-shadow: 0 0 0 5px var(--accent);
+			}
+		}
+
+		h3 {
+			font-family: 'sporty';
+			font-size: 30px;
+			color: var(--contrast);
+
+			a {
+				color: var(--contrast);
+			}
+		}
+	}
+}

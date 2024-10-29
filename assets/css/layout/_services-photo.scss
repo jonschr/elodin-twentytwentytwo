@@ -1,0 +1,14 @@
+.loop-container.loop-layout-services_photo {
+	.services {
+		.featured-image {
+			margin-top: 0;
+			transition: 0.3s all ease;
+		}
+
+		&:hover {
+			a.featured-image {
+				box-shadow: 0 0 0 5px var(--accent);
+			}
+		}
+	}
+}

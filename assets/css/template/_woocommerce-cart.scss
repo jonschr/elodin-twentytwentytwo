@@ -1,0 +1,12 @@
+body.woocommerce-cart {
+	.wc-block-components-express-payment-continue-rule,
+	.wc-block-components-express-payment__event-buttons {
+		display: none;
+	}
+
+	.wc-block-cart__submit-container {
+		span.wc-block-components-button__text {
+			color: white;
+		}
+	}
+}

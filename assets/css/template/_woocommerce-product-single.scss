@@ -1,0 +1,55 @@
+body.single-product {
+	.summary.entry-summary {
+		h1 {
+			color: var(--contrast-3);
+		}
+
+		.wc-pao-addons-container {
+			padding-top: 20px;
+			padding-bottom: 20px;
+
+			.wc-pao-addon-name {
+				color: var(--contrast-3);
+			}
+
+			.wc-pao-addon-container {
+				margin-bottom: 20px;
+
+				.wc-pao-addon-wrap {
+					> [class*='wc-pao-addon-'] {
+						display: grid;
+						grid-template-columns: 18px 1fr;
+						margin-bottom: 8px;
+						gap: 5px;
+
+						input[type='checkbox'] {
+							align-self: flex-start;
+							margin-top: 5px;
+						}
+
+						label {
+							line-height: 1.4;
+						}
+					}
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.site-main {
+		@include notdesktop {
+			margin: 0;
+			padding: 25px;
+		}
+	}
+
+	.content-area {
+		@include desktop {
+			margin-bottom: 60px;
+		}
+	}
+}

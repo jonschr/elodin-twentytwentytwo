@@ -28,6 +28,7 @@
 .wp-block-buttons {
 	margin-top: 30px;
 	margin-bottom: 30px;
+	gap: 8px;
 
 	@include mobile {
 		margin-top: 20px;

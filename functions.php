@@ -16,5 +16,3 @@ foreach ( glob( CHILD_THEME_DIR . "/inc/*/*.php", GLOB_NOSORT ) as $filename ){
 }
 
 add_filter( 'media_library_infinite_scrolling', '__return_true' );
-
-

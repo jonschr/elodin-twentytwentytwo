@@ -52,3 +52,16 @@ $wide: 1200px;
 		@content;
 	}
 }
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+	font-family: 'britt';
+	src: url('../font/BrittanySignatureRegular.woff2') format('woff2'),
+		url('../font/BrittanySignatureRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

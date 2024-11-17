@@ -22,10 +22,10 @@
 :where(.gb-is-root-block > .gb-container),
 :where(.gb-root-block-generateblocks-container > .gb-container),
 :where(.block-library-block__reusable-block-container > .gb-container) {
-	padding: 60px 25px;
+	padding: 40px 25px;
 
 	@include tablet {
-		padding: 45px 25px;
+		padding: 35px 25px;
 	}
 
 	@include mobile {

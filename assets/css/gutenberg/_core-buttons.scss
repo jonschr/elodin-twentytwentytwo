@@ -124,3 +124,18 @@
 	width: 100% !important;
 	text-align: center;
 }
+
+.wp-block-button__link {
+	&.has-contrast-3-background-color.has-accent-color {
+		&:hover {
+			color: white !important;
+			background-color: var(--accent) !important;
+		}
+	}
+
+	&.has-contrast-background-color {
+		&:hover {
+			background-color: var(--accent) !important;
+		}
+	}
+}

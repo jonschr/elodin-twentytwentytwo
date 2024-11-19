@@ -132,7 +132,7 @@ function rfs_start_sync_single_property() {
 	// rfs_sync_single_property( $property_id = '4818692', $integration = 'realpage' ); // Max flats
 	// rfs_sync_single_property( $property_id = '4818710', $integration = 'realpage' ); // Oldtown flats
 	// rfs_sync_single_property( $property_id = 'RIVER', $integration = 'rentmanager' ); // Rent manager test
-	rfs_sync_single_property( $property_id = 'p1797602', $integration = 'yardi' ); // Rent manager test
+	rfs_sync_single_property( $property_id = 'p1797602', $integration = 'yardi' ); // Yardi test
 	
 }
 // add_action( 'wp_footer', 'rfs_start_sync_single_property' );

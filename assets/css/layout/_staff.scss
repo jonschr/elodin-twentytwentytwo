@@ -1,0 +1,19 @@
+.staff-content.ginlined-content {
+	h2 {
+		color: var(--contrast);
+	}
+
+	p.title {
+		text-transform: uppercase;
+		font-weight: bold;
+		color: var(--accent);
+	}
+
+	a.button {
+		@extend .btn;
+	}
+
+	.info {
+		margin-bottom: 30px;
+	}
+}

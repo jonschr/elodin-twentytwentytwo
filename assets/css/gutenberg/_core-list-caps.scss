@@ -1,0 +1,14 @@
+ul.is-style-caps-2col,
+ul.is-style-caps {
+	margin-left: 2em;
+
+	li {
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+ul.is-style-caps-2col {
+	columns: 2;
+	gap: 3em;
+}

@@ -1,0 +1,19 @@
+ul.wp-block-navigation__container {
+	li {
+		a {
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 14px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+ul.wp-block-social-links {
+	@include notmobile {
+		justify-content: flex-end !important;
+	}
+}

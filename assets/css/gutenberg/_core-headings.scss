@@ -8,7 +8,9 @@ h3.wp-block-heading {
 	}
 }
 
-.is-style-kicker {
+.is-style-kicker,
+.wp-block-image,
+.gb-block-image {
 	+ h1.wp-block-heading,
 	+ h2.wp-block-heading,
 	+ h3.wp-block-heading {

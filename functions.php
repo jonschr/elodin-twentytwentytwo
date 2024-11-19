@@ -18,3 +18,13 @@ foreach ( glob( CHILD_THEME_DIR . "/inc/*/*.php", GLOB_NOSORT ) as $filename ){
 add_filter( 'media_library_infinite_scrolling', '__return_true' );
 
 
+add_theme_support( 'block-editor-settings' );
+
+add_filter( 'block_editor_settings_all', function( $editor_settings ) {
+	$editor_settings['filters']['duotone'][] = [
+		'slug'   => 'custom-duotone',
+		'name'   => 'Custom Duotone',
+		'colors' => [ '#FFA500', '#000000' ],
+	];
+	return $editor_settings;
+});

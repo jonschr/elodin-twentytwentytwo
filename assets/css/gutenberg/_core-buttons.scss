@@ -5,13 +5,15 @@
 .btn {
 	font-weight: bold;
 	cursor: pointer;
-	padding: 15px 25px !important;
+	padding: 10px 15px !important;
 	text-decoration: none !important;
-	font-size: 15px !important;
+	font-size: 13px !important;
 	font-weight: 600;
 	display: inline-block !important;
 	position: static;
 	border-radius: 3px;
+	text-transform: uppercase;
+	font-weight: 800;
 
 	transition: all 0.3s ease-in-out;
 
@@ -123,4 +125,17 @@
 
 	width: 100% !important;
 	text-align: center;
+}
+
+.gform_button {
+	font-weight: bold !important;
+	cursor: pointer !important;
+	padding: 10px 15px !important;
+	text-decoration: none !important;
+	font-size: 13px !important;
+	display: inline-block !important;
+	position: static;
+	border-radius: 3px;
+	text-transform: uppercase !important;
+	font-weight: 800 !important;
 }

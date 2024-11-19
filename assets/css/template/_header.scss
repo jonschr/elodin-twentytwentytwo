@@ -1,0 +1,14 @@
+body.nav-float-right,
+body .inside-header {
+	#site-navigation {
+		margin-left: 80px;
+	}
+
+	.header-widget {
+		margin-left: auto;
+	}
+}
+
+header.site-header {
+	border-bottom: 5px solid var(--accent);
+}

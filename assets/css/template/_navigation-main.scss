@@ -25,13 +25,21 @@
 					}
 				}
 
+				li {
+					a {
+						padding-left: 15px;
+						padding-right: 15px;
+					}
+				}
+
 				// Submenu
 				ul {
 					width: 250px;
+					padding: 8px 0;
 
 					li {
 						a {
-							padding: 15px 20px;
+							padding: 8px 20px;
 						}
 					}
 				}

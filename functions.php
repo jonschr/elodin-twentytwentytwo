@@ -134,7 +134,8 @@ function rfs_start_sync_single_property() {
 	rfs_sync_single_property( $property_id = 'HR', $integration = 'rentmanager' ); // Rent manager test
 	rfs_sync_single_property( $property_id = 'NC', $integration = 'rentmanager' ); // Rent manager test
 	rfs_sync_single_property( $property_id = 'WP', $integration = 'rentmanager' ); // Rent manager test
+	// rfs_sync_single_property( $property_id = 'RIVER', $integration = 'rentmanager' ); // Rent manager test
 	// rfs_sync_single_property( $property_id = 'p1797602', $integration = 'yardi' ); // Yardi test
 	
 }
-add_action( 'wp_footer', 'rfs_start_sync_single_property' );
+// add_action( 'wp_footer', 'rfs_start_sync_single_property' );

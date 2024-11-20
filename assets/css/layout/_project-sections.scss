@@ -1,0 +1,21 @@
+.project-section {
+	padding: 60px 25px;
+
+	&:nth-of-type(odd) {
+		background-color: var(--base);
+	}
+
+	@include mobile {
+		padding: 25px;
+	}
+
+	.wrap {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 1200px;
+
+		h3 {
+			color: var(--contrast);
+		}
+	}
+}

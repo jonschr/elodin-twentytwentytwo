@@ -138,4 +138,4 @@ function rfs_start_sync_single_property() {
 	rfs_sync_single_property( $property_id = 'p0241141', $integration = 'yardi' ); // Yardi test (buffalo canyon)
 	
 }
-add_action( 'wp_footer', 'rfs_start_sync_single_property' );
+// add_action( 'wp_footer', 'rfs_start_sync_single_property' );

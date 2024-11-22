@@ -1,0 +1,73 @@
+.inside-right-sidebar {
+	.widget {
+		margin-bottom: 20px !important;
+
+		h2.widget-title {
+			font-family: 'mona';
+			line-height: 1;
+			margin-bottom: 10px;
+		}
+
+		.wp-block-search__inside-wrapper {
+			display: flex;
+			flex-direction: row;
+
+			input {
+				font-size: 16px;
+			}
+
+			button {
+				margin: 0;
+				background-color: var(--contrast);
+
+				&:hover {
+					background-color: var(--contrast-2);
+				}
+			}
+		}
+
+		.wp-block-woocommerce-product-categories {
+			display: flex;
+			flex-direction: row;
+
+			.wc-block-product-categories__dropdown {
+				width: calc(100% - 85px);
+
+				select {
+					font-size: 16px;
+					color: var(--contrast-2);
+				}
+			}
+
+			button {
+				width: 85px;
+				display: block;
+				background-color: var(--contrast);
+
+				&:hover {
+					background-color: var(--contrast-2);
+				}
+			}
+		}
+
+		&.widget_recently_viewed_products {
+			padding: 25px;
+			background-color: var(--base);
+
+			img {
+				display: none;
+			}
+
+			span.product-title {
+				color: var(--contrast);
+				font-size: 16px;
+				line-height: 1.2 !important;
+				display: block;
+
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
+	}
+}

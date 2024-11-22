@@ -1,0 +1,36 @@
+body.single-product {
+	.entry-content {
+		.summary {
+			h1.product_title.entry-title {
+				font-family: 'mona';
+				font-weight: 700;
+				font-size: 30px;
+			}
+		}
+
+		.woocommerce-product-details__short-description {
+			margin-bottom: 15px;
+		}
+
+		.single_add_to_cart_button {
+			background-color: var(--accent) !important;
+			border-radius: 3px;
+			font-weight: 700;
+			font-size: 15px;
+		}
+
+		.input-text {
+			background-color: var(--base) !important;
+		}
+
+		.woocommerce-message {
+			background-color: var(--accent);
+			font-size: 16px;
+
+			a.button {
+				float: none;
+				text-decoration: underline;
+			}
+		}
+	}
+}

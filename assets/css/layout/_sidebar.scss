@@ -1,6 +1,6 @@
 .inside-right-sidebar {
 	.widget {
-		margin-bottom: 20px !important;
+		margin-bottom: 40px !important;
 
 		h2.widget-title {
 			font-family: 'mona';
@@ -22,6 +22,43 @@
 
 				&:hover {
 					background-color: var(--contrast-2);
+				}
+			}
+		}
+
+		ul.wc-block-product-categories-list {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin: 0;
+				padding: 0;
+
+				a {
+					text-decoration: none;
+					background-color: var(--contrast);
+					display: block;
+					padding: 8px 20px;
+					color: white;
+
+					&:hover {
+						background-color: var(--contrast-2);
+					}
+				}
+
+				&:first-child > a {
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+				}
+
+				&:last-child > a {
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+
+				span.wc-block-product-categories-list-item-count {
+					display: none;
 				}
 			}
 		}

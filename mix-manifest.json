@@ -1,5 +1,4 @@
 {
     "/assets/dist/editor-style.css": "/assets/dist/editor-style.css",
-    "/assets/dist/gutenberg-style.css": "/assets/dist/gutenberg-style.css",
-    "/assets/dist/theme-style.css": "/assets/dist/theme-style.css"
+    "/assets/dist/gutenberg-style.css": "/assets/dist/gutenberg-style.css"
 }

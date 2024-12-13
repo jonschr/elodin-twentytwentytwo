@@ -43,3 +43,11 @@
 .sticky-enabled .main-navigation.is_stuck {
 	z-index: 50 !important;
 }
+
+nav.has-sticky-branding {
+	&.is_stuck {
+		img.is-logo-image {
+			height: 45px !important;
+		}
+	}
+}

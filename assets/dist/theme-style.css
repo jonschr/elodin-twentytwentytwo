@@ -82,7 +82,7 @@ video[poster] {
 }
 
 .mobile-header-navigation .site-logo.mobile-header-logo img {
-  height: 60px !important;
+  height: 35px !important;
 }
 
 .menu a[target=_blank]:after,
@@ -125,6 +125,10 @@ video[poster] {
 
 .sticky-enabled .main-navigation.is_stuck {
   z-index: 50 !important;
+}
+
+nav.has-sticky-branding.is_stuck img.is-logo-image {
+  height: 45px !important;
 }
 
 .secondary-navigation.has-top-bar {

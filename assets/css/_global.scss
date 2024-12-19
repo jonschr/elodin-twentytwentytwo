@@ -52,3 +52,18 @@ $wide: 1200px;
 		@content;
 	}
 }
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+	font-family: 'veneer';
+	src: url('/wp-content/themes/biolime-historical-2024/assets/font/VeneerThree.woff2')
+			format('woff2'),
+		url('/wp-content/themes/biolime-historical-2024/assets/font/VeneerThree.woff')
+			format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

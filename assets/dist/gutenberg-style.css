@@ -47,6 +47,10 @@ h3:first-child {
   margin-top: 0;
 }
 
+h1.entry-title {
+  color: var(--contrast);
+}
+
 div[data-type="core/buttons"] .block-list-appender__toggle {
   opacity: 1 !important;
   transform: none !important;
@@ -59,13 +63,15 @@ div[data-type="core/buttons"] .block-list-appender__toggle {
 .wp-block-button div.wp-block-button__link, .read-more.button, .gform_footer input[type=submit], .gb-button-wrapper .gb-button {
   font-weight: bold;
   cursor: pointer;
-  padding: 15px 25px !important;
+  padding: 12px 25px !important;
   text-decoration: none !important;
-  font-size: 15px !important;
-  font-weight: 600;
+  font-size: 14px !important;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   display: inline-block !important;
   position: static;
-  border-radius: 3px;
+  border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 600px) {

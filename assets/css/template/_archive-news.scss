@@ -1,0 +1,27 @@
+.site.grid-container {
+	width: 100%;
+	max-width: 100%;
+	display: block;
+
+	.site-content {
+		display: block;
+	}
+}
+
+.news-archive-container {
+	padding: 60px 25px;
+
+	@include tablet {
+		padding: 40px 25px;
+	}
+
+	@include mobile {
+		padding: 25px;
+	}
+
+	.wrap {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+}

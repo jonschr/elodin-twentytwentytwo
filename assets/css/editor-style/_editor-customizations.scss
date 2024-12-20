@@ -35,16 +35,17 @@
 		transition: 0.3s all ease;
 	}
 	.wp-block-post-title:not(:focus) {
-		opacity: 0.15;
+		opacity: 0.25;
 		text-decoration: line-through;
 	}
 }
 
 /* ==========================================================================
-   Make title black
+   Make title black (background)
    ========================================================================== */
 
-body.post-type-page {
+body.post-type-page,
+body.post-type-gp_elements {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .make-title-black;
 		@extend .remove-top-margin;
@@ -52,10 +53,24 @@ body.post-type-page {
 }
 
 /* ==========================================================================
+   Make title black (letters)
+   ========================================================================== */
+
+body.post-type-post,
+body.post-type-news {
+	.edit-post-visual-editor__post-title-wrapper {
+		.wp-block-post-title {
+			color: var(--contrast);
+		}
+	}
+}
+
+/* ==========================================================================
    Give title margin
    ========================================================================== */
 
-body.post-type-post {
+body.post-type-post,
+body.post-type-news {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .add-bottom-margin;
 		@extend .center-in-space;
@@ -67,7 +82,8 @@ body.post-type-post {
    ========================================================================== */
 
 body.content-title-hidden,
-body.post-type-page {
+body.post-type-page,
+body.post-type-gp_elements {
 	.edit-post-visual-editor__post-title-wrapper {
 		@extend .cross-out-title;
 	}
@@ -77,10 +93,10 @@ body.post-type-page {
    Blocks general
    ========================================================================== */
 
-.block-editor-block-list__layout {
+.is-root-container.block-editor-block-list__layout {
 	> .wp-block {
-		// margin-left: auto;
-		// margin-right: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
